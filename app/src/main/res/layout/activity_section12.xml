@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- s12title  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12title"
@@ -41,6 +42,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q1  Radio   -->
             <androidx.cardview.widget.CardView
@@ -100,6 +102,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2"
@@ -119,6 +122,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2a  Radio   -->
             <androidx.cardview.widget.CardView
@@ -195,6 +199,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2b  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2b"
@@ -269,6 +274,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2c  Radio   -->
             <androidx.cardview.widget.CardView
@@ -345,6 +351,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2d  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2d"
@@ -419,6 +426,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2e  Radio   -->
             <androidx.cardview.widget.CardView
@@ -495,6 +503,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2f  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2f"
@@ -569,6 +578,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2g  Radio   -->
             <androidx.cardview.widget.CardView
@@ -645,6 +655,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2h  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2h"
@@ -719,6 +730,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2i  Radio   -->
             <androidx.cardview.widget.CardView
@@ -795,6 +807,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2j  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2j"
@@ -869,6 +882,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2k  Radio   -->
             <androidx.cardview.widget.CardView
@@ -945,6 +959,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2l  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2l"
@@ -1019,6 +1034,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2m  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1095,6 +1111,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q2n  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2n"
@@ -1169,6 +1186,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q2o  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1245,6 +1263,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q3  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q3"
@@ -1262,6 +1281,7 @@
                         android:text="@string/s12q3" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q301  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1321,6 +1341,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q302  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q302"
@@ -1378,6 +1399,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q303  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1437,6 +1459,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q304  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q304"
@@ -1494,6 +1517,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q305  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1553,6 +1577,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q306  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q306"
@@ -1610,6 +1635,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q307  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1739,6 +1765,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q4  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q4"
@@ -1803,6 +1830,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s12q5  CheckBox   -->
             <androidx.cardview.widget.CardView
@@ -1904,6 +1932,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s12q6  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q6"
@@ -1976,6 +2005,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -2004,6 +2034,7 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
 
         </LinearLayout>
 
