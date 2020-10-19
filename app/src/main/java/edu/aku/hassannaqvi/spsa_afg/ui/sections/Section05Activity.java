@@ -13,17 +13,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection07Binding;
+import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection05Binding;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
-public class Section07Activity extends AppCompatActivity {
+public class Section05Activity extends AppCompatActivity {
 
-    ActivitySection07Binding bi;
+    ActivitySection05Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section07);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section05);
         bi.setCallback(this);
         setupSkips();
     }
@@ -56,76 +56,85 @@ public class Section07Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("s7qa", bi.s7qa01.isChecked() ? "1"
-                : bi.s7qa02.isChecked() ? "2"
+        json.put("s5q1", bi.s5q101.isChecked() ? "1"
+                : bi.s5q102.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qb", bi.s7qb01.isChecked() ? "1"
-                : bi.s7qb02.isChecked() ? "2"
+        json.put("s5q1a", bi.s5q1a01.isChecked() ? "1"
+                : bi.s5q1a02.isChecked() ? "2"
+                : bi.s5q1a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qc", bi.s7qc01.isChecked() ? "1"
-                : bi.s7qc02.isChecked() ? "2"
+        json.put("s5q2", bi.s5q201.isChecked() ? "1"
+                : bi.s5q202.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qd", bi.s7qd01.isChecked() ? "1"
-                : bi.s7qd02.isChecked() ? "2"
+        json.put("s5q2a", bi.s5q2a01.isChecked() ? "1"
+                : bi.s5q2a02.isChecked() ? "2"
+                : bi.s5q2a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qe", bi.s7qe01.isChecked() ? "1"
-                : bi.s7qe02.isChecked() ? "2"
+        json.put("s5q3", bi.s5q301.isChecked() ? "1"
+                : bi.s5q302.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qf", bi.s7qf01.isChecked() ? "1"
-                : bi.s7qf02.isChecked() ? "2"
+        json.put("s5q3a", bi.s5q3a01.isChecked() ? "1"
+                : bi.s5q3a02.isChecked() ? "2"
+                : bi.s5q3a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qg", bi.s7qg01.isChecked() ? "1"
-                : bi.s7qg02.isChecked() ? "2"
+        json.put("s5q4", bi.s5q401.isChecked() ? "1"
+                : bi.s5q402.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qh", bi.s7qh01.isChecked() ? "1"
-                : bi.s7qh02.isChecked() ? "2"
+        json.put("s5q4a", bi.s5q4a01.isChecked() ? "1"
+                : bi.s5q4a02.isChecked() ? "2"
+                : bi.s5q4a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qi", bi.s7qi01.isChecked() ? "1"
-                : bi.s7qi02.isChecked() ? "2"
+        json.put("s5q5", bi.s5q501.isChecked() ? "1"
+                : bi.s5q502.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qj", bi.s7qj01.isChecked() ? "1"
-                : bi.s7qj02.isChecked() ? "2"
+        json.put("s5q5a", bi.s5q5a01.isChecked() ? "1"
+                : bi.s5q5a02.isChecked() ? "2"
+                : bi.s5q5a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qk", bi.s7qk01.isChecked() ? "1"
-                : bi.s7qk02.isChecked() ? "2"
+        json.put("s5q6", bi.s5q601.isChecked() ? "1"
+                : bi.s5q602.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7ql", bi.s7ql01.isChecked() ? "1"
-                : bi.s7ql02.isChecked() ? "2"
+        json.put("s5q6a", bi.s5q6a01.isChecked() ? "1"
+                : bi.s5q6a02.isChecked() ? "2"
+                : bi.s5q6a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qm", bi.s7qm01.isChecked() ? "1"
-                : bi.s7qm02.isChecked() ? "2"
+        json.put("s5q7", bi.s5q701.isChecked() ? "1"
+                : bi.s5q702.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qn", bi.s7qn01.isChecked() ? "1"
-                : bi.s7qn02.isChecked() ? "2"
+        json.put("s5q7a", bi.s5q7a01.isChecked() ? "1"
+                : bi.s5q7a02.isChecked() ? "2"
+                : bi.s5q7a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qo", bi.s7qo01.isChecked() ? "1"
-                : bi.s7qo02.isChecked() ? "2"
+        json.put("s5q8", bi.s5q801.isChecked() ? "1"
+                : bi.s5q802.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qp", bi.s7qp01.isChecked() ? "1"
-                : bi.s7qp02.isChecked() ? "2"
+        json.put("s5q8a", bi.s5q8a01.isChecked() ? "1"
+                : bi.s5q8a02.isChecked() ? "2"
+                : bi.s5q8a03.isChecked() ? "3"
                 : "-1");
 
-        json.put("s7qq", bi.s7qq01.isChecked() ? "1"
-                : bi.s7qq02.isChecked() ? "2"
+        json.put("s5q9", bi.s5q901.isChecked() ? "1"
+                : bi.s5q902.isChecked() ? "2"
                 : "-1");
 
-        json.put("s7qr", bi.s7qr01.isChecked() ? "1"
-                : bi.s7qr02.isChecked() ? "2"
+        json.put("s5q9a", bi.s5q9a01.isChecked() ? "1"
+                : bi.s5q9a02.isChecked() ? "2"
+                : bi.s5q9a03.isChecked() ? "3"
                 : "-1");
 
         //    MainApp.fc.setsL(String.valueOf(json));
