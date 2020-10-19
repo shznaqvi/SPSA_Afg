@@ -30,6 +30,8 @@
         tools:replace="android:allowBackup">
         <activity android:name=".ui.sections.Section06Activity"></activity>
         <activity android:name=".ui.sections.Section09Activity" />
+        <activity android:name=".ui.sections.Section07Activity"></activity>
+        <activity android:name=".ui.sections.Section09Activity" />
         <activity android:name=".ui.sections.Section13Activity" />
         <activity android:name=".ui.sections.Section12Activity" />
         <activity
