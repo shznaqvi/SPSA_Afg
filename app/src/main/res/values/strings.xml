@@ -197,6 +197,7 @@
     <string name='Q_a4'>a4</string>
     <string name='Q_a5'>a5</string>
 
+
     <string name="section2socioeconomicstatus_mainheading">Section 2. Socio-Economic Status : SocioEconomic Status </string>
     <string name="section3handwashing_mainheading">Section 3: HAND-WASHING : HANDWASHING </string>
     <string name="section4exposuretointerventions_mainheading">Section 4: Exposure to Interventions: Exposure to Interventions</string>
@@ -1443,6 +1444,5 @@ Any other illnesses?
     <string name='Q_s9q5'>s9q5</string>
     <string name='Q_s9q6'>s9q6</string>
     <string name='Q_s9title'>s9title</string>
-
 
 </resources>
