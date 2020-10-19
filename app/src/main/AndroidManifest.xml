@@ -28,8 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.sections.Section13Activity"></activity>
-        <activity android:name=".ui.sections.Section12Activity"></activity>
+
         <activity
             android:name=".ui.list_activity.FormsReportCluster"
             android:label="Forms Report"
@@ -57,6 +56,18 @@
         </activity>
         <activity
             android:name=".ui.other.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish" />
+        <activity
+            android:name=".ui.sections.Section10Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish" />
+        <activity
+            android:name=".ui.sections.Section12Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish" />
+        <activity
+            android:name=".ui.sections.Section13Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish" />
         <activity
