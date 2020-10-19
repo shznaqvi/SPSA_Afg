@@ -28,6 +28,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
+        <activity android:name=".ui.sections.Section13Activity"></activity>
+        <activity android:name=".ui.sections.SectionMActivity" />
         <activity android:name=".ui.sections.Section12Activity"></activity>
         <activity android:name=".ui.sections.SectionMActivity" />
         <activity
