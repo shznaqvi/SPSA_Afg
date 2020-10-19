@@ -156,7 +156,7 @@ public class Section05Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, Section12Activity.class));
+            startActivity(new Intent(this, Section06Activity.class));
         }
     }
 
