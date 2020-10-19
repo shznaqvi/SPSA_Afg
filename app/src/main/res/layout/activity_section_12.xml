@@ -188,8 +188,6 @@
                             android:hint="@string/s12q2ad"
                             android:inputType="number"
                             android:tag="s12q2ad"
-
-
                             android:text='@{s12q2ad.checked ? s12q2adx.getText().toString() : ""}'
                             android:visibility='@{s12q2ad.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -265,8 +263,6 @@
                             android:hint="@string/s12q2bd"
                             android:inputType="number"
                             android:tag="s12q2bd"
-
-
                             android:text='@{s12q2bd.checked ? s12q2bdx.getText().toString() : ""}'
                             android:visibility='@{s12q2bd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -342,8 +338,6 @@
                             android:hint="@string/s12q2cd"
                             android:inputType="number"
                             android:tag="s12q2cd"
-
-
                             android:text='@{s12q2cd.checked ? s12q2cdx.getText().toString() : ""}'
                             android:visibility='@{s12q2cd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -419,8 +413,6 @@
                             android:hint="@string/s12q2dd"
                             android:inputType="number"
                             android:tag="s12q2dd"
-
-
                             android:text='@{s12q2dd.checked ? s12q2ddx.getText().toString() : ""}'
                             android:visibility='@{s12q2dd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -496,8 +488,6 @@
                             android:hint="@string/s12q2ed"
                             android:inputType="number"
                             android:tag="s12q2ed"
-
-
                             android:text='@{s12q2ed.checked ? s12q2edx.getText().toString() : ""}'
                             android:visibility='@{s12q2ed.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -573,8 +563,6 @@
                             android:hint="@string/s12q2fd"
                             android:inputType="number"
                             android:tag="s12q2fd"
-
-
                             android:text='@{s12q2fd.checked ? s12q2fdx.getText().toString() : ""}'
                             android:visibility='@{s12q2fd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -650,8 +638,6 @@
                             android:hint="@string/s12q2gd"
                             android:inputType="number"
                             android:tag="s12q2gd"
-
-
                             android:text='@{s12q2gd.checked ? s12q2gdx.getText().toString() : ""}'
                             android:visibility='@{s12q2gd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -727,8 +713,6 @@
                             android:hint="@string/s12q2hd"
                             android:inputType="number"
                             android:tag="s12q2hd"
-
-
                             android:text='@{s12q2hd.checked ? s12q2hdx.getText().toString() : ""}'
                             android:visibility='@{s12q2hd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -804,8 +788,6 @@
                             android:hint="@string/s12q2id"
                             android:inputType="number"
                             android:tag="s12q2id"
-
-
                             android:text='@{s12q2id.checked ? s12q2idx.getText().toString() : ""}'
                             android:visibility='@{s12q2id.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -881,8 +863,6 @@
                             android:hint="@string/s12q2jd"
                             android:inputType="number"
                             android:tag="s12q2jd"
-
-
                             android:text='@{s12q2jd.checked ? s12q2jdx.getText().toString() : ""}'
                             android:visibility='@{s12q2jd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -958,8 +938,6 @@
                             android:hint="@string/s12q2kd"
                             android:inputType="number"
                             android:tag="s12q2kd"
-
-
                             android:text='@{s12q2kd.checked ? s12q2kdx.getText().toString() : ""}'
                             android:visibility='@{s12q2kd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -1035,8 +1013,6 @@
                             android:hint="@string/s12q2ld"
                             android:inputType="number"
                             android:tag="s12q2ld"
-
-
                             android:text='@{s12q2ld.checked ? s12q2ldx.getText().toString() : ""}'
                             android:visibility='@{s12q2ld.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -1112,8 +1088,6 @@
                             android:hint="@string/s12q2md"
                             android:inputType="number"
                             android:tag="s12q2md"
-
-
                             android:text='@{s12q2md.checked ? s12q2mdx.getText().toString() : ""}'
                             android:visibility='@{s12q2md.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -1189,8 +1163,6 @@
                             android:hint="@string/s12q2nd"
                             android:inputType="number"
                             android:tag="s12q2nd"
-
-
                             android:text='@{s12q2nd.checked ? s12q2ndx.getText().toString() : ""}'
                             android:visibility='@{s12q2nd.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
@@ -1266,8 +1238,6 @@
                             android:hint="@string/s12q2od"
                             android:inputType="number"
                             android:tag="s12q2od"
-
-
                             android:text='@{s12q2od.checked ? s12q2odx.getText().toString() : ""}'
                             android:visibility='@{s12q2od.checked? View.VISIBLE : View.GONE}'
                             app:type="range" />
