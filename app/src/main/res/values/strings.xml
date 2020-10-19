@@ -198,7 +198,6 @@
     <string name='Q_a5'>a5</string>
 
 
-
     <string name="section2socioeconomicstatus_mainheading">Section 2. Socio-Economic Status : SocioEconomic Status </string>
     <string name="section3handwashing_mainheading">Section 3: HAND-WASHING : HANDWASHING </string>
     <string name="section4exposuretointerventions_mainheading">Section 4: Exposure to Interventions: Exposure to Interventions</string>
@@ -731,7 +730,7 @@ If less than one week, record days.</string>
     <string name="s8q1102"> Days after birth      </string>
     <string name="s8q1103"> Weeks after birth   </string>
     <string name="s8q1198">Don’t know </string>
-    <string name="s8q12">Who checked on (NAME)'s health at that time? PROBE FOR MOST QUALIFIED PERSON</string>
+    <string name="s8q12">Who checked on (NAME)\'s health at that time? PROBE FOR MOST QUALIFIED PERSON</string>
     <string name="s8q12title1">HEALTH PERSONNEL </string>
     <string name="s8q1201">Doctor </string>
     <string name="s8q1202">Nurse/Midwife</string>
@@ -958,7 +957,7 @@ Note: Please show samples of vitamins and medicines to respondent.
     <string name="s11q1802">No </string>
     <string name="s11q1898">Don’t know </string>
     <string name="s12title"> Child Immunization, Morbidity and Care Seeking</string>
-    <string name="s12q1">Do you have a card where (NAME)'s vaccinations are written down?
+    <string name="s12q1">Do you have a card where (NAME)\'s vaccinations are written down?
 If yes, may I see it please?
 </string>
     <string name="s12q101">Yes, seen </string>
@@ -967,7 +966,7 @@ If yes, may I see it please?
     <string name="s12q2">Did (NAME) ever have any vaccinations to prevent him/her from getting diseases, including vaccinations received in a national immunization day campaign?
 
 COPY DATES FROM THE CARD.
-WRITE ‘44' IN ‘DAY' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
+WRITE ‘44\' IN ‘DAY\' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
 
 Dates are not applicable if the source of vaccination is from maternal recall, and in response of card not seen or No card in Q.1
 </string>
