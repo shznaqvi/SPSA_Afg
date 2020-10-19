@@ -223,7 +223,8 @@
     <string name="s2q107">Uzbaki</string>
     <string name="s2q196">Other (Specify) </string>
     <string name="s2q2">What is ownership status of household? </string>
-
+    <string name="s2q201">Own </string>
+    <string name="s2q202">Rented</string>
     <string name="s2q296">Others specify</string>
     <string name="s2q3">What is the main source of drinking water in your house hold?</string>
     <string name="s2q301">Piped into dwelling  </string>
@@ -451,8 +452,8 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s2q1906">Buffalo</string>
     <string name="s2q1907">Camels </string>
     <string name="s2q20">Does any member of this household have a bank account?</string>
-    <string name="s2q201">Yes  </string>
-    <string name="s2q202">No</string>
+    <string name="s2q2001">Yes  </string>
+    <string name="s2q2002">No</string>
     <string name="s2q2098">Don’t know </string>
     <string name="s3title">HAND-WASHING </string>
     <string name="s3q1">Please show us where you and members of your household most often wash their hands</string>
@@ -1182,10 +1183,7 @@ Any other illnesses?
     <string name="s1q20d">Lactating Women</string>
     <string name="s1q20e">Total family member</string>
 
-
-    <!--Question IDs-->
-
-
+    <!--QUESTION NUMBERS-->
     <string name='Q_s1_consent'>s1_consent</string>
     <string name='Q_s1_title1'>s1_title1</string>
     <string name='Q_s10q1'>s10q1</string>
@@ -1271,7 +1269,6 @@ Any other illnesses?
     <string name='Q_s12q5'>s12q5</string>
     <string name='Q_s12q6'>s12q6</string>
     <string name='Q_s12title'>s12title</string>
-
     <string name='Q_s13q1'>s13q1</string>
     <string name='Q_s13q10'>s13q10</string>
     <string name='Q_s13q2'>s13q2</string>
