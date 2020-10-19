@@ -197,8 +197,6 @@
     <string name='Q_a4'>a4</string>
     <string name='Q_a5'>a5</string>
 
-
-
     <string name="section2socioeconomicstatus_mainheading">Section 2. Socio-Economic Status : SocioEconomic Status </string>
     <string name="section3handwashing_mainheading">Section 3: HAND-WASHING : HANDWASHING </string>
     <string name="section4exposuretointerventions_mainheading">Section 4: Exposure to Interventions: Exposure to Interventions</string>
@@ -224,7 +222,8 @@
     <string name="s2q107">Uzbaki</string>
     <string name="s2q196">Other (Specify) </string>
     <string name="s2q2">What is ownership status of household? </string>
-
+    <string name="s2q201">Own </string>
+    <string name="s2q202">Rented</string>
     <string name="s2q296">Others specify</string>
     <string name="s2q3">What is the main source of drinking water in your house hold?</string>
     <string name="s2q301">Piped into dwelling  </string>
@@ -452,8 +451,8 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s2q1906">Buffalo</string>
     <string name="s2q1907">Camels </string>
     <string name="s2q20">Does any member of this household have a bank account?</string>
-    <string name="s2q201">Yes  </string>
-    <string name="s2q202">No</string>
+    <string name="s2q2001">Yes  </string>
+    <string name="s2q2002">No</string>
     <string name="s2q2098">Don’t know </string>
     <string name="s3title">HAND-WASHING </string>
     <string name="s3q1">Please show us where you and members of your household most often wash their hands</string>
@@ -731,7 +730,7 @@ If less than one week, record days.</string>
     <string name="s8q1102"> Days after birth      </string>
     <string name="s8q1103"> Weeks after birth   </string>
     <string name="s8q1198">Don’t know </string>
-    <string name="s8q12">Who checked on (NAME)'s health at that time? PROBE FOR MOST QUALIFIED PERSON</string>
+    <string name="s8q12">Who checked on (NAME)\'s health at that time? PROBE FOR MOST QUALIFIED PERSON</string>
     <string name="s8q12title1">HEALTH PERSONNEL </string>
     <string name="s8q1201">Doctor </string>
     <string name="s8q1202">Nurse/Midwife</string>
@@ -958,7 +957,7 @@ Note: Please show samples of vitamins and medicines to respondent.
     <string name="s11q1802">No </string>
     <string name="s11q1898">Don’t know </string>
     <string name="s12title"> Child Immunization, Morbidity and Care Seeking</string>
-    <string name="s12q1">Do you have a card where (NAME)'s vaccinations are written down?
+    <string name="s12q1">Do you have a card where (NAME)\'s vaccinations are written down?
 If yes, may I see it please?
 </string>
     <string name="s12q101">Yes, seen </string>
@@ -967,7 +966,7 @@ If yes, may I see it please?
     <string name="s12q2">Did (NAME) ever have any vaccinations to prevent him/her from getting diseases, including vaccinations received in a national immunization day campaign?
 
 COPY DATES FROM THE CARD.
-WRITE ‘44' IN ‘DAY' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
+WRITE ‘44\' IN ‘DAY\' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
 
 Dates are not applicable if the source of vaccination is from maternal recall, and in response of card not seen or No card in Q.1
 </string>
@@ -1183,10 +1182,7 @@ Any other illnesses?
     <string name="s1q20d">Lactating Women</string>
     <string name="s1q20e">Total family member</string>
 
-
-    <!--Question IDs-->
-
-
+    <!--QUESTION NUMBERS-->
     <string name='Q_s1_consent'>s1_consent</string>
     <string name='Q_s1_title1'>s1_title1</string>
     <string name='Q_s10q1'>s10q1</string>
@@ -1272,7 +1268,6 @@ Any other illnesses?
     <string name='Q_s12q5'>s12q5</string>
     <string name='Q_s12q6'>s12q6</string>
     <string name='Q_s12title'>s12title</string>
-
     <string name='Q_s13q1'>s13q1</string>
     <string name='Q_s13q10'>s13q10</string>
     <string name='Q_s13q2'>s13q2</string>
@@ -1448,5 +1443,6 @@ Any other illnesses?
     <string name='Q_s9q5'>s9q5</string>
     <string name='Q_s9q6'>s9q6</string>
     <string name='Q_s9title'>s9title</string>
+
 
 </resources>
