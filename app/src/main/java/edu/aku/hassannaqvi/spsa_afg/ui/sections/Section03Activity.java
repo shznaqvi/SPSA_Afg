@@ -110,7 +110,7 @@ public class Section03Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, Section05Activity.class));
+            startActivity(new Intent(this, Section04Activity.class));
         }
     }
 
