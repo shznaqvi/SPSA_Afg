@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection11Binding;
+import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 public class Section11Activity extends AppCompatActivity {
     ActivitySection11Binding bi;
@@ -48,65 +49,24 @@ public class Section11Activity extends AppCompatActivity {
             }
         }));
 
-        bi.g3133s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3133sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3133so);
-            }
-        }));
-
-        bi.g3134s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3134sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3134so);
-            }
-        }));
-
-        bi.g3135s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3135sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3135so);
-            }
-        }));
-
-        bi.g3136s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3136sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3136so);
-            }
-        }));
-
-        bi.g3137s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3137sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3137so);
-            }
-        }));
-
-        bi.g3138s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3138sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3138so);
-            }
-        }));
-
-        bi.g3139s.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g3139sn.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg3139so);
-            }
-        }));
-
     }
 
-
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SG, fc.getsG());
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+
         json.put("s11q7", bi.s11q701.isChecked() ? "1"
                 : bi.s11q702.isChecked() ? "2"
                 : bi.s11q798.isChecked() ? "98"
@@ -303,11 +263,9 @@ public class Section11Activity extends AppCompatActivity {
 
     }
 
-
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -318,10 +276,13 @@ public class Section11Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, Section11Activity.class));
+            startActivity(new Intent(this, Section12Activity.class));
         }
     }
 
+    public void BtnEnd() {
+        AppUtilsKt.openEndActivity(this);
+    }
 
     @Override
     public void onBackPressed() {
@@ -330,4 +291,3 @@ public class Section11Activity extends AppCompatActivity {
 
 }
 
-}

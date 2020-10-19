@@ -35,7 +35,6 @@
                         android:id="@+id/qtxt_s11title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/q_s11title"
                         android:text="@string/s11title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -304,7 +303,6 @@
                         android:id="@+id/qtxt_s11title1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/q_s11title1"
                         android:text="@string/s11title1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -323,7 +321,6 @@
                         android:id="@+id/qtxt_s11q10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/q_s11q10"
                         android:text="@string/s11q10" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -926,7 +923,6 @@
                         android:id="@+id/qtxt_s11q12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/q_s11q12"
                         android:text="@string/s11q12" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
