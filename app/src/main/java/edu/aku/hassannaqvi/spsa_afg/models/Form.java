@@ -386,7 +386,7 @@ public class Form extends LiveData<Form> {
     public String s12q696;
     public String s13title;
     public String s13q1;
-    public String s13q196;
+    public String s13q196x;
     public String s13q2;
     public String s13q3;
     public String s13q4;
@@ -413,6 +413,7 @@ public class Form extends LiveData<Form> {
     public String s13q1005;
     public String s13q1006;
     public String s13q1007;
+    public String s13q202x;
 
 
     public Form() {
@@ -3501,12 +3502,12 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getS13q196() {
-        return s13q196;
+    public String getS13q196x() {
+        return s13q196x;
     }
 
-    public Form setS13q196(String s13q196) {
-        this.s13q196 = s13q196;
+    public Form setS13q196x(String s13q196x) {
+        this.s13q196x = s13q196x;
         return this;
     }
 
@@ -3960,14 +3961,24 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getS1q20e() {
-        return s1q20e;
-    }
+    public String getS1q20e() {  return s1q20e; }
 
     public Form setS1q20e(String s1q20e) {
         this.s1q20e = s1q20e;
         return this;
     }
+
+
+    public String getS13q202x() {  return s13q202x; }
+
+    public Form setS13q202x(String s13q202x) {
+        this.s13q202x = s13q202x;
+        return this;
+    }
+
+
+
+
 
     public String getFormType() {
         return formType;
