@@ -1798,6 +1798,186 @@
                             android:text="@string/Q_s12q4" />
                     </RelativeLayout>
 
+                    <LinearLayout
+                        android:id="@+id/llgrpsec1101"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{s12q401.checked ? View.VISIBLE: View.GONE  }'>
+                        <!-- s12q5  CheckBox   -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/fldGrpCVs12q5"
+                            style="@style/cardView">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_s12q5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_s12q5"
+                                        android:text="@string/s12q5" />
+
+                                    <TextView
+                                        android:id="@+id/q_s12q5"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_s12q5"
+                                        android:layout_alignBottom="@id/qtxt_s12q5"
+                                        android:text="@string/Q_s12q5" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/s12q5check"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:tag="0">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:text="@string/s12q5title1" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q501"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q501" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q502"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q502" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q503"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q503" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:text="@string/s12q5title2" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q504"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q504" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q505"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q505" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q596"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q596" />
+
+                                    <EditText
+                                        android:id="@+id/s12q596x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                        android:hint="@string/s12q596"
+                                        android:tag="s12q596"
+                                        android:text='@{s12q596.checked ? s12q596x.getText().toString() : ""}'
+                                        android:visibility='@{s12q596.checked? View.VISIBLE : View.GONE}' />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <!-- s12q6  CheckBox   -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/fldGrpCVs12q6"
+                            style="@style/cardView">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_s12q6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_s12q6"
+                                        android:text="@string/s12q6" />
+
+                                    <TextView
+                                        android:id="@+id/q_s12q6"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_s12q6"
+                                        android:layout_alignBottom="@id/qtxt_s12q6"
+                                        android:text="@string/Q_s12q6" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/s12q6check"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:tag="0">
+
+                                    <CheckBox
+                                        android:id="@+id/s12q601"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q601" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q602"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q602" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q603"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q603" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q604"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q604" />
+
+                                    <CheckBox
+                                        android:id="@+id/s12q696"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/s12q696" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/s12q4"
                         android:layout_width="match_parent"
@@ -1829,180 +2009,6 @@
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- s12q5  CheckBox   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVs12q5"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_s12q5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s12q5"
-                            android:text="@string/s12q5" />
-
-                        <TextView
-                            android:id="@+id/q_s12q5"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s12q5"
-                            android:layout_alignBottom="@id/qtxt_s12q5"
-                            android:text="@string/Q_s12q5" />
-                    </RelativeLayout>
-
-                    <LinearLayout
-                        android:id="@+id/s12q5check"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="@string/s12q5title1" />
-
-                        <CheckBox
-                            android:id="@+id/s12q501"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q501" />
-
-                        <CheckBox
-                            android:id="@+id/s12q502"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q502" />
-
-                        <CheckBox
-                            android:id="@+id/s12q503"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q503" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="@string/s12q5title2" />
-
-                        <CheckBox
-                            android:id="@+id/s12q504"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q504" />
-
-                        <CheckBox
-                            android:id="@+id/s12q505"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q505" />
-
-                        <CheckBox
-                            android:id="@+id/s12q596"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q596" />
-
-                        <EditText
-                            android:id="@+id/s12q596x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/s12q596"
-                            android:tag="s12q596"
-                            android:text='@{s12q596.checked ? s12q596x.getText().toString() : ""}'
-                            android:visibility='@{s12q596.checked? View.VISIBLE : View.GONE}' />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- s12q6  CheckBox   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVs12q6"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_s12q6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s12q6"
-                            android:text="@string/s12q6" />
-
-                        <TextView
-                            android:id="@+id/q_s12q6"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s12q6"
-                            android:layout_alignBottom="@id/qtxt_s12q6"
-                            android:text="@string/Q_s12q6" />
-                    </RelativeLayout>
-
-                    <LinearLayout
-                        android:id="@+id/s12q6check"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:tag="0">
-
-                        <CheckBox
-                            android:id="@+id/s12q601"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q601" />
-
-                        <CheckBox
-                            android:id="@+id/s12q602"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q602" />
-
-                        <CheckBox
-                            android:id="@+id/s12q603"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q603" />
-
-                        <CheckBox
-                            android:id="@+id/s12q604"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q604" />
-
-                        <CheckBox
-                            android:id="@+id/s12q696"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q696" />
-                    </LinearLayout>
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
 

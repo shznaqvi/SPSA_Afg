@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -30,7 +31,11 @@ public class Section12Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-
+        bi.s12q4.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.s12q401.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs12q4);
+            }
+        }));
         /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.cvd0202);
             Clear.clearAllFields(bi.cvd0203);
