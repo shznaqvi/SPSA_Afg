@@ -37,7 +37,18 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.SectionInfoActivity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section02Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section03Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section04Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section06Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section07Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section08Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section09Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section10Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section11Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section12Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section13Activity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
@@ -288,15 +299,42 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     public void openSpecificActivity(View v) {
         Intent oF = null;
         switch (v.getId()) {
-            case R.id.formA:
-                oF = new Intent(this, SectionInfoActivity.class);
+            case R.id.sec02:
+                oF = new Intent(this, Section02Activity.class);
                 break;
-         /*   case R.id.formB:
-                oF = new Intent(this, SectionCActivity.class);
+            case R.id.sec03:
+                oF = new Intent(this, Section03Activity.class);
                 break;
-            case R.id.formC:
-                oF = new Intent(this, SectionEActivity.class);
-                break;*/
+            case R.id.sec04:
+                oF = new Intent(this, Section04Activity.class);
+                break;
+            case R.id.sec05:
+                oF = new Intent(this, Section05Activity.class);
+                break;
+            case R.id.sec06:
+                oF = new Intent(this, Section06Activity.class);
+                break;
+            case R.id.sec07:
+                oF = new Intent(this, Section07Activity.class);
+                break;
+            case R.id.sec08:
+                oF = new Intent(this, Section08Activity.class);
+                break;
+            case R.id.sec09:
+                oF = new Intent(this, Section09Activity.class);
+                break;
+            case R.id.sec10:
+                oF = new Intent(this, Section10Activity.class);
+                break;
+            case R.id.sec11:
+                oF = new Intent(this, Section11Activity.class);
+                break;
+            case R.id.sec12:
+                oF = new Intent(this, Section12Activity.class);
+                break;
+            case R.id.sec13:
+                oF = new Intent(this, Section13Activity.class);
+                break;
             case R.id.databaseBtn:
                 oF = new Intent(this, AndroidDatabaseManager.class);
                 break;

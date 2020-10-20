@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <data>
@@ -135,111 +134,167 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:padding="0dp"
                     android:orientation="horizontal">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/formA"
-                        android:layout_width="0dp"
+                    <Button
+                        android:id="@+id/sec01"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:elevation="@dimen/cardview_default_elevation"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{callback::openSpecificActivity}"
-                        app:cardCornerRadius="@dimen/cardview_default_radius">
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryDark"
-                            android:padding="12dp">
+                        android:text="01" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center_horizontal"
-                                android:drawableStart="@drawable/open_form"
-                                android:drawablePadding="12dp"
-                                android:text="@string/openScreening"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/white" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/formB"
-                        android:layout_width="0dp"
+                    <Button
+                        android:id="@+id/sec02"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="12dp"
-                        android:layout_weight="1.4"
-                        android:clickable="true"
-                        android:elevation="@dimen/cardview_default_elevation"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{callback::openSpecificActivity}"
-                        app:cardCornerRadius="@dimen/cardview_default_radius">
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryDark"
-                            android:padding="12dp">
+                        android:text="02" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center_horizontal"
-                                android:drawableStart="@drawable/open_form"
-                                android:drawablePadding="12dp"
-                                android:text="@string/openPretest"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/white" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/formC"
-                        android:layout_width="0dp"
+                    <Button
+                        android:id="@+id/sec03"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_margin="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:elevation="@dimen/cardview_default_elevation"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{callback::openSpecificActivity}"
-                        app:cardCornerRadius="@dimen/cardview_default_radius">
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryDark"
-                            android:padding="12dp">
+                        android:text="03" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center_horizontal"
-                                android:drawableStart="@drawable/open_form"
-                                android:drawablePadding="12dp"
-                                android:text="@string/openFollowup"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                                android:textColor="@color/white" />
+                    <Button
+                        android:id="@+id/sec04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
 
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
+                        android:padding="0dp"
+                        android:text="04" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+
+                    android:padding="0dp">
+
+                    <Button
+                        android:id="@+id/sec05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+
+                        android:padding="0dp"
+                        android:text="05" />
+
+                    <Button
+                        android:id="@+id/sec06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+
+                        android:padding="0dp"
+                        android:text="06" />
+
+                    <Button
+                        android:id="@+id/sec07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="07" />
+
+                    <Button
+                        android:id="@+id/sec08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="08" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sec09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="09" />
+
+                    <Button
+                        android:id="@+id/sec10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="10" />
+
+                    <Button
+                        android:id="@+id/sec11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="11" />
+
+                    <Button
+                        android:id="@+id/sec12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="0dp"
+
+                        android:text="12" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/sec13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:onClick='@{callback::openSpecificActivity}'
+                    android:padding="0dp"
+
+                    android:text="13" />
 
                 <LinearLayout
                     android:id="@+id/admin"
@@ -248,74 +303,40 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+
                     android:orientation="horizontal">
 
-                    <androidx.cardview.widget.CardView
+                    <Button
                         android:id="@+id/uploadData"
                         android:layout_width="0dp"
+                        android:layout_marginStart="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{callback::openSpecificActivity}'>
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/ic_upload"
+                        android:drawablePadding="12dp"
+                        android:gravity="center_vertical"
+                        android:onClick='@{callback::openSpecificActivity}'
+                        android:padding="8dp"
+                        android:text="@string/btnUpload"
+                        android:textColor="@color/colorPrimaryDark" />
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="10dp"
-                            android:padding="12dp">
-
-
-                            <TextView
-                                android:id="@+id/formText2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginStart="10dp"
-                                android:drawableStart="@drawable/ic_upload"
-                                android:drawablePadding="12dp"
-                                android:text="@string/btnUpload"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                android:textColor="@color/colorPrimaryDark" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
+                    <Button
                         android:id="@+id/databaseBtn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{callback::openSpecificActivity}">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_margin="10dp"
-                            android:padding="12dp">
-
-
-                            <TextView
-                                android:id="@+id/formText3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_marginStart="10dp"
-                                android:drawableStart="@drawable/database"
-                                android:drawablePadding="12dp"
-                                android:text="@string/database"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                android:textColor="@color/colorPrimaryDark" />
-
-                        </RelativeLayout>
-
-                    </androidx.cardview.widget.CardView>
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/database"
+                        android:drawablePadding="12dp"
+                        android:gravity="center_vertical"
+                        android:onClick="@{callback::openSpecificActivity}"
+                        android:padding="8dp"
+                        android:text="@string/database"
+                        android:textColor="@color/colorPrimaryDark" />
 
 
                 </LinearLayout>
