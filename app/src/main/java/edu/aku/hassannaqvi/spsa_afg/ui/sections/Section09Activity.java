@@ -39,6 +39,7 @@ public class Section09Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section09);
+        bi.setForm(form);
         bi.setCallback(this);
 
         setupSkips();
@@ -51,24 +52,22 @@ public class Section09Activity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        JSONObject json = new JSONObject();
-        json.put("s9q1", bi.s9q1.getText().toString());
 
-        json.put("s9q2", bi.s9q2.getText().toString());
+        form.setS9q1(bi.s9q1.getText().toString());
 
-        json.put("s9q3", bi.s9q301.isChecked() ? "1"
+        form.setS9q2(bi.s9q2.getText().toString());
+
+        form.setS9q3( bi.s9q301.isChecked() ? "1"
                 : bi.s9q302.isChecked() ? "2"
                 :  "-1");
 
-        json.put("s9q401", bi.s9q401.getText().toString());
+        form.setS9q401x(bi.s9q401x.getText().toString());
+        form.setS9q402x(bi.s9q402x.getText().toString());
+        form.setS9q501x(bi.s9q501x.getText().toString());
+        form.setS9q502x(bi.s9q502x.getText().toString());
+        form.setS9q6(bi.s9q6.getText().toString());
 
-        json.put("s9q402", bi.s9q402.getText().toString());
 
-        json.put("s9q501", bi.s9q501.getText().toString());
-
-        json.put("s9q502", bi.s9q502.getText().toString());
-
-        json.put("s9q6", bi.s9q6.getText().toString());
 
 
 
