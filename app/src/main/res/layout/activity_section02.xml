@@ -152,7 +152,7 @@
                             android:layout_alignBottom="@id/qtxt_s2q2"
                             android:text="@string/Q_s2q2" />
                     </RelativeLayout>
-
+<!--
                     <RadioGroup
                         android:id="@+id/s2q2"
                         android:layout_width="match_parent"
@@ -186,7 +186,7 @@
                             android:text='@{s2q296.checked ? s2q296x.getText().toString() : ""}'
                             android:visibility='@{s2q296.checked? View.VISIBLE : View.GONE}' />
 
-                    </RadioGroup>
+                    </RadioGroup>-->
 
                 </LinearLayout>
 
@@ -3440,7 +3440,7 @@
                             android:text="@string/Q_s2q20" />
                     </RelativeLayout>
 
-                    <RadioGroup
+              <!--      <RadioGroup
                         android:id="@+id/s2q21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -3463,7 +3463,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s2q20098" />
 
-                    </RadioGroup>
+                    </RadioGroup>-->
 
                 </LinearLayout>
 
