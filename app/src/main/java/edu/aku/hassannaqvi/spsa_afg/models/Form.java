@@ -413,7 +413,7 @@ public class Form extends LiveData<Form> {
     public String s13q1005;
     public String s13q1006;
     public String s13q1007;
-    public String s13q202x;
+
 
 
     public Form() {
@@ -3968,19 +3968,7 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-
-    public String getS13q202x() {  return s13q202x; }
-
-    public Form setS13q202x(String s13q202x) {
-        this.s13q202x = s13q202x;
-        return this;
-    }
-
-
-
-
-
-    public String getFormType() {
+  public String getFormType() {
         return formType;
     }
 

@@ -40,7 +40,7 @@ public class Section06Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section06);
         bi.setCallback(this);
-
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -54,16 +54,11 @@ public class Section06Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
-        json.put("s6q1a", bi.s6q1a.getText().toString());
-
-        json.put("s6q1b", bi.s6q1b.getText().toString());
-
-        json.put("s6q2a", bi.s6q2a.getText().toString());
-
-        json.put("s6q2b", bi.s6q2b.getText().toString());
-
-        json.put("s6q3", bi.s6q3.getText().toString());
+        form.setS6q1ax(bi.s6q1ax.getText().toString());
+        form.setS6q1bx(bi.s6q1bx.getText().toString());
+        form.setS6q2ax(bi.s6q2ax.getText().toString());
+        form.setS6q2bx(bi.s6q2bx.getText().toString());
+        form.setS6q3(bi.s6q3.getText().toString());
 
 
 
