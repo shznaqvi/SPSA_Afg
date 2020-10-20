@@ -52,7 +52,7 @@ public class Section06Activity extends AppCompatActivity {
 
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft()  {
 
 
         form.setS6q1a(bi.s6q1a.getText().toString());
