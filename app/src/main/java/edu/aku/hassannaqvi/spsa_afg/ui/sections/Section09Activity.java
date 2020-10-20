@@ -51,7 +51,7 @@ public class Section09Activity extends AppCompatActivity {
 
     }
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft()  {
 
         form.setS9q1(bi.s9q1.getText().toString());
 
