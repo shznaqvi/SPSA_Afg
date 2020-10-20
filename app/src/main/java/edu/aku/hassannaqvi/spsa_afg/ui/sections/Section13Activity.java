@@ -1,8 +1,5 @@
 package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -10,21 +7,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
-
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection13Binding;
-
-import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
+
 import static edu.aku.hassannaqvi.spsa_afg.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 import static edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt.contextBackActivity;
@@ -84,15 +73,15 @@ public class Section13Activity extends AppCompatActivity {
                 :  "-1");
 
         form.setS13q596x(bi.s13q596x.getText().toString());
-        form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1";
+        form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
 
-        form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1";
+        form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1");
 
-        form.setS13q603(bi.s13q603.isChecked() ? "3" : "-1";
+        form.setS13q603(bi.s13q603.isChecked() ? "3" : "-1");
 
-        form.setS13q696(bi.s13q696.isChecked() ? "96" : "-1";
+        form.setS13q696(bi.s13q696.isChecked() ? "96" : "-1");
 
-        form.setS13q698(bi.s13q698.isChecked() ? "98" : "-1";
+        form.setS13q698(bi.s13q698.isChecked() ? "98" : "-1");
 
         form.setS13q7( bi.s13q701.isChecked() ? "1"
                 : bi.s13q702.isChecked() ? "2"

@@ -246,11 +246,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_PID, form.getPid());
         values.put(FormsContract.FormsTable.COLUMN_S1Q1, form.getS1q1());
         values.put(FormsContract.FormsTable.COLUMN_S1Q2, form.getS1q2());
-        values.put(FormsContract.FormsTable.COLUMN_S1Q3, form.getS1q3());
+    //    values.put(FormsContract.FormsTable.COLUMN_S1Q3, form.getS1q3());
         values.put(FormsContract.FormsTable.COLUMN_S1Q4, form.getS1q4());
-        values.put(FormsContract.FormsTable.COLUMN_S1Q5, form.getS1q5());
+        //       values.put(FormsContract.FormsTable.COLUMN_S1Q5, form.getS1q5());
         values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
-        values.put(FormsContract.FormsTable.COLUMN_SB, form.getsB());
+        values.put(FormsContract.FormsTable.COLUMN_S01, form.getS01());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS, form.getIstatus());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
@@ -302,11 +302,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_S1Q3,
+                //               FormsContract.FormsTable.COLUMN_S1Q3,
                 FormsContract.FormsTable.COLUMN_S1Q4,
                 FormsContract.FormsTable.COLUMN_S1Q5,
                 FormsContract.FormsTable.COLUMN_S1Q6,
-                FormsContract.FormsTable.COLUMN_SB,
+                FormsContract.FormsTable.COLUMN_S01,
+                FormsContract.FormsTable.COLUMN_S02,
+                FormsContract.FormsTable.COLUMN_S03,
+                FormsContract.FormsTable.COLUMN_S04,
+                FormsContract.FormsTable.COLUMN_S05,
+                FormsContract.FormsTable.COLUMN_S06,
+                FormsContract.FormsTable.COLUMN_S07,
+                FormsContract.FormsTable.COLUMN_S08,
+                FormsContract.FormsTable.COLUMN_S09,
+                FormsContract.FormsTable.COLUMN_S10,
+                FormsContract.FormsTable.COLUMN_S11,
+                FormsContract.FormsTable.COLUMN_S12,
+                FormsContract.FormsTable.COLUMN_S13,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_GPSLAT,
                 FormsContract.FormsTable.COLUMN_GPSLNG,

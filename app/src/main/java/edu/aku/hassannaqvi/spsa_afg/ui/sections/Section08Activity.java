@@ -114,30 +114,32 @@ public class Section08Activity extends AppCompatActivity {
 
         form.setS8q2a(bi.s8q2a.getText().toString());
 
+        form.setS8q2btitle1(bi.s8q2btitle1.isChecked() ? "" : "-1");
 
-        form.setS8q2b01(bi.s8q2b01.isChecked() ? "1" : "-1";
+        form.setS8q2b01(bi.s8q2b01.isChecked() ? "1" : "-1");
 
-        form.setS8q2b02(bi.s8q2b02.isChecked() ? "2" : "-1";
+        form.setS8q2b02(bi.s8q2b02.isChecked() ? "2" : "-1");
 
-        form.setS8q2b03(bi.s8q2b03.isChecked() ? "3" : "-1";
+        form.setS8q2b03(bi.s8q2b03.isChecked() ? "3" : "-1");
 
+        form.setS8q2btitle2(bi.s8q2btitle2.isChecked() ? "" : "-1");
 
-        form.setS8q2b04(bi.s8q2b04.isChecked() ? "4" : "-1";
+        form.setS8q2b04(bi.s8q2b04.isChecked() ? "4" : "-1");
 
-        form.setS8q2b05(bi.s8q2b05.isChecked() ? "5" : "-1";
+        form.setS8q2b05(bi.s8q2b05.isChecked() ? "5" : "-1");
 
-        form.setS8q2b96(bi.s8q2b96.isChecked() ? "96" : "-1";
+        form.setS8q2b96(bi.s8q2b96.isChecked() ? "96" : "-1");
 
         form.setS8q2b96x(bi.s8q2b96x.getText().toString());
-        form.setS8q2c01(bi.s8q2c01.isChecked() ? "1" : "-1";
+        form.setS8q2c01(bi.s8q2c01.isChecked() ? "1" : "-1");
 
-        form.setS8q2c02(bi.s8q2c02.isChecked() ? "2" : "-1";
+        form.setS8q2c02(bi.s8q2c02.isChecked() ? "2" : "-1");
 
-        form.setS8q2c03(bi.s8q2c03.isChecked() ? "3" : "-1";
+        form.setS8q2c03(bi.s8q2c03.isChecked() ? "3" : "-1");
 
-        form.setS8q2c04(bi.s8q2c04.isChecked() ? "4" : "-1";
+        form.setS8q2c04(bi.s8q2c04.isChecked() ? "4" : "-1");
 
-        form.setS8q2c96(bi.s8q2c96.isChecked() ? "96" : "-1";
+        form.setS8q2c96(bi.s8q2c96.isChecked() ? "96" : "-1");
 
         form.setS8q2c96x(bi.s8q2c96x.getText().toString());
         form.setS8q3(bi.s8q301.isChecked() ? "1"
@@ -182,26 +184,26 @@ public class Section08Activity extends AppCompatActivity {
 
         form.setS8q7a01x(bi.s8q7a01x.getText().toString());
         form.setS8q7a02x(bi.s8q7a02x.getText().toString());
-        form.setS8q8TITLE1(bi.s8q8title1.isChecked() ? "" : "-1";
+        form.setS8q8title1(bi.s8q8title1.isChecked() ? "" : "-1");
 
-        form.setS8q801(bi.s8q801.isChecked() ? "1" : "-1";
+        form.setS8q801(bi.s8q801.isChecked() ? "1" : "-1");
 
-        form.setS8q802(bi.s8q802.isChecked() ? "2" : "-1";
+        form.setS8q802(bi.s8q802.isChecked() ? "2" : "-1");
 
-        form.setS8q803(bi.s8q803.isChecked() ? "3" : "-1";
+        form.setS8q803(bi.s8q803.isChecked() ? "3" : "-1");
 
-        form.setS8q8TITLE2(bi.s8q8title2.isChecked() ? "" : "-1";
+        form.setS8q8title2(bi.s8q8title2.isChecked() ? "" : "-1");
 
-        form.setS8q804(bi.s8q804.isChecked() ? "4" : "-1";
+        form.setS8q804(bi.s8q804.isChecked() ? "4" : "-1");
 
-        form.setS8q805(bi.s8q805.isChecked() ? "5" : "-1";
+        form.setS8q805(bi.s8q805.isChecked() ? "5" : "-1");
 
-        form.setS8q806(bi.s8q806.isChecked() ? "6" : "-1";
+        form.setS8q806(bi.s8q806.isChecked() ? "6" : "-1");
 
-        form.setS8q896(bi.s8q896.isChecked() ? "96" : "-1";
+        form.setS8q896(bi.s8q896.isChecked() ? "96" : "-1");
 
         form.setS8q896x(bi.s8q896x.getText().toString());
-        form.setS8q899(bi.s8q899.isChecked() ? "99" : "-1";
+        form.setS8q899(bi.s8q899.isChecked() ? "99" : "-1");
 
         form.setS8q9(bi.s8q901.isChecked() ? "1"
                 : bi.s8q902.isChecked() ? "2"
@@ -242,6 +244,7 @@ public class Section08Activity extends AppCompatActivity {
                 : "-1");
 
         form.setS8q1396x(bi.s8q1396x.getText().toString());
+
 
     }
 
