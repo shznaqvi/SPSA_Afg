@@ -27,7 +27,7 @@ public class FormsContract {
         public static final String COLUMN_S1Q1 = "s1q1";
         public static final String COLUMN_S1Q2 = "s1q2";
         public static final String COLUMN_S1Q4 = "s1q4";
-        public static final String COLUMN_S1Q5 = "s1q5";
+
         public static final String COLUMN_S1Q6 = "s1q6";
         public static final String COLUMN_INFO = "info";
         public static final String COLUMN_S02 = "S02";

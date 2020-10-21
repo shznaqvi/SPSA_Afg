@@ -37,6 +37,7 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section02Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section03Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section04Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity;

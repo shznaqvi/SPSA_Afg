@@ -43,12 +43,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+   /* public void onCreate(SQLiteDatabase db) {
         db.execSQL(CreateTable.SQL_CREATE_USERS);
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_BL_RANDOM);
         db.execSQL(CreateTable.SQL_CREATE_VERSIONAPP);
-    }
+    }*/
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -58,12 +58,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    private boolean getTableNames(SQLiteDatabase db, String name) {
+/*    private boolean getTableNames(SQLiteDatabase db, String name) {
         Cursor c = db.rawQuery(
                 "SELECT name FROM sqlite_master WHERE type='table'", null);
         Asserts.checkNotNull(c);
 
-        List<String> actual = new ArrayList<>();
+        ArrayList<String> actual = new ArrayList<>();
         if (c.moveToFirst()) {
             while (!c.isAfterLast()) {
                 actual.add(c.getString(0));
@@ -74,7 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (actual.size() == 0) return false;
         return actual.contains(name);
-    }
+    }*/
 
 
     public int syncBLRandom(JSONArray blList) {
@@ -244,6 +244,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_FORMDATE, form.getFormdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, form.getFormType());
         values.put(FormsContract.FormsTable.COLUMN_PID, form.getPid());
+         values.put(FormsContract.FormsTable.COLUMN_S1Q1,form.getS1q1());
+         values.put(FormsContract.FormsTable.COLUMN_S1Q2,form.getS1q2());
+         values.put(FormsContract.FormsTable.COLUMN_S1Q4,form.getS1q4());
+
+         values.put(FormsContract.FormsTable.COLUMN_S1Q6,form.getS1q6());
+         values.put(FormsContract.FormsTable.COLUMN_INFO,form.getInfo());
+         values.put(FormsContract.FormsTable.COLUMN_S02 ,form.getS02());
+         values.put(FormsContract.FormsTable.COLUMN_S03 ,form.getS03());
+         values.put(FormsContract.FormsTable.COLUMN_S04 ,form.getS04());
+         values.put(FormsContract.FormsTable.COLUMN_S05 ,form.getS05());
+         values.put(FormsContract.FormsTable.COLUMN_S06 ,form.getS06());
+         values.put(FormsContract.FormsTable.COLUMN_S07 ,form.getS07());
+         values.put(FormsContract.FormsTable.COLUMN_S08 ,form.getS08());
+         values.put(FormsContract.FormsTable.COLUMN_S09 ,form.getS09());
+         values.put(FormsContract.FormsTable.COLUMN_S10 ,form.getS10());
+         values.put(FormsContract.FormsTable.COLUMN_S11 ,form.getS11());
+         values.put(FormsContract.FormsTable.COLUMN_S12 ,form.getS12());
+         values.put(FormsContract.FormsTable.COLUMN_S13 ,form.getS13());
+
         values.put(FormsContract.FormsTable.COLUMN_S1Q1, form.getS1q1());
         values.put(FormsContract.FormsTable.COLUMN_S1Q2, form.getS1q2());
     //    values.put(FormsContract.FormsTable.COLUMN_S1Q3, form.getS1q3());
@@ -272,7 +291,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public int updateFormID() {
+ /*   public int updateFormID() {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
@@ -289,7 +308,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
         return count;
     }
-
+*/
     public Collection<Form> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -305,9 +324,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 //               FormsContract.FormsTable.COLUMN_S1Q3,
                 FormsContract.FormsTable.COLUMN_S1Q4,
-                FormsContract.FormsTable.COLUMN_S1Q5,
+               /* FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-                FormsContract.FormsTable.COLUMN_S01,
+               /* FormsContract.FormsTable.COLUMN_S01,*/
                 FormsContract.FormsTable.COLUMN_S02,
                 FormsContract.FormsTable.COLUMN_S03,
                 FormsContract.FormsTable.COLUMN_S04,
@@ -335,8 +354,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String groupBy = null;
         String having = null;
 
+
         String orderBy =
                 FormsContract.FormsTable.COLUMN_ID + " ASC";
+
+
 
         Collection<Form> allForms = new ArrayList<Form>();
         try {
@@ -351,7 +373,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 Form form = new Form();
-                allForms.add(form.Hydrate(c));
+
+                allForms = new Form().infoHydrate(c);
+                allForms = new Form().s02Hydrate(c);
+                allForms = new Form().s03Hydrate(c);
+                allForms = new Form().s04Hydrate(c);
+                allForms = new Form().s05Hydrate(c);
+                allForms = new Form().s06Hydrate(c);
+                allForms = new Form().s07Hydrate(c);
+                allForms = new Form().s08Hydrate(c);
+                allForms = new Form().s09Hydrate(c);
+                allForms = new Form().s10Hydrate(c);
+                allForms = new Form().s11Hydrate(c);
+                allForms = new Form().s12Hydrate(c);
+                allForms = new Form().s13Hydrate(c);
+
             }
         } finally {
             if (c != null) {
@@ -439,11 +475,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_S1Q3,
+               /* FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-                FormsContract.FormsTable.COLUMN_S1Q5,
+                /*FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-                FormsContract.FormsTable.COLUMN_SB,
+                /*FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_ISTATUS96x,
                 FormsContract.FormsTable.COLUMN_ENDINGDATETIME,
@@ -509,11 +545,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_S1Q3,
+                /*FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-                FormsContract.FormsTable.COLUMN_S1Q5,
+              /*  FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-                FormsContract.FormsTable.COLUMN_SB,
+                /*FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_SYNCED,
 
@@ -766,14 +802,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_S1Q3,
+                /*FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-                FormsContract.FormsTable.COLUMN_S1Q5,
+                /*FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_ISTATUS96x,
                 FormsContract.FormsTable.COLUMN_ENDINGDATETIME,
-                FormsContract.FormsTable.COLUMN_SB,
+                /*FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_GPSLAT,
                 FormsContract.FormsTable.COLUMN_GPSLNG,
                 FormsContract.FormsTable.COLUMN_GPSDATE,
@@ -801,7 +837,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                allForms = new Form().Hydrate(c);
+                /*allForms = new Form().Hydrate(c);*/
             }
         } finally {
             if (c != null) {

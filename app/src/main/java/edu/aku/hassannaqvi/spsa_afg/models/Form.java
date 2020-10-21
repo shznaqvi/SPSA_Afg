@@ -1,5 +1,7 @@
 package edu.aku.hassannaqvi.spsa_afg.models;
 
+import android.database.Cursor;
+
 import androidx.lifecycle.LiveData;
 
 import com.google.gson.GsonBuilder;
@@ -3845,11 +3847,9 @@ public class Form extends LiveData<Form> {
    }
 
 
-    private void infoHydrate(String string) {
+    public void infoHydrate(Cursor cursor) {
 
-        if (string != null) {
-            try {
-                JSONObject json = new JSONObject(string);
+
 
                 this.s1qno = json.getString("s1qno");
                 this.s1q1 = json.getString("s1q1");
@@ -3878,14 +3878,12 @@ public class Form extends LiveData<Form> {
 
 
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
+
+
     }
 
 
-    private void s02Hydrate(String string) {
+    public void s02Hydrate(String string) {
 
         if (string != null) {
             try {
@@ -3965,7 +3963,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s03Hydrate(String string) {
+    public void s03Hydrate(String string) {
 
         if (string != null) {
 
@@ -4004,7 +4002,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s04Hydrate(String string) {
+    public void s04Hydrate(String string) {
 
         if (string != null) {
 
@@ -4033,7 +4031,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s05Hydrate(String string) {
+    public void s05Hydrate(String string) {
 
         if (string != null) {
 
@@ -4067,7 +4065,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s06Hydrate(String string) {
+    public void s06Hydrate(String string) {
 
         if (string != null) {
 
@@ -4087,7 +4085,7 @@ public class Form extends LiveData<Form> {
             }
         }
     }
-    private void s07Hydrate(String string) {
+    public void s07Hydrate(String string) {
 
         if (string != null) {
 
@@ -4119,7 +4117,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s08Hydrate(String string) {
+    public void s08Hydrate(String string) {
 
         if (string != null) {
 
@@ -4187,7 +4185,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s09Hydrate(String string) {
+    public void s09Hydrate(String string) {
 
         if (string != null) {
 
@@ -4212,7 +4210,7 @@ public class Form extends LiveData<Form> {
     }
 
 
-    private void s10Hydrate(String string) {
+    public void s10Hydrate(String string) {
 
         if (string != null) {
 
@@ -4248,7 +4246,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s11Hydrate(String string) {
+    public void s11Hydrate(String string) {
 
         if (string != null) {
 
@@ -4311,7 +4309,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s12Hydrate(String string) {
+    public void s12Hydrate(String string) {
 
         if (string != null) {
 
@@ -4396,7 +4394,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s13Hydrate(String string) {
+    public void s13Hydrate(String string) {
 
         if (string != null) {
 

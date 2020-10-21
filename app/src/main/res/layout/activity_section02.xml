@@ -396,7 +396,8 @@
             <!-- s2q5  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q5"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s2q402.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -606,7 +607,11 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+            <!-- Skip Pattern Sec2Q6   -->
+        <LinearLayout
+            android:id="@+id/fldGrpSec2Q6"
+            style="@style/vlinearlayout"
+            android:visibility='@{s2q608.checked? View.GONE : View.VISIBLE || s2q609.checked? View.GONE : View.VISIBLE }'>
             <!-- s2q7  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q7"
@@ -667,7 +672,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility='@{s2q702.checked? View.GONE : View.VISIBLE }'>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -730,6 +736,8 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+        </LinearLayout>>
+
 
             <!-- s2q9  Title   -->
             <androidx.cardview.widget.CardView
@@ -2911,7 +2919,8 @@
             <!-- s2q17  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q17"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s2q1602.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3066,6 +3075,14 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
+            <!-- Skip Pattern Sec2Q18   -->
+        <LinearLayout
+            android:id="@+id/fldGrpSec2Q18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility='@{s2q1802.checked ? View.VISIBLE : View.GONE}'>
             <!-- s2q19  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q19"
@@ -3454,7 +3471,10 @@
                             android:text="@string/s2q20098" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
