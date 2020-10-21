@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.google.android.gms.common.internal.Asserts;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,7 +18,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-
+import java.util.List;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.spsa_afg.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
@@ -346,45 +349,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_APPVERSION,
 
         };
-        String whereClause = null;
-        String[] whereArgs = null;
+
+        String whereClause = FormsTable.COLUMN_S1Q1 + "=? AND " + FormsTable.COLUMN_PID + "=?";
+        /*String[] whereArgs = {district, refno};*/
         String groupBy = null;
         String having = null;
+        String orderBy = FormsTable._ID + " ASC";
+        Form allForms = null;
 
 
-        String orderBy =
-                FormsContract.FormsTable.COLUMN_ID + " ASC";
 
 
 
-        Collection<Form> allForms = new ArrayList<Form>();
+
         try {
-            c = db.query(
+           /* c = db.query(
                     FormsContract.FormsTable.TABLE_NAME_FORMS,  // The table to query
                     columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
+                    whereClause,                 // The values for the WHERE clause
                     groupBy,                   // don't group the rows
                     having,                    // don't filter by row groups
                     orderBy                    // The sort order
-            );
+            );*/
             while (c.moveToNext()) {
-                Form form = new Form();
-
-               /* allForms = new Form().infoHydrate(c);
-                allForms = new Form().s02Hydrate(c);
-                allForms = new Form().s03Hydrate(c);
-                allForms = new Form().s04Hydrate(c);
-                allForms = new Form().s05Hydrate(c);
-                allForms = new Form().s06Hydrate(c);
-                allForms = new Form().s07Hydrate(c);
-                allForms = new Form().s08Hydrate(c);
-                allForms = new Form().s09Hydrate(c);
-                allForms = new Form().s10Hydrate(c);
-                allForms = new Form().s11Hydrate(c);
-                allForms = new Form().s12Hydrate(c);
-                allForms = new Form().s13Hydrate(c);*/
-
+                allForms = new Form().Hydrate(c);
             }
         } finally {
             if (c != null) {
@@ -394,7 +382,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.close();
             }
         }
-        return allForms;
+        return (Collection<Form>) allForms;
     }
 
     public Collection<Form> checkFormExist() {
@@ -410,11 +398,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                //        FormsContract.FormsTable.COLUMN_S1Q3,
+               /* FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-                //        FormsContract.FormsTable.COLUMN_S1Q5,
+               /* FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-                //        FormsContract.FormsTable.COLUMN_SB,
+               /* FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_GPSLAT,
                 FormsContract.FormsTable.COLUMN_GPSLNG,
@@ -445,8 +433,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                Form info = new Form();
-                //    allForms.add(info.Hydrate(c));
+                Form form = new Form();
+                allForms.add(form.Hydrate(c));
             }
         } finally {
             if (c != null) {
@@ -516,8 +504,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                Form form = new Form();
-                //    allForms.add(form.Hydrate(c));
+                allForms.add(new Form().Hydrate(c));
             }
         } finally {
             if (c != null) {
@@ -583,11 +570,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setPid(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_PID)));
                 form.setS1q1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q1)));
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
-                //        form.setS1q3(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q3)));
+               /* form.setS1q3(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q3)));*/
                 form.setS1q4(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q4)));
-                //        form.setS1q5(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q5)));
+               /* form.setS1q5(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q5)));*/
                 form.setS1q6(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q6)));
-                //        form.setsB(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)));
+                /*form.setsB(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)));*/
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);

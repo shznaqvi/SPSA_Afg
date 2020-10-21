@@ -3847,11 +3847,13 @@ public class Form extends LiveData<Form> {
    }
 
 
-    public void infoHydrate(Cursor cursor) {
+    private void infoHydrate(String string) {
 
+        if (string != null) {
+            try {
+                JSONObject json = new JSONObject(string);
 
-
-               /* this.s1qno = json.getString("s1qno");
+                this.s1qno = json.getString("s1qno");
                 this.s1q1 = json.getString("s1q1");
                 this.s1q2 = json.getString("s1q2");
                 this.s1q4 = json.getString("s1q4");
@@ -3873,14 +3875,16 @@ public class Form extends LiveData<Form> {
                 this.s1q20b = json.getString("s1q20b");
                 this.s1q20c = json.getString("s1q20c");
                 this.s1q20d = json.getString("s1q20d");
-                this.s1q20e = json.getString("s1q20e");*/
+                this.s1q20e = json.getString("s1q20e");
 
-
-
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
-    public void s02Hydrate(String string) {
+    private void s02Hydrate(String string) {
 
         if (string != null) {
             try {
@@ -3960,7 +3964,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s03Hydrate(String string) {
+    private void s03Hydrate(String string) {
 
         if (string != null) {
 
@@ -3999,7 +4003,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s04Hydrate(String string) {
+    private void s04Hydrate(String string) {
 
         if (string != null) {
 
@@ -4028,7 +4032,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s05Hydrate(String string) {
+    private void s05Hydrate(String string) {
 
         if (string != null) {
 
@@ -4062,7 +4066,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s06Hydrate(String string) {
+    private void s06Hydrate(String string) {
 
         if (string != null) {
 
@@ -4082,7 +4086,7 @@ public class Form extends LiveData<Form> {
             }
         }
     }
-    public void s07Hydrate(String string) {
+    private void s07Hydrate(String string) {
 
         if (string != null) {
 
@@ -4114,7 +4118,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s08Hydrate(String string) {
+    private void s08Hydrate(String string) {
 
         if (string != null) {
 
@@ -4182,7 +4186,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s09Hydrate(String string) {
+    private void s09Hydrate(String string) {
 
         if (string != null) {
 
@@ -4207,7 +4211,7 @@ public class Form extends LiveData<Form> {
     }
 
 
-    public void s10Hydrate(String string) {
+    private void s10Hydrate(String string) {
 
         if (string != null) {
 
@@ -4243,7 +4247,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s11Hydrate(String string) {
+    private void s11Hydrate(String string) {
 
         if (string != null) {
 
@@ -4306,7 +4310,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s12Hydrate(String string) {
+    private void s12Hydrate(String string) {
 
         if (string != null) {
 
@@ -4391,7 +4395,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    public void s13Hydrate(String string) {
+    private void s13Hydrate(String string) {
 
         if (string != null) {
 
@@ -4444,6 +4448,65 @@ public class Form extends LiveData<Form> {
                 e.printStackTrace();
             }
         }
+    }
+
+    public Form Hydrate(Cursor cursor) {
+        this._ID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ID));
+        this._UID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UID));
+        this.username = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USERNAME));
+        this.sysdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYSDATE));
+        this.formdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMDATE));
+        this.formType = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
+        this.pid = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_PID));
+        this.s1q1 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q1));
+        this.s1q2 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q2));
+       /* this.s1q3 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q3));*/
+        this.s1q4 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q4));
+       /* this.s1q5 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q5));*/
+        this.s1q6 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S1Q6));
+        this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
+        this.istatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS96x));
+        this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
+        this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
+        this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
+        this.gpsDT = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
+        this.gpsAcc = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSACC));
+        this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
+        this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
+        this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
+
+             if (this.formType.equals("1")) {
+                 infoHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INFO)));
+                 s02Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S02)));
+                 s03Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03)));
+                 s03Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03)));
+                 s04Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S04)));
+                 s05Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S05)));
+                 s06Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S06)));
+                 s07Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S07)));
+                 s08Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S08)));
+                 s09Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S09)));
+                 s10Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S10)));
+                 s11Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S11)));
+                 s12Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S12)));
+                 s13Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S13)));
+             }
+             else
+                 this.Info = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INFO));
+                 this.S02 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S02));
+                 this.S03 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03));
+                 this.S04 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S04));
+                 this.S05 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S05));
+                 this.S06 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S06));
+                 this.S07 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S07));
+                 this.S08 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S08));
+                 this.S09 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S09));
+                 this.S10 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S10));
+                 this.S11 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S11));
+                 this.S12 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S12));
+                 this.S13 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S13));
+
+        return this;
     }
 
     public String toString() {
