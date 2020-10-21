@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -37,6 +38,52 @@ public class Section05Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
+        bi.s5q1a.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q1a02.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q2);
+            }
+        }));
+        bi.s5q2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q202.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q3);
+            }
+        }));
+        bi.s5q3.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q302.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q4);
+            }
+        }));
+        bi.s5q4.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q402.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q5);
+            }
+        }));
+        bi.s5q5.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q502.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q6);
+            }
+        }));
+
+        bi.s5q6.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q602.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q7);
+            }
+        }));
+        bi.s5q7.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q702.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q8);
+            }
+        }));
+        bi.s5q8.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q802.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q9);
+            }
+        }));
+        bi.s5q9.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s5q902.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs5q9a);
+            }
+        }));
         /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.cvd0202);
             Clear.clearAllFields(bi.cvd0203);

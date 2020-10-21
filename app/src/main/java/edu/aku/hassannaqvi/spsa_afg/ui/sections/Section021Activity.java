@@ -44,7 +44,7 @@ public class Section021Activity extends AppCompatActivity {
         }));
 
         bi.s2q6.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s2q608.getId() ||i == bi.s2q609.getId()) {
+            if (i == bi.s2q608.getId() || i == bi.s2q609.getId()) {
                 Clear.clearAllFields(bi.fldGrpSec2Q6);
             }
         }));
