@@ -250,7 +250,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_S1Q4, form.getS1q4());
         //       values.put(FormsContract.FormsTable.COLUMN_S1Q5, form.getS1q5());
         values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
-        values.put(FormsContract.FormsTable.COLUMN_S01, form.getS01());
+        values.put(FormsContract.FormsTable.COLUMN_INFO, form.getInfo());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS, form.getIstatus());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
@@ -261,6 +261,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, form.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, form.getAppversion());
+
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;

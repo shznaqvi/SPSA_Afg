@@ -78,13 +78,9 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addForm(form);
-        form.set_ID(String.valueOf(updcount));
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_INFO, form.infotoString(true));
         if (updcount > 0) {
-            form.set_UID(form.getDeviceID() + form.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();

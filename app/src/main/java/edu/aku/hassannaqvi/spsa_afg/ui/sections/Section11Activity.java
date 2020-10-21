@@ -62,11 +62,11 @@ public class Section11Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S11, fc.getsG());
-        if (updcount == 1) {
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S11, form.s11toString(true));
+        if (updcount > 0) {
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
