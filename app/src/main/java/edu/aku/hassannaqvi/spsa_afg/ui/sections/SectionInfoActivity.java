@@ -499,7 +499,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_section_11);
+            setContentView(R.layout.activity_section1101);
         }
     }
 }

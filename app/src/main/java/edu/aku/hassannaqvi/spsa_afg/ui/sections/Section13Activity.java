@@ -1,8 +1,5 @@
 package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -10,21 +7,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
-
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection13Binding;
-
+import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.EndingActivity;
+
 import static edu.aku.hassannaqvi.spsa_afg.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 import static edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt.contextBackActivity;
@@ -148,10 +140,7 @@ public class Section13Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-        } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 
