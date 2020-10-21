@@ -3851,7 +3851,7 @@ public class Form extends LiveData<Form> {
 
 
 
-                this.s1qno = json.getString("s1qno");
+               /* this.s1qno = json.getString("s1qno");
                 this.s1q1 = json.getString("s1q1");
                 this.s1q2 = json.getString("s1q2");
                 this.s1q4 = json.getString("s1q4");
@@ -3873,10 +3873,7 @@ public class Form extends LiveData<Form> {
                 this.s1q20b = json.getString("s1q20b");
                 this.s1q20c = json.getString("s1q20c");
                 this.s1q20d = json.getString("s1q20d");
-                this.s1q20e = json.getString("s1q20e");
-
-
-
+                this.s1q20e = json.getString("s1q20e");*/
 
 
 

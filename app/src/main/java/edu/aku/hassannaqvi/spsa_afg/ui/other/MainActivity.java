@@ -28,6 +28,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
@@ -37,7 +38,7 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section02Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section021Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section03Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section04Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity;
@@ -46,7 +47,7 @@ import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section07Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section08Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section09Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section10Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section11Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section1101Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section12Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section13Activity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
@@ -60,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
 
     static File file;
     ActivityMainBinding bi;
-    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime());
+    String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
     SharedPreferences sharedPrefDownload;
     SharedPreferences.Editor editorDownload;
     DownloadManager downloadManager;
@@ -300,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         Intent oF = null;
         switch (v.getId()) {
             case R.id.sec02:
-                oF = new Intent(this, Section02Activity.class);
+                oF = new Intent(this, Section021Activity.class);
                 break;
             case R.id.sec03:
                 oF = new Intent(this, Section03Activity.class);
@@ -327,7 +328,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 oF = new Intent(this, Section10Activity.class);
                 break;
             case R.id.sec11:
-                oF = new Intent(this, Section11Activity.class);
+                oF = new Intent(this, Section1101Activity.class);
                 break;
             case R.id.sec12:
                 oF = new Intent(this, Section12Activity.class);
