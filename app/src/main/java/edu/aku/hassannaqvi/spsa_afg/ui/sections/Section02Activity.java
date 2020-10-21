@@ -7,10 +7,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
@@ -37,10 +37,17 @@ public class Section02Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0202);
-        }));*/
+        bi.s2q4.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s2q401.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs2q6);
+            }
+        }));
+
+        bi.s2q6.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s2q608.getId() || i == bi.s2q609.getId()) {
+                Clear.clearAllFields(bi.llgrpsec206i);
+            }
+        }));
 
     }
 
