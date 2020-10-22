@@ -9,8 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.google.android.gms.common.internal.Asserts;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,10 +16,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
+
 import edu.aku.hassannaqvi.spsa_afg.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.spsa_afg.models.BLRandom;
@@ -248,9 +246,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
          values.put(FormsContract.FormsTable.COLUMN_S1Q2,form.getS1q2());
          values.put(FormsContract.FormsTable.COLUMN_S1Q4,form.getS1q4());
 
-         values.put(FormsContract.FormsTable.COLUMN_S1Q6,form.getS1q6());
-         values.put(FormsContract.FormsTable.COLUMN_INFO,form.getInfo());
-         values.put(FormsContract.FormsTable.COLUMN_S02 ,form.getS02());
+        values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
+        values.put(FormsContract.FormsTable.COLUMN_SINFO, form.getInfo());
+        values.put(FormsContract.FormsTable.COLUMN_S02, form.getS02());
          values.put(FormsContract.FormsTable.COLUMN_S03 ,form.getS03());
          values.put(FormsContract.FormsTable.COLUMN_S04 ,form.getS04());
          values.put(FormsContract.FormsTable.COLUMN_S05 ,form.getS05());
@@ -269,7 +267,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_S1Q4, form.getS1q4());
         //       values.put(FormsContract.FormsTable.COLUMN_S1Q5, form.getS1q5());
         values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
-        values.put(FormsContract.FormsTable.COLUMN_INFO, form.getInfo());
+        values.put(FormsContract.FormsTable.COLUMN_SINFO, form.getInfo());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS, form.getIstatus());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
