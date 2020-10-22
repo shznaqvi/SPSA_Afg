@@ -56,8 +56,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private void setupSkip() {
-        bi.a06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla07));
-        bi.a07.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla08));
+      /*  bi.a06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla07));
+        bi.a07.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla08));*/
     }
 
 
@@ -93,262 +93,79 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        form = new Form();
-        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
 
-        /*form.setA01(bi.a01.getText().toString());
-        form.setA02(bi.a02.getText().toString());
-        form.setA03(MainApp.userName);
 
-        form.setDeviceID(MainApp.appInfo.getDeviceID());
-        form.setDevicetagID(MainApp.appInfo.getTagName());
-        form.setAppversion(MainApp.appInfo.getAppVersion());
+        form.setS1qno(bi.s1qno.getText().toString());
 
-        form.setA04(bi.a0401.isChecked() ? "1"
-                : bi.a0402.isChecked() ? "2"
-                : bi.a0403.isChecked() ? "3"
-                : bi.a0404.isChecked() ? "4"
-                : bi.a0405.isChecked() ? "5"
-                : bi.a0406.isChecked() ? "6"
-                : "-1");
+        form.setS1q1( bi.s1q101.isChecked() ? "1"
+                : bi.s1q102.isChecked() ? "2"
+                :  "-1");
 
-        form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
+        form.setS1q2(bi.s1q2.getText().toString());
 
-        form.setRefno(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
+        form.setS1q4(bi.s1q4.getText().toString());
 
-        form.setA06(bi.a0601.isChecked() ? "1"
-                : bi.a0602.isChecked() ? "2"
-                : bi.a0603.isChecked() ? "3"
-                : bi.a0604.isChecked() ? "4"
-                : bi.a0605.isChecked() ? "5"
-                : bi.a0606.isChecked() ? "6"
-                : bi.a0607.isChecked() ? "7"
-                : bi.a0696.isChecked() ? "96"
-                : "-1");
+        form.setS1q6(bi.s1q6.getText().toString());
 
-        form.setA07(bi.a0701.isChecked() ? "1"
-                : bi.a0702.isChecked() ? "2"
-                : "-1");
+        form.setS1q8(bi.s1q8.getText().toString());
 
-        form.setA08(bi.a08.getText().toString());
+        form.setS1q9(bi.s1q9.getText().toString());
 
-        form.setA09(bi.a09.getText().toString());
+        form.setS1q10(bi.s1q10.getText().toString());
 
-        form.setA10(bi.a10.getText().toString());
+        form.setS1q11(bi.s1q11.getText().toString());
 
-        form.setA11(bi.a11.getText().toString());
+        form.setS1q12(bi.s1q12.getText().toString());
 
-        form.setA12(bi.a1201.isChecked() ? "1"
-                : bi.a1202.isChecked() ? "2"
-                : "-1");
+        form.setS1q13( bi.s1q1301.isChecked() ? "1"
+                : bi.s1q1302.isChecked() ? "2"
+                :  "-1");
 
-        form.setA13dd(bi.a13dd.getText().toString());
+        form.setS1q14(bi.s1q14.getText().toString());
 
-        form.setA13mm(bi.a13mm.getText().toString());
+        form.setS1q15(bi.s1q15.getText().toString());
 
-        form.setA13yy(bi.a13yy.getText().toString());
+        form.setS1q16(bi.s1q16.getText().toString());
 
-        form.setA14mm(bi.a14mm.getText().toString());
+        form.setS1q17( bi.s1q1701.isChecked() ? "1"
+                : bi.s1q1702.isChecked() ? "2"
+                :  "-1");
 
-        form.setA14yy(bi.a14yy.getText().toString());
+        form.setS1q18( bi.s1q1801.isChecked() ? "1"
+                : bi.s1q1802.isChecked() ? "2"
+                :  "-1");
 
-        form.setA15(bi.a1501.isChecked() ? "1"
-                : bi.a1502.isChecked() ? "2"
-                : bi.a1503.isChecked() ? "3"
-                : "-1");
+        form.setS1_consent( bi.s1consent01.isChecked() ? "1"
+                : bi.s1consent02.isChecked() ? "2"
+                :  "-1");
 
-        String a16 = bi.a1601.isChecked() ? "1"
-                : bi.a1602.isChecked() ? "2"
-                : bi.a1603.isChecked() ? "3"
-                : bi.a1604.isChecked() ? "4"
-                : bi.a1605.isChecked() ? "5"
-                : bi.a1606.isChecked() ? "6"
-                : bi.a1607.isChecked() ? "7"
-                : bi.a1608.isChecked() ? "8"
-                : bi.a1609.isChecked() ? "9"
-                : bi.a16096.isChecked() ? "96"
-                : "-1";
-        form.setA16(a16);
+        form.setS1q19et(bi.s1q19et.getText().toString());
 
-        form.setA17(bi.a17.getText().toString());
+        form.setS1q20a(bi.s1q20a.getText().toString());
 
-        form.setA18(bi.a1801.isChecked() ? "1"
-                : bi.a1802.isChecked() ? "2"
-                : bi.a1803.isChecked() ? "3"
-                : bi.a1804.isChecked() ? "4"
-                : bi.a18096.isChecked() ? "96"
-                : "-1");
+        form.setS1q20b(bi.s1q20b.getText().toString());
 
-        form.setA19(bi.a1901.isChecked() ? "1"
-                : bi.a1902.isChecked() ? "2"
-                : bi.a1903.isChecked() ? "3"
-                : bi.a1904.isChecked() ? "4"
-                : bi.a1905.isChecked() ? "5"
-                : bi.a1906.isChecked() ? "6"
-                : bi.a1907.isChecked() ? "7"
-                : bi.a1908.isChecked() ? "8"
-                : bi.a1909.isChecked() ? "9"
-                : bi.a1910.isChecked() ? "10"
-                : bi.a1911.isChecked() ? "11"
-                : bi.a19096.isChecked() ? "96"
-                : "-1");
+        form.setS1q20c(bi.s1q20c.getText().toString());
 
-        form.setA20(bi.a2001.isChecked() ? "1"
-                : bi.a2002.isChecked() ? "2"
-                : bi.a2003.isChecked() ? "3"
-                : bi.a2004.isChecked() ? "4"
-                : bi.a2005.isChecked() ? "5"
-                : "-1");
+        form.setS1q20d(bi.s1q20d.getText().toString());
 
-        form.setA21(bi.a2101.isChecked() ? "1"
-                : bi.a2102.isChecked() ? "2"
-                : bi.a2103.isChecked() ? "3"
-                : bi.a2104.isChecked() ? "4"
-                : bi.a2105.isChecked() ? "5"
-                : bi.a2106.isChecked() ? "6"
-                : bi.a2107.isChecked() ? "7"
-                : bi.a2108.isChecked() ? "8"
-                : bi.a2109.isChecked() ? "9"
-                : bi.a2110.isChecked() ? "10"
-                : bi.a2111.isChecked() ? "11"
-                : bi.a21096.isChecked() ? "96"
-                : "-1");
+        form.setS1q20e(bi.s1q20e.getText().toString());
 
-        form.setA22pos(bi.a22pos.getText().toString());
 
-        form.setA22org(bi.a22org.getText().toString());
 
-        form.setA23(bi.a2301.isChecked() ? "1"
-                : bi.a2302.isChecked() ? "2"
-                : "-1");*/
-
-      /*  JSONObject json = new JSONObject();
-
-        json.put("a01", bi.a01.getText().toString());
-
-        json.put("a02", bi.a02.getText().toString());
-
-        json.put("a06", bi.a0601.isChecked() ? "1"
-                : bi.a0602.isChecked() ? "2"
-                : bi.a0603.isChecked() ? "3"
-                : bi.a0604.isChecked() ? "4"
-                : bi.a0605.isChecked() ? "5"
-                : bi.a0606.isChecked() ? "6"
-                : bi.a0607.isChecked() ? "7"
-                : bi.a0696.isChecked() ? "96"
-                : "-1");
-
-        json.put("a07", bi.a0701.isChecked() ? "1"
-                : bi.a0702.isChecked() ? "2"
-                : "-1");
-
-        json.put("a08", bi.a08.getText().toString());
-
-        json.put("a09", bi.a09.getText().toString());
-
-        json.put("a10", bi.a10.getText().toString());
-
-        json.put("a11", bi.a11.getText().toString());
-
-        json.put("a12", bi.a1201.isChecked() ? "1"
-                : bi.a1202.isChecked() ? "2"
-                : "-1");
-
-        json.put("a13dd", bi.a13dd.getText().toString());
-
-        json.put("a13mm", bi.a13mm.getText().toString());
-
-        json.put("a13yy", bi.a13yy.getText().toString());
-
-        json.put("a14mm", bi.a14mm.getText().toString());
-
-        json.put("a14yy", bi.a14yy.getText().toString());
-
-        json.put("a15", bi.a1501.isChecked() ? "1"
-                : bi.a1502.isChecked() ? "2"
-                : bi.a1503.isChecked() ? "3"
-                : "-1");
-
-        String a16 = bi.a1601.isChecked() ? "1"
-                : bi.a1602.isChecked() ? "2"
-                : bi.a1603.isChecked() ? "3"
-                : bi.a1604.isChecked() ? "4"
-                : bi.a1605.isChecked() ? "5"
-                : bi.a1606.isChecked() ? "6"
-                : bi.a1607.isChecked() ? "7"
-                : bi.a1608.isChecked() ? "8"
-                : bi.a1609.isChecked() ? "9"
-                : bi.a16096.isChecked() ? "96"
-                : "-1";
-        json.put("a16", a16);
-
-        json.put("a17", bi.a17.getText().toString());
-
-        json.put("a18", bi.a1801.isChecked() ? "1"
-                : bi.a1802.isChecked() ? "2"
-                : bi.a1803.isChecked() ? "3"
-                : bi.a1804.isChecked() ? "4"
-                : bi.a18096.isChecked() ? "96"
-                : "-1");
-
-        json.put("a19", bi.a1901.isChecked() ? "1"
-                : bi.a1902.isChecked() ? "2"
-                : bi.a1903.isChecked() ? "3"
-                : bi.a1904.isChecked() ? "4"
-                : bi.a1905.isChecked() ? "5"
-                : bi.a1906.isChecked() ? "6"
-                : bi.a1907.isChecked() ? "7"
-                : bi.a1908.isChecked() ? "8"
-                : bi.a1909.isChecked() ? "9"
-                : bi.a1910.isChecked() ? "10"
-                : bi.a1911.isChecked() ? "11"
-                : bi.a19096.isChecked() ? "96"
-                : "-1");
-
-        json.put("a20", bi.a2001.isChecked() ? "1"
-                : bi.a2002.isChecked() ? "2"
-                : bi.a2003.isChecked() ? "3"
-                : bi.a2004.isChecked() ? "4"
-                : bi.a2005.isChecked() ? "5"
-                : "-1");
-
-        json.put("a21", bi.a2101.isChecked() ? "1"
-                : bi.a2102.isChecked() ? "2"
-                : bi.a2103.isChecked() ? "3"
-                : bi.a2104.isChecked() ? "4"
-                : bi.a2105.isChecked() ? "5"
-                : bi.a2106.isChecked() ? "6"
-                : bi.a2107.isChecked() ? "7"
-                : bi.a2108.isChecked() ? "8"
-                : bi.a2109.isChecked() ? "9"
-                : bi.a2110.isChecked() ? "10"
-                : bi.a2111.isChecked() ? "11"
-                : bi.a21096.isChecked() ? "96"
-                : "-1");
-
-        json.put("a22pos", bi.a22pos.getText().toString());
-
-        json.put("a22org", bi.a22org.getText().toString());
-
-        json.put("a23", bi.a2301.isChecked() ? "1"
-                : bi.a2302.isChecked() ? "2"
-                : "-1");
-
-        form.setsInfo(json.toString());*/
-
-        //form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), a16, bi.a2002.isChecked()));
 
     }
 
 
     private boolean formValidation() {
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+       /* if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
         if (!dtFlag) {
 //            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
         }
         if (bi.a0702.isChecked()) return true;
-        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;
+        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;*/
+       return true;
     }
 
 
@@ -441,15 +258,15 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
         //Setting Date
-        try {
+       /* try {
             Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
             localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
-    public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
+   /* public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
         bi.a14mm.setEnabled(false);
         bi.a14mm.setText(null);
         bi.a14yy.setEnabled(false);
@@ -494,7 +311,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-    }
+    }*/
 
     public static class SectionKActivity extends AppCompatActivity {
 
