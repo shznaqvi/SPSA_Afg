@@ -16,8 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection1101Binding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
@@ -154,7 +152,7 @@ public class Section1101Activity extends AppCompatActivity {
         if (!formValidation()) return;
         try {
             SaveDraft();
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (UpdateDB()) {
