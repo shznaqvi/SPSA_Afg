@@ -24,9 +24,8 @@ import static edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt.contextBackActivity;
 
 public class Section09Activity extends AppCompatActivity {
 
-
-
     ActivitySection09Binding bi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +36,15 @@ public class Section09Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
 
 
 
     }
 
-    private void SaveDraft()  {
 
+    private void SaveDraft()  {
 
         form.setS9q1(bi.s9q1.getText().toString());
 
@@ -60,10 +60,8 @@ public class Section09Activity extends AppCompatActivity {
         form.setS9q502(bi.s9q502.getText().toString());
         form.setS9q6(bi.s9q6.getText().toString());
 
-
-
-
     }
+
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -78,31 +76,32 @@ public class Section09Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
+
 
     public void onBackPressed() {
         contextBackActivity(this);
     }
 
+
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S09, form.s09toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S09, form.s09toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
-
 
 }

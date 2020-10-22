@@ -11,9 +11,11 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection12Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -29,6 +31,7 @@ public class Section12Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section12);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -48,23 +51,18 @@ public class Section12Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S12, form.s12toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S12, form.s12toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
 
         form.setS12q1(bi.s12q101.isChecked() ? "1"
                 : bi.s12q102.isChecked() ? "2"
@@ -215,15 +213,11 @@ public class Section12Activity extends AppCompatActivity {
                 : bi.s12q498.isChecked() ? "98"
                 : "-1");
 
-    //    form.setS12Q5TITLE1(bi.s12q5title1.isChecked() ? "" : "-1");
-
         form.setS12q501(bi.s12q501.isChecked() ? "1" : "-1");
 
         form.setS12q502(bi.s12q502.isChecked() ? "2" : "-1");
 
         form.setS12q503(bi.s12q503.isChecked() ? "3" : "-1");
-
-        //    form.setS12Q5TITLE2(bi.s12q5title2.isChecked() ? "" : "-1");
 
         form.setS12q504(bi.s12q504.isChecked() ? "4" : "-1");
 
@@ -241,9 +235,6 @@ public class Section12Activity extends AppCompatActivity {
         form.setS12q604(bi.s12q604.isChecked() ? "4" : "-1");
 
         form.setS12q696(bi.s12q696.isChecked() ? "96" : "-1");
-
-
-        //    MainApp.fc.setsL(String.valueOf(json));
 
     }
 

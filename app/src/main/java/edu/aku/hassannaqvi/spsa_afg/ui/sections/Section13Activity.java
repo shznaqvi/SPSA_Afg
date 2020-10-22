@@ -21,18 +21,16 @@ import static edu.aku.hassannaqvi.spsa_afg.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 import static edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt.contextBackActivity;
 
-
-
 public class Section13Activity extends AppCompatActivity {
 
     ActivitySection13Binding bi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section13);
         bi.setForm(form);
         bi.setCallback(this);
-
         setupSkips();
     }
 
@@ -43,8 +41,8 @@ public class Section13Activity extends AppCompatActivity {
 
     }
 
-    private void SaveDraft()  {
 
+    private void SaveDraft()  {
 
         form.setS13q1( bi.s13q101.isChecked() ? "1"
                 : bi.s13q196.isChecked() ? "96"
@@ -123,11 +121,6 @@ public class Section13Activity extends AppCompatActivity {
 
         form.setS13q1007(bi.s13q1007.isChecked() ? "7" : "-1");
 
-
-
-
-
-
     }
 
 
@@ -144,9 +137,11 @@ public class Section13Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
+
 
     public void onBackPressed() {
         contextBackActivity(this);
@@ -154,17 +149,16 @@ public class Section13Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-      /*  DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S12, form.s13toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S13, form.s13toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);

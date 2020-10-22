@@ -11,9 +11,11 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection03Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -29,6 +31,7 @@ public class Section03Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section03);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -40,42 +43,35 @@ public class Section03Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.llgrpsecs3q1);
             }
         }));
-        bi.s3q1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q1096.getId()) {
-                Clear.clearAllFields(bi.llgrpsecs3q1);
+
+        bi.s3q301.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.llgrpsec206i);
             }
         }));
+
         bi.s3q4.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s3q401.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs3q6);
             }
         }));
 
-
-        /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0203);
-        }));*/
-
     }
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S03, form.s03toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S03, form.s03toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
+
     private void SaveDraft() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
 
         form.setS3q1(bi.s3q101.isChecked() ? "1"
                 : bi.s3q102.isChecked() ? "2"
