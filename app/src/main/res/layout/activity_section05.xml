@@ -3,9 +3,9 @@
     <data>
 
         <import type="android.view.View" />
-        <!--<variable
+        <variable
             name="form"
-            type="edu.aku.hassannaqvi.spsaafghanistan.models.Form" />-->
+            type="edu.aku.hassannaqvi.spsa_afg.models.Form" />
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity" />

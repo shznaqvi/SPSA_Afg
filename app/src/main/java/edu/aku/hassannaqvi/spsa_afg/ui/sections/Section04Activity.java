@@ -17,6 +17,8 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection04Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
+import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
+
 public class Section04Activity extends AppCompatActivity {
 
     ActivitySection04Binding bi;
@@ -57,41 +59,40 @@ public class Section04Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("s4q1", bi.s4q1a01.isChecked() ? "1"
+        form.setS4q1(bi.s4q1a01.isChecked() ? "1"
                 : bi.s4q1a02.isChecked() ? "2"
                 : bi.s4q1b.isChecked() ? ""
                 : bi.s4q1c.isChecked() ? ""
                 : "-1");
-        json.put("s4q1bx", bi.s4q1bx.getText().toString());
-        json.put("s4q1cx", bi.s4q1cx.getText().toString());
 
-        json.put("s4q2", bi.s4q2aa.isChecked() ? "1"
+        form.setS4q1bx(bi.s4q1bx.getText().toString());
+        form.setS4q1cx(bi.s4q1cx.getText().toString());
+        form.setS4q2(bi.s4q2aa.isChecked() ? "1"
                 : bi.s4q2ab.isChecked() ? "2"
                 : bi.s4q2b.isChecked() ? ""
                 : bi.s4q2c.isChecked() ? ""
                 : "-1");
-        json.put("s4q2bx", bi.s4q2bx.getText().toString());
-        json.put("s4q2cx", bi.s4q2cx.getText().toString());
 
-        json.put("s4q3", bi.s4q3aa.isChecked() ? "1"
+        form.setS4q2bx(bi.s4q2bx.getText().toString());
+        form.setS4q2cx(bi.s4q2cx.getText().toString());
+        form.setS4q3(bi.s4q3aa.isChecked() ? "1"
                 : bi.s4q3ab.isChecked() ? "2"
                 : bi.s4q3b.isChecked() ? ""
                 : bi.s4q3c.isChecked() ? ""
                 : "-1");
-        json.put("s4q3bx", bi.s4q3bx.getText().toString());
-        json.put("s4q3cx", bi.s4q3cx.getText().toString());
 
-        json.put("s4q4", bi.s4q4aa.isChecked() ? "1"
+        form.setS4q3cx(bi.s4q3bx.getText().toString());
+        form.setS4q3cx(bi.s4q3cx.getText().toString());
+        form.setS4q4(bi.s4q4aa.isChecked() ? "1"
                 : bi.s4q4ab.isChecked() ? "2"
                 : bi.s4q4b.isChecked() ? ""
                 : bi.s4q4c.isChecked() ? ""
                 : "-1");
-        json.put("s4q4bx", bi.s4q4bx.getText().toString());
-        json.put("s4q4cx", bi.s4q4cx.getText().toString());
 
-        json.put("s4q5", bi.s4q5.getText().toString());
+        form.setS4q4bx(bi.s4q4bx.getText().toString());
+        form.setS4q4cx(bi.s4q4cx.getText().toString());
+        form.setS4q5(bi.s4q5.getText().toString());
 
-        //    MainApp.fc.setsL(String.valueOf(json));
 
     }
 
