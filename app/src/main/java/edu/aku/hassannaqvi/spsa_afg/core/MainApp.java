@@ -111,9 +111,9 @@ public class MainApp extends Application {
 
             MainApp.form.setGpsLat(GPSPref.getString("Latitude", "0"));
             MainApp.form.setGpsLng(GPSPref.getString("Longitude", "0"));
-            MainApp.form.setGpsAcc(GPSPref.getString("Accuracy", "0"));
+            MainApp.form.setGpsacc(GPSPref.getString("Accuracy", "0"));
 //            MainApp.form.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
-            MainApp.form.setGpsDT(date); // Timestamp is converted to date above
+            MainApp.form.setGpsdate(date); // Timestamp is converted to date above
 
         } catch (Exception e) {
             Log.e("GPS", "setGPS: " + e.getMessage());

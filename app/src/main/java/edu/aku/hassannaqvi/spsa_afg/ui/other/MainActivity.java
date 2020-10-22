@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 }
 
                 String form_type = "NA";
-                switch (form.getFormType()) {
+                switch (form.getFormtype()) {
                     case "1":
                         form_type = "Screening";
                         break;

@@ -461,7 +461,7 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s3q1title1">Not observed </string>
     <string name="s3q102">Not in dwelling/plot/yard</string>
     <string name="s3q103">No permission to see</string>
-    <string name="s3q104">Other reason</string>
+    <string name="s3q1096">Other reason</string>
     <string name="s3q2">Observe presence of water at the specific place for hand washing</string>
     <string name="s3q201">Water is available</string>
     <string name="s3q202">Water is not available</string>

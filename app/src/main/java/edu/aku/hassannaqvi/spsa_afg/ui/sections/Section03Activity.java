@@ -36,12 +36,12 @@ public class Section03Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.s3q1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q104.getId()) {
+            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q1096.getId()) {
                 Clear.clearAllFields(bi.llgrpsecs3q1);
             }
         }));
         bi.s3q1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q104.getId()) {
+            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q1096.getId()) {
                 Clear.clearAllFields(bi.llgrpsecs3q1);
             }
         }));

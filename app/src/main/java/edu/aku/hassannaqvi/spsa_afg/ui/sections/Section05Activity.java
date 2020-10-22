@@ -183,7 +183,7 @@ public class Section05Activity extends AppCompatActivity {
                 : bi.s5q902.isChecked() ? "2"
                 : "-1");
 
-        form.setS5a9a(bi.s5q9a01.isChecked() ? "1"
+        form.setS5q9a(bi.s5q9a01.isChecked() ? "1"
                 : bi.s5q9a02.isChecked() ? "2"
                 : bi.s5q9a03.isChecked() ? "3"
                 : "-1");

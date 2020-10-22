@@ -215,7 +215,7 @@ public class Section12Activity extends AppCompatActivity {
                 : bi.s12q498.isChecked() ? "98"
                 : "-1");
 
-        form.setS12Q5TITLE1(bi.s12q5title1.isChecked() ? "" : "-1");
+    //    form.setS12Q5TITLE1(bi.s12q5title1.isChecked() ? "" : "-1");
 
         form.setS12q501(bi.s12q501.isChecked() ? "1" : "-1");
 
@@ -223,7 +223,7 @@ public class Section12Activity extends AppCompatActivity {
 
         form.setS12q503(bi.s12q503.isChecked() ? "3" : "-1");
 
-        form.setS12Q5TITLE2(bi.s12q5title2.isChecked() ? "" : "-1");
+        //    form.setS12Q5TITLE2(bi.s12q5title2.isChecked() ? "" : "-1");
 
         form.setS12q504(bi.s12q504.isChecked() ? "4" : "-1");
 

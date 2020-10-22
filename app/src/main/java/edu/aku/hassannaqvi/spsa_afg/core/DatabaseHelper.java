@@ -240,45 +240,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_USERNAME, form.getUsername());
         values.put(FormsContract.FormsTable.COLUMN_SYSDATE, form.getSysdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMDATE, form.getFormdate());
-        values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, form.getFormType());
+        values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, form.getFormtype());
         values.put(FormsContract.FormsTable.COLUMN_PID, form.getPid());
-         values.put(FormsContract.FormsTable.COLUMN_S1Q1,form.getS1q1());
-         values.put(FormsContract.FormsTable.COLUMN_S1Q2,form.getS1q2());
-         values.put(FormsContract.FormsTable.COLUMN_S1Q4,form.getS1q4());
-
-        values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
-        values.put(FormsContract.FormsTable.COLUMN_SINFO, form.getInfo());
-        values.put(FormsContract.FormsTable.COLUMN_S02, form.getS02());
-         values.put(FormsContract.FormsTable.COLUMN_S03 ,form.getS03());
-         values.put(FormsContract.FormsTable.COLUMN_S04 ,form.getS04());
-         values.put(FormsContract.FormsTable.COLUMN_S05 ,form.getS05());
-         values.put(FormsContract.FormsTable.COLUMN_S06 ,form.getS06());
-         values.put(FormsContract.FormsTable.COLUMN_S07 ,form.getS07());
-         values.put(FormsContract.FormsTable.COLUMN_S08 ,form.getS08());
-         values.put(FormsContract.FormsTable.COLUMN_S09 ,form.getS09());
-         values.put(FormsContract.FormsTable.COLUMN_S10 ,form.getS10());
-         values.put(FormsContract.FormsTable.COLUMN_S11 ,form.getS11());
-         values.put(FormsContract.FormsTable.COLUMN_S12 ,form.getS12());
-         values.put(FormsContract.FormsTable.COLUMN_S13 ,form.getS13());
-
         values.put(FormsContract.FormsTable.COLUMN_S1Q1, form.getS1q1());
         values.put(FormsContract.FormsTable.COLUMN_S1Q2, form.getS1q2());
-    //    values.put(FormsContract.FormsTable.COLUMN_S1Q3, form.getS1q3());
         values.put(FormsContract.FormsTable.COLUMN_S1Q4, form.getS1q4());
-        //       values.put(FormsContract.FormsTable.COLUMN_S1Q5, form.getS1q5());
         values.put(FormsContract.FormsTable.COLUMN_S1Q6, form.getS1q6());
-        values.put(FormsContract.FormsTable.COLUMN_SINFO, form.getInfo());
+        values.put(FormsContract.FormsTable.COLUMN_SINFO, form.getsInfo());
+        values.put(FormsContract.FormsTable.COLUMN_S02, form.gets02());
+        values.put(FormsContract.FormsTable.COLUMN_S03, form.gets03());
+        values.put(FormsContract.FormsTable.COLUMN_S04, form.gets04());
+        values.put(FormsContract.FormsTable.COLUMN_S05, form.gets05());
+        values.put(FormsContract.FormsTable.COLUMN_S06, form.gets06());
+        values.put(FormsContract.FormsTable.COLUMN_S07, form.gets07());
+        values.put(FormsContract.FormsTable.COLUMN_S08, form.gets08());
+        values.put(FormsContract.FormsTable.COLUMN_S09, form.gets09());
+        values.put(FormsContract.FormsTable.COLUMN_S10, form.gets10());
+        values.put(FormsContract.FormsTable.COLUMN_S11, form.gets11());
+        values.put(FormsContract.FormsTable.COLUMN_S12, form.gets12());
+        values.put(FormsContract.FormsTable.COLUMN_S13, form.gets13());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS, form.getIstatus());
         values.put(FormsContract.FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
         values.put(FormsContract.FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
         values.put(FormsContract.FormsTable.COLUMN_GPSLAT, form.getGpsLat());
         values.put(FormsContract.FormsTable.COLUMN_GPSLNG, form.getGpsLng());
-        values.put(FormsContract.FormsTable.COLUMN_GPSDATE, form.getGpsDT());
-        values.put(FormsContract.FormsTable.COLUMN_GPSACC, form.getGpsAcc());
+        values.put(FormsContract.FormsTable.COLUMN_GPSDATE, form.getGpsdate());
+        values.put(FormsContract.FormsTable.COLUMN_GPSACC, form.getGpsacc());
         values.put(FormsContract.FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, form.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, form.getAppversion());
-
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -289,24 +279,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
- /*   public int updateFormID() {
-        SQLiteDatabase db = this.getReadableDatabase();
+    /*   public int updateFormID() {
+           SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(FormsContract.FormsTable.COLUMN_UID, MainApp.form.get_UID());
+   // New value for one column
+           ContentValues values = new ContentValues();
+           values.put(FormsContract.FormsTable.COLUMN_UID, MainApp.form.get_UID());
 
-// Which row to update, based on the ID
-        String selection = FormsContract.FormsTable._ID + " = ?";
-        String[] selectionArgs = {String.valueOf(MainApp.form.get_ID())};
+   // Which row to update, based on the ID
+           String selection = FormsContract.FormsTable._ID + " = ?";
+           String[] selectionArgs = {String.valueOf(MainApp.form.get_ID())};
 
-        int count = db.update(FormsContract.FormsTable.TABLE_NAME_FORMS,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
-*/
+           int count = db.update(FormsContract.FormsTable.TABLE_NAME_FORMS,
+                   values,
+                   selection,
+                   selectionArgs);
+           return count;
+       }
+   */
     public Collection<Form> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
@@ -322,9 +312,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 //               FormsContract.FormsTable.COLUMN_S1Q3,
                 FormsContract.FormsTable.COLUMN_S1Q4,
-               /* FormsContract.FormsTable.COLUMN_S1Q5,*/
+                /* FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-               /* FormsContract.FormsTable.COLUMN_S01,*/
+                /* FormsContract.FormsTable.COLUMN_S01,*/
+                FormsTable.COLUMN_SINFO,
                 FormsContract.FormsTable.COLUMN_S02,
                 FormsContract.FormsTable.COLUMN_S03,
                 FormsContract.FormsTable.COLUMN_S04,
@@ -349,15 +340,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
         String whereClause = FormsTable.COLUMN_S1Q1 + "=? AND " + FormsTable.COLUMN_PID + "=?";
-        /*String[] whereArgs = {district, refno};*/
+        /* String[] whereArgs = {district, refno};*/
         String groupBy = null;
         String having = null;
         String orderBy = FormsTable._ID + " ASC";
         Form allForms = null;
-
-
-
-
 
 
         try {
@@ -396,11 +383,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-               /* FormsContract.FormsTable.COLUMN_S1Q3,*/
+                /* FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-               /* FormsContract.FormsTable.COLUMN_S1Q5,*/
+                /* FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
-               /* FormsContract.FormsTable.COLUMN_SB,*/
+                /* FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_GPSLAT,
                 FormsContract.FormsTable.COLUMN_GPSLNG,
@@ -458,11 +445,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-               /* FormsContract.FormsTable.COLUMN_S1Q3,*/
+                /* FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
                 /*FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
                 /*FormsContract.FormsTable.COLUMN_SB,*/
+                FormsTable.COLUMN_SINFO,
+                FormsTable.COLUMN_S02,
+                FormsTable.COLUMN_S03,
+                FormsTable.COLUMN_S04,
+                FormsTable.COLUMN_S05,
+                FormsTable.COLUMN_S06,
+                FormsTable.COLUMN_S07,
+                FormsTable.COLUMN_S08,
+                FormsTable.COLUMN_S09,
+                FormsTable.COLUMN_S10,
+                FormsTable.COLUMN_S11,
+                FormsTable.COLUMN_S12,
+                FormsTable.COLUMN_S13,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_ISTATUS96x,
                 FormsContract.FormsTable.COLUMN_ENDINGDATETIME,
@@ -530,7 +530,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 /*FormsContract.FormsTable.COLUMN_S1Q3,*/
                 FormsContract.FormsTable.COLUMN_S1Q4,
-              /*  FormsContract.FormsTable.COLUMN_S1Q5,*/
+                /*  FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
                 /*FormsContract.FormsTable.COLUMN_SB,*/
                 FormsContract.FormsTable.COLUMN_ISTATUS,
@@ -564,13 +564,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYSDATE)));
                 form.setFormdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMDATE)));
                 String formValue = c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
-                form.setFormType(formValue == null ? "1" : formValue);
+                form.setFormtype(formValue == null ? "1" : formValue);
                 form.setPid(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_PID)));
                 form.setS1q1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q1)));
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
-               /* form.setS1q3(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q3)));*/
+                /* form.setS1q3(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q3)));*/
                 form.setS1q4(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q4)));
-               /* form.setS1q5(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q5)));*/
+                /* form.setS1q5(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q5)));*/
                 form.setS1q6(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q6)));
                 /*form.setsB(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)));*/
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));

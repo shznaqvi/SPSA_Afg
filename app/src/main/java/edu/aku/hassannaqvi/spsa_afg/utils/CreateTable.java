@@ -26,16 +26,14 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_PID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q1 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q2 + " TEXT,"
-            //   + FormsContract.FormsTable.COLUMN_S1Q3 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q4 + " TEXT,"
-            /*+ FormsContract.FormsTable.COLUMN_S1Q5 + " TEXT,"*/
             + FormsContract.FormsTable.COLUMN_S1Q6 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSLAT + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSLNG + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSDATE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSACC + " TEXT,"
             + FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT,"
-            /*+ FormsContract.FormsTable.COLUMN_S01 + " TEXT,"*/
+            + FormsContract.FormsTable.COLUMN_SINFO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S02 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S03 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S04 + " TEXT,"
