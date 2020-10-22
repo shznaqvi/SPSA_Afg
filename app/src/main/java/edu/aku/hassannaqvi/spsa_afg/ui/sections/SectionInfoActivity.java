@@ -3,32 +3,23 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
-import com.validatorcrawler.aliazaz.Validator;
-
 import org.json.JSONException;
-import org.threeten.bp.Instant;
 import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
-import org.threeten.bp.ZoneId;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
-import edu.aku.hassannaqvi.spsa_afg.datecollection.AgeModel;
-import edu.aku.hassannaqvi.spsa_afg.datecollection.DateRepository;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -51,6 +42,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_info_section);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkip();
     }
 
@@ -78,28 +70,35 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_INFO, form.infotoString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        long updcount = db.addForm(form);
+        form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
+            form.set_UID(form.getDeviceID() + form.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
 
 
     private void SaveDraft() throws JSONException {
 
+        form = new Form();
+        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        form.setS1q2(MainApp.userName);
+        form.setDeviceID(MainApp.appInfo.getDeviceID());
+        form.setDevicetagID(MainApp.appInfo.getTagName());
+        form.setAppversion(MainApp.appInfo.getAppVersion());
 
 
         form.setS1qno(bi.s1qno.getText().toString());
 
-        form.setS1q1( bi.s1q101.isChecked() ? "1"
+        form.setS1q1(bi.s1q101.isChecked() ? "1"
                 : bi.s1q102.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setS1q2(bi.s1q2.getText().toString());
 
@@ -150,9 +149,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setS1q20d(bi.s1q20d.getText().toString());
 
         form.setS1q20e(bi.s1q20e.getText().toString());
-
-
-
 
     }
 
@@ -321,4 +317,5 @@ public class SectionInfoActivity extends AppCompatActivity {
             setContentView(R.layout.activity_section1101);
         }
     }
+
 }

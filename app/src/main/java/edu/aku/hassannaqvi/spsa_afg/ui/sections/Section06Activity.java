@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -9,6 +10,9 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection06Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -31,6 +35,7 @@ public class Section06Activity extends AppCompatActivity {
         setupSkips();
     }
 
+
     private void setupSkips() {
 
 
@@ -38,9 +43,7 @@ public class Section06Activity extends AppCompatActivity {
     }
 
 
-
     private void SaveDraft()  {
-
 
         form.setS6q1a(bi.s6q1a.getText().toString());
         form.setS6q1b(bi.s6q1b.getText().toString());
@@ -49,14 +52,13 @@ public class Section06Activity extends AppCompatActivity {
         form.setS6q3(bi.s6q3.getText().toString());
 
 
-
-
-
     }
+
 
     public void onBackPressed() {
         contextBackActivity(this);
     }
+
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -71,29 +73,27 @@ public class Section06Activity extends AppCompatActivity {
         }
     }
 
+
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S06, form.s06toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S06, form.s06toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
-
+        }
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
-
-
 
 }
