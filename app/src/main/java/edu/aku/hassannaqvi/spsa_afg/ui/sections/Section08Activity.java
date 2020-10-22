@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -13,9 +12,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection08Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -63,7 +59,7 @@ public class Section08Activity extends AppCompatActivity {
         if (!formValidation()) return;
         try {
             SaveDraft();
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (UpdateDB()) {

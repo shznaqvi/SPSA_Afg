@@ -13,14 +13,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection07Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
-
-import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 
 public class Section07Activity extends AppCompatActivity {
 
@@ -149,7 +144,7 @@ public class Section07Activity extends AppCompatActivity {
         if (!formValidation()) return;
         try {
             SaveDraft();
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (UpdateDB()) {

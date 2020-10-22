@@ -23,7 +23,9 @@ public class Form extends LiveData<Form> {
     private String username;
     private String sysdate = "";
     private String formdate = "";
+
     private String pid = "";
+
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -37,6 +39,36 @@ public class Form extends LiveData<Form> {
     private String istatus96x = ""; // Interview Status
     private String endingdatetime = "";
     private String formType = "";
+
+
+    public static final String COLUMN_FORMTYPE = "formtype";
+
+    public static final String COLUMN_SINFO = "sInfo";
+    public static final String COLUMN_S02 = "s02";
+    public static final String COLUMN_S03 = "s03";
+    public static final String COLUMN_S04 = "s04";
+    public static final String COLUMN_S05 = "s05";
+    public static final String COLUMN_S06 = "s06";
+    public static final String COLUMN_S07 = "s07";
+    public static final String COLUMN_S08 = "s08";
+    public static final String COLUMN_S09 = "s09";
+    public static final String COLUMN_S10 = "s10";
+    public static final String COLUMN_S11 = "s11";
+    public static final String COLUMN_S12 = "s12";
+    public static final String COLUMN_S13 = "s13";
+
+    public static final String COLUMN_ISTATUS = "istatus";
+    public static final String COLUMN_ISTATUS96x = "istatus96x";
+    public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
+    public static final String COLUMN_GPSLAT = "gpslat";
+    public static final String COLUMN_GPSLNG = "gpslng";
+    public static final String COLUMN_GPSDATE = "gpsdate";
+    public static final String COLUMN_GPSACC = "gpsacc";
+    public static final String COLUMN_DEVICEID = "deviceid";
+    public static final String COLUMN_DEVICETAGID = "tagid";
+    public static final String COLUMN_SYNCED = "synced";
+    public static final String COLUMN_SYNCED_DATE = "synced_date";
+    public static final String COLUMN_APPVERSION = "appversion";
 
     // SECTIONS
     public String Info;
@@ -3828,7 +3860,7 @@ public class Form extends LiveData<Form> {
        this.synced_date = jsonObject.getString(FormsTable.COLUMN_SYNCED_DATE);
        this.appversion = jsonObject.getString(FormsTable.COLUMN_SYNCED_DATE);
        /*this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);*/
-       this.Info= jsonObject.getString(FormsTable.COLUMN_INFO);
+       this.Info = jsonObject.getString(FormsTable.COLUMN_SINFO);
        this.S02 = jsonObject.getString(FormsTable.COLUMN_S02);
        this.S03 = jsonObject.getString(FormsTable.COLUMN_S03);
        this.S04 = jsonObject.getString(FormsTable.COLUMN_S04);
@@ -4476,7 +4508,7 @@ public class Form extends LiveData<Form> {
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
 
              if (this.formType.equals("1")) {
-                 infoHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INFO)));
+                 infoHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO)));
                  s02Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S02)));
                  s03Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03)));
                  s03Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03)));
@@ -4492,7 +4524,7 @@ public class Form extends LiveData<Form> {
                  s13Hydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S13)));
              }
              else
-                 this.Info = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_INFO));
+                 this.Info = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
                  this.S02 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S02));
                  this.S03 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03));
                  this.S04 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S04));

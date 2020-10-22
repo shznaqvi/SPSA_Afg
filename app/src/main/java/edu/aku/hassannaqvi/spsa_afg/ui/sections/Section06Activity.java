@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -10,9 +9,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection06Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -57,6 +53,7 @@ public class Section06Activity extends AppCompatActivity {
 
 
     }
+
     public void onBackPressed() {
         contextBackActivity(this);
     }
@@ -73,6 +70,7 @@ public class Section06Activity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         }
     }
+
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }

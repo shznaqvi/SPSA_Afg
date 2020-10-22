@@ -13,9 +13,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection021Binding;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
@@ -236,7 +233,7 @@ public class Section021Activity extends AppCompatActivity {
         if (!formValidation()) return;
         try {
             SaveDraft();
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (UpdateDB()) {
