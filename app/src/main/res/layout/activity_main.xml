@@ -147,8 +147,7 @@
                         android:onClick='@{callback::openSpecificActivity}'
                         android:padding="0dp"
 
-                        android:text="01"
-                        android:visibility="gone" />
+                        android:text="01" />
 
                     <Button
                         android:id="@+id/sec02"

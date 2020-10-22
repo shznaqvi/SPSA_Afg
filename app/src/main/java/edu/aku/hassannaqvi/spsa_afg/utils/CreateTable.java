@@ -85,7 +85,7 @@ public final class CreateTable {
             + BLRandomContract.BLRandomTable.COLUMN_RANDOMDT + " TEXT,"
             + BLRandomContract.BLRandomTable.COLUMN_SNO_HH + " TEXT );";
 
-/*    public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
-            ChildTable.TABLE_NAME + " ADD COLUMN " +
-            ChildTable.COLUMN_SYSDATE + " TEXT";*/
+    public static final String SQL_ALTER_FORMS_S1q4CODE = "ALTER TABLE " +
+            FormsContract.FormsTable.TABLE_NAME_FORMS + " ADD COLUMN " +
+            FormsContract.FormsTable.COLUMN_S1Q4 + " TEXT";
 }

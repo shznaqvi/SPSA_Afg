@@ -56,6 +56,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.core.AppInfo;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
@@ -194,6 +195,8 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
 //        DB backup
         dbBackup();
+
+        MainApp.appInfo = new AppInfo(this);
 
     }
 

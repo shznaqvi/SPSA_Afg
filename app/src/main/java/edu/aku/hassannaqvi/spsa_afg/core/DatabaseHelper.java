@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
@@ -27,6 +28,8 @@ import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.Users;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
+
+import static edu.aku.hassannaqvi.spsa_afg.utils.CreateTable.SQL_ALTER_FORMS_S1q4CODE;
 
 
 /**
@@ -432,7 +435,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public Collection<Form> getUnsyncedForms(int formType) {
+    public Collection<Form> getUnsyncedForms(int formtype) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -477,13 +480,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == ''";
         String[] whereArgs = null;
-        if (formType != 0) {
-            if (formType == 1) {
+        if (formtype != 0) {
+            if (formtype == 1) {
                 whereClause = "(" + FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == '') AND (" + FormsContract.FormsTable.COLUMN_FORMTYPE + "=? OR " + FormsContract.FormsTable.COLUMN_FORMTYPE + " is null)";
-                whereArgs = new String[]{String.valueOf(formType)};
+                whereArgs = new String[]{String.valueOf(formtype)};
             } else {
                 whereClause = "(" + FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == '') AND " + FormsContract.FormsTable.COLUMN_FORMTYPE + "=?";
-                whereArgs = new String[]{String.valueOf(formType)};
+                whereArgs = new String[]{String.valueOf(formtype)};
             }
         }
         String groupBy = null;
@@ -577,6 +580,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);
             }
+        } catch (SQLiteException e) {
+
+            db.rawQuery(SQL_ALTER_FORMS_S1q4CODE, null);
+
         } finally {
             if (c != null) {
                 c.close();
