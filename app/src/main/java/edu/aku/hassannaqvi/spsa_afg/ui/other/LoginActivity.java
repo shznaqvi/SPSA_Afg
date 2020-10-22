@@ -78,8 +78,6 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
     public ArrayList<String> values;
     public Map<String, String> valuesnlabels;
     // UI references.
-    @BindView(R.id.testing)
-    TextView testing;
     @BindView(R.id.loginProgress)
     ProgressBar mProgressView;
     @BindView(R.id.login_form)
@@ -195,14 +193,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
         });
 
 //        DB backup
-
         dbBackup();
-
-        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
-            testing.setVisibility(View.GONE);
-        } else {
-            testing.setVisibility(View.VISIBLE);
-        }
 
     }
 
