@@ -76,6 +76,11 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static LiveData<Form> liveForms = new MutableLiveData<>();
+    public static String[] loginMem; /*Add by Fazal for login Activity*/
+    public static long installedOn; /*Add by Fazal for login Activity*/
+    public static int versionCode; /*Add by Fazal for login Activity*/
+    public static String versionName; /*Add by Fazal for login Activity*/
+
 
     public static String userName = "0000";
     public static UsersContract user;
