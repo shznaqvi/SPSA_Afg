@@ -16,8 +16,6 @@ import java.util.Date;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
-import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
-import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
@@ -70,7 +68,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addForm(form);
         form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -80,7 +78,8 @@ public class SectionInfoActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
     }
 
 

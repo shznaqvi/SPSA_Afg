@@ -174,8 +174,7 @@
             <!-- s11q8  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs11q8"
-                style="@style/cardView"
-                android:visibility='@{s11q701.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/cardView">
 
 
                 <LinearLayout
