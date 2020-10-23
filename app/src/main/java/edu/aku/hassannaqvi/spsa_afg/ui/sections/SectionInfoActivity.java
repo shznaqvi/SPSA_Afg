@@ -3,7 +3,6 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -19,7 +18,7 @@ import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -55,14 +54,12 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (!formValidation()) return;
         try {
             SaveDraft();
-        } catch (JSONException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, EndingActivity.class));
-        } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
 
