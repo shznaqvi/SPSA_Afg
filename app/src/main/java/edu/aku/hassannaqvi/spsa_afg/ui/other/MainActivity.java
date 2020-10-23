@@ -50,6 +50,7 @@ import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section10Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section1101Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section12Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section13Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
@@ -300,6 +301,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     public void openSpecificActivity(View v) {
         Intent oF = null;
         switch (v.getId()) {
+            case R.id.sec01:
+                oF = new Intent(this, SectionInfoActivity.class);
+                break;
             case R.id.sec02:
                 oF = new Intent(this, Section021Activity.class);
                 break;

@@ -51,12 +51,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.core.AppInfo;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
+import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
+import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
 
 /**
  * A login screen that offers login via email/password.
@@ -75,8 +79,6 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
     public ArrayList<String> values;
     public Map<String, String> valuesnlabels;
     // UI references.
-    @BindView(R.id.testing)
-    TextView testing;
     @BindView(R.id.loginProgress)
     ProgressBar mProgressView;
     @BindView(R.id.login_form)
@@ -192,14 +194,9 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
         });
 
 //        DB backup
-
         dbBackup();
 
-        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
-            testing.setVisibility(View.GONE);
-        } else {
-            testing.setVisibility(View.VISIBLE);
-        }
+        MainApp.appInfo = new AppInfo(this);
 
     }
 
@@ -257,11 +254,11 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
                 if (success) {
 
                     try {
-                        File dbFile = new File(this.getDatabasePath(DatabaseHelper.DATABASE_NAME).getPath());
+                        File dbFile = new File(this.getDatabasePath(CreateTable.DATABASE_NAME).getPath());
                         FileInputStream fis = new FileInputStream(dbFile);
 
                         String outFileName = DirectoryName + File.separator +
-                                DatabaseHelper.DB_NAME;
+                                CreateTable.DB_NAME;
 
                         // Open the empty db as the output stream
                         OutputStream output = new FileOutputStream(outFileName);
@@ -289,7 +286,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
     }
 
-    @OnClick(R.id.syncClusters)
+    @OnClick(R.id.syncData)
     void onSyncClustersClick() {
         //TODO implement
 
@@ -548,13 +545,13 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
                 if ((mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu")) || db.Login(mEmail1, mPassword1) ||
                         (mEmail1.equals("test1234") && mPassword1.equals("test1234"))) {
-                    AppMain.userName = mEmail1;
-                    AppMain.admin = mEmail1.contains("@");
+                    MainApp.userName = mEmail1;
+                    MainApp.admin = mEmail1.contains("@");
 
                     if ((mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu")) || db.Login(mEmail2, mPassword2) ||
                             (mEmail2.equals("test1234") && mPassword2.equals("test1234"))) {
-                        AppMain.userName = mEmail2;
-                        AppMain.admin = mEmail2.contains("@");
+                        MainApp.userName = mEmail2;
+                        MainApp.admin = mEmail2.contains("@");
 
                         finish();
 
