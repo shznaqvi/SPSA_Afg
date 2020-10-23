@@ -383,7 +383,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 /* FormsContract.FormsTable.COLUMN_S1Q3,*/
