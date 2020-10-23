@@ -335,7 +335,8 @@
                 <!-- s3q5  CheckBox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVs3q5"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility='@{s3q402.checked ? View.GONE : View.VISIBLE}'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -411,8 +412,7 @@
             <!-- s3q6  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs3q6"
-                style="@style/cardView"
-                android:visibility='@{s3q401.checked ? View.VISIBLE: View. GONE }'>
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"

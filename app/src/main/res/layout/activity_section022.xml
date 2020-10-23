@@ -1421,7 +1421,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility='@{s2q1802.checked ? View.VISIBLE : View.GONE}'>
+                android:visibility='@{s2q1802.checked ? View.GONE : View.VISIBLE}'>
 
                 <!-- s2q19  Title   -->
                 <androidx.cardview.widget.CardView

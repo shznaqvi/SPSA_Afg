@@ -103,7 +103,8 @@
             <!-- s5q1a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q1a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q102.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,8 +163,7 @@
             <!-- s5q2  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q2"
-                style="@style/cardView"
-                android:visibility='@{s5q1a02.checked ? View.VISIBLE : View.GONE}'>
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -222,7 +222,9 @@
             <!-- s5q2a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q2a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q201.checked ? View.VISIBLE: View.GONE}'>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -282,7 +284,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q3"
                 style="@style/cardView"
-                android:visibility='@{s5q202.checked ? View.VISIBLE : View.GONE}'>
+                android:visibility='@{s5q202.checked ? View.VISIBLE: View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -341,7 +343,8 @@
             <!-- s5q3a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q3a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q302.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -460,7 +463,8 @@
             <!-- s5q4a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q4a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q402.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -579,7 +583,8 @@
             <!-- s5q5a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q5a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q502.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -698,7 +703,8 @@
             <!-- s5q6a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q6a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q602.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -817,7 +823,8 @@
             <!-- s5q7a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q7a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q702.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -936,7 +943,8 @@
             <!-- s5q8a  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs5q8a"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{s5q802.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
