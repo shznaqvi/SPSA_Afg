@@ -73,16 +73,17 @@ public class Section03Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        form.setS3q1(bi.s3q101.isChecked() ? "1"
+
+        form.setS3q1( bi.s3q101.isChecked() ? "1"
                 : bi.s3q102.isChecked() ? "2"
                 : bi.s3q103.isChecked() ? "3"
                 : bi.s3q1096.isChecked() ? "4"
-                : "-1");
+                :  "-1");
 
         form.setS3q1096x(bi.s3q1096x.getText().toString());
-        form.setS3q2(bi.s3q201.isChecked() ? "1"
+        form.setS3q2( bi.s3q201.isChecked() ? "1"
                 : bi.s3q202.isChecked() ? "2"
-                : "-1");
+                :  "-1");
 
         form.setS3q301(bi.s3q301.isChecked() ? "1" : "-1");
 
@@ -94,9 +95,9 @@ public class Section03Activity extends AppCompatActivity {
 
         form.setS3q305(bi.s3q305.isChecked() ? "5" : "-1");
 
-        form.setS3q4(bi.s3q401.isChecked() ? "1"
+        form.setS3q4( bi.s3q401.isChecked() ? "1"
                 : bi.s3q402.isChecked() ? "2"
-                : "-1");
+                :  "-1");
 
         form.setS3q501(bi.s3q501.isChecked() ? "1" : "-1");
 
@@ -108,19 +109,20 @@ public class Section03Activity extends AppCompatActivity {
 
         form.setS3q505(bi.s3q505.isChecked() ? "5" : "-1");
 
-        form.setS3q6a(bi.s3q6a.isChecked() ? "" : "-1");
+        form.setS3q6a(bi.s3q6a.isChecked() ? "1" : "-1");
 
-        form.setS3q6b(bi.s3q6b.isChecked() ? "" : "-1");
+        form.setS3q6b(bi.s3q6b.isChecked() ? "2" : "-1");
 
-        form.setS3q6c(bi.s3q6c.isChecked() ? "" : "-1");
+        form.setS3q6c(bi.s3q6c.isChecked() ? "3" : "-1");
 
-        form.setS3q6d(bi.s3q6d.isChecked() ? "" : "-1");
+        form.setS3q6d(bi.s3q6d.isChecked() ? "4" : "-1");
 
-        form.setS3q6e(bi.s3q6e.isChecked() ? "" : "-1");
+        form.setS3q6e(bi.s3q6e.isChecked() ? "5" : "-1");
 
         form.setS3q696(bi.s3q696.isChecked() ? "96" : "-1");
 
         form.setS3q696x(bi.s3q696x.getText().toString());
+
 
 
         //    MainApp.fc.setsL(String.valueOf(json));
