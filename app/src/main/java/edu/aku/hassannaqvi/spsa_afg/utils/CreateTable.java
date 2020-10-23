@@ -23,7 +23,6 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_USERNAME + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMTYPE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_PID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q1 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q2 + " TEXT,"
             + FormsContract.FormsTable.COLUMN_S1Q4 + " TEXT,"

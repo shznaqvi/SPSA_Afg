@@ -244,7 +244,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_SYSDATE, form.getSysdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMDATE, form.getFormdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, form.getFormtype());
-        values.put(FormsContract.FormsTable.COLUMN_PID, form.getPid());
         values.put(FormsContract.FormsTable.COLUMN_S1Q1, form.getS1q1());
         values.put(FormsContract.FormsTable.COLUMN_S1Q2, form.getS1q2());
         values.put(FormsContract.FormsTable.COLUMN_S1Q4, form.getS1q4());
@@ -310,7 +309,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 //               FormsContract.FormsTable.COLUMN_S1Q3,
@@ -342,7 +340,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
 
-        String whereClause = FormsTable.COLUMN_S1Q1 + "=? AND " + FormsTable.COLUMN_PID + "=?";
+        String whereClause = FormsTable.COLUMN_S1Q1 + "=? ";
         /* String[] whereArgs = {district, refno};*/
         String groupBy = null;
         String having = null;
@@ -444,7 +442,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 /* FormsContract.FormsTable.COLUMN_S1Q3,*/
@@ -527,7 +524,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
                 /*FormsContract.FormsTable.COLUMN_S1Q3,*/
@@ -567,7 +563,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setFormdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMDATE)));
                 String formValue = c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
                 form.setFormtype(formValue == null ? "1" : formValue);
-                form.setPid(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_PID)));
                 form.setS1q1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q1)));
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
                 /* form.setS1q3(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q3)));*/
@@ -605,12 +600,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_SYNCED,
 
         };
-        String whereClause = FormsContract.FormsTable.COLUMN_PID + " = ? ";
+        String whereClause = FormsTable.COLUMN_S1Q1 + " = ? ";
         String[] whereArgs = new String[]{cluster};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
@@ -637,7 +631,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYSDATE)));
                 form.setS1q1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q1)));
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
-                form.setPid(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_PID)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);
@@ -662,7 +655,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_S1Q1,
                 FormsContract.FormsTable.COLUMN_S1Q2,
-                FormsContract.FormsTable.COLUMN_PID,
                 FormsContract.FormsTable.COLUMN_ISTATUS,
                 FormsContract.FormsTable.COLUMN_SYNCED,
         };
@@ -690,7 +682,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYSDATE)));
                 form.setS1q1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q1)));
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
-                form.setPid(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_PID)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);
@@ -809,8 +800,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
 //        String whereClause = "(" + FormsTable.COLUMN_ISTATUS + " is null OR " + FormsTable.COLUMN_ISTATUS + "='') AND " + FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
-        String whereClause = FormsContract.FormsTable.COLUMN_S1Q1 + "=? AND " + FormsContract.FormsTable.COLUMN_PID + "=?";
-        String[] whereArgs = {district, refno};
+        String whereClause = FormsContract.FormsTable.COLUMN_S1Q1 + "=?";
+        String[] whereArgs = {district};
         String groupBy = null;
         String having = null;
         String orderBy = FormsContract.FormsTable._ID + " ASC";

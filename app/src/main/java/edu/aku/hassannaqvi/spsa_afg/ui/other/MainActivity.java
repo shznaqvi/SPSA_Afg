@@ -163,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
 
                 rSumText
                         .append((form.getS1q1() + "          ").substring(0, 10))
-                        .append((form.getPid() + "      ").substring(0, 6))
                         .append("  \t\t")
                         .append(form_type)
                         .append("  \t")

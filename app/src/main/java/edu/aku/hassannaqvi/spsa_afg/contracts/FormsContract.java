@@ -24,7 +24,6 @@ public class FormsContract {
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_REFNO = "refno";
-        public static final String COLUMN_PID = "pid";
         public static final String COLUMN_S1Q1 = "s1q1";
         public static final String COLUMN_S1Q2 = "s1q2";
         public static final String COLUMN_S1Q4 = "s1q4";

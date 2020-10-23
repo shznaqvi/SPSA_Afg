@@ -24,7 +24,6 @@ public class Form extends LiveData<Form> {
     private String sysdate = "";
     private String formdate = "";
     private String formtype = "";
-    private String pid = "";
     private String sInfo = "";
     private String s02 = "";
     private String s03 = "";
@@ -499,16 +498,6 @@ public class Form extends LiveData<Form> {
     public void setFormtype(String formtype) {
         this.formtype = formtype;
     }
-
-
-    public String getPid() {
-        return pid;
-    }
-
-    public void setPid(String pid) {
-        this.pid = pid;
-    }
-
 
     public String getGpsLat() {
         return gpsLat;
@@ -3802,7 +3791,6 @@ public class Form extends LiveData<Form> {
         this.sysdate = jsonObject.getString(FormsTable.COLUMN_SYSDATE);
         this.formdate = jsonObject.getString(FormsTable.COLUMN_FORMDATE);
         this.formtype = jsonObject.getString(FormsTable.COLUMN_FORMTYPE);
-        this.pid = jsonObject.getString(FormsTable.COLUMN_PID);
         this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
         this.s02 = jsonObject.getString(FormsTable.COLUMN_S02);
         this.s03 = jsonObject.getString(FormsTable.COLUMN_S03);
@@ -3841,20 +3829,6 @@ public class Form extends LiveData<Form> {
         this.sysdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYSDATE));
         this.formdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMDATE));
         this.formtype = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FORMTYPE));
-        this.pid = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_PID));
-        /*this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
-        this.s02 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S02));
-        this.s03 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S03));
-        this.s04 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S04));
-        this.s05 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S05));
-        this.s06 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S06));
-        this.s07 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S07));
-        this.s08 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S08));
-        this.s09 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S09));
-        this.s10 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S10));
-        this.s11 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S11));
-        this.s12 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S12));
-        this.s13 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_S13));*/
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
         this.gpsLng = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLNG));
         this.gpsdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSDATE));
