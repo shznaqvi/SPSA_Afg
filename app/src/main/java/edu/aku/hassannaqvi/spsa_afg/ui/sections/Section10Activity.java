@@ -40,20 +40,18 @@ public class Section10Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.Sec10fld);
             }
         }));
+
+        bi.s10q3.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s10q302.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVs10q4);
+            }
+        }));
+
         bi.s10q5.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s10q502.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs10q6);
             }
         }));
-        bi.s10q3.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s10q302.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs10q5);
-            }
-        }));
-        /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0203);
-        }));*/
 
     }
 
