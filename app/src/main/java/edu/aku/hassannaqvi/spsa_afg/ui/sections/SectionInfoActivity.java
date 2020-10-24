@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.threeten.bp.LocalDate;
 
@@ -20,6 +22,7 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
+import edu.aku.hassannaqvi.spsa_afg.validator.ValidatorClass;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 
@@ -150,14 +153,15 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-       /* if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
-        if (!dtFlag) {
-//            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
+
+       /* if (!dtFlag) {
+           Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
         }
         if (bi.a0702.isChecked()) return true;
         return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;*/
-       return true;
+
     }
 
 

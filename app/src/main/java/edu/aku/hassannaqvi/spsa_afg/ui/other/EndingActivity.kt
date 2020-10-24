@@ -51,27 +51,28 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun saveDraft() {
-        val statusValue = if (bi.istatusa.isChecked) "1"
+       /* val statusValue = if (bi.istatusa.isChecked) "1"
         else if (bi.istatusb.isChecked) "2"
         else if (bi.istatusc.isChecked) "3"
         else if (bi.istatus96.isChecked) "96"
         else "-1"
         form.istatus = statusValue
         form.istatus96x = if (bi.istatus96x.text.toString().trim().isEmpty()) "-1" else bi.istatus96x.text.toString()
-        form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)
+        form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)*/
 
     }
 
 
     private fun updateDB(): Boolean {
-        val db = appInfo.dbHelper
+       /* val db = appInfo.dbHelper
         val updcount = db.updateEnding()
         return if (updcount == 1) {
             true
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show()
             false
-        }
+        }*/ /*Commit for App Testing by Fazal*/
+        return true;
     }
 
     private fun formValidation(): Boolean {

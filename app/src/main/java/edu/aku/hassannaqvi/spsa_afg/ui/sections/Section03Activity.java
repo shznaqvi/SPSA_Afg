@@ -53,6 +53,21 @@ public class Section03Activity extends AppCompatActivity {
             }
         }));
 
+
+        bi.s3q305.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.s3q3check, false);
+            } else {
+                Clear.clearAllFields(bi.s3q3check, true);
+            }
+        });
+        bi.s3q505.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.s3q5check, false);
+            } else {
+                Clear.clearAllFields(bi.s3q5check, true);
+            }
+        });
     }
 
 

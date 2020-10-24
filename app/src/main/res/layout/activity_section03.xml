@@ -224,7 +224,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:tag="0">
+                            android:tag="0"
+                            >
 
                             <CheckBox
                                 android:id="@+id/s3q301"
@@ -250,13 +251,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/s3q304" />
 
-                            <CheckBox
-                                android:id="@+id/s3q305"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/s3q305" />
+
 
                         </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/s3q305"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s3q305" />
 
                     </LinearLayout>
 
@@ -396,12 +398,13 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/s3q504" />
 
-                            <CheckBox
-                                android:id="@+id/s3q505"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/s3q505" />
+
                         </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/s3q505"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s3q505" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
