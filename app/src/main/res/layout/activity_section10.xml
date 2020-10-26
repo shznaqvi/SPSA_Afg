@@ -538,13 +538,14 @@
                                 android:text='@{s10q696.checked ? s10q696x.getText().toString() : ""}'
                                 android:visibility='@{s10q696.checked? View.VISIBLE : View.GONE}' />
 
-                            <CheckBox
-                                android:id="@+id/s10q699"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/s10q699" />
-
                         </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/s10q699"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:tag="-1"
+                            android:text="@string/s10q699" />
 
                     </LinearLayout>
 
