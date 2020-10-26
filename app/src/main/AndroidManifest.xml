@@ -57,7 +57,7 @@
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.sections.Section021Activity"
             android:screenOrientation="portrait"

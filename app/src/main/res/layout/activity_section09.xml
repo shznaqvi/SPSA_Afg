@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- s9title  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs9title"
@@ -42,6 +43,7 @@
                         android:text="@string/s9title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s9q1  Input   -->
             <androidx.cardview.widget.CardView
@@ -79,9 +81,11 @@
                         android:id="@+id/s9q1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
                         android:hint="@string/s9q1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s9q2  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -127,6 +131,7 @@
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s9q3  Radio   -->
             <androidx.cardview.widget.CardView
@@ -186,6 +191,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- s9q4  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs9q4"
@@ -236,6 +242,7 @@
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s9q5  Title   -->
             <androidx.cardview.widget.CardView
@@ -288,6 +295,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s9q6  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs9q6"
@@ -331,7 +339,10 @@
                         app:minValue="7"
                         app:type="range" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -359,6 +370,10 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
