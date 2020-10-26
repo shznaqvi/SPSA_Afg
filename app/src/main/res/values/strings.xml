@@ -57,147 +57,6 @@
     <string name="istatusc"> انڪار ڪري ڇڏيو </string>
     <string name="istatus96"> ٻيو ڪجھ </string>
     <string name="istatus96x"> وضاحت ڪريو </string>
-
-    <string name="sec1heading"> بنيادي معلومات: </string>
-    <string name="sec2heading"> علامتون: </string>
-    <string name="sec5heading"> تعلقو صحت ڪوارٽر پوئواري فارم </string>
-
-    <string name="a06"> گھرانے کے انٹرویوکا نتیجہ: نوٹ: انٹرویو مکمل نہ ہونے کی صورت میں سپروائزر سے رابطہ کریں۔</string>
-    <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
-    <string name="a0601">مکمل</string>
-    <string name="a0602">فرد کی شناخت نہیں ہو سکی</string>
-    <string name="a0603">گھر کی شناخت نہیں ہو سکی </string>
-    <string name="a0604">گھر بند ہے</string>
-    <string name="a0605">گھر میں کوئی اہل جواب دہندہ موجود نہیں</string>
-    <string name="a0606">گھر طویل مدت سے بند ہے</string>
-    <string name="a0607">انکار کردیا </string>
-    <string name="a0696">دیگر(وضاحت کریں)</string>
-    <string name="Q_a06">A06</string>
-    <string name="a01">انٹرویو کی تاریخ</string>
-    <string name="a02">انٹرویو شروع کرنے کا وقت(24 گھنٹوں میں)</string>
-    <string name="a03">انٹرویو لینے والے کا کوڈ</string>
-    <string name="a04">صوبہ؟</string>
-    <string name="a0401">خیبر پختونخوا </string>
-    <string name="a0402">پنجاب</string>
-    <string name="a0403">سندھ</string>
-    <string name="a0404">بلوچستان</string>
-    <string name="a0405">آزاد جموں کشمیر </string>
-    <string name="a0406">گلگت بلتستان </string>
-    <string name="a05">ضلع؟</string>
-    <string name="a05a">فرد کی شناختی  آئی ڈی</string>
-    <string name="a05b">کیا گھر اور فرد کی شناخت ہو گئی</string>
-    <string name="a05b1">ہاں</string>
-    <string name="a05b2">نہیں</string>
-    <string name="a07">کیا میں انٹرویو شروع کر سکتا /سکتی ہوں؟</string>
-    <string name="a0701">ہاں</string>
-    <string name="a0702">نہیں</string>
-    <string name="a08"> پورا نام؟</string>
-    <string name="a09">باپ/شوہر کا نام؟</string>
-    <string name="a10">رہائشی پتہ (جنوری -2020 کے بعد سے) شہر / گاؤں کے ساتھ؟</string>
-    <string name="a11">رابطہ نمبر؟</string>
-    <string name="a12">رہائشی علائقہ؟</string>
-    <string name="a1201">شہری </string>
-    <string name="a1202">دیہی</string>
-    <string name="a13">آپ کی تاریخ پیدائش کیا ہے؟</string>
-    <string name="a13dd">دن</string>
-    <string name="a13mm">مہینہ</string>
-    <string name="a13yy">سال</string>
-    <string name="a14">آپ کی عمر کتنی ہے؟</string>
-    <string name="a14mm">مہینہ</string>
-    <string name="a14yy">سال</string>
-    <string name="a15">آپ کی جنس کیا ہے؟</string>
-    <string name="a1501">مرد(لڑکا) </string>
-    <string name="a1502">عورت(لڑکی) </string>
-    <string name="a1503">تیسری جنس </string>
-    <string name="a16">آپ کون سی قومیت سے تعلق رکھتے ہیں؟</string>
-    <string name="a1601">سندھی</string>
-    <string name="a1602">اردو</string>
-    <string name="a1603">پنجابی</string>
-    <string name="a1604">بلوچ/براہوی</string>
-    <string name="a1605">پشتون</string>
-    <string name="a1606">سرائیکی </string>
-    <string name="a1607">کشمیری</string>
-    <string name="a1608">ہزارہ </string>
-    <string name="a1609">برشو</string>
-    <string name="a16096">دیگر(وضاحت کریں) </string>
-    <string name="a17">آپ کی ذات کیا ہے؟</string>
-    <string name="a18">آپ کس مذہب کے پیروکارہیں؟</string>
-    <string name="a1801">مسلمان </string>
-    <string name="a1802">عیسائی </string>
-    <string name="a1803">ہندو </string>
-    <string name="a1804">سکھ </string>
-    <string name="a18096">دیگر(وضاحت کریں)</string>
-    <string name="a19">آپ کی زیادہ سے زیادہ تعلیم کیا ہے؟</string>
-    <string name="a1901">کوئی تعلیم نہیں </string>
-    <string name="a1902">صرف قرآنی تعلیم </string>
-    <string name="a1903">پرائمری اسکول (1-4 سال) </string>
-    <string name="a1904">پرائمری اسکول (5 سال) مکمل </string>
-    <string name="a1905">سیکنڈری اسکول (6-9 سال) </string>
-    <string name="a1906">سیکنڈری اسکول (10 سال) مکمل </string>
-    <string name="a1907">ہائی اسکول (11-12 سال) </string>
-    <string name="a1908">بیچلر ڈگری (14 سال) </string>
-    <string name="a1909">ماسٹرزڈگری (16 سال) </string>
-    <string name="a1910">پی ایچ ڈی </string>
-    <string name="a1911">تکنیکی تعلیم </string>
-    <string name="a19096">دیگر(وضاحت کریں</string>
-    <string name="a20">آپ کی ازدواجی حیثیت کیا ہے؟</string>
-    <string name="a2001">غیرشادی شدہ </string>
-    <string name="a2002">شادی شدہ </string>
-    <string name="a2003">طلاق یافتہ </string>
-    <string name="a2004">الگ ہونا </string>
-    <string name="a2005">بیوہ/رنڈوا</string>
-    <string name="a21"> آپ کا بنیادی پیشہ تجارت کونسا ہے؟</string>
-    <string name="a2101">پیشہ ور (اکاؤنٹنٹ، انجینئر، ڈاکٹر) </string>
-    <string name="a2102">انتظامی اور تکنیکی/انٹرمیڈیٹ مارکیٹنگ اور سیلز مینیجرز، اساتذہ، صحافی، نرسیں) </string>
-    <string name="a2103">غیر دستی ہنر مند (کلرکس ، دکان کے معاونین ، کیشیئر) </string>
-    <string name="a2104">دستی ہنر مند (ترخان، ڈرائیور، باورچی) </string>
-    <string name="a2105">جزوی طور پر ہنرمند (سیکیورٹی گارڈز، مشین آپریٹرز، کسان) </string>
-    <string name="a2106">غیر ہنر مند (مزدور، کلینر) </string>
-    <string name="a2107">طالب علم </string>
-    <string name="a2108">بے روزگار </string>
-    <string name="a2109">گھریلو خاتون </string>
-    <string name="a2110">پری اسکول </string>
-    <string name="a2111">چائلڈ لیبر(15 سال سے کم کام کرنے والا بچہ) </string>
-    <string name="a21096">دیگر(وضاحت کریں</string>
-    <string name="a22">آپ کا مخصوص پیشہ(پوزیشن، عہدہ اور تنظیم کے نام سمیت) کیا ہے؟</string>
-    <string name="a22pos">عہدہ</string>
-    <string name="a22org">ادارے کا نام </string>
-    <string name="a23">کیا آپ جنوری 2020 کے بعد جیل میں یا قانون نافذ کرنے والے اداروں کی تحویل میں رہے ہیں؟</string>
-    <string name="a2301">ہاں</string>
-    <string name="a2302">نہیں</string>
-    <string name='Q_a01'>a01</string>
-    <string name='Q_a02'>a02</string>
-    <string name='Q_a03'>a03</string>
-    <string name='Q_a04'>a04</string>
-    <string name='Q_a05'>a05</string>
-    <string name='Q_a05a'>a05a</string>
-    <string name='Q_a05b'>a05b</string>
-    <string name='Q_a07'>a07</string>
-    <string name='Q_a08'>a08</string>
-    <string name='Q_a09'>a09</string>
-    <string name='Q_a10'>a10</string>
-    <string name='Q_a11'>a11</string>
-    <string name='Q_a12'>a12</string>
-    <string name='Q_a13'>a13</string>
-    <string name='Q_a14'>a14</string>
-    <string name='Q_a15'>a15</string>
-    <string name='Q_a16'>a16</string>
-    <string name='Q_a17'>a17</string>
-    <string name='Q_a18'>a18</string>
-    <string name='Q_a19'>a19</string>
-    <string name='Q_a20'>a20</string>
-    <string name='Q_a21'>a21</string>
-    <string name='Q_a22'>a22</string>
-    <string name='Q_a22org'>a22org</string>
-    <string name='Q_a22pos'>a22pos</string>
-    <string name='Q_a'>a</string>
-    <string name='Q_a1'>a1</string>
-    <string name='Q_a2'>a2</string>
-    <string name='Q_a3'>a3</string>
-    <string name='Q_a4'>a4</string>
-    <string name='Q_a5'>a5</string>
-
-
     <string name="section2socioeconomicstatus_mainheading">Section 2. Socio-Economic Status : SocioEconomic Status </string>
     <string name="section3handwashing_mainheading">Section 3: HAND-WASHING : HANDWASHING </string>
     <string name="section4exposuretointerventions_mainheading">Section 4: Exposure to Interventions: Exposure to Interventions</string>
@@ -211,7 +70,6 @@
     <string name="section12childimmunizationmorbidityandcareseeking_mainheading">Section 12: Child Immunization, Morbidity and Care Seeking: Child Immunization, Morbidity and Care Seeking</string>
     <string name="section13knowledgeaboutiycf_mainheading">Section 13: Knowledge about IYCF   : Knowledge about IYCF   </string>
     <string name="section1generalinformation_mainheading">Section 1: General Information : Section 1: General Information </string>
-
     <string name="newHHheadname"> Name of new head of the household </string>
     <string name="s2q1">What is your mother tongue?</string>
     <string name="s2q101">Dari</string>
@@ -454,7 +312,7 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s2q20">Does any member of this household have a bank account?</string>
     <string name="s2q2001">Yes  </string>
     <string name="s2q2002">No</string>
-    <string name="s2q2098">Don’t know </string>
+    <string name="s2q20098">Don’t know </string>
     <string name="s3title">HAND-WASHING </string>
     <string name="s3q1">Please show us where you and members of your household most often wash their hands</string>
     <string name="s3q101">Observed</string>
@@ -576,6 +434,8 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s5q9a02">Sometimes (3-10 times in the past four weeks)</string>
     <string name="s5q9a03">Often (more than ten times in the past four weeks)</string>
     <string name="s6title"> Anthropometry and Hb of pregnant and lactating women (PLW) </string>
+    <string name="s6mea1">Measurer-1</string>
+    <string name="s6mea2">Measurer-2</string>
     <string name="s6q1">Weight in k.g</string>
     <string name="s6q1a">Measurer-1 Code: Weight in k.g</string>
     <string name="s6q1b">Measurer-2 Code: Weight in k.g</string>
@@ -767,9 +627,9 @@ If unable to determine if public or private sector, write the name of place</str
     <string name="s10q102">No </string>
     <string name="s10q198">Don’t know</string>
     <string name="s10q2">How long after birth did you first put (NAME) to the breast?</string>
-    <string name="s10q201">Immediately</string>
-    <string name="s10q202">Hours </string>
-    <string name="s10q203">Days</string>
+    <string name="s10q2666">Immediately</string>
+    <string name="s10q201">Hours</string>
+    <string name="s10q202">Days</string>
     <string name="s10q3">Did you feed first milk (colostrum) to the child?</string>
     <string name="s10q301">Yes </string>
     <string name="s10q302">No </string>
@@ -794,7 +654,7 @@ If unable to determine if public or private sector, write the name of place</str
     <string name="s10q609">Honey</string>
     <string name="s10q610">Prescribed medicine</string>
     <string name="s10q696">Other (specify)</string>
-    <string name="s10q699">Not given anything to drink</string>
+    <string name="s10q699">Not given anything to rink</string>
     <string name="s11title">Infant &amp; Young Child Feeding (IYCF) Practices </string>
     <string name="s11q7">Was (NAME) breastfed yesterday during the day or at night?</string>
     <string name="s11q701">Yes </string>
@@ -967,7 +827,7 @@ If yes, may I see it please?
     <string name="s12q2">Did (NAME) ever have any vaccinations to prevent him/her from getting diseases, including vaccinations received in a national immunization day campaign?
 
 COPY DATES FROM THE CARD.
-WRITE ‘44\' IN ‘DAY\' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
+WRITE \'44\' IN \'DAY\' COLUMN IF CARD SHOWS THAT A DOSE WAS GIVEN, BUT NO DATE IS RECORDED.
 
 Dates are not applicable if the source of vaccination is from maternal recall, and in response of card not seen or No card in Q.1
 </string>
@@ -1101,9 +961,9 @@ Any other illnesses?
     <string name="s13q196">Other (Specify)</string>
     <string name="s13q198">Don’t know</string>
     <string name="s13q2">When a child should ideally be initiated breastfeeding after birth?</string>
-    <string name="s13q201">Immediately</string>
-    <string name="s13q202">Hours </string>
-    <string name="s13q203">Days</string>
+    <string name="s13q2666">Immediately</string>
+    <string name="s13q201">Hours</string>
+    <string name="s13q202"> Days</string>
     <string name="s13q3">Have you heard about exclusive breastfeeding?</string>
     <string name="s13q301">Yes </string>
     <string name="s13q302">No </string>
@@ -1182,8 +1042,6 @@ Any other illnesses?
     <string name="s1q20c">Pregnant Women</string>
     <string name="s1q20d">Lactating Women</string>
     <string name="s1q20e">Total family member</string>
-
-    <!--QUESTION NUMBERS-->
     <string name='Q_s1_consent'>s1_consent</string>
     <string name='Q_s1_title1'>s1_title1</string>
     <string name='Q_s10q1'>s10q1</string>
@@ -1220,13 +1078,7 @@ Any other illnesses?
     <string name='Q_s11q12n'>s11q12n</string>
     <string name='Q_s11q12o'>s11q12o</string>
     <string name='Q_s11q12p'>s11q12p</string>
-    <string name='Q_s11q12p01'>s11q12p01</string>
-    <string name='Q_s11q12p02'>s11q12p02</string>
-    <string name='Q_s11q12p98'>s11q12p98</string>
     <string name='Q_s11q12q'>s11q12q</string>
-    <string name='Q_s11q12q01'>s11q12q01</string>
-    <string name='Q_s11q12q02'>s11q12q02</string>
-    <string name='Q_s11q12q98'>s11q12q98</string>
     <string name='Q_s11q13'>s11q13</string>
     <string name='Q_s11q14'>s11q14</string>
     <string name='Q_s11q15'>s11q15</string>
@@ -1400,6 +1252,8 @@ Any other illnesses?
     <string name='Q_s5q9'>s5q9</string>
     <string name='Q_s5q9a'>s5q9a</string>
     <string name='Q_s5title'>s5title</string>
+    <string name='Q_s6mea1'>s6mea1</string>
+    <string name='Q_s6mea2'>s6mea2</string>
     <string name='Q_s6q1'>s6q1</string>
     <string name='Q_s6q2'>s6q2</string>
     <string name='Q_s6q3'>s6q3</string>
@@ -1452,6 +1306,5 @@ Any other illnesses?
     <string name='Q_s9q5'>s9q5</string>
     <string name='Q_s9q6'>s9q6</string>
     <string name='Q_s9title'>s9title</string>
-    <string name="s2q20098">Don\'t know</string>
 
 </resources>

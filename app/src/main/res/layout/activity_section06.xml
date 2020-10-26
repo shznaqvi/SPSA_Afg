@@ -43,6 +43,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s6q1  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs6q1"
@@ -53,12 +54,27 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/qtxt_s6q1"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
 
-                        android:text="@string/s6q1" />
+                        <TextView
+                            android:id="@+id/qtxt_s6q1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_s6q1"
+                            android:text="@string/s6q1" />
+
+                        <TextView
+                            android:id="@+id/q_s6q1"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_s6q1"
+                            android:layout_alignBottom="@id/qtxt_s6q1"
+                            android:text="@string/Q_s6q1" />
+                    </RelativeLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -69,11 +85,12 @@
                         android:id="@+id/s6q1a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/s6q1a"
+                        android:hint="##.##"
                         android:inputType="number"
-                        android:maxLength="3"
-                        app:maxValue="110"
-                        app:minValue="40"
+                        app:mask="###.##"
+                        app:maxValue="110.00"
+                        app:minValue="40.00"
+                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
                         app:type="range" />
 
                     <TextView
@@ -85,14 +102,17 @@
                         android:id="@+id/s6q1b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/s6q1b"
+                        android:hint="##.##"
                         android:inputType="number"
-                        android:maxLength="3"
-                        app:maxValue="110"
-                        app:minValue="40"
+                        app:mask="###.##"
+                        app:maxValue="110.00"
+                        app:minValue="40.00"
+                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
                         app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s6q2  Title   -->
             <androidx.cardview.widget.CardView
@@ -104,12 +124,27 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/qtxt_s6q2"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
 
-                        android:text="@string/s6q2" />
+                        <TextView
+                            android:id="@+id/qtxt_s6q2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_s6q2"
+                            android:text="@string/s6q2" />
+
+                        <TextView
+                            android:id="@+id/q_s6q2"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_s6q2"
+                            android:layout_alignBottom="@id/qtxt_s6q2"
+                            android:text="@string/Q_s6q2" />
+                    </RelativeLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -120,11 +155,12 @@
                         android:id="@+id/s6q2a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/s6q2a"
+                        android:hint="##.#"
                         android:inputType="number"
-                        android:maxLength="3"
-                        app:maxValue="180"
-                        app:minValue="100"
+                        app:mask="###.#"
+                        app:maxValue="180.0"
+                        app:minValue="100.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
 
                     <TextView
@@ -136,14 +172,16 @@
                         android:id="@+id/s6q2b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/s6q2b"
+                        android:hint="##.#"
                         android:inputType="number"
-                        android:maxLength="3"
-                        app:maxValue="180"
-                        app:minValue="100"
+                        app:mask="###.#"
+                        app:maxValue="180.0"
+                        app:minValue="100.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s6q3  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -181,14 +219,17 @@
                         android:id="@+id/s6q3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/s6q3"
+                        android:hint="##.#"
                         android:inputType="number"
                         android:maxLength="2"
-                        app:maxValue="19"
-                        app:minValue="6"
+                        app:mask="##.#"
+                        app:maxValue="19.0"
+                        app:minValue="6.0"
+                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!--EndButton LinearLayout-->
             <LinearLayout
@@ -218,6 +259,7 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
 
         </LinearLayout>
 

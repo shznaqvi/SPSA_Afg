@@ -26,28 +26,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppThemeEnglish"
         tools:replace="android:allowBackup">
 
         <activity
             android:name=".ui.list_activity.FormsReportCluster"
             android:label="Forms Report"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.list_activity.FormsReportDate"
             android:label="Forms Report"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.list_activity.PendingFormsActivity"
             android:label="Unfinished Forms"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,80 +57,78 @@
         <activity
             android:name=".ui.sections.Section021Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section022Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section03Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section04Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section05Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section06Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section07Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section08Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section09Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section10Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section1101Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section1102Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section12Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section13Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.other.MainActivity"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.SectionInfoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeUrdu" />
+            android:theme="@style/AppThemeDari" />
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:screenOrientation="portrait" />
 
         <service android:name=".utils.DownloadFileService" />
     </application>
