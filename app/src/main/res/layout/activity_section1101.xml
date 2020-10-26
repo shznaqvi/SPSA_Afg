@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -442,13 +443,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10b01" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s11q10b01x"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/s11q10b01"
                             android:tag="s11q10b01"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range"
                             android:text='@{s11q10b01.checked ? s11q10b01x.getText().toString() : ""}'
                             android:visibility='@{s11q10b01.checked? View.VISIBLE : View.GONE}' />
 
@@ -463,6 +469,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10b98" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -511,13 +518,16 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10c01" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s11q10c01x"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/s11q10c01"
                             android:tag="s11q10c01"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range"
                             android:text='@{s11q10c01.checked ? s11q10c01x.getText().toString() : ""}'
                             android:visibility='@{s11q10c01.checked? View.VISIBLE : View.GONE}' />
 
@@ -532,8 +542,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10c98" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -706,13 +719,16 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10f01" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s11q10f01x"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/s11q10f01"
                             android:tag="s11q10f01"
+                            app:maxValue="12"
+                            app:minValue="1"
+                            app:type="range"
                             android:text='@{s11q10f01.checked ? s11q10f01x.getText().toString() : ""}'
                             android:visibility='@{s11q10f01.checked? View.VISIBLE : View.GONE}' />
 
@@ -727,8 +743,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s11q10f98" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 

@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- s13title  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13title"
@@ -42,6 +43,7 @@
                         android:text="@string/s13title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q1  Radio   -->
             <androidx.cardview.widget.CardView
@@ -110,6 +112,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q2  Radio   -->
             <androidx.cardview.widget.CardView
@@ -197,6 +200,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s13q3  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q3"
@@ -261,6 +265,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q4  Radio   -->
             <androidx.cardview.widget.CardView
@@ -330,6 +335,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s13q5  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q5"
@@ -398,6 +404,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s13q6  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q6"
@@ -455,14 +462,29 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s13q696" />
 
-                        <RadioButton
-                            android:id="@+id/s13q698"
+                        <EditText
+                            android:id="@+id/s13q696x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/s13q698" />
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/s13q696"
+                            android:tag="s13q196"
+                            android:text='@{s13q696.checked ? s13q696x.getText().toString() : ""}'
+                            android:visibility='@{s13q696.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/s13q698"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/s13q698" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q7  Radio   -->
             <androidx.cardview.widget.CardView
@@ -550,6 +572,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s13q8  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q8"
@@ -617,6 +640,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q9  Radio   -->
             <androidx.cardview.widget.CardView
@@ -697,6 +721,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s13q10  CheckBox   -->
             <androidx.cardview.widget.CardView
@@ -780,7 +805,10 @@
                             android:text="@string/s13q1007" />
                     </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -808,6 +836,10 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
