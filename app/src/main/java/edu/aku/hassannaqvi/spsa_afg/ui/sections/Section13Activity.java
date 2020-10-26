@@ -11,7 +11,7 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection13Binding;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
+import edu.aku.hassannaqvi.spsa_afg.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.CONSTANTS.FSTATUS_END_FLAG;
@@ -131,7 +131,7 @@ public class Section13Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, EndingActivity.class));
         }
     }
 

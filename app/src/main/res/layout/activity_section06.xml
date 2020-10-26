@@ -81,36 +81,67 @@
                         android:layout_height="wrap_content"
                         android:text="@string/s6q1a" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q1a"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.##"
-                        android:inputType="number"
-                        app:mask="###.##"
-                        app:maxValue="110.00"
-                        app:minValue="40.00"
-                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q1a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:mask="###.##"
+                            app:maxValue="110.00"
+                            app:minValue="40.00"
+                            app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                        <!--<Spinner
+                            android:id="@+id/s6q1ab"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />-->
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s6q1b" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q1b"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.##"
-                        android:inputType="number"
-                        app:mask="###.##"
-                        app:maxValue="110.00"
-                        app:minValue="40.00"
-                        app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q1b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="##.##"
+                            android:inputType="number"
+                            app:mask="###.##"
+                            app:maxValue="110.00"
+                            app:minValue="40.00"
+                            app:pattern="^(\\d{3,3}\\.\\d{2,2})$"
+                            app:type="range" />
+
+                        <!--<Spinner
+                            android:id="@+id/s6q1bb"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />-->
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
@@ -151,34 +182,65 @@
                         android:layout_height="wrap_content"
                         android:text="@string/s6q2a" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q2a"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
-                        android:inputType="number"
-                        app:mask="###.#"
-                        app:maxValue="180.0"
-                        app:minValue="100.0"
-                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q2a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="##.#"
+                            android:inputType="number"
+                            app:mask="###.#"
+                            app:maxValue="180.0"
+                            app:minValue="100.0"
+                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                            app:type="range" />
+
+                        <!-- <Spinner
+                             android:id="@+id/s6q2ab"
+                             style="@style/spinner"
+                             android:layout_width="0dp"
+                             android:layout_margin="10dp"
+                             android:layout_weight="1" />-->
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s6q2b" />
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q2b"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
-                        android:inputType="number"
-                        app:mask="###.#"
-                        app:maxValue="180.0"
-                        app:minValue="100.0"
-                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q2b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="##.#"
+                            android:inputType="number"
+                            app:mask="###.#"
+                            app:maxValue="180.0"
+                            app:minValue="100.0"
+                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                            app:type="range" />
+
+                        <!--<Spinner
+                            android:id="@+id/s6q2bb"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />-->
+
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -215,18 +277,34 @@
                             android:text="@string/Q_s6q3" />
                     </RelativeLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q3"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:mask="##.#"
-                        app:maxValue="19.0"
-                        app:minValue="6.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
-                        app:type="range" />
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="##.#"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:mask="##.#"
+                            app:maxValue="19.0"
+                            app:minValue="6.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                            app:type="range" />
+
+                        <!-- <Spinner
+                             android:id="@+id/s6q3a"
+                             style="@style/spinner"
+                             android:layout_width="0dp"
+                             android:layout_margin="10dp"
+                             android:layout_weight="1" />-->
+
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
@@ -142,6 +143,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return (int) count;
     }
 
+    public List<String> getUsers() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {UsersContract.UsersTable.COLUMN_USERNAME};
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = null;
+
+        List<String> allAC = new ArrayList<>();
+        allAC.add("....");
+        try {
+            c = db.query(
+                    UsersContract.UsersTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allAC.add(c.getString(c.getColumnIndex(UsersContract.UsersTable.COLUMN_USERNAME)));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allAC;
+    }
 
     public VersionApp getVersionApp() {
 

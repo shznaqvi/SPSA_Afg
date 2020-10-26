@@ -3,11 +3,16 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -51,6 +56,30 @@ public class SectionInfoActivity extends AppCompatActivity {
     private void setupSkip() {
       /*  bi.a06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla07));
         bi.a07.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla08));*/
+
+        bi.s1qno.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (TextUtils.isEmpty(bi.s1qno.getText())) {
+                }
+                if (bi.s1qno.getText().toString().length() == 4) {
+                    bi.llGrpsec01.setVisibility(View.VISIBLE);
+                } else {
+                    bi.llGrpsec01.setVisibility(View.GONE);
+                    Clear.clearAllFields(bi.llGrpsec01);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
 
 

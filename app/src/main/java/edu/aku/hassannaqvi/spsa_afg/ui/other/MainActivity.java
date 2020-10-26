@@ -38,18 +38,6 @@ import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section021Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section03Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section04Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section06Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section07Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section08Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section09Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section10Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section1101Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section12Activity;
-import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section13Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -303,7 +291,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.openForm:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-            case R.id.sec01:
+            /*case R.id.sec01:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
             case R.id.sec02:
@@ -341,7 +329,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 break;
             case R.id.sec13:
                 oF = new Intent(this, Section13Activity.class);
-                break;
+                break;*/
             case R.id.databaseBtn:
                 oF = new Intent(this, AndroidDatabaseManager.class);
                 break;
