@@ -543,13 +543,20 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
-                if ((mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu")) || db.Login(mEmail1, mPassword1) ||
-                        (mEmail1.equals("test1234") && mPassword1.equals("test1234"))) {
+                if (db.Login(mEmail1, mPassword1)
+                        || (mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu"))
+                        || (mEmail1.equals("test1234") && mPassword1.equals("test1234"))
+                        || (mEmail1.equals("test1235") && mPassword1.equals("test1235"))
+
+                ) {
                     MainApp.userName = mEmail1;
                     MainApp.admin = mEmail1.contains("@");
 
-                    if ((mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu")) || db.Login(mEmail2, mPassword2) ||
-                            (mEmail2.equals("test1234") && mPassword2.equals("test1234"))) {
+                    if (db.Login(mEmail2, mPassword1)
+                            || (mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu"))
+                            || (mEmail2.equals("test1234") && mPassword2.equals("test1234"))
+                            || (mEmail2.equals("test1235") && mPassword2.equals("test1235"))
+                    ) {
                         MainApp.userName = mEmail2;
                         MainApp.admin = mEmail2.contains("@");
 

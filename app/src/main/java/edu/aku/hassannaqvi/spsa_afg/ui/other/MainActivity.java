@@ -300,6 +300,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     public void openSpecificActivity(View v) {
         Intent oF = null;
         switch (v.getId()) {
+            case R.id.openForm:
+                oF = new Intent(this, SectionInfoActivity.class);
+                break;
             case R.id.sec01:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;

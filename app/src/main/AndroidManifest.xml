@@ -112,7 +112,7 @@
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.other.MainActivity"
-            android:theme="@style/AppThemeDari" />
+           />
         <activity
             android:name=".ui.sections.SectionInfoActivity"
             android:screenOrientation="portrait"

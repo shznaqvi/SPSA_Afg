@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -17,12 +18,12 @@ import java.util.Date;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
-import edu.aku.hassannaqvi.spsa_afg.validator.ValidatorClass;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 
@@ -62,13 +63,13 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, Section021Activity.class));
         }
     }
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         long updcount = db.addForm(form);
         form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
@@ -78,8 +79,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
 
 
