@@ -398,6 +398,8 @@ public class Form extends LiveData<Form> {
     public String s13q602 = "";
     public String s13q603 = "";
     public String s13q696 = "";
+    public String s13q696x = "";
+    public String s13q698 = "";
     public String s13q7 = "";
     public String s13q796x = "";
     public String s13q8 = "";
@@ -3476,6 +3478,22 @@ public class Form extends LiveData<Form> {
         this.s13q696 = s13q696;
     }
 
+    public String getS13q696x() {
+        return s13q696x;
+    }
+
+    public void setS13q696x(String s13q696x) {
+        this.s13q696x = s13q696x;
+    }
+
+    public String getS13q698() {
+        return s13q698;
+    }
+
+    public void setS13q698(String s13q698) {
+        this.s13q698 = s13q698;
+    }
+
     public String getS13q7() {
         return s13q7;
     }
@@ -4390,7 +4408,8 @@ public class Form extends LiveData<Form> {
                     .put("s13q602", s13q602)
                     .put("s13q603", s13q603)
                     .put("s13q696", s13q696)
-                    /*.put("s13q698", s13q698x)*/
+                    .put("s13q696x", s13q696x)
+                    .put("s13q698", s13q698)
                     .put("s13q7", s13q7)
                     .put("s13q796x", s13q796x)
                     .put("s13q8", s13q8)
@@ -5042,7 +5061,8 @@ public class Form extends LiveData<Form> {
                 this.s13q602 = json.getString("s13q602");
                 this.s13q603 = json.getString("s13q603");
                 this.s13q696 = json.getString("s13q696");
-                //this.s13q698x = json.getString("s13q698");
+                this.s13q696x = json.getString("s13q696x");
+                this.s13q698 = json.getString("s13q698");
                 this.s13q7 = json.getString("s13q7");
                 this.s13q796x = json.getString("s13q796x");
                 this.s13q8 = json.getString("s13q8");

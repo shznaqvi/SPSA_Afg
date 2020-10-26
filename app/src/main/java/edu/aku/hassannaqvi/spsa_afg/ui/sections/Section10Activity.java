@@ -53,6 +53,14 @@ public class Section10Activity extends AppCompatActivity {
             }
         }));
 
+        bi.s10q699.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.s10q6check, false);
+            } else {
+                Clear.clearAllFields(bi.s10q6check, true);
+            }
+        });
+
     }
 
 

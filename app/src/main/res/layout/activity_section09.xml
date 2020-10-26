@@ -81,8 +81,9 @@
                         android:id="@+id/s9q1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:hint="@string/s9q1" />
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+                        android:hint="@string/s9q1"
+                        android:maxLength="50" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
