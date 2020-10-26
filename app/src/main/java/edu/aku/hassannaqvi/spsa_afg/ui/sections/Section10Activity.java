@@ -84,13 +84,13 @@ public class Section10Activity extends AppCompatActivity {
                 : bi.s10q198.isChecked() ? "98"
                 : "-1");
 
-        form.setS10q2(bi.s10q201.isChecked() ? "666"
-                : bi.s10q202.isChecked() ? ""
-                : bi.s10q203.isChecked() ? ""
+        form.setS10q2(bi.s10q201.isChecked() ? "1"
+                : bi.s10q202.isChecked() ? "2"
+                : bi.s10q2666.isChecked() ? "666"
                 : "-1");
 
+        form.setS10q201x(bi.s10q201x.getText().toString());
         form.setS10q202x(bi.s10q202x.getText().toString());
-        form.setS10q203x(bi.s10q203x.getText().toString());
         form.setS10q3(bi.s10q301.isChecked() ? "1"
                 : bi.s10q302.isChecked() ? "2"
                 : bi.s10q398.isChecked() ? "98"

@@ -77,7 +77,7 @@ public class Section04Activity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        form.setS4q1(bi.s4q1a01.isChecked() ? "1"
+/*        form.setS4q1(bi.s4q1a01.isChecked() ? "1"
                 : bi.s4q1a02.isChecked() ? "2"
                 : "-1");
         form.setS4q1bx(bi.s4q1b.getText().toString());
@@ -101,7 +101,41 @@ public class Section04Activity extends AppCompatActivity {
         form.setS4q4bx(bi.s4q4b.getText().toString());
         form.setS4q4cx(bi.s4q4c.getText().toString());
 
+        form.setS4q5(bi.s4q5.getText().toString());*/
+        form.setS4q1(bi.s4q1a01.isChecked() ? "1"
+                : bi.s4q1a02.isChecked() ? "2"
+                : "-1");
+
+        form.setS4q1b(bi.s4q1b.getText().toString());
+
+        form.setS4q1c(bi.s4q1c.getText().toString());
+
+        form.setS4q2(bi.s4q2a01.isChecked() ? "1"
+                : bi.s4q2a02.isChecked() ? "2"
+                : "-1");
+
+        form.setS4q2b(bi.s4q2b.getText().toString());
+
+        form.setS4q2c(bi.s4q2c.getText().toString());
+
+        form.setS4q3(bi.s4q3a01.isChecked() ? "1"
+                : bi.s4q3a02.isChecked() ? "2"
+                : "-1");
+
+        form.setS4q3b(bi.s4q3b.getText().toString());
+
+        form.setS4q3c(bi.s4q3c.getText().toString());
+
+        form.setS4q4(bi.s4q4a01.isChecked() ? "1"
+                : bi.s4q4a02.isChecked() ? "2"
+                : "-1");
+
+        form.setS4q4b(bi.s4q4b.getText().toString());
+
+        form.setS4q4c(bi.s4q4c.getText().toString());
+
         form.setS4q5(bi.s4q5.getText().toString());
+
 
     }
 

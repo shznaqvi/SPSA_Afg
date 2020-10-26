@@ -47,43 +47,46 @@ public class Section13Activity extends AppCompatActivity {
 
     private void SaveDraft()  {
 
-        form.setS13q1( bi.s13q101.isChecked() ? "1"
+        form.setS13q1(bi.s13q101.isChecked() ? "1"
                 : bi.s13q196.isChecked() ? "96"
                 : bi.s13q198.isChecked() ? "98"
-                :  "-1");
+                : "-1");
         form.setS13q196x(bi.s13q196x.getText().toString());
 
-        form.setS13q2( bi.s13q201.isChecked() ? "666"
-                : bi.s13q202.isChecked() ? ""
-                : bi.s13q203.isChecked() ? ""
-                :  "-1");
+        form.setS13q2(bi.s13q201.isChecked() ? "1"
+                : bi.s13q202.isChecked() ? "2"
+                : bi.s13q2666.isChecked() ? "666"
+                : "-1");
         form.setS13q202x(bi.s13q202x.getText().toString());
-        form.setS13q203x(bi.s13q203x.getText().toString());
+        form.setS13q201x(bi.s13q201x.getText().toString());
 
-        form.setS13q3( bi.s13q301.isChecked() ? "1"
+        form.setS13q3(bi.s13q301.isChecked() ? "1"
                 : bi.s13q302.isChecked() ? "2"
                 : bi.s13q398.isChecked() ? "98"
-                :  "-1");
+                : "-1");
 
-        form.setS13q4( bi.s13q401.isChecked() ? "1"
+        form.setS13q4(bi.s13q401.isChecked() ? "1"
                 : bi.s13q496.isChecked() ? "96"
                 : bi.s13q498.isChecked() ? "98"
-                :  "-1");
+                : "-1");
         form.setS13q496x(bi.s13q496x.getText().toString());
 
-        form.setS13q5( bi.s13q501.isChecked() ? "1"
+        form.setS13q5(bi.s13q501.isChecked() ? "1"
                 : bi.s13q596.isChecked() ? "96"
                 : bi.s13q598.isChecked() ? "98"
                 : "-1");
         form.setS13q596x(bi.s13q596x.getText().toString());
 
-        //form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
+        // Error in portal
+        // form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
 
         form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1");
         form.setS13q603(bi.s13q603.isChecked() ? "3" : "-1");
         form.setS13q696(bi.s13q696.isChecked() ? "96" : "-1");
+
+        /* Error in portal
         form.setS13q698(bi.s13q698.isChecked() ? "98" : "-1");
-        form.setS13q696x(bi.s13q696x.getText().toString());
+        form.setS13q696x(bi.s13q696x.getText().toString());*/
 
         form.setS13q7(bi.s13q701.isChecked() ? "1"
                 : bi.s13q702.isChecked() ? "2"
