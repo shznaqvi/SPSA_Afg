@@ -8,11 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.validatorcrawler.aliazaz.Validator
 import edu.aku.hassannaqvi.spsa_afg.CONSTANTS.Companion.FSTATUS_END_FLAG
 import edu.aku.hassannaqvi.spsa_afg.R
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp.appInfo
-import edu.aku.hassannaqvi.spsa_afg.core.MainApp.form
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityEndingBinding
-import java.text.SimpleDateFormat
-import java.util.*
 
 class EndingActivity : AppCompatActivity() {
     lateinit var bi: ActivityEndingBinding
@@ -25,13 +21,11 @@ class EndingActivity : AppCompatActivity() {
         if (check) {
             bi.istatusa.isEnabled = true
             bi.istatusb.isEnabled = false
-            bi.istatusc.isEnabled = false
             bi.istatus96.isEnabled = false
         } else {
             val bool = intent.getIntExtra(FSTATUS_END_FLAG, 0)
             bi.istatusa.isEnabled = false
             bi.istatusb.isEnabled = true
-            bi.istatusc.isEnabled = true
             bi.istatus96.isEnabled = true
         }
     }
@@ -72,7 +66,7 @@ class EndingActivity : AppCompatActivity() {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show()
             false
         }*/ /*Commit for App Testing by Fazal*/
-        return true;
+        return true
     }
 
     private fun formValidation(): Boolean {

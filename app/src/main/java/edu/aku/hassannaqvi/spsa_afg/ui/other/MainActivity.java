@@ -39,6 +39,7 @@ import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section021Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section022Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section03Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section04Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity;
@@ -48,6 +49,7 @@ import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section08Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section09Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section10Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section1101Activity;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section1102Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section12Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section13Activity;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.SectionInfoActivity;
@@ -306,8 +308,11 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.sec01:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-            case R.id.sec02:
+            case R.id.sec02a:
                 oF = new Intent(this, Section021Activity.class);
+                break;
+            case R.id.sec02b:
+                oF = new Intent(this, Section022Activity.class);
                 break;
             case R.id.sec03:
                 oF = new Intent(this, Section03Activity.class);
@@ -333,8 +338,11 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.sec10:
                 oF = new Intent(this, Section10Activity.class);
                 break;
-            case R.id.sec11:
+            case R.id.sec11a:
                 oF = new Intent(this, Section1101Activity.class);
+                break;
+            case R.id.sec11b:
+                oF = new Intent(this, Section1102Activity.class);
                 break;
             case R.id.sec12:
                 oF = new Intent(this, Section12Activity.class);
