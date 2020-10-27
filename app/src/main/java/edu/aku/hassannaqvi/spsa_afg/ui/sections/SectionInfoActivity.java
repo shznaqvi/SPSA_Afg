@@ -7,6 +7,8 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +21,17 @@ import org.json.JSONException;
 import org.threeten.bp.LocalDate;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.DistrictContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.ProvinceContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.VillageContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
@@ -36,9 +44,13 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     /*private static final String TAG = "";
     public static FormsContract fc;
-    public List<String> talukaName, ucName, villageName, usersName, teamLeadName, healthFacilityCode;
-    public List<String> talukaCode, ucCode, villageCode, usersCode, teamLeadCode, healthFacilityName;*/
+    public List<String> usersName, teamLeadName, healthFacilityCode;
+    public List<String> usersCode, teamLeadCode, healthFacilityName;*/
+
     ActivityInfoSectionBinding bi;
+    public List<String> provinceName, districtName, villageName;
+    public List<String> provinceCode, districtCode, villageCode;
+    private DatabaseHelper db;
     boolean dtFlag = false;
     LocalDate localDate = null;
     LocalDate calculatedDOB;
@@ -49,7 +61,19 @@ public class SectionInfoActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_info_section);
         bi.setCallback(this);
         bi.setForm(form);
+        initializingComponents();
         setupSkip();
+        populateSpinner(this);
+    }
+
+
+
+
+
+    private void initializingComponents() {
+        // Databinding Edit Mode (only in first activity for every contract)
+        db = MainApp.appInfo.getDbHelper();
+        populateSpinner(this);
     }
 
 
@@ -132,13 +156,10 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form.setS1q4(bi.s1q4.getText().toString());
 
-        form.setS1q6(bi.s1q6.getText().toString());
-
-        form.setS1q8(bi.s1q8.getText().toString());
-
-        form.setS1q9(bi.s1q9.getText().toString());
-
-        form.setS1q10(bi.s1q10.getText().toString());
+        form.setS1q6(bi.s1q6.getSelectedItem().toString());
+        form.setS1q8(bi.s1q8.getSelectedItem().toString());
+        form.setS1q9(bi.s1q9.getSelectedItem().toString());
+        form.setS1q10(bi.s1q10.getSelectedItem().toString());
 
         form.setS1q11(bi.s1q11.getText().toString());
 
@@ -194,54 +215,55 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
 
+
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
     }
 
 
+
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
-        /*talukaName = new ArrayList<>();
-        talukaCode = new ArrayList<>();
+        provinceName = new ArrayList<>();
+        provinceCode = new ArrayList<>();
 
-        talukaName.add("....");
-        talukaCode.add("....");
+        provinceName.add("....");
+        provinceCode.add("....");
 
-        Collection<TalukasContract> dc = db.getTalukas();
-        for (TalukasContract d : dc) {
-            talukaName.add(d.getTaluka());
-            talukaCode.add(d.getTalukacode());
+        Collection<ProvinceContract> dc = db.getAllProvince();
+        for (ProvinceContract d : dc) {
+            provinceName.add(d.getProvinceName());
+            provinceCode.add(d.getProvinceCode());
         }
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, talukaName);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, provinceName);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
-        bi.s1q2.setAdapter(dataAdapter);
+        bi.s1q6.setAdapter(dataAdapter);
 
-        bi.s1q2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.s1q6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                healthFacilityCode = new ArrayList<>();
-                healthFacilityName = new ArrayList<>();
+                districtCode = new ArrayList<>();
+                districtName = new ArrayList<>();
 
+                districtCode.add("....");
+                districtName.add("....");
 
-                healthFacilityCode.add("....");
-                healthFacilityName.add("....");
-
-                Collection<HealthFacilitiesContract> pc = db.getHealthFacilities(talukaCode.get(position));
-                for (HealthFacilitiesContract p : pc) {
-                    healthFacilityCode.add(p.getFacilityCode());
-                    healthFacilityName.add(p.getFacilityName());
+                Collection<DistrictContract> pc = db.getAllDistricts(provinceCode.get(position));
+                for (DistrictContract p : pc) {
+                    districtCode.add(p.getDistrictCode());
+                    districtName.add(p.getDistrictName());
                 }
-                ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, healthFacilityName);
+                ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtName);
 
                 psuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                bi.s1q1.setAdapter(psuAdapter);
+                bi.s1q8.setAdapter(psuAdapter);
             }
 
             @Override
@@ -251,33 +273,32 @@ public class SectionInfoActivity extends AppCompatActivity {
         });
 
 
-        bi.s1q1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.s1q8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 villageCode = new ArrayList<>();
                 villageName = new ArrayList<>();
 
-
                 villageCode.add("....");
                 villageName.add("....");
 
-                Collection<VillagesContract> pc = db.getVillages(healthFacilityCode.get(position));
-                for (VillagesContract p : pc) {
-                    villageCode.add(p.getVillagecode());
-                    villageName.add(p.getVillagename());
+                Collection<VillageContract> pc = db.getAllVillages(districtCode.get(position));
+                for (VillageContract p : pc) {
+                    villageCode.add(p.getVillageCode());
+                    villageName.add(p.getVillageName());
                 }
                 ArrayAdapter<String> vilAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageName);
 
                 vilAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                bi.s1q3.setAdapter(vilAdapter);
+                bi.s1q10.setAdapter(vilAdapter);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });*/
+        });
     }
 
 

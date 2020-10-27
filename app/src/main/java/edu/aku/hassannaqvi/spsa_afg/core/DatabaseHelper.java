@@ -20,10 +20,13 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.DistrictContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
+import edu.aku.hassannaqvi.spsa_afg.contracts.ProvinceContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.VillageContract;
 import edu.aku.hassannaqvi.spsa_afg.models.BLRandom;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.Users;
@@ -47,6 +50,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CreateTable.SQL_CREATE_USERS);
+        db.execSQL(CreateTable.SQL_CREATE_PROVINCE);
+        db.execSQL(CreateTable.SQL_CREATE_DISTRICT);
+        db.execSQL(CreateTable.SQL_CREATE_VILLAGE);
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_BL_RANDOM);
         db.execSQL(CreateTable.SQL_CREATE_VERSIONAPP);
@@ -117,6 +123,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return insertCount;
     }
 
+
+
     public Integer syncVersionApp(JSONObject VersionList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppContract.VersionAppTable.TABLE_NAME, null, null);
@@ -142,6 +150,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return (int) count;
     }
+
+
 
     public List<String> getUsers() {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -179,6 +189,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return allAC;
     }
+
+
 
     public VersionApp getVersionApp() {
 
@@ -223,6 +235,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
+
+
     public int syncUser(JSONArray userList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(UsersContract.UsersTable.TABLE_NAME, null, null);
@@ -252,6 +266,261 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return insertCount;
     }
 
+
+    public void syncProvince(JSONArray Provincelist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(ProvinceContract.table.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = Provincelist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                ProvinceContract Vc = new ProvinceContract();
+                Vc.Sync(jsonObjectCC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(ProvinceContract.table.COLUMN_PCODE, Vc.getProvinceCode());
+                values.put(ProvinceContract.table.COLUMN_PNAME, Vc.getProvinceName());
+
+                db.insert(ProvinceContract.table.TABLE_NAME, null, values);
+            }
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
+
+    public void syncDistricts(JSONArray Districtslist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DistrictContract.table.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = Districtslist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                DistrictContract Vc = new DistrictContract();
+                Vc.Sync(jsonObjectCC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(DistrictContract.table.COLUMN_PCODE, Vc.getProvinceCode());
+                values.put(DistrictContract.table.COLUMN_DCODE, Vc.getDistrictCode());
+                values.put(DistrictContract.table.COLUMN_DNAME, Vc.getDistrictName());
+
+                db.insert(DistrictContract.table.TABLE_NAME, null, values);
+            }
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
+
+    public void syncVillages(JSONArray Villageslist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DistrictContract.table.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = Villageslist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+
+                VillageContract Vc = new VillageContract();
+                Vc.Sync(jsonObjectCC);
+
+                ContentValues values = new ContentValues();
+
+                values.put(VillageContract.table.COLUMN_DCODE, Vc.getDistrictCode());
+                values.put(VillageContract.table.COLUMN_VCODE, Vc.getVillageCode());
+                values.put(VillageContract.table.COLUMN_VNAME, Vc.getVillageName());
+
+                db.insert(DistrictContract.table.TABLE_NAME, null, values);
+            }
+        } catch (Exception e) {
+        } finally {
+            db.close();
+        }
+    }
+
+
+
+    public Collection<ProvinceContract> getAllProvince() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                ProvinceContract.table.COLUMN_PCODE,
+                ProvinceContract.table.COLUMN_PNAME
+        };
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                ProvinceContract.table.COLUMN_PNAME + " ASC";
+
+        Collection<ProvinceContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    ProvinceContract.table.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                ProvinceContract dc = new ProvinceContract();
+                allDC.add(dc.HydrateProvince(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+    public Collection<DistrictContract> getAllDistricts() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                DistrictContract.table.COLUMN_PCODE,
+                DistrictContract.table.COLUMN_DCODE,
+                DistrictContract.table.COLUMN_DNAME
+        };
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                DistrictContract.table.COLUMN_DNAME + " ASC";
+
+        Collection<DistrictContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    DistrictContract.table.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                DistrictContract dc = new DistrictContract();
+                allDC.add(dc.HydrateDistrict(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+    public Collection<DistrictContract> getAllDistricts(String pcode) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                DistrictContract.table.COLUMN_PCODE,
+                DistrictContract.table.COLUMN_DCODE,
+                DistrictContract.table.COLUMN_DNAME
+        };
+
+        String whereClause = DistrictContract.table.COLUMN_PCODE + "=?";
+        String[] whereArgs = new String[]{pcode};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                DistrictContract.table.COLUMN_DNAME + " ASC";
+
+        Collection<DistrictContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    DistrictContract.table.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                DistrictContract dc = new DistrictContract();
+                allDC.add(dc.HydrateDistrict(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+    public Collection<VillageContract> getAllVillages(String dcode) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                VillageContract.table.COLUMN_DCODE,
+                VillageContract.table.COLUMN_VCODE,
+                VillageContract.table.COLUMN_VNAME
+        };
+
+        String whereClause = VillageContract.table.COLUMN_VNAME + "=?";
+        String[] whereArgs = new String[]{dcode};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                VillageContract.table.COLUMN_VNAME + " ASC";
+
+        Collection<VillageContract> allDC = new ArrayList<>();
+        try {
+            c = db.query(
+                    VillageContract.table.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                VillageContract dc = new VillageContract();
+                allDC.add(dc.HydrateVillage(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDC;
+    }
+
+
+
     public boolean Login(String username, String password) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -267,6 +536,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return false;
     }
+
 
     public Long addForm(Form form) {
 
@@ -318,6 +588,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+
+
     /*   public int updateFormID() {
            SQLiteDatabase db = this.getReadableDatabase();
 
@@ -336,6 +608,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
            return count;
        }
    */
+
+
     public Collection<Form> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;

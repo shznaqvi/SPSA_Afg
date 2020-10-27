@@ -310,13 +310,29 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
-//                    Getting FUP
+//                    Getting Provinces
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "FUP", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "Provinces", syncListAdapter, list).execute();
+
+//                    Getting Districts
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Districts", syncListAdapter, list).execute();
+
+//                    Getting Villages
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
 
                 }
 

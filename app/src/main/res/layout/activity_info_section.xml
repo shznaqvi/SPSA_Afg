@@ -262,15 +262,20 @@
                                 android:layout_alignTop="@id/qtxt_s1q6"
                                 android:layout_alignBottom="@id/qtxt_s1q6"
                                 android:text="@string/Q_s1q6" />
+
                         </RelativeLayout>
 
-                        <EditText
+                        <Spinner
                             android:id="@+id/s1q6"
-                            android:layout_width="match_parent"
+                            style="@null"
+                            android:layout_width="350dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s1q6" />
+                            android:layout_gravity="center"/>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- s1q8  Input   -->
                 <androidx.cardview.widget.CardView
@@ -302,15 +307,20 @@
                                 android:layout_alignTop="@id/qtxt_s1q8"
                                 android:layout_alignBottom="@id/qtxt_s1q8"
                                 android:text="@string/Q_s1q8" />
+
                         </RelativeLayout>
 
-                        <EditText
+                        <Spinner
                             android:id="@+id/s1q8"
-                            android:layout_width="match_parent"
+                            style="@null"
+                            android:layout_width="350dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s1q8" />
+                            android:layout_gravity="center"/>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- s1q9  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
@@ -342,17 +352,20 @@
                                 android:layout_alignTop="@id/qtxt_s1q9"
                                 android:layout_alignBottom="@id/qtxt_s1q9"
                                 android:text="@string/Q_s1q9" />
+
                         </RelativeLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <Spinner
                             android:id="@+id/s1q9"
-                            android:layout_width="match_parent"
+                            style="@null"
+                            android:layout_width="350dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s1q9"
-                            android:inputType="number" />
+                            android:layout_gravity="center"/>
 
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- s1q10  Input   -->
                 <androidx.cardview.widget.CardView
@@ -384,15 +397,20 @@
                                 android:layout_alignTop="@id/qtxt_s1q10"
                                 android:layout_alignBottom="@id/qtxt_s1q10"
                                 android:text="@string/Q_s1q10" />
+
                         </RelativeLayout>
 
-                        <EditText
+                        <Spinner
                             android:id="@+id/s1q10"
-                            android:layout_width="match_parent"
+                            style="@null"
+                            android:layout_width="350dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s1q10" />
+                            android:layout_gravity="center"/>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- s1q11  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
@@ -424,6 +442,7 @@
                                 android:layout_alignTop="@id/qtxt_s1q11"
                                 android:layout_alignBottom="@id/qtxt_s1q11"
                                 android:text="@string/Q_s1q11" />
+
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -436,8 +455,11 @@
                             app:maxValue="500"
                             app:minValue="1"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- s1q12  Input   -->
                 <androidx.cardview.widget.CardView

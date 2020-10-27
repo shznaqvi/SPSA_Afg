@@ -634,14 +634,23 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
                 @Override
                 public void run() {
-                    Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "PW").execute();
+                    /*Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
+                    new GetAllData(mContext, "PW").execute();*/
 
                     Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "User").execute();
 
-                    Toast.makeText(LoginActivity.this, "Sync FollowUps", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FollowUps").execute();
+                    Toast.makeText(LoginActivity.this, "Sync App Version", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "VersionApp").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Provinces", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Provinces").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Districts", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Districts").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Villages").execute();
                 }
             });
 
