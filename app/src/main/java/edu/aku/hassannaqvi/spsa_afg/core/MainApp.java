@@ -41,7 +41,7 @@ public class MainApp extends Application {
     public static final String TAG = "AppMain";
     // public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
     public static final String _IP = "http://f38158";// .TEST server
-    public static final String _HOST_URL = MainApp._IP + "/spsa/api/";// .TEST server;
+    public static final String _HOST_URL = MainApp._IP + "/spsa_afg/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
     public static final String _SERVER_GET_URL = "getData.php";
     public static final String _PHOTO_UPLOAD_URL = MainApp._IP + "/spsa/api/uploads.php";

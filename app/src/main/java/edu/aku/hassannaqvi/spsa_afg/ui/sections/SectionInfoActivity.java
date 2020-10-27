@@ -232,8 +232,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         Collection<ProvinceContract> dc = db.getAllProvince();
         for (ProvinceContract d : dc) {
-            provinceName.add(d.getProvinceName());
-            provinceCode.add(d.getProvinceCode());
+            provinceName.add(d.getProv_name());
+            provinceCode.add(d.getProv_code());
         }
 
         // Creating adapter for spinner

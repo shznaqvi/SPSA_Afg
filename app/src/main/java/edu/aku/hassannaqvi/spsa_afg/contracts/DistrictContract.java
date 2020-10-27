@@ -76,7 +76,7 @@ public class DistrictContract {
 
     public static abstract class table implements BaseColumns {
 
-        public static final String TABLE_NAME = "district";
+        public static final String TABLE_NAME = "districts";
         public static final String COLUMN_PCODE = "prov_code";
         public static final String COLUMN_DCODE = "dist_code";
         public static final String COLUMN_DNAME = "dist_name";

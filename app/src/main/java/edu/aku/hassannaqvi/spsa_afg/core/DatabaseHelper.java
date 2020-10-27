@@ -280,8 +280,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(ProvinceContract.table.COLUMN_PCODE, Vc.getProvinceCode());
-                values.put(ProvinceContract.table.COLUMN_PNAME, Vc.getProvinceName());
+                values.put(ProvinceContract.table.COLUMN_PCODE, Vc.getProv_code());
+                values.put(ProvinceContract.table.COLUMN_PNAME, Vc.getProv_name());
 
                 db.insert(ProvinceContract.table.TABLE_NAME, null, values);
             }
@@ -320,7 +320,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void syncVillages(JSONArray Villageslist) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(DistrictContract.table.TABLE_NAME, null, null);
+        db.delete(VillageContract.table.TABLE_NAME, null, null);
         try {
             JSONArray jsonArray = Villageslist;
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -335,7 +335,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(VillageContract.table.COLUMN_VCODE, Vc.getVillageCode());
                 values.put(VillageContract.table.COLUMN_VNAME, Vc.getVillageName());
 
-                db.insert(DistrictContract.table.TABLE_NAME, null, values);
+                db.insert(VillageContract.table.TABLE_NAME, null, values);
             }
         } catch (Exception e) {
         } finally {

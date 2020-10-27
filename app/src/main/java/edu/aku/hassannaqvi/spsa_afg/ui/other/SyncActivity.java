@@ -41,6 +41,7 @@ import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncAllData;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncAllPhotos;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncDevice;
+import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.spsa_afg.utils.CreateTable.DB_NAME;
@@ -117,11 +118,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void syncServer() {
         bi.activityTitle.setText("Upload Data");
-        // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
+        if (AndroidUtilityKt.isNetworkConnected(this)) {
 
             DatabaseHelper db = new DatabaseHelper(this);
 

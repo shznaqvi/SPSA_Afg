@@ -10,8 +10,8 @@ import org.json.JSONObject;
 public class ProvinceContract {
 
     private static final String TAG = "Province_CONTRACT";
-    String provinceCode;
-    String provinceName;
+    String prov_code;
+    String prov_name;
 
 
     public ProvinceContract() {
@@ -20,49 +20,49 @@ public class ProvinceContract {
 
 
     public ProvinceContract Sync(JSONObject jsonObject) throws JSONException {
-        this.provinceCode = jsonObject.getString(table.COLUMN_PCODE);
-        this.provinceName = jsonObject.getString(table.COLUMN_PNAME);
+        this.prov_code = jsonObject.getString(table.COLUMN_PCODE);
+        this.prov_name = jsonObject.getString(table.COLUMN_PNAME);
         return this;
     }
 
 
     public ProvinceContract HydrateProvince(Cursor cursor) {
-        this.provinceCode = cursor.getString(cursor.getColumnIndex(table.COLUMN_PCODE));
-        this.provinceName = cursor.getString(cursor.getColumnIndex(table.COLUMN_PNAME));
+        this.prov_code = cursor.getString(cursor.getColumnIndex(table.COLUMN_PCODE));
+        this.prov_name = cursor.getString(cursor.getColumnIndex(table.COLUMN_PNAME));
         return this;
     }
 
 
-    public String getProvinceCode() {
-        return provinceCode;
+    public String getProv_code() {
+        return prov_code;
     }
 
-    public void setProvinceCode(String provinceCode) {
-        this.provinceCode = provinceCode;
+    public void setProv_code(String prov_code) {
+        this.prov_code = prov_code;
     }
 
 
-    public String getProvinceName() {
-        return provinceName;
+    public String getProv_name() {
+        return prov_name;
     }
 
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName;
+    public void setProv_name(String prov_name) {
+        this.prov_name = prov_name;
     }
 
 
 
     public JSONObject toJSONObject() throws JSONException {
         JSONObject json = new JSONObject();
-        json.put(table.COLUMN_PCODE, this.provinceCode == null ? JSONObject.NULL : this.provinceCode);
-        json.put(table.COLUMN_PNAME, this.provinceName == null ? JSONObject.NULL : this.provinceName);
+        json.put(table.COLUMN_PCODE, this.prov_code == null ? JSONObject.NULL : this.prov_code);
+        json.put(table.COLUMN_PNAME, this.prov_name == null ? JSONObject.NULL : this.prov_name);
         return json;
     }
 
 
     public static abstract class table implements BaseColumns {
 
-        public static final String TABLE_NAME = "province";
+        public static final String TABLE_NAME = "provinces";
         public static final String COLUMN_PCODE = "prov_code";
         public static final String COLUMN_PNAME = "prov_name";
 

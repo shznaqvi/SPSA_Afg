@@ -76,7 +76,7 @@ public class VillageContract {
 
     public static abstract class table implements BaseColumns {
 
-        public static final String TABLE_NAME = "village";
+        public static final String TABLE_NAME = "villages";
         public static final String COLUMN_DCODE = "dist_code";
         public static final String COLUMN_VCODE = "village_code";
         public static final String COLUMN_VNAME = "village_name";

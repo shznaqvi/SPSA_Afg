@@ -412,7 +412,6 @@
                         android:background="@color/black_overlay"
                         android:drawableStart="@drawable/ic_download"
                         android:drawablePadding="12dp"
-                        android:onClick="onSyncDataClick"
                         android:padding="12dp"
 
                         android:text="Download User Data"

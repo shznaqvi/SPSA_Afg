@@ -60,6 +60,8 @@ import edu.aku.hassannaqvi.spsa_afg.core.AppInfo;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
+import edu.aku.hassannaqvi.spsa_afg.sync.SyncDevice;
+import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
 
 /**
@@ -288,16 +290,23 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
     @OnClick(R.id.syncData)
     void onSyncClustersClick() {
-        //TODO implement
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
+/*        ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
             new syncData(this).execute();
 
+        } else {
+            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        }*/
+
+        if (AndroidUtilityKt.isNetworkConnected(this)) {
+            /*if (sync_flag) new SyncData(SyncActivity.this, MainApp.DIST_ID).execute(true);
+            else new SyncDevice(SyncActivity.this, true).execute();*/
+            startActivity(new Intent(this, SyncActivity.class));
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
@@ -634,10 +643,12 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
                 @Override
                 public void run() {
+
+
                     /*Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
                     new GetAllData(mContext, "PW").execute();*/
 
-                    Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
+                   /* Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "User").execute();
 
                     Toast.makeText(LoginActivity.this, "Sync App Version", Toast.LENGTH_LONG).show();
@@ -650,7 +661,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
                     new GetAllData(mContext, "Districts").execute();
 
                     Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Villages").execute();
+                    new GetAllData(mContext, "Villages").execute();*/
                 }
             });
 
