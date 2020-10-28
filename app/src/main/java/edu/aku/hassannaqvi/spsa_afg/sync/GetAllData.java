@@ -236,17 +236,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             break;
                         case "Provinces":
                             jsonArray = new JSONArray(result);
-                            db.syncProvince(jsonArray);
+                            insertCount = db.syncProvince(jsonArray);
                             position = 2;
                             break;
                         case "Districts":
                             jsonArray = new JSONArray(result);
-                            db.syncDistricts(jsonArray);
+                            insertCount = db.syncDistricts(jsonArray);
                             position = 3;
                             break;
                         case "Villages":
                             jsonArray = new JSONArray(result);
-                            db.syncVillages(jsonArray);
+                            insertCount = db.syncVillages(jsonArray);
                             position = 4;
                             break;
 

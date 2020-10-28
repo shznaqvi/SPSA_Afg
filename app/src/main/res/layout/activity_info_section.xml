@@ -325,7 +325,8 @@
                 <!-- s1q9  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVs1q9"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="match_parent"

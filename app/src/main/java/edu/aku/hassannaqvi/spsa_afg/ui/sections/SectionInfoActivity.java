@@ -67,9 +67,6 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
 
-
-
-
     private void initializingComponents() {
         // Databinding Edit Mode (only in first activity for every contract)
         db = MainApp.appInfo.getDbHelper();
@@ -165,9 +162,9 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form.setS1q12(bi.s1q12.getText().toString());
 
-        form.setS1q13( bi.s1q1301.isChecked() ? "1"
+        form.setS1q13(bi.s1q1301.isChecked() ? "1"
                 : bi.s1q1302.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setS1q14(bi.s1q14.getText().toString());
 
@@ -175,17 +172,17 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form.setS1q16(bi.s1q16.getText().toString());
 
-        form.setS1q17( bi.s1q1701.isChecked() ? "1"
+        form.setS1q17(bi.s1q1701.isChecked() ? "1"
                 : bi.s1q1702.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setS1q18( bi.s1q1801.isChecked() ? "1"
+        form.setS1q18(bi.s1q1801.isChecked() ? "1"
                 : bi.s1q1802.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setS1_consent( bi.s1consent01.isChecked() ? "1"
+        form.setS1_consent(bi.s1consent01.isChecked() ? "1"
                 : bi.s1consent02.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setS1q19et(bi.s1q19et.getText().toString());
 
@@ -215,11 +212,9 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
 
-
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
     }
-
 
 
     public void populateSpinner(final Context context) {
@@ -255,10 +250,10 @@ public class SectionInfoActivity extends AppCompatActivity {
                 districtCode.add("....");
                 districtName.add("....");
 
-                Collection<DistrictContract> pc = db.getAllDistricts(provinceCode.get(position));
-                for (DistrictContract p : pc) {
-                    districtCode.add(p.getDistrictCode());
-                    districtName.add(p.getDistrictName());
+                Collection<DistrictContract> dc = db.getAllDistricts(provinceCode.get(position));
+                for (DistrictContract d : dc) {
+                    districtCode.add(d.getDistrictCode());
+                    districtName.add(d.getDistrictName());
                 }
                 ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtName);
 
@@ -302,17 +297,17 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
 
-    public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
+    /*public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
         //Setting Date
-       /* try {
+       *//* try {
             Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
             localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
         } catch (ParseException e) {
             e.printStackTrace();
-        }*/
+        }*//*
     }
 
-   /* public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
+   *//* public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
         bi.a14mm.setEnabled(false);
         bi.a14mm.setText(null);
         bi.a14yy.setEnabled(false);
@@ -357,7 +352,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-    }*/
+    }*//*
 
     public static class SectionKActivity extends AppCompatActivity {
 
@@ -366,6 +361,6 @@ public class SectionInfoActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_section1101);
         }
-    }
+    }*/
 
 }
