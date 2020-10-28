@@ -569,6 +569,12 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
                         MainApp.userName = mEmail2;
                         MainApp.admin = mEmail2.contains("@");
 
+                        MainApp.measurers = new ArrayList<>();
+
+                        MainApp.measurers.add(mEmail1);
+                        MainApp.measurers.add(mEmail2);
+
+
                         finish();
 
                         Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);

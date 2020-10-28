@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SPSA Afghanistan</string>
+    <string name="app_name">SPSA Afghanistan (English)</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -51,12 +51,11 @@
     <string name="contactnum"> رابطہ نمبر </string>
     <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
 
-    <string name="istatus"> انٽرويو جو نتيجو </string>
-    <string name="istatusa"> مڪمل ٿيو </string>
-    <string name="istatusb"> نامڪمل </string>
-    <string name="istatusc"> انڪار ڪري ڇڏيو </string>
-    <string name="istatus96"> ٻيو ڪجھ </string>
-    <string name="istatus96x"> وضاحت ڪريو </string>
+    <string name="istatus"> Interview Status </string>
+    <string name="istatusa"> Complete </string>
+    <string name="istatusb"> Incomplete </string>
+    <string name="istatus96"> Other </string>
+    <string name="istatus96x"> Specify... </string>
     <string name="section2socioeconomicstatus_mainheading">Section 2. Socio-Economic Status : SocioEconomic Status </string>
     <string name="section3handwashing_mainheading">Section 3: HAND-WASHING : HANDWASHING </string>
     <string name="section4exposuretointerventions_mainheading">Section 4: Exposure to Interventions: Exposure to Interventions</string>

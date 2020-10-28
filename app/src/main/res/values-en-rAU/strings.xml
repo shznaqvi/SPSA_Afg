@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SPSA Afghanistan</string>
+    <string name="app_name">SPSA Afghanistan (Dari)</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -56,7 +56,6 @@
     <string name="istatus"> انٽرويو جو نتيجو </string>
     <string name="istatusa"> مڪمل ٿيو </string>
     <string name="istatusb"> نامڪمل </string>
-    <string name="istatusc"> انڪار ڪري ڇڏيو </string>
     <string name="istatus96"> ٻيو ڪجھ </string>
     <string name="istatus96x"> وضاحت ڪريو </string>
 

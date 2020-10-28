@@ -24,6 +24,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
@@ -91,6 +92,7 @@ public class MainApp extends Application {
     public static SharedPreferences sharedPref;
     public static String DIST_ID;
     public static Pair<List<Integer>, List<String>> selectedChildren;
+    public static ArrayList<String> measurers;
     protected static LocationManager locationManager;
 
     public static void setItemClick(OnItemClick itemClick) {

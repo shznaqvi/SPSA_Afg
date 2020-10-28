@@ -188,8 +188,6 @@
                                 android:hint="@string/s10q201"
                                 android:inputType="number"
                                 android:tag="s10q201"
-
-
                                 android:text='@{s10q201.checked ? s10q201x.getText().toString() : ""}'
                                 android:visibility='@{s10q201.checked? View.VISIBLE : View.GONE}' />
 
@@ -206,8 +204,6 @@
                                 android:hint="@string/s10q202"
                                 android:inputType="number"
                                 android:tag="s10q202"
-
-
                                 android:text='@{s10q202.checked ? s10q202x.getText().toString() : ""}'
                                 android:visibility='@{s10q202.checked? View.VISIBLE : View.GONE}' />
 
