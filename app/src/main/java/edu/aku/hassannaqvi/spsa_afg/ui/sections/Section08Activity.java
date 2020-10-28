@@ -34,25 +34,26 @@ public class Section08Activity extends AppCompatActivity {
     private void setupSkip() {
 
         bi.s8q1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s8q102.getId() || i == bi.s8q103.getId()) {
+            if (i != bi.s8q101.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs8q1a);
             }
         }));
+        bi.s8q2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.s8q201.getId()) {
+                Clear.clearAllFields(bi.llgrpsec802);
+            }
+        }));
         bi.s8q3.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s8q301.getId()) {
+            if (i != bi.s8q301.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs8q3a);
             }
         }));
         bi.s8q4.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s8q401.getId()) {
+            if (i != bi.s8q401.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs8q4a);
             }
         }));
-        bi.s8q2.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s8q201.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs8q3);
-            }
-        }));
+
     }
 
 

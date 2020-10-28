@@ -41,7 +41,7 @@ public class Section10Activity extends AppCompatActivity {
         }));
 
         bi.s10q3.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s10q302.getId()) {
+            if (i != bi.s10q302.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs10q4);
             }
         }));

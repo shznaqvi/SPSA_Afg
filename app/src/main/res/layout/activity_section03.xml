@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility='@{s3q102.checked || s3q103.checked || s3q1096.checked? View.GONE: View.VISIBLE  }'>
+                android:visibility='@{s3q101.checked  ? View.VISIBLE : View.GONE  }'>
 
                 <!-- s3q2  Radio   -->
                 <androidx.cardview.widget.CardView

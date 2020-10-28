@@ -111,7 +111,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs8q1a"
                 style="@style/cardView"
-                android:visibility='@{s8q102.checked || s8q103.checked ? View.GONE : View.VISIBLE}'>
+                android:visibility='@{s8q101 ? View.VISIBLE : View.GONE }'>
 
 
                 <LinearLayout
