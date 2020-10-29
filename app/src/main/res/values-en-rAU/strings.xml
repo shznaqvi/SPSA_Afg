@@ -951,6 +951,8 @@
     <string name="s12q308a">بلی</string>
     <string name="s12q308b">نخیر</string>
     <string name="s12q396">دیگر (مشخص نماید) </string>
+    <string name="s12q396a">بلی</string>
+    <string name="s12q396b">نخیر</string>
     <string name="s12q4">آیا در طول دو هفته گذشته به دنبال مراقبت از این بیماری ها بودید؟</string>
     <string name="s12q401">بلی</string>
     <string name="s12q402">نخیر</string>
@@ -1133,6 +1135,7 @@
     <string name='Q_s12q306'>s12q306</string>
     <string name='Q_s12q307'>s12q307</string>
     <string name='Q_s12q308'>s12q308</string>
+    <string name='Q_s12q396'>s12q396</string>
     <string name='Q_s12q4'>s12q4</string>
     <string name='Q_s12q5'>s12q5</string>
     <string name='Q_s12q6'>s12q6</string>

@@ -939,6 +939,8 @@ Any other illnesses?
     <string name="s12q308a">Yes</string>
     <string name="s12q308b">No</string>
     <string name="s12q396">Other (Specify </string>
+    <string name="s12q396a">Yes</string>
+    <string name="s12q396b">No</string>
     <string name="s12q4">Did you seek any care for these illnesses during the last two weeks?</string>
     <string name="s12q401">Yes </string>
     <string name="s12q402">No</string>
@@ -1120,6 +1122,7 @@ Any other illnesses?
     <string name='Q_s12q306'>s12q306</string>
     <string name='Q_s12q307'>s12q307</string>
     <string name='Q_s12q308'>s12q308</string>
+    <string name='Q_s12q396'>s12q396</string>
     <string name='Q_s12q4'>s12q4</string>
     <string name='Q_s12q5'>s12q5</string>
     <string name='Q_s12q6'>s12q6</string>
