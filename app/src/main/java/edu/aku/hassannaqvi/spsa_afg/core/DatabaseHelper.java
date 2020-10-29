@@ -887,19 +887,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
-                FormsContract.FormsTable._ID,
-                FormsContract.FormsTable.COLUMN_UID,
-                FormsContract.FormsTable.COLUMN_USERNAME,
-                FormsContract.FormsTable.COLUMN_SYSDATE,
-                FormsContract.FormsTable.COLUMN_FORMDATE,
-                FormsContract.FormsTable.COLUMN_FORMTYPE,
-                FormsContract.FormsTable.COLUMN_S1Q1,
-                FormsContract.FormsTable.COLUMN_S1Q2,
-                /* FormsContract.FormsTable.COLUMN_S1Q3,*/
-                FormsContract.FormsTable.COLUMN_S1Q4,
-                /*FormsContract.FormsTable.COLUMN_S1Q5,*/
-                FormsContract.FormsTable.COLUMN_S1Q6,
-                /*FormsContract.FormsTable.COLUMN_SB,*/
+                FormsTable._ID,
+                FormsTable.COLUMN_UID,
+                FormsTable.COLUMN_USERNAME,
+                FormsTable.COLUMN_SYSDATE,
+                FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_FORMTYPE,
+                FormsTable.COLUMN_S1Q1,
+                FormsTable.COLUMN_S1Q2,
+                /* FormsTable.COLUMN_S1Q3,*/
+                FormsTable.COLUMN_S1Q4,
+                /*FormsTable.COLUMN_S1Q5,*/
+                FormsTable.COLUMN_S1Q6,
+                /*FormsTable.COLUMN_SB,*/
                 FormsTable.COLUMN_SINFO,
                 FormsTable.COLUMN_S02,
                 FormsTable.COLUMN_S03,
@@ -913,16 +913,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_S11,
                 FormsTable.COLUMN_S12,
                 FormsTable.COLUMN_S13,
-                FormsContract.FormsTable.COLUMN_ISTATUS,
-                FormsContract.FormsTable.COLUMN_ISTATUS96x,
-                FormsContract.FormsTable.COLUMN_ENDINGDATETIME,
-                FormsContract.FormsTable.COLUMN_GPSLAT,
-                FormsContract.FormsTable.COLUMN_GPSLNG,
-                FormsContract.FormsTable.COLUMN_GPSDATE,
-                FormsContract.FormsTable.COLUMN_GPSACC,
-                FormsContract.FormsTable.COLUMN_DEVICETAGID,
-                FormsContract.FormsTable.COLUMN_DEVICEID,
-                FormsContract.FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_ISTATUS96x,
+                FormsTable.COLUMN_ENDINGDATETIME,
+                FormsTable.COLUMN_GPSLAT,
+                FormsTable.COLUMN_GPSLNG,
+                FormsTable.COLUMN_GPSDATE,
+                FormsTable.COLUMN_GPSACC,
+                FormsTable.COLUMN_DEVICETAGID,
+                FormsTable.COLUMN_DEVICEID,
+                FormsTable.COLUMN_APPVERSION,
         };
 
         String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == ''";

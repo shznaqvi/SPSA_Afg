@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +47,11 @@ public class Section022Activity extends AppCompatActivity {
             }
         }));
 
+        bi.s2q1798.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b){
+                Clear.clearAllFields(bi.lls2q17check, false);
+            }
+        }));
     }
 
 
@@ -174,15 +180,21 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1602.isChecked() ? "2"
                 : "-1");
 
-        form.setS2q17(bi.s2q1701.isChecked() ? ""
-                : bi.s2q1702.isChecked() ? ""
-                : bi.s2q1703.isChecked() ? ""
-                : bi.s2q1798.isChecked() ? "98"
-                : "-1");
+//        form.setS2q17(bi.s2q1701.isChecked() ? ""
+//                : bi.s2q1702.isChecked() ? ""
+//                : bi.s2q1703.isChecked() ? ""
+//                : bi.s2q1798.isChecked() ? "98"
+//                : "-1");
+//
+//        form.setS2q1701x(bi.s2q1701x.getText().toString());
+//        form.setS2q1702x(bi.s2q1702x.getText().toString());
+//        form.setS2q1703x(bi.s2q1703x.getText().toString());
 
-        form.setS2q1701x(bi.s2q1701x.getText().toString());
-        form.setS2q1702x(bi.s2q1702x.getText().toString());
-        form.setS2q1703x(bi.s2q1703x.getText().toString());
+//        form.setS2Q17(bi.s2q17.getText().toString());
+//
+//        form.setS2Q1701x(bi.s2q1701x.getText().toString());
+//        form.setS2Q1702x(bi.s2q1702x.getText().toString());
+//        form.setS2Q1703x(bi.s2q1703x.getText().toString());
 
         form.setS2q18(bi.s2q1801.isChecked() ? "1"
                 : bi.s2q1802.isChecked() ? "2"
@@ -205,7 +217,29 @@ public class Section022Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+
+        int totals217 = (TextUtils.isEmpty(bi.s2q1701.getText()) ? 0 : Integer.parseInt(bi.s2q1701.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()));
+
+        if (totals217 == 0){
+            return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
+        }
+
+        int totals219 = (TextUtils.isEmpty(bi.s2q1901.getText()) ? 0 : Integer.parseInt(bi.s2q1901.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1902.getText()) ? 0 : Integer.parseInt(bi.s2q1902.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1903.getText()) ? 0 : Integer.parseInt(bi.s2q1903.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1904.getText()) ? 0 : Integer.parseInt(bi.s2q1904.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1905.getText()) ? 0 : Integer.parseInt(bi.s2q1905.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1906.getText()) ? 0 : Integer.parseInt(bi.s2q1906.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1907.getText()) ? 0 : Integer.parseInt(bi.s2q1907.getText().toString().trim()));
+
+        if (totals219 == 0){
+            return Validator.emptyCustomTextBox(this, bi.s2q1901, "Total cont cannot be 0");
+        }
+        return true;
     }
 
 
