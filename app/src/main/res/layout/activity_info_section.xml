@@ -142,7 +142,8 @@
             <!-- s1q2  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs1q2"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -854,7 +855,8 @@
                 <!-- s1q19et  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVs1q19et"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="match_parent"
