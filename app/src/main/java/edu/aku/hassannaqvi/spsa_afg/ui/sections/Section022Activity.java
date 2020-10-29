@@ -225,9 +225,9 @@ public class Section022Activity extends AppCompatActivity {
 
         int totals217 = (TextUtils.isEmpty(bi.s2q1701.getText()) ? 0 : Integer.parseInt(bi.s2q1701.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()));
+                + (TextUtils.isEmpty(bi.s2q1703.getText()) ? 0 : Integer.parseInt(bi.s2q1703.getText().toString().trim()));
 
-        if (totals217 == 0 && bi.s2q1798.isChecked()){
+        if ((totals217 == 0 && !bi.s2q1798.isChecked())){
             return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
         }
 
