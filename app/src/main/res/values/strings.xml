@@ -369,6 +369,8 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s4q4b">Number of Beneficiaries</string>
     <string name="s4q4c">Source/ NGO</string>
     <string name="s4q5">Other (Specify): </string>
+    <string name="s4q5b">Number of Beneficiaries</string>
+    <string name="s4q5c">Source/ NGO</string>
     <string name="s5title">5: Household Food Insecurity Access Scale (HFIAS) </string>
     <string name="s5q1">In the past four weeks, did you worry that your household would not have enough food?</string>
     <string name="s5q101">Yes</string>
@@ -1231,6 +1233,8 @@ Any other illnesses?
     <string name='Q_s4q4b'>s4q4b</string>
     <string name='Q_s4q4c'>s4q4c</string>
     <string name='Q_s4q5'>s4q5</string>
+    <string name='Q_s4q5b'>s4q5b</string>
+    <string name='Q_s4q5c'>s4q5c</string>
     <string name='Q_s4title1'>s4title1</string>
     <string name='Q_s4title2'>s4title2</string>
     <string name='Q_s4title3'>s4title3</string>

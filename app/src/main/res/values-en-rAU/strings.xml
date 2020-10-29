@@ -375,6 +375,8 @@
     <string name="s4q4b">تعداد مستفیدین</string>
     <string name="s4q4c">منبع / این جی او</string>
     <string name="s4q5">دیگر (مشخص نمایید): </string>
+    <string name="s4q5b">تعداد مستفیدین</string>
+    <string name="s4q5c">منبع / این جی او</string>
     <string name="s5title">بخش پنجم: ابزار اندازه گیری میزان تشویش دسترسی غذائی خانواده </string>
     <string name="s5q1">آیا شما در چهار هفته گذشته تشویش اینکه خانواده شما غذای کافی نخواهند داشت، بودید؟</string>
     <string name="s5q101">بلی</string>
@@ -1247,6 +1249,8 @@
     <string name='Q_s4title1'>s4title1</string>
     <string name='Q_s4title2'>s4title2</string>
     <string name='Q_s4title3'>s4title3</string>
+    <string name='Q_s4q5b'>s4q5b</string>
+    <string name='Q_s4q5c'>s4q5c</string>
     <string name='Q_s5q1'>s5q1</string>
     <string name='Q_s5q1a'>s5q1a</string>
     <string name='Q_s5q2'>s5q2</string>
