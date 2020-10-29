@@ -218,7 +218,8 @@
                         android:gravity="center"
                         android:hint="@string/s1q4"
                         app:dateFormat="dd-MM-yyyy"
-                        app:maxDate="CR_DATE" />
+                        app:maxDate="CR_DATE"
+                        app:minDate="27/10/2020"/>
 
                 </LinearLayout>
 
@@ -499,6 +500,7 @@
                             android:id="@+id/s1q12"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
                             android:hint="@string/s1q12" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -594,6 +596,7 @@
                             android:id="@+id/s1q14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
                             android:hint="@string/s1q14" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -851,8 +854,7 @@
                 <!-- s1q19et  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVs1q19et"
-                    style="@style/cardView"
-                    android:visibility="gone">
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"

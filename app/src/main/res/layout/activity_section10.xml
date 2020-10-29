@@ -133,6 +133,7 @@
                 android:visibility='@{s10q101.checked ? View.VISIBLE : View.GONE}'>
 
                 <!-- s10q2  Radio   -->
+                <!-- s10q2  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVs10q2"
                     style="@style/cardView">
@@ -205,8 +206,7 @@
                                 android:inputType="number"
                                 android:tag="s10q202"
                                 android:text='@{s10q202.checked ? s10q202x.getText().toString() : ""}'
-                                android:visibility='@{s10q202.checked? View.VISIBLE : View.GONE}' />
-
+                                android:visibility='@{s10q202.checked? View.VISIBLE : View.GONE}'/>
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
