@@ -448,6 +448,7 @@
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <!-- s8q3  Radio   -->
@@ -950,12 +951,13 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/s8q7a01"
                             android:inputType="number"
-                            android:maxLength="3"
                             android:tag="s8q7a01"
                             android:text='@{s8q7a01.checked ? s8q7a01x.getText().toString() : ""}'
                             android:visibility='@{s8q7a01.checked? View.VISIBLE : View.GONE}'
+                            app:mask="#.#"
                             app:maxValue="5.0"
                             app:minValue="0.9"
+                            app:pattern="^(\\d{1,1}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <RadioButton
@@ -970,12 +972,13 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/s8q7a02"
                             android:inputType="number"
-                            android:maxLength="3"
                             android:tag="s8q7a02"
                             android:text='@{s8q7a02.checked ? s8q7a02x.getText().toString() : ""}'
                             android:visibility='@{s8q7a02.checked? View.VISIBLE : View.GONE}'
+                            app:mask="#.#"
                             app:maxValue="5.0"
                             app:minValue="0.9"
+                            app:pattern="^(\\d{1,1}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <RadioButton
@@ -1092,12 +1095,15 @@
                             android:text='@{s8q896.checked ? s8q896x.getText().toString() : ""}'
                             android:visibility='@{s8q896.checked? View.VISIBLE : View.GONE}' />
 
-                        <CheckBox
-                            android:id="@+id/s8q899"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s8q899" />
                     </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/s8q899"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/s8q899" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1247,7 +1253,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- s8q11  Radio   -->
+            <!-- s8q11  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs8q11"
                 style="@style/cardView">
@@ -1279,77 +1285,66 @@
                             android:text="@string/Q_s8q11" />
                     </RelativeLayout>
 
-                    <RadioGroup
-                        android:id="@+id/s8q11"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="@string/s8q1101" />
 
-                        <RadioButton
-                            android:id="@+id/s8q1101"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s8q1101" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/s8q1101"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled='@{s8q1198.checked? false : true}'
+                        android:hint="@string/s8q1101"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:text='@{s8q1198.checked? "" : s8q1101.getText().toString()}'
+                        app:maxValue="23"
+                        app:minValue="0"
+                        app:type="range" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s8q1101x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s8q1101"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:tag="s8q1101"
-                            android:text='@{s8q1101.checked ? s8q1101x.getText().toString() : ""}'
-                            android:visibility='@{s8q1101.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="23"
-                            app:minValue="0"
-                            app:type="range" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s8q1102" />
 
-                        <RadioButton
-                            android:id="@+id/s8q1102"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s8q1102" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/s8q1102"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled='@{s8q1198.checked? false : true}'
+                        android:hint="@string/s8q1102"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text='@{s8q1198.checked? "" : s8q1102.getText().toString()}'
+                        app:maxValue="6"
+                        app:minValue="0"
+                        app:type="range" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s8q1102x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s8q1102"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:tag="s8q1102"
-                            android:text='@{s8q1102.checked ? s8q1102x.getText().toString() : ""}'
-                            android:visibility='@{s8q1102.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="6"
-                            app:minValue="0"
-                            app:type="range" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s8q1103" />
 
-                        <RadioButton
-                            android:id="@+id/s8q1103"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s8q1103" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/s8q1103"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled='@{s8q1198.checked? false : true}'
+                        android:hint="@string/s8q1103"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text='@{s8q1198.checked? "" : s8q1103.getText().toString()}'
+                        app:maxValue="8"
+                        app:minValue="0"
+                        app:type="range" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s8q1103x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s8q1103"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:tag="s8q1103"
-                            android:text='@{s8q1103.checked ? s8q1103x.getText().toString() : ""}'
-                            android:visibility='@{s8q1103.checked? View.VISIBLE : View.GONE}'
-                            app:maxValue="8"
-                            app:minValue="0"
-                            app:type="range" />
-
-                        <RadioButton
-                            android:id="@+id/s8q1198"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s8q1198" />
-                    </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/s8q1198"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/s8q1198" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
