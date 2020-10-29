@@ -236,10 +236,10 @@ public class Form extends LiveData<Form> {
     public String s8q996x;
     public String s8q10;
     public String s8q1001x;
-    public String s8q11;
-    public String s8q1101x;
-    public String s8q1102x;
-    public String s8q1103x;
+    public String s8q1198;
+    public String s8q1101;
+    public String s8q1102;
+    public String s8q1103;
     public String s8q12;
     public String s8q1296x;
     public String s8q13;
@@ -2308,36 +2308,36 @@ public class Form extends LiveData<Form> {
         this.s8q1001x = s8q1001x;
     }
 
-    public String getS8q11() {
-        return s8q11;
+    public String getS8q1198() {
+        return s8q1198;
     }
 
-    public void setS8q11(String s8q11) {
-        this.s8q11 = s8q11;
+    public void setS8q1198(String s8q1198) {
+        this.s8q1198 = s8q1198;
     }
 
-    public String getS8q1101x() {
-        return s8q1101x;
+    public String getS8q1101() {
+        return s8q1101;
     }
 
-    public void setS8q1101x(String s8q1101x) {
-        this.s8q1101x = s8q1101x;
+    public void setS8q1101(String s8q1101) {
+        this.s8q1101 = s8q1101;
     }
 
-    public String getS8q1102x() {
-        return s8q1102x;
+    public String getS8q1102() {
+        return s8q1102;
     }
 
-    public void setS8q1102x(String s8q1102x) {
-        this.s8q1102x = s8q1102x;
+    public void setS8q1102(String s8q1102) {
+        this.s8q1102 = s8q1102;
     }
 
-    public String getS8q1103x() {
-        return s8q1103x;
+    public String getS8q1103() {
+        return s8q1103;
     }
 
-    public void setS8q1103x(String s8q1103x) {
-        this.s8q1103x = s8q1103x;
+    public void setS8q1103(String s8q1103) {
+        this.s8q1103 = s8q1103;
     }
 
     public String getS8q12() {
@@ -4284,10 +4284,10 @@ public class Form extends LiveData<Form> {
                     .put("s8q996x", s8q996x)
                     .put("s8q10", s8q10)
                     .put("s8q1001x", s8q1001x)
-                    .put("s8q11", s8q11)
-                    .put("s8q1101x", s8q1101x)
-                    .put("s8q1102x", s8q1102x)
-                    .put("s8q1103x", s8q1103x)
+                    .put("s8q1198", s8q1198)
+                    .put("s8q1101", s8q1101)
+                    .put("s8q1102", s8q1102)
+                    .put("s8q1103", s8q1103)
                     .put("s8q12", s8q12)
                     .put("s8q1296x", s8q1296x)
                     .put("s8q13", s8q13)
@@ -4951,10 +4951,10 @@ public class Form extends LiveData<Form> {
                 this.s8q996x = json.getString("s8q996x");
                 this.s8q10 = json.getString("s8q10");
                 this.s8q1001x = json.getString("s8q1001x");
-                this.s8q11 = json.getString("s8q11");
-                this.s8q1101x = json.getString("s8q1101x");
-                this.s8q1102x = json.getString("s8q1102x");
-                this.s8q1103x = json.getString("s8q1103x");
+                this.s8q1198 = json.getString("s8q1198");
+                this.s8q1101 = json.getString("s8q1101");
+                this.s8q1102 = json.getString("s8q1102");
+                this.s8q1103 = json.getString("s8q1103");
                 this.s8q12 = json.getString("s8q12");
                 this.s8q1296x = json.getString("s8q1296x");
                 this.s8q13 = json.getString("s8q13");
