@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -9,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection09Binding;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
@@ -20,6 +24,8 @@ import static edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt.contextBackActivity;
 public class Section09Activity extends AppCompatActivity {
 
     ActivitySection09Binding bi;
+    Spinner[] userSpinners;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +34,25 @@ public class Section09Activity extends AppCompatActivity {
         bi.setForm(form);
         bi.setCallback(this);
         setupSkips();
+        setupContent();
+    }
+
+    private void setupContent() {
+        db = new DatabaseHelper(this);
+        userSpinners = new Spinner[]{bi.s6q4aab, bi.s6q5aab, bi.s6q6ab, bi.s6q4abb, bi.s6q5abb};
+        for (Spinner singleSpinner : userSpinners) {
+            singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, MainApp.loginMem));
+        }
     }
 
 
     private void setupSkips() {
 
 
-
     }
 
 
-    private void SaveDraft()  {
+    private void SaveDraft() {
 
         form.setS9q1(bi.s9q1.getText().toString());
 
