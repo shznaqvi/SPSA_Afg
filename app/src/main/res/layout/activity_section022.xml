@@ -1306,10 +1306,12 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/s2q1701"
                         android:layout_width="match_parent"
+                        android:enabled='@{s2q1798.checked? false : true}'
                         android:layout_height="wrap_content"
                         android:hint="@string/s2q1701"
                         android:inputType="number"
                         android:maxLength="1"
+                        android:text='@{s2q1798.checked? "" : s2q1701.getText().toString()}'
                         app:maxValue="2"
                         app:minValue="0"
                         app:type="range" />
@@ -1322,10 +1324,12 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/s2q1702"
                         android:layout_width="match_parent"
+                        android:enabled='@{s2q1798.checked? false : true}'
                         android:layout_height="wrap_content"
                         android:hint="@string/s2q1702"
                         android:inputType="number"
                         android:maxLength="3"
+                        android:text='@{s2q1798.checked? "" : s2q1702.getText().toString()}'
                         app:maxValue="999"
                         app:minValue="0"
                         app:type="range" />
@@ -1338,10 +1342,12 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/s2q1703"
                         android:layout_width="match_parent"
+                        android:enabled='@{s2q1798.checked? false : true}'
                         android:layout_height="wrap_content"
                         android:hint="@string/s2q1703"
                         android:inputType="number"
                         android:maxLength="1"
+                        android:text='@{s2q1798.checked? "" : s2q1703.getText().toString()}'
                         app:maxValue="7"
                         app:minValue="0"
                         app:type="range" />

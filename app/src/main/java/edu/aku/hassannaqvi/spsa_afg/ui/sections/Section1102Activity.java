@@ -15,6 +15,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection1102Binding;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
@@ -89,15 +92,15 @@ public class Section1102Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S11, form.s11toString(true));
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S11, form.s11toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+       /* return true;*/
 
     }
 
