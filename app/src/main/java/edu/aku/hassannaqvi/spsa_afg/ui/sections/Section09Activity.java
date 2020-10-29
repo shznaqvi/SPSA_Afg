@@ -44,15 +44,15 @@ public class Section09Activity extends AppCompatActivity {
 
         form.setS9q2(bi.s9q2.getText().toString());
 
-        form.setS9q3( bi.s9q301.isChecked() ? "1"
+        form.setS9q3(bi.s9q301.isChecked() ? "1"
                 : bi.s9q302.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
-        form.setS9q401(bi.s9q401.getText().toString());
-        form.setS9q402(bi.s9q402.getText().toString());
-        form.setS9q501(bi.s9q501.getText().toString());
-        form.setS9q502(bi.s9q502.getText().toString());
-        form.setS9q6(bi.s9q6.getText().toString());
+        form.setS9q4a(bi.s9q4a.getText().toString());
+        form.setS9q4b(bi.s9q4b.getText().toString());
+        form.setS9q5a(bi.s9q5a.getText().toString());
+        form.setS9q5b(bi.s9q5b.getText().toString());
+        form.setS9q6a(bi.s9q6a.getText().toString());
 
     }
 

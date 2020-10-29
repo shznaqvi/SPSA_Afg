@@ -247,11 +247,11 @@ public class Form extends LiveData<Form> {
     public String s9q1;
     public String s9q2;
     public String s9q3;
-    public String s9q401;
-    public String s9q402;
-    public String s9q501;
-    public String s9q502;
-    public String s9q6;
+    public String s9q4a;
+    public String s9q4b;
+    public String s9q5a;
+    public String s9q5b;
+    public String s9q6a;
     public String s10title;
     public String s10q1;
     public String s10q2;
@@ -2396,44 +2396,44 @@ public class Form extends LiveData<Form> {
         this.s9q3 = s9q3;
     }
 
-    public String getS9q401() {
-        return s9q401;
+    public String getS9q4a() {
+        return s9q4a;
     }
 
-    public void setS9q401(String s9q401) {
-        this.s9q401 = s9q401;
+    public void setS9q4a(String s9q4a) {
+        this.s9q4a = s9q4a;
     }
 
-    public String getS9q402() {
-        return s9q402;
+    public String getS9q4b() {
+        return s9q4b;
     }
 
-    public void setS9q402(String s9q402) {
-        this.s9q402 = s9q402;
+    public void setS9q4b(String s9q4b) {
+        this.s9q4b = s9q4b;
     }
 
-    public String getS9q501() {
-        return s9q501;
+    public String getS9q5a() {
+        return s9q5a;
     }
 
-    public void setS9q501(String s9q501) {
-        this.s9q501 = s9q501;
+    public void setS9q5a(String s9q5a) {
+        this.s9q5a = s9q5a;
     }
 
-    public String getS9q502() {
-        return s9q502;
+    public String getS9q5b() {
+        return s9q5b;
     }
 
-    public void setS9q502(String s9q502) {
-        this.s9q502 = s9q502;
+    public void setS9q5b(String s9q5b) {
+        this.s9q5b = s9q5b;
     }
 
-    public String getS9q6() {
-        return s9q6;
+    public String getS9q6a() {
+        return s9q6a;
     }
 
-    public void setS9q6(String s9q6) {
-        this.s9q6 = s9q6;
+    public void setS9q6a(String s9q6a) {
+        this.s9q6a = s9q6a;
     }
 
     public String getS10title() {
@@ -4308,11 +4308,11 @@ public class Form extends LiveData<Form> {
                     .put("s9q1", s9q1)
                     .put("s9q2", s9q2)
                     .put("s9q3", s9q3)
-                    .put("s9q401", s9q401)
-                    .put("s9q402", s9q402)
-                    .put("s9q501", s9q501)
-                    .put("s9q502", s9q502)
-                    .put("s9q6", s9q6);
+                    .put("s9q4a", s9q4a)
+                    .put("s9q4b", s9q4b)
+                    .put("s9q5a", s9q5a)
+                    .put("s9q5b", s9q5b)
+                    .put("s9q6a", s9q6a);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4976,11 +4976,11 @@ public class Form extends LiveData<Form> {
                 this.s9q1 = json.getString("s9q1");
                 this.s9q2 = json.getString("s9q2");
                 this.s9q3 = json.getString("s9q3");
-                this.s9q401 = json.getString("s9q401");
-                this.s9q402 = json.getString("s9q402");
-                this.s9q501 = json.getString("s9q501");
-                this.s9q502 = json.getString("s9q502");
-                this.s9q6 = json.getString("s9q6");
+                this.s9q4a = json.getString("s9q4a");
+                this.s9q4b = json.getString("s9q4b");
+                this.s9q5a = json.getString("s9q5a");
+                this.s9q5b = json.getString("s9q5b");
+                this.s9q6a = json.getString("s9q6a");
 
             } catch (JSONException e) {
                 e.printStackTrace();
