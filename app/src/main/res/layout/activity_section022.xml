@@ -1262,6 +1262,7 @@
             <!-- s2q17  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q17"
+                android:visibility='@{s2q1602.checked ? View.GONE : View.VISIBLE}'
                 style="@style/cardView">
 
                 <LinearLayout
