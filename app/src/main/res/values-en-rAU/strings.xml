@@ -20,6 +20,10 @@
     <string name="records_summary">Records Summary</string>
     <string name="main_menu">Main Menu</string>
     <string name="only_for_testing">ONLY FOR TESTING</string>
+    <string name="openScreening"> Screening </string>
+    <string name="openPretest"> Pre Test Knowlegde </string>
+    <string name="openFollowup"> Follow Up </string>
+    <string name="numfth"> Number of times </string>
     <string name="database">Database</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_field_required">This field is required</string>
