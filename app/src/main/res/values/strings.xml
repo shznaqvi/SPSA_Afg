@@ -1012,7 +1012,7 @@ Any other illnesses?
     <string name="s1q1"> Type of Study Arm:   </string>
     <string name="s1q101"> Intervention      </string>
     <string name="s1q102"> Control</string>
-    <string name="s1q2">  Interviewer´s name: </string>
+    <string name="s1q2"> Interviewer´s name: </string>
     <string name="s1q4"> Date of interview</string>
     <string name="s1q6">Province name:</string>
     <string name="s1q8"> District name:</string>

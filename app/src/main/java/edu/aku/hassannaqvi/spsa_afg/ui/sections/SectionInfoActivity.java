@@ -140,6 +140,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
+        form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
 
 
         form.setS1qno(bi.s1qno.getText().toString());
