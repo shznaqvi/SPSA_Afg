@@ -308,6 +308,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
+                                android:gravity="center"
                                 android:text="@string/s8q2btitle1" />
 
                             <CheckBox
@@ -332,6 +333,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
+                                android:gravity="center"
                                 android:text="@string/s8q2btitle2" />
 
                             <CheckBox
@@ -359,8 +361,6 @@
                                 android:hint="@string/s8q2b96"
                                 android:inputType="number"
                                 android:tag="s8q2b96"
-
-
                                 android:text='@{s8q2b96.checked ? s8q2b96x.getText().toString() : ""}'
                                 android:visibility='@{s8q2b96.checked? View.VISIBLE : View.GONE}' />
                         </LinearLayout>
@@ -1030,6 +1030,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s8q8title1" />
 
                         <CheckBox
@@ -1054,6 +1055,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s8q8title2" />
 
                         <CheckBox
@@ -1392,6 +1394,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s8q12title1" />
 
                         <RadioButton
@@ -1416,6 +1419,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s8q12title2" />
 
                         <RadioButton

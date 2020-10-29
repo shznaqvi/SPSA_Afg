@@ -75,10 +75,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private void setupSkip() {
-      /*  bi.a06.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla07));
-        bi.a07.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.lla08));*/
 
-        bi.s1qno.addTextChangedListener(new TextWatcher() {
+        bi.s1q11.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -86,10 +84,11 @@ public class SectionInfoActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (TextUtils.isEmpty(bi.s1qno.getText())) {
+                if (TextUtils.isEmpty(bi.s1q11.getText())) {
                 }
-                if (bi.s1qno.getText().toString().length() == 4) {
+                if (bi.s1q11.getText().toString().length() == 3) {
                     bi.llGrpsec01.setVisibility(View.VISIBLE);
+                    bi.btnContinue.setVisibility(View.VISIBLE);
                 } else {
                     bi.llGrpsec01.setVisibility(View.GONE);
                     Clear.clearAllFields(bi.llGrpsec01);
@@ -296,71 +295,5 @@ public class SectionInfoActivity extends AppCompatActivity {
         });
     }
 
-
-    /*public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
-        //Setting Date
-       *//* try {
-            Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
-            localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }*//*
-    }
-
-   *//* public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
-        bi.a14mm.setEnabled(false);
-        bi.a14mm.setText(null);
-        bi.a14yy.setEnabled(false);
-        bi.a14yy.setText(null);
-        calculatedDOB = null;
-        dtFlag = true;
-        if (TextUtils.isEmpty(bi.a13dd.getText()) || TextUtils.isEmpty(bi.a13mm.getText()) || TextUtils.isEmpty(bi.a13yy.getText()))
-            return;
-        if (!bi.a13dd.isRangeTextValidate() || !bi.a13mm.isRangeTextValidate() || !bi.a13yy.isRangeTextValidate())
-            return;
-        if (bi.a13dd.getText().toString().equals("98") && bi.a13mm.getText().toString().equals("98") && bi.a13yy.getText().toString().equals("9998")) {
-            bi.a14mm.setEnabled(true);
-            bi.a14yy.setEnabled(true);
-            dtFlag = true;
-            return;
-        }
-        int day = bi.a13dd.getText().toString().equals("98") ? 15 : Integer.parseInt(bi.a13dd.getText().toString());
-        int month = Integer.parseInt(bi.a13mm.getText().toString());
-        int year = Integer.parseInt(bi.a13yy.getText().toString());
-
-        AgeModel age;
-        if (localDate != null)
-            age = DateRepository.Companion.getCalculatedAge(localDate, year, month, day);
-        else
-            age = DateRepository.Companion.getCalculatedAge(year, month, day);
-        if (age == null) {
-            bi.a13yy.setError("Invalid date!!");
-            dtFlag = false;
-            return;
-        }
-        dtFlag = true;
-        bi.a14mm.setText(String.valueOf(age.getMonth()));
-        bi.a14yy.setText(String.valueOf(age.getYear()));
-
-        //Setting Date
-        try {
-            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
-                    bi.a13dd.getText().toString() + "-" + bi.a13mm.getText().toString() + "-" + bi.a13yy.getText().toString()
-            )) + "T06:24:01Z");
-            calculatedDOB = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-    }*//*
-
-    public static class SectionKActivity extends AppCompatActivity {
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_section1101);
-        }
-    }*/
 
 }

@@ -77,16 +77,12 @@ public class Section13Activity extends AppCompatActivity {
                 : "-1");
         form.setS13q596x(bi.s13q596x.getText().toString());
 
-        // Error in portal
-        // form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
-
+        form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
         form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1");
         form.setS13q603(bi.s13q603.isChecked() ? "3" : "-1");
         form.setS13q696(bi.s13q696.isChecked() ? "96" : "-1");
-
-        /* Error in portal
+        form.setS13q696x(bi.s13q696x.getText().toString());
         form.setS13q698(bi.s13q698.isChecked() ? "98" : "-1");
-        form.setS13q696x(bi.s13q696x.getText().toString());*/
 
         form.setS13q7(bi.s13q701.isChecked() ? "1"
                 : bi.s13q702.isChecked() ? "2"
