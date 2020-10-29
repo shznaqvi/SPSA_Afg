@@ -622,13 +622,14 @@
     <string name="s9q3">جنس کودک </string>
     <string name="s9q301">مرد</string>
     <string name="s9q302">زن</string>
-    <string name="s9q4">قد </string>
-    <string name="s9q401">Measurer-1 Code: قد </string>
-    <string name="s9q402">Measurer-2 Code: قد </string>
-    <string name="s9q5">وزن</string>
-    <string name="s9q501">Measurer-1 Code: وزن</string>
-    <string name="s9q502">Measurer-2 Code: وزن</string>
-    <string name="s9q6">نتیجه  HBرا بنوسید  Measurer-1 Code</string>
+    <string name="s9mea1">Measurer-1 Code</string>
+    <string name="s9q4a">قد </string>
+    <string name="s9q5a">وزن</string>
+    <string name="s9q6a">نتیجه  HBرا بنوسید  </string>
+    <string name="s9mea2">Measurer-2 Code</string>
+    <string name="s9q4b">قد</string>
+    <string name="s9q5b">وزن</string>
+    <string name="s9q6b">نتیجه HBرا بنوسید</string>
     <string name="s10title">بخش دهم: شروع تغذیه با شیر مادر</string>
     <string name="s10q1">ایا تاکنون (نام طفل) شیر مادر گرفته شده است؟</string>
     <string name="s10q101">بلی </string>
@@ -1312,12 +1313,11 @@
     <string name='Q_s8q8'>s8q8</string>
     <string name='Q_s8q9'>s8q9</string>
     <string name='Q_s8title'>s8title</string>
+    <string name='Q_s9mea1'>s9mea1</string>
+    <string name='Q_s9mea2'>s9mea2</string>
     <string name='Q_s9q1'>s9q1</string>
     <string name='Q_s9q2'>s9q2</string>
     <string name='Q_s9q3'>s9q3</string>
-    <string name='Q_s9q4'>s9q4</string>
-    <string name='Q_s9q5'>s9q5</string>
-    <string name='Q_s9q6'>s9q6</string>
     <string name='Q_s9title'>s9title</string>
 
 
