@@ -14,7 +14,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +24,6 @@ import androidx.databinding.DataBindingUtil;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -35,7 +33,6 @@ import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.models.VersionApp;
 import edu.aku.hassannaqvi.spsa_afg.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section021Activity;
@@ -112,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
-        Collection<Form> todaysForms = appInfo.getDbHelper().getTodayForms(sysdateToday);
+     /*  Collection<Form> todaysForms = appInfo.getDbHelper().getTodayForms(sysdateToday);
         Collection<Form> unsyncedForms = appInfo.getDbHelper().getUnsyncedForms(0);
         Collection<Form> unclosedForms = appInfo.getDbHelper().getUnclosedForms();
 
@@ -190,7 +187,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 .append("\t\t\t\t\t\t||\r\n")
                 .append("\t========================================================\r\n");
         bi.recordSummary.setText(rSumText);
-
+*/
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
