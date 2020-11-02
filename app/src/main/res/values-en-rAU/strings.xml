@@ -630,7 +630,6 @@
     <string name="s9mea2">Measurer-2 Code</string>
     <string name="s9q4b">قد</string>
     <string name="s9q5b">وزن</string>
-    <string name="s9q6b">نتیجه HBرا بنوسید</string>
     <string name="s10title">بخش دهم: شروع تغذیه با شیر مادر</string>
     <string name="s10q1">ایا تاکنون (نام طفل) شیر مادر گرفته شده است؟</string>
     <string name="s10q101">بلی </string>
@@ -1327,6 +1326,11 @@
     <string name='Q_s9q1'>s9q1</string>
     <string name='Q_s9q2'>s9q2</string>
     <string name='Q_s9q3'>s9q3</string>
+    <string name='Q_s9q4a'>s9q4a</string>
+    <string name='Q_s9q4b'>s9q4b</string>
+    <string name='Q_s9q5a'>s9q5a</string>
+    <string name='Q_s9q5b'>s9q5b</string>
+    <string name='Q_s9q6a'>s9q6a</string>
     <string name='Q_s9title'>s9title</string>
 
 

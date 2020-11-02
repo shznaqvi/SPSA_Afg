@@ -622,7 +622,6 @@ If unable to determine if public or private sector, write the name of place</str
     <string name="s9mea2"> Measurer-2 Code</string>
     <string name="s9q4b">Length</string>
     <string name="s9q5b">Weight</string>
-    <string name="s9q6b">Hb result</string>
     <string name="s10title">Initiation of Breastfeeding     </string>
     <string name="s10q1">Has (NAME) ever been breastfed?</string>
     <string name="s10q101">Yes </string>
@@ -1314,6 +1313,11 @@ Any other illnesses?
     <string name='Q_s9q1'>s9q1</string>
     <string name='Q_s9q2'>s9q2</string>
     <string name='Q_s9q3'>s9q3</string>
+    <string name='Q_s9q4a'>s9q4a</string>
+    <string name='Q_s9q4b'>s9q4b</string>
+    <string name='Q_s9q5a'>s9q5a</string>
+    <string name='Q_s9q5b'>s9q5b</string>
+    <string name='Q_s9q6a'>s9q6a</string>
     <string name='Q_s9title'>s9title</string>
 
 
