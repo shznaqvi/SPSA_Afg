@@ -125,7 +125,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
 
-            String[] sync_forms = {"covid", "pretest", "followup"};
+            String[] sync_forms = {"covid"};
 
             for (int i = 0; i < sync_forms.length; i++) {
                 Toast.makeText(getApplicationContext(), String.format("Syncing %s Forms", sync_forms[i].toUpperCase()), Toast.LENGTH_SHORT).show();
@@ -141,7 +141,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         Form.class,
                         MainApp._HOST_URL + MainApp._SERVER_URL,
                         sync_forms[i],
-                        db.getUnsyncedForms(i + 1), i, syncListAdapter, uploadlist
+                        db.getUnsyncedForms(), i, syncListAdapter, uploadlist
                 ).execute();
 
             }

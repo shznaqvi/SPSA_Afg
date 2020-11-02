@@ -22,6 +22,7 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_REFNO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_UID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_USERNAME + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT,"

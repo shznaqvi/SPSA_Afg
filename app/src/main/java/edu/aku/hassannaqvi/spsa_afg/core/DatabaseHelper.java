@@ -718,6 +718,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsContract.FormsTable.COLUMN_DEVICETAGID, form.getDevicetagID());
         values.put(FormsContract.FormsTable.COLUMN_DEVICEID, form.getDeviceID());
         values.put(FormsContract.FormsTable.COLUMN_APPVERSION, form.getAppversion());
+        values.put(FormsContract.FormsTable.COLUMN_REFNO, form.getAppversion());
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -788,6 +789,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
                 FormsContract.FormsTable.COLUMN_APPVERSION,
+                FormsContract.FormsTable.COLUMN_REFNO,
 
         };
 
@@ -847,6 +849,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
                 FormsContract.FormsTable.COLUMN_APPVERSION,
+                FormsContract.FormsTable.COLUMN_REFNO,
 
         };
         String whereClause = null;
@@ -883,7 +886,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public Collection<Form> getUnsyncedForms(int formtype) {
+    public Collection<Form> getUnsyncedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -893,8 +896,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_FORMTYPE,
-                FormsTable.COLUMN_S1Q1,
-                FormsTable.COLUMN_S1Q2,
+               /* FormsTable.COLUMN_S1Q1,
+                FormsTable.COLUMN_S1Q2,*/
                 /* FormsTable.COLUMN_S1Q3,*/
                 FormsTable.COLUMN_S1Q4,
                 /*FormsTable.COLUMN_S1Q5,*/
@@ -923,19 +926,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_DEVICETAGID,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_SYNCED,
+                FormsTable.COLUMN_REFNO,
         };
 
-        String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == ''";
+        String whereClause = FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " = ''";
         String[] whereArgs = null;
-        if (formtype != 0) {
-            if (formtype == 1) {
-                whereClause = "(" + FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == '') AND (" + FormsContract.FormsTable.COLUMN_FORMTYPE + "=? OR " + FormsContract.FormsTable.COLUMN_FORMTYPE + " is null)";
-                whereArgs = new String[]{String.valueOf(formtype)};
-            } else {
-                whereClause = "(" + FormsContract.FormsTable.COLUMN_SYNCED + " is null OR " + FormsContract.FormsTable.COLUMN_SYNCED + " == '') AND " + FormsContract.FormsTable.COLUMN_FORMTYPE + "=?";
-                whereArgs = new String[]{String.valueOf(formtype)};
-            }
-        }
+
         String groupBy = null;
         String having = null;
         String orderBy = FormsContract.FormsTable.COLUMN_ID + " ASC";
@@ -1247,7 +1244,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsContract.FormsTable.COLUMN_GPSACC,
                 FormsContract.FormsTable.COLUMN_DEVICETAGID,
                 FormsContract.FormsTable.COLUMN_DEVICEID,
-                FormsContract.FormsTable.COLUMN_APPVERSION
+                FormsContract.FormsTable.COLUMN_APPVERSION,
+                FormsContract.FormsTable.COLUMN_REFNO
         };
 
 //        String whereClause = "(" + FormsTable.COLUMN_ISTATUS + " is null OR " + FormsTable.COLUMN_ISTATUS + "='') AND " + FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
