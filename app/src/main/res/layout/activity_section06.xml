@@ -96,12 +96,12 @@
                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
-                        <Spinner
+                       <!-- <Spinner
                             android:id="@+id/s6q1ab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
-                            android:layout_weight="1" />
+                            android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -128,12 +128,12 @@
                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
-                        <Spinner
+                        <!--<Spinner
                             android:id="@+id/s6q2ab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
-                            android:layout_weight="1" />
+                            android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -159,12 +159,12 @@
                             app:minValue="6"
                             app:type="range" />
 
-                        <Spinner
+                        <!--<Spinner
                             android:id="@+id/s6q3ab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
-                            android:layout_weight="1" />
+                            android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -227,12 +227,12 @@
                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
-                        <Spinner
-                            android:id="@+id/s6q1bb"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
+                        <!-- <Spinner
+                             android:id="@+id/s6q1bb"
+                             style="@style/spinner"
+                             android:layout_width="0dp"
+                             android:layout_margin="10dp"
+                             android:layout_weight="1" />-->
 
                     </LinearLayout>
 
@@ -259,12 +259,12 @@
                             app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
-                        <Spinner
-                            android:id="@+id/s6q2bb"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
+                        <!-- <Spinner
+                             android:id="@+id/s6q2bb"
+                             style="@style/spinner"
+                             android:layout_width="0dp"
+                             android:layout_margin="10dp"
+                             android:layout_weight="1" />-->
 
                     </LinearLayout>
 
