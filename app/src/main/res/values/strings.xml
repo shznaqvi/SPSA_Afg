@@ -437,14 +437,13 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s5q9a03">Often (more than ten times in the past four weeks)</string>
     <string name="s6title"> Anthropometry and Hb of pregnant and lactating women (PLW) </string>
     <string name="s6mea1">Measurer-1</string>
+    <string name="s6q1a">Weight in k.g</string>
+    <string name="s6q2a">Height in CM</string>
+    <string name="s6q3a">Hb result</string>
     <string name="s6mea2">Measurer-2</string>
-    <string name="s6q1">Weight in k.g</string>
-    <string name="s6q1a">Measurer-1 Code: Weight in k.g</string>
-    <string name="s6q1b">Measurer-2 Code: Weight in k.g</string>
-    <string name="s6q2">Height in CM</string>
-    <string name="s6q2a">Measurer-1 Code: Height in CM</string>
-    <string name="s6q2b">Measurer-2 Code: Height in CM</string>
-    <string name="s6q3">Measurer-1 Code: Hb resulte</string>
+    <string name="s6q1b">Weight in k.g</string>
+    <string name="s6q2b">Height in CM</string>
+    <string name="s6q3b">Measurer-1 Code: Hb result</string>
     <string name="s7title1">Minimum Dietary Diversity for Pregnant and Lactating Woman (PLW)</string>
     <string name="s7title2">Please describe the foods (meals and snacks) that you ate or drank yesterday during the day and night, whether at home or outside the home. Start with the first food or drink eaten in the morning.
 Write down all food and drinks mentioned. When composite dishes are mentioned, ask for the list of ingredients. When the respondent has finished, probe for meals and snacks not mentioned.
@@ -1262,9 +1261,12 @@ Any other illnesses?
     <string name='Q_s5title'>s5title</string>
     <string name='Q_s6mea1'>s6mea1</string>
     <string name='Q_s6mea2'>s6mea2</string>
-    <string name='Q_s6q1'>s6q1</string>
-    <string name='Q_s6q2'>s6q2</string>
-    <string name='Q_s6q3'>s6q3</string>
+    <string name='Q_s6q1a'>s6q1a</string>
+    <string name='Q_s6q1b'>s6q1b</string>
+    <string name='Q_s6q2a'>s6q2a</string>
+    <string name='Q_s6q2b'>s6q2b</string>
+    <string name='Q_s6q3a'>s6q3a</string>
+    <string name='Q_s6q3b'>s6q3b</string>
     <string name='Q_s6title'>s6title</string>
     <string name='Q_s7qa'>s7qa</string>
     <string name='Q_s7qb'>s7qb</string>
