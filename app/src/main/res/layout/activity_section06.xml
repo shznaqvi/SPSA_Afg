@@ -1,8 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    
     <data>
 
         <import type="android.view.View" />
@@ -16,19 +14,15 @@
             type="edu.aku.hassannaqvi.spsa_afg.ui.sections.Section06Activity" />
     </data>
 
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
         <LinearLayout
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <!-- s6title  Title   -->
             <androidx.cardview.widget.CardView
@@ -41,19 +35,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/qtxt_s6title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s6title" />
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
-
-            <!-- s6q1  Title   -->
+            <!-- s6mea1  Input   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVs6q1"
+                android:id="@+id/fldGrpCVs6mea1"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -67,21 +57,20 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_s6q1"
+                            android:id="@+id/qtxt_s6mea1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s6q1"
-                            android:text="@string/s6q1" />
+                            android:layout_toEndOf="@id/q_s6mea1"
+                            android:text="@string/s6mea1" />
 
                         <TextView
-                            android:id="@+id/q_s6q1"
+                            android:id="@+id/q_s6mea1"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s6q1"
-                            android:layout_alignBottom="@id/qtxt_s6q1"
-                            android:text="@string/Q_s6q1" />
-
+                            android:layout_alignTop="@id/qtxt_s6mea1"
+                            android:layout_alignBottom="@id/qtxt_s6mea1"
+                            android:text="@string/Q_s6mea1" />
                     </RelativeLayout>
 
                     <TextView
@@ -99,12 +88,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="###.#"
+                            android:hint="@string/s6q1a"
                             android:inputType="number"
-                            app:mask="###.#"
-                            app:maxValue="110.0"
-                            app:minValue="40.0"
-                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                            app:mask="##.#"
+                            app:maxValue="40.0"
+                            app:minValue="11.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <Spinner
@@ -115,76 +104,6 @@
                             android:layout_weight="1" />
 
                     </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/s6q1b" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s6q1b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="###.#"
-                            android:inputType="number"
-                            app:mask="###.#"
-                            app:maxValue="110.0"
-                            app:minValue="40.0"
-                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
-                            app:type="range" />
-
-                        <Spinner
-                            android:id="@+id/s6q1bb"
-                            style="@style/spinner"
-                            android:layout_width="0dp"
-                            android:layout_margin="10dp"
-                            android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-            <!-- s6q2  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVs6q2"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_s6q2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s6q2"
-                            android:text="@string/s6q2" />
-
-                        <TextView
-                            android:id="@+id/q_s6q2"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s6q2"
-                            android:layout_alignBottom="@id/qtxt_s6q2"
-                            android:text="@string/Q_s6q2" />
-
-                    </RelativeLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -201,20 +120,119 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="##.#"
+                            android:hint="@string/s6q2a"
                             android:inputType="number"
-                            app:mask="###.#"
-                            app:maxValue="180.0"
-                            app:minValue="100.0"
-                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                            app:mask="##.#"
+                            app:maxValue="18.0"
+                            app:minValue="10.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
-                         <Spinner
-                             android:id="@+id/s6q2ab"
-                             style="@style/spinner"
-                             android:layout_width="0dp"
-                             android:layout_margin="10dp"
-                             android:layout_weight="1" />
+                        <Spinner
+                            android:id="@+id/s6q2ab"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s6q3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q3a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/s6q3"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="19"
+                            app:minValue="6"
+                            app:type="range" />
+
+                        <Spinner
+                            android:id="@+id/s6q3ab"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- s6mea2  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVs6mea2"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_s6mea2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_s6mea2"
+                            android:text="@string/s6mea2" />
+
+                        <TextView
+                            android:id="@+id/q_s6mea2"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_s6mea2"
+                            android:layout_alignBottom="@id/qtxt_s6mea2"
+                            android:text="@string/Q_s6mea2" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/s6q1b" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q1b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/s6q1b"
+                            android:inputType="number"
+                            app:mask="##.#"
+                            app:maxValue="40.0"
+                            app:minValue="11.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                            app:type="range" />
+
+                        <Spinner
+                            android:id="@+id/s6q1bb"
+                            style="@style/spinner"
+                            android:layout_width="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
 
@@ -233,12 +251,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="##.#"
+                            android:hint="@string/s6q2b"
                             android:inputType="number"
-                            app:mask="###.#"
-                            app:maxValue="180.0"
-                            app:minValue="100.0"
-                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
+                            app:mask="##.#"
+                            app:maxValue="18.0"
+                            app:minValue="10.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <Spinner
@@ -253,74 +271,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
-
-            <!-- s6q3  Input-Numeric   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVs6q3"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_s6q3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s6q3"
-                            android:text="@string/s6q3" />
-
-                        <TextView
-                            android:id="@+id/q_s6q3"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s6q3"
-                            android:layout_alignBottom="@id/qtxt_s6q3"
-                            android:text="@string/Q_s6q3" />
-
-                    </RelativeLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s6q3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:hint="##.#"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            app:mask="##.#"
-                            app:maxValue="19.0"
-                            app:minValue="6.0"
-                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
-                            app:type="range" />
-
-                         <Spinner
-                             android:id="@+id/s6q3a"
-                             style="@style/spinner"
-                             android:layout_width="0dp"
-                             android:layout_margin="10dp"
-                             android:layout_weight="1" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
 
             <!--EndButton LinearLayout-->
             <LinearLayout
@@ -350,7 +300,6 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
-
 
         </LinearLayout>
 

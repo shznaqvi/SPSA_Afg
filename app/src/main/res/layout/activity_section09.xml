@@ -232,13 +232,14 @@
                             android:layout_weight="1"
                             android:hint="@string/s9q4a"
                             android:inputType="number"
-                            android:maxLength="2"
-                            app:maxValue="60"
-                            app:minValue="14"
+                            app:mask="##.#"
+                            app:maxValue="60.0"
+                            app:minValue="14.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <Spinner
-                            android:id="@+id/s6q4aab"
+                            android:id="@+id/s9q4aab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
@@ -270,7 +271,7 @@
                             app:type="range" />
 
                         <Spinner
-                            android:id="@+id/s6q5aab"
+                            android:id="@+id/s9q5aab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
@@ -301,7 +302,7 @@
                             app:type="range" />
 
                         <Spinner
-                            android:id="@+id/s6q6ab"
+                            android:id="@+id/s9q6ab"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
@@ -361,13 +362,14 @@
                             android:layout_weight="1"
                             android:hint="@string/s9q4b"
                             android:inputType="number"
-                            android:maxLength="2"
-                            app:maxValue="60"
-                            app:minValue="14"
+                            app:mask="##.#"
+                            app:maxValue="60.0"
+                            app:minValue="14.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                             app:type="range" />
 
                         <Spinner
-                            android:id="@+id/s6q4abb"
+                            android:id="@+id/s9q4abb"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"
@@ -399,7 +401,7 @@
                             app:type="range" />
 
                         <Spinner
-                            android:id="@+id/s6q5abb"
+                            android:id="@+id/s9q5abb"
                             style="@style/spinner"
                             android:layout_width="0dp"
                             android:layout_margin="10dp"

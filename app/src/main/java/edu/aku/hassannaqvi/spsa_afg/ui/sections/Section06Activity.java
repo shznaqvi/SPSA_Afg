@@ -41,7 +41,7 @@ public class Section06Activity extends AppCompatActivity {
 
     private void setupContent() {
         db = new DatabaseHelper(this);
-        userSpinners = new Spinner[]{bi.s6q1ab, bi.s6q1bb, bi.s6q2ab, bi.s6q2bb, bi.s6q3a};
+        userSpinners = new Spinner[]{bi.s6q1ab, bi.s6q2ab, bi.s6q1bb, bi.s6q2bb, bi.s6q3ab};
         for (Spinner singleSpinner : userSpinners) {
             singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, MainApp.loginMem));
         }
@@ -67,8 +67,8 @@ public class Section06Activity extends AppCompatActivity {
         form.setS6q2b(bi.s6q2b.getText().toString());
         form.setS6q2bb(bi.s6q2bb.getSelectedItem().toString());
 
-        form.setS6q3(bi.s6q3.getText().toString());
-        form.setS6q3a(bi.s6q3a.getSelectedItem().toString());
+        form.setS6q3a(bi.s6q3a.getText().toString());
+        form.setS6q3ab(bi.s6q3ab.getSelectedItem().toString());
 
 
     }

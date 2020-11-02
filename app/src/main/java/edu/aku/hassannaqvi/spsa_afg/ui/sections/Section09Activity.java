@@ -41,7 +41,7 @@ public class Section09Activity extends AppCompatActivity {
 
     private void setupContent() {
         db = new DatabaseHelper(this);
-        userSpinners = new Spinner[]{bi.s6q4aab, bi.s6q5aab, bi.s6q6ab, bi.s6q4abb, bi.s6q5abb};
+        userSpinners = new Spinner[]{bi.s9q4aab, bi.s9q5aab, bi.s9q6ab, bi.s9q4abb, bi.s9q5abb};
         for (Spinner singleSpinner : userSpinners) {
             singleSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, MainApp.loginMem));
         }
@@ -65,10 +65,19 @@ public class Section09Activity extends AppCompatActivity {
                 : "-1");
 
         form.setS9q4a(bi.s9q4a.getText().toString());
+        form.setS9q4aab(bi.s9q4aab.getSelectedItem().toString());
+
         form.setS9q4b(bi.s9q4b.getText().toString());
+        form.setS9q4abb(bi.s9q4abb.getSelectedItem().toString());
+
         form.setS9q5a(bi.s9q5a.getText().toString());
+        form.setS9q5aab(bi.s9q5aab.getSelectedItem().toString());
+
         form.setS9q5b(bi.s9q5b.getText().toString());
+        form.setS9q5abb(bi.s9q5abb.getSelectedItem().toString());
+
         form.setS9q6a(bi.s9q6a.getText().toString());
+        form.setS9q6ab(bi.s9q6ab.getSelectedItem().toString());
 
     }
 
