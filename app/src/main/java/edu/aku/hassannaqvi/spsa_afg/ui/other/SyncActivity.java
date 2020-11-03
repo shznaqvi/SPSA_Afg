@@ -41,6 +41,7 @@ import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncAllData;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncAllPhotos;
 import edu.aku.hassannaqvi.spsa_afg.sync.SyncDevice;
+import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.spsa_afg.utils.CreateTable.DB_NAME;
@@ -117,18 +118,14 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void syncServer() {
         bi.activityTitle.setText("Upload Data");
-        // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
+        if (AndroidUtilityKt.isNetworkConnected(this)) {
 
             DatabaseHelper db = new DatabaseHelper(this);
 
             new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
 
-            String[] sync_forms = {"covid", "pretest", "followup"};
+            String[] sync_forms = {"forms"};
 
             for (int i = 0; i < sync_forms.length; i++) {
                 Toast.makeText(getApplicationContext(), String.format("Syncing %s Forms", sync_forms[i].toUpperCase()), Toast.LENGTH_SHORT).show();
@@ -144,7 +141,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         Form.class,
                         MainApp._HOST_URL + MainApp._SERVER_URL,
                         sync_forms[i],
-                        db.getUnsyncedForms(i + 1), i, syncListAdapter, uploadlist
+                        db.getUnsyncedForms(), i, syncListAdapter, uploadlist
                 ).execute();
 
             }
@@ -310,13 +307,29 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
-//                    Getting FUP
+//                    Getting Provinces
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "FUP", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "Provinces", syncListAdapter, list).execute();
+
+//                    Getting Districts
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Districts", syncListAdapter, list).execute();
+
+//                    Getting Villages
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "Villages", syncListAdapter, list).execute();
 
                 }
 

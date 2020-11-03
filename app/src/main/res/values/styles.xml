@@ -7,7 +7,9 @@
 
     <!-- Base application theme. -->
     <style name="AppThemeEnglish" parent="Theme.AppCompat.Light.DarkActionBar">
+<!--
         <item name="android:typeface">sans</item>
+-->
         <item name="android:spinnerStyle">@style/spinner</item>
         <!--
                       Customize your theme here. -->

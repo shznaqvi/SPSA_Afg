@@ -13,8 +13,10 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection05Binding;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -42,38 +44,38 @@ public class Section05Activity extends AppCompatActivity {
         }));
         bi.s5q2.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q202.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q3);
+                Clear.clearAllFields(bi.fldGrpCVs5q2a);
             }
         }));
         bi.s5q3.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q302.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q4);
+                Clear.clearAllFields(bi.fldGrpCVs5q3a);
             }
         }));
         bi.s5q4.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q402.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q5);
+                Clear.clearAllFields(bi.fldGrpCVs5q4a);
             }
         }));
         bi.s5q5.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q502.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q6);
+                Clear.clearAllFields(bi.fldGrpCVs5q5a);
             }
         }));
 
         bi.s5q6.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q602.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q7);
+                Clear.clearAllFields(bi.fldGrpCVs5q6a);
             }
         }));
         bi.s5q7.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q702.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q8);
+                Clear.clearAllFields(bi.fldGrpCVs5q7a);
             }
         }));
         bi.s5q8.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q802.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs5q9);
+                Clear.clearAllFields(bi.fldGrpCVs5q8a);
             }
         }));
         bi.s5q9.setOnCheckedChangeListener(((radioGroup, i) -> {
@@ -90,15 +92,15 @@ public class Section05Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S05, form.s05toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+        /*return true;*/
     }
 
 
@@ -202,7 +204,7 @@ public class Section05Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, Section06Activity.class));
         }
     }
 

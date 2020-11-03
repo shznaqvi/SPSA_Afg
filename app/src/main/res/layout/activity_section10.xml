@@ -190,11 +190,12 @@
                                 android:hint="@string/s10q201"
                                 android:inputType="number"
                                 android:tag="s10q201"
-
-
+                                android:maxLength="2"
+                                app:maxValue="23"
+                                app:minValue="1"
+                                app:type="range"
                                 android:text='@{s10q201.checked ? s10q201x.getText().toString() : ""}'
-                                android:visibility='@{s10q201.checked? View.VISIBLE : View.GONE}'
-                                app:type="range" />
+                                android:visibility='@{s10q201.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
                                 android:id="@+id/s10q202"
@@ -209,11 +210,12 @@
                                 android:hint="@string/s10q202"
                                 android:inputType="number"
                                 android:tag="s10q202"
-
-
+                                android:maxLength="2"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range"
                                 android:text='@{s10q202.checked ? s10q202x.getText().toString() : ""}'
-                                android:visibility='@{s10q202.checked? View.VISIBLE : View.GONE}'
-                                app:type="range" />
+                                android:visibility='@{s10q202.checked? View.VISIBLE : View.GONE}'/>
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

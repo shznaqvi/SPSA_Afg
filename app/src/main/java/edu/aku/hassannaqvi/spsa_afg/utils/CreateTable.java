@@ -1,9 +1,12 @@
 package edu.aku.hassannaqvi.spsa_afg.utils;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.DistrictContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.ProvinceContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.VillageContract;
 
 public final class CreateTable {
 
@@ -19,6 +22,7 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_REFNO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_UID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_USERNAME + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT,"
@@ -61,6 +65,26 @@ public final class CreateTable {
             + UsersContract.UsersTable.COLUMN_USERNAME + " TEXT,"
             + UsersContract.UsersTable.COLUMN_PASSWORD + " TEXT,"
             + UsersContract.UsersTable.COLUMN_FULL_NAME + " TEXT"
+            + " );";
+
+    public static final String SQL_CREATE_PROVINCE = "CREATE TABLE " + ProvinceContract.table.TABLE_NAME + "("
+            + ProvinceContract.table._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + ProvinceContract.table.COLUMN_PCODE + " TEXT,"
+            + ProvinceContract.table.COLUMN_PNAME + " TEXT"
+            + " );";
+
+    public static final String SQL_CREATE_DISTRICT = "CREATE TABLE " + DistrictContract.table.TABLE_NAME + "("
+            + DistrictContract.table._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + DistrictContract.table.COLUMN_PCODE + " TEXT,"
+            + DistrictContract.table.COLUMN_DCODE + " TEXT,"
+            + DistrictContract.table.COLUMN_DNAME + " TEXT"
+            + " );";
+
+    public static final String SQL_CREATE_VILLAGE = "CREATE TABLE " + VillageContract.table.TABLE_NAME + "("
+            + VillageContract.table._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + VillageContract.table.COLUMN_DCODE + " TEXT,"
+            + VillageContract.table.COLUMN_VCODE + " TEXT,"
+            + VillageContract.table.COLUMN_VNAME + " TEXT"
             + " );";
 
     public static final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppContract.VersionAppTable.TABLE_NAME + " (" +

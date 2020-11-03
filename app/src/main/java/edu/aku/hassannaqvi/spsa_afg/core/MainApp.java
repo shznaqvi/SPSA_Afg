@@ -24,6 +24,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
@@ -39,9 +40,9 @@ import kotlin.Pair;
 public class MainApp extends Application {
 
     public static final String TAG = "AppMain";
-    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
-    //    public static final String _IP = "http://f38158";// .TEST server
-    public static final String _HOST_URL = MainApp._IP + "/spsa/api/";// .TEST server;
+    // public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
+    public static final String _IP = "http://f38158";// .TEST server
+    public static final String _HOST_URL = MainApp._IP + "/spsa_afg/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
     public static final String _SERVER_GET_URL = "getData.php";
     public static final String _PHOTO_UPLOAD_URL = MainApp._IP + "/spsa/api/uploads.php";
@@ -91,6 +92,7 @@ public class MainApp extends Application {
     public static SharedPreferences sharedPref;
     public static String DIST_ID;
     public static Pair<List<Integer>, List<String>> selectedChildren;
+    public static ArrayList<String> measurers;
     protected static LocationManager locationManager;
 
     public static void setItemClick(OnItemClick itemClick) {

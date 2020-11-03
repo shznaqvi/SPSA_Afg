@@ -167,7 +167,8 @@ public class Form extends LiveData<Form> {
     public String s6q1b;
     public String s6q2a;
     public String s6q2b;
-    public String s6q3;
+    public String s6q3a;
+    public String s6q3b;
     public String s7qa;
     public String s7qb;
     public String s7qc;
@@ -231,10 +232,10 @@ public class Form extends LiveData<Form> {
     public String s8q996x;
     public String s8q10;
     public String s8q1001x;
-    public String s8q11;
-    public String s8q1101x;
-    public String s8q1102x;
-    public String s8q1103x;
+    public String s8q1198;
+    public String s8q1101;
+    public String s8q1102;
+    public String s8q1103;
     public String s8q12;
     public String s8q1296x;
     public String s8q13;
@@ -242,11 +243,13 @@ public class Form extends LiveData<Form> {
     public String s9q1;
     public String s9q2;
     public String s9q3;
-    public String s9q401;
-    public String s9q402;
-    public String s9q501;
-    public String s9q502;
-    public String s9q6;
+    public String s9mea1;
+    public String s9mea2;
+    public String s9q4a;
+    public String s9q4b;
+    public String s9q5a;
+    public String s9q5b;
+    public String s9q6a;
     public String s10title;
     public String s10q1;
     public String s10q2;
@@ -314,35 +317,35 @@ public class Form extends LiveData<Form> {
     public String s11q18;
     public String s12q1;
     public String s12q2a;
-    public String s12q2adx;
+    public String s12q2a01x;
     public String s12q2b;
-    public String s12q2bdx;
+    public String s12q2b01x;
     public String s12q2c;
-    public String s12q2cdx;
+    public String s12q2c01x;
     public String s12q2d;
-    public String s12q2ddx;
+    public String s12q2d01x;
     public String s12q2e;
-    public String s12q2edx;
+    public String s12q2e01x;
     public String s12q2f;
-    public String s12q2fdx;
+    public String s12q2f01x;
     public String s12q2g;
-    public String s12q2gdx;
+    public String s12q2g01x;
     public String s12q2h;
-    public String s12q2hdx;
+    public String s12q2h01x;
     public String s12q2i;
-    public String s12q2idx;
+    public String s12q2i01x;
     public String s12q2j;
-    public String s12q2jdx;
+    public String s12q2j01x;
     public String s12q2k;
-    public String s12q2kdx;
+    public String s12q2k01x;
     public String s12q2l;
-    public String s12q2ldx;
+    public String s12q2l01x;
     public String s12q2m;
-    public String s12q2mdx;
+    public String s12q2m01x;
     public String s12q2n;
-    public String s12q2ndx;
+    public String s12q2n01x;
     public String s12q2o;
-    public String s12q2odx;
+    public String s12q2o01x;
     public String s12q301;
     public String s12q302;
     public String s12q303;
@@ -351,7 +354,7 @@ public class Form extends LiveData<Form> {
     public String s12q306;
     public String s12q307;
     public String s12q308;
-    public String s12q396x;
+    public String s12q396;
     public String s12q4;
     public String s12q5;
     public String s12q501;
@@ -377,10 +380,12 @@ public class Form extends LiveData<Form> {
     public String s13q496x;
     public String s13q5;
     public String s13q596x;
-    public String s13q6;
+    public String s13q601;
     public String s13q602;
     public String s13q603;
     public String s13q696;
+    public String s13q696x;
+    public String s13q698;
     public String s13q7;
     public String s13q796x;
     public String s13q8;
@@ -1689,6 +1694,7 @@ public class Form extends LiveData<Form> {
         this.s5q9a = s5q9a;
     }
 
+
     public String getS6mea1() {
         return s6mea1;
     }
@@ -1697,6 +1703,7 @@ public class Form extends LiveData<Form> {
         this.s6mea1 = s6mea1;
         return this;
     }
+
 
     public String getS6mea2() {
         return s6mea2;
@@ -1707,6 +1714,7 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+
     public String getS6q1a() {
         return s6q1a;
     }
@@ -1715,13 +1723,6 @@ public class Form extends LiveData<Form> {
         this.s6q1a = s6q1a;
     }
 
-    public String getS6q1b() {
-        return s6q1b;
-    }
-
-    public void setS6q1b(String s6q1b) {
-        this.s6q1b = s6q1b;
-    }
 
     public String getS6q2a() {
         return s6q2a;
@@ -1731,6 +1732,25 @@ public class Form extends LiveData<Form> {
         this.s6q2a = s6q2a;
     }
 
+
+    public String getS6q3a() {
+        return s6q3a;
+    }
+
+    public void setS6q3a(String s6q3a) {
+        this.s6q3a = s6q3a;
+    }
+
+
+    public String getS6q1b() {
+        return s6q1b;
+    }
+
+    public void setS6q1b(String s6q1b) {
+        this.s6q1b = s6q1b;
+    }
+
+
     public String getS6q2b() {
         return s6q2b;
     }
@@ -1739,13 +1759,15 @@ public class Form extends LiveData<Form> {
         this.s6q2b = s6q2b;
     }
 
-    public String getS6q3() {
-        return s6q3;
+
+    public String getS6q3b() {
+        return s6q3b;
     }
 
-    public void setS6q3(String s6q3) {
-        this.s6q3 = s6q3;
+    public void setS6q3b(String s6q3b) {
+        this.s6q3b = s6q3b;
     }
+
 
     public String getS7qa() {
         return s7qa;
@@ -2251,36 +2273,36 @@ public class Form extends LiveData<Form> {
         this.s8q1001x = s8q1001x;
     }
 
-    public String getS8q11() {
-        return s8q11;
+    public String getS8q1198() {
+        return s8q1198;
     }
 
-    public void setS8q11(String s8q11) {
-        this.s8q11 = s8q11;
+    public void setS8q1198(String s8q1198) {
+        this.s8q1198 = s8q1198;
     }
 
-    public String getS8q1101x() {
-        return s8q1101x;
+    public String getS8q1101() {
+        return s8q1101;
     }
 
-    public void setS8q1101x(String s8q1101x) {
-        this.s8q1101x = s8q1101x;
+    public void setS8q1101(String s8q1101) {
+        this.s8q1101 = s8q1101;
     }
 
-    public String getS8q1102x() {
-        return s8q1102x;
+    public String getS8q1102() {
+        return s8q1102;
     }
 
-    public void setS8q1102x(String s8q1102x) {
-        this.s8q1102x = s8q1102x;
+    public void setS8q1102(String s8q1102) {
+        this.s8q1102 = s8q1102;
     }
 
-    public String getS8q1103x() {
-        return s8q1103x;
+    public String getS8q1103() {
+        return s8q1103;
     }
 
-    public void setS8q1103x(String s8q1103x) {
-        this.s8q1103x = s8q1103x;
+    public void setS8q1103(String s8q1103) {
+        this.s8q1103 = s8q1103;
     }
 
     public String getS8q12() {
@@ -2315,6 +2337,7 @@ public class Form extends LiveData<Form> {
         this.s8q1396x = s8q1396x;
     }
 
+
     public String getS9q1() {
         return s9q1;
     }
@@ -2322,6 +2345,7 @@ public class Form extends LiveData<Form> {
     public void setS9q1(String s9q1) {
         this.s9q1 = s9q1;
     }
+
 
     public String getS9q2() {
         return s9q2;
@@ -2331,6 +2355,7 @@ public class Form extends LiveData<Form> {
         this.s9q2 = s9q2;
     }
 
+
     public String getS9q3() {
         return s9q3;
     }
@@ -2339,45 +2364,69 @@ public class Form extends LiveData<Form> {
         this.s9q3 = s9q3;
     }
 
-    public String getS9q401() {
-        return s9q401;
+
+    public String getS9mea1() {
+        return s9mea1;
     }
 
-    public void setS9q401(String s9q401) {
-        this.s9q401 = s9q401;
+    public void setS9mea1(String s9mea1) {
+        this.s9mea1 = s9mea1;
     }
 
-    public String getS9q402() {
-        return s9q402;
+
+    public String getS9q4a() {
+        return s9q4a;
     }
 
-    public void setS9q402(String s9q402) {
-        this.s9q402 = s9q402;
+    public void setS9q4a(String s9q4a) {
+        this.s9q4a = s9q4a;
     }
 
-    public String getS9q501() {
-        return s9q501;
+
+    public String getS9q4b() {
+        return s9q4b;
     }
 
-    public void setS9q501(String s9q501) {
-        this.s9q501 = s9q501;
+    public void setS9q4b(String s9q4b) {
+        this.s9q4b = s9q4b;
     }
 
-    public String getS9q502() {
-        return s9q502;
+
+    public String getS9mea2() {
+        return s9mea2;
     }
 
-    public void setS9q502(String s9q502) {
-        this.s9q502 = s9q502;
+    public void setS9mea2(String s9mea2) {
+        this.s9mea2 = s9mea2;
     }
 
-    public String getS9q6() {
-        return s9q6;
+
+    public String getS9q5a() {
+        return s9q5a;
     }
 
-    public void setS9q6(String s9q6) {
-        this.s9q6 = s9q6;
+    public void setS9q5a(String s9q5a) {
+        this.s9q5a = s9q5a;
     }
+
+
+    public String getS9q5b() {
+        return s9q5b;
+    }
+
+    public void setS9q5b(String s9q5b) {
+        this.s9q5b = s9q5b;
+    }
+
+
+    public String getS9q6a() {
+        return s9q6a;
+    }
+
+    public void setS9q6a(String s9q6a) {
+        this.s9q6a = s9q6a;
+    }
+
 
     public String getS10title() {
         return s10title;
@@ -2964,12 +3013,12 @@ public class Form extends LiveData<Form> {
         this.s12q2a = s12q2a;
     }
 
-    public String getS12q2adx() {
-        return s12q2adx;
+    public String getS12q2a01x() {
+        return s12q2a01x;
     }
 
-    public void setS12q2adx(String s12q2adx) {
-        this.s12q2adx = s12q2adx;
+    public void setS12q2a01x(String s12q2a01x) {
+        this.s12q2a01x = s12q2a01x;
     }
 
     public String getS12q2b() {
@@ -2980,12 +3029,12 @@ public class Form extends LiveData<Form> {
         this.s12q2b = s12q2b;
     }
 
-    public String getS12q2bdx() {
-        return s12q2bdx;
+    public String getS12q2b01x() {
+        return s12q2b01x;
     }
 
-    public void setS12q2bdx(String s12q2bdx) {
-        this.s12q2bdx = s12q2bdx;
+    public void setS12q2b01x(String s12q2b01x) {
+        this.s12q2b01x = s12q2b01x;
     }
 
     public String getS12q2c() {
@@ -2996,12 +3045,12 @@ public class Form extends LiveData<Form> {
         this.s12q2c = s12q2c;
     }
 
-    public String getS12q2cdx() {
-        return s12q2cdx;
+    public String getS12q2c01x() {
+        return s12q2c01x;
     }
 
-    public void setS12q2cdx(String s12q2cdx) {
-        this.s12q2cdx = s12q2cdx;
+    public void setS12q2c01x(String s12q2c01x) {
+        this.s12q2c01x = s12q2c01x;
     }
 
     public String getS12q2d() {
@@ -3012,12 +3061,12 @@ public class Form extends LiveData<Form> {
         this.s12q2d = s12q2d;
     }
 
-    public String getS12q2ddx() {
-        return s12q2ddx;
+    public String getS12q2d01x() {
+        return s12q2d01x;
     }
 
-    public void setS12q2ddx(String s12q2ddx) {
-        this.s12q2ddx = s12q2ddx;
+    public void setS12q2d01x(String s12q2d01x) {
+        this.s12q2d01x = s12q2d01x;
     }
 
     public String getS12q2e() {
@@ -3028,12 +3077,12 @@ public class Form extends LiveData<Form> {
         this.s12q2e = s12q2e;
     }
 
-    public String getS12q2edx() {
-        return s12q2edx;
+    public String getS12q2e01x() {
+        return s12q2e01x;
     }
 
-    public void setS12q2edx(String s12q2edx) {
-        this.s12q2edx = s12q2edx;
+    public void setS12q2e01x(String s12q2e01x) {
+        this.s12q2e01x = s12q2e01x;
     }
 
     public String getS12q2f() {
@@ -3044,12 +3093,12 @@ public class Form extends LiveData<Form> {
         this.s12q2f = s12q2f;
     }
 
-    public String getS12q2fdx() {
-        return s12q2fdx;
+    public String getS12q2f01x() {
+        return s12q2f01x;
     }
 
-    public void setS12q2fdx(String s12q2fdx) {
-        this.s12q2fdx = s12q2fdx;
+    public void setS12q2f01x(String s12q2f01x) {
+        this.s12q2f01x = s12q2f01x;
     }
 
     public String getS12q2g() {
@@ -3060,12 +3109,12 @@ public class Form extends LiveData<Form> {
         this.s12q2g = s12q2g;
     }
 
-    public String getS12q2gdx() {
-        return s12q2gdx;
+    public String getS12q2g01x() {
+        return s12q2g01x;
     }
 
-    public void setS12q2gdx(String s12q2gdx) {
-        this.s12q2gdx = s12q2gdx;
+    public void setS12q2g01x(String s12q2g01x) {
+        this.s12q2g01x = s12q2g01x;
     }
 
     public String getS12q2h() {
@@ -3076,12 +3125,12 @@ public class Form extends LiveData<Form> {
         this.s12q2h = s12q2h;
     }
 
-    public String getS12q2hdx() {
-        return s12q2hdx;
+    public String getS12q2h01x() {
+        return s12q2h01x;
     }
 
-    public void setS12q2hdx(String s12q2hdx) {
-        this.s12q2hdx = s12q2hdx;
+    public void setS12q2h01x(String s12q2h01x) {
+        this.s12q2h01x = s12q2h01x;
     }
 
     public String getS12q2i() {
@@ -3092,12 +3141,12 @@ public class Form extends LiveData<Form> {
         this.s12q2i = s12q2i;
     }
 
-    public String getS12q2idx() {
-        return s12q2idx;
+    public String getS12q2i01x() {
+        return s12q2i01x;
     }
 
-    public void setS12q2idx(String s12q2idx) {
-        this.s12q2idx = s12q2idx;
+    public void setS12q2i01x(String s12q2i01x) {
+        this.s12q2i01x = s12q2i01x;
     }
 
     public String getS12q2j() {
@@ -3108,12 +3157,12 @@ public class Form extends LiveData<Form> {
         this.s12q2j = s12q2j;
     }
 
-    public String getS12q2jdx() {
-        return s12q2jdx;
+    public String getS12q2j01x() {
+        return s12q2j01x;
     }
 
-    public void setS12q2jdx(String s12q2jdx) {
-        this.s12q2jdx = s12q2jdx;
+    public void setS12q2j01x(String s12q2j01x) {
+        this.s12q2j01x = s12q2j01x;
     }
 
     public String getS12q2k() {
@@ -3124,12 +3173,12 @@ public class Form extends LiveData<Form> {
         this.s12q2k = s12q2k;
     }
 
-    public String getS12q2kdx() {
-        return s12q2kdx;
+    public String getS12q2k01x() {
+        return s12q2k01x;
     }
 
-    public void setS12q2kdx(String s12q2kdx) {
-        this.s12q2kdx = s12q2kdx;
+    public void setS12q2k01x(String s12q2k01x) {
+        this.s12q2k01x = s12q2k01x;
     }
 
     public String getS12q2l() {
@@ -3140,12 +3189,12 @@ public class Form extends LiveData<Form> {
         this.s12q2l = s12q2l;
     }
 
-    public String getS12q2ldx() {
-        return s12q2ldx;
+    public String getS12q2l01x() {
+        return s12q2l01x;
     }
 
-    public void setS12q2ldx(String s12q2ldx) {
-        this.s12q2ldx = s12q2ldx;
+    public void setS12q2l01x(String s12q2l01x) {
+        this.s12q2l01x = s12q2l01x;
     }
 
     public String getS12q2m() {
@@ -3156,12 +3205,12 @@ public class Form extends LiveData<Form> {
         this.s12q2m = s12q2m;
     }
 
-    public String getS12q2mdx() {
-        return s12q2mdx;
+    public String getS12q2m01x() {
+        return s12q2m01x;
     }
 
-    public void setS12q2mdx(String s12q2mdx) {
-        this.s12q2mdx = s12q2mdx;
+    public void setS12q2m01x(String s12q2m01x) {
+        this.s12q2m01x = s12q2m01x;
     }
 
     public String getS12q2n() {
@@ -3172,12 +3221,12 @@ public class Form extends LiveData<Form> {
         this.s12q2n = s12q2n;
     }
 
-    public String getS12q2ndx() {
-        return s12q2ndx;
+    public String getS12q2n01x() {
+        return s12q2n01x;
     }
 
-    public void setS12q2ndx(String s12q2ndx) {
-        this.s12q2ndx = s12q2ndx;
+    public void setS12q2n01x(String s12q2n01x) {
+        this.s12q2n01x = s12q2n01x;
     }
 
     public String getS12q2o() {
@@ -3188,12 +3237,12 @@ public class Form extends LiveData<Form> {
         this.s12q2o = s12q2o;
     }
 
-    public String getS12q2odx() {
-        return s12q2odx;
+    public String getS12q2o01x() {
+        return s12q2o01x;
     }
 
-    public void setS12q2odx(String s12q2odx) {
-        this.s12q2odx = s12q2odx;
+    public void setS12q2o01x(String s12q2o01x) {
+        this.s12q2o01x = s12q2o01x;
     }
 
     public String getS12q301() {
@@ -3260,12 +3309,12 @@ public class Form extends LiveData<Form> {
         this.s12q308 = s12q308;
     }
 
-    public String getS12q396x() {
-        return s12q396x;
+    public String getS12q396() {
+        return s12q396;
     }
 
-    public void setS12q396x(String s12q396x) {
-        this.s12q396x = s12q396x;
+    public void setS12q396(String s12q396) {
+        this.s12q396 = s12q396;
     }
 
     public String getS12q4() {
@@ -3468,12 +3517,12 @@ public class Form extends LiveData<Form> {
         this.s13q596x = s13q596x;
     }
 
-    public String getS13q6() {
-        return s13q6;
+    public String getS13q601() {
+        return s13q601;
     }
 
-    public void setS13q6(String s13q6) {
-        this.s13q6 = s13q6;
+    public void setS13q601(String s13q601) {
+        this.s13q601 = s13q601;
     }
 
     public String getS13q602() {
@@ -3500,7 +3549,7 @@ public class Form extends LiveData<Form> {
         this.s13q696 = s13q696;
     }
 
-    /*public String getS13q696x() {
+    public String getS13q696x() {
         return s13q696x;
     }
 
@@ -3514,7 +3563,7 @@ public class Form extends LiveData<Form> {
 
     public void setS13q698(String s13q698) {
         this.s13q698 = s13q698;
-    }*/
+    }
 
     public String getS13q7() {
         return s13q7;
@@ -3875,8 +3924,6 @@ public class Form extends LiveData<Form> {
         this.gpsacc = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSACC));
         this.deviceID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICEID));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_DEVICETAGID));
-        this.synced = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYNCED));
-        this.synced_date = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYSDATE));
         this.appversion = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_APPVERSION));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS96x));
@@ -4135,11 +4182,14 @@ public class Form extends LiveData<Form> {
 
         try {
             json
+                    .put("s6mea1", s6mea1)
+                    .put("s6mea2", s6mea2)
                     .put("s6q1a", s6q1a)
                     .put("s6q1b", s6q1b)
                     .put("s6q2a", s6q2a)
                     .put("s6q2b", s6q2b)
-                    .put("s6q3", s6q3);
+                    .put("s6q3a", s6q3a)
+                    .put("s6q3b", s6q3b);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4227,10 +4277,10 @@ public class Form extends LiveData<Form> {
                     .put("s8q996x", s8q996x)
                     .put("s8q10", s8q10)
                     .put("s8q1001x", s8q1001x)
-                    .put("s8q11", s8q11)
-                    .put("s8q1101x", s8q1101x)
-                    .put("s8q1102x", s8q1102x)
-                    .put("s8q1103x", s8q1103x)
+                    .put("s8q1198", s8q1198)
+                    .put("s8q1101", s8q1101)
+                    .put("s8q1102", s8q1102)
+                    .put("s8q1103", s8q1103)
                     .put("s8q12", s8q12)
                     .put("s8q1296x", s8q1296x)
                     .put("s8q13", s8q13)
@@ -4251,11 +4301,13 @@ public class Form extends LiveData<Form> {
                     .put("s9q1", s9q1)
                     .put("s9q2", s9q2)
                     .put("s9q3", s9q3)
-                    .put("s9q401", s9q401)
-                    .put("s9q402", s9q402)
-                    .put("s9q501", s9q501)
-                    .put("s9q502", s9q502)
-                    .put("s9q6", s9q6);
+                    .put("s9mea1", s9mea1)
+                    .put("s9mea2", s9mea2)
+                    .put("s9q4a", s9q4a)
+                    .put("s9q4b", s9q4b)
+                    .put("s9q5a", s9q5a)
+                    .put("s9q5b", s9q5b)
+                    .put("s9q6a", s9q6a);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4370,35 +4422,35 @@ public class Form extends LiveData<Form> {
             json
                     .put("s12q1", s12q1)
                     .put("s12q2a", s12q2a)
-                    .put("s12q2adx", s12q2adx)
+                    .put("s12q2a01x", s12q2a01x)
                     .put("s12q2b", s12q2b)
-                    .put("s12q2bdx", s12q2bdx)
+                    .put("s12q2b01x", s12q2b01x)
                     .put("s12q2c", s12q2c)
-                    .put("s12q2cdx", s12q2cdx)
+                    .put("s12q2c01x", s12q2c01x)
                     .put("s12q2d", s12q2d)
-                    .put("s12q2ddx", s12q2ddx)
+                    .put("s12q2d01x", s12q2d01x)
                     .put("s12q2e", s12q2e)
-                    .put("s12q2edx", s12q2edx)
+                    .put("s12q2e01x", s12q2e01x)
                     .put("s12q2f", s12q2f)
-                    .put("s12q2fdx", s12q2fdx)
+                    .put("s12q2f01x", s12q2f01x)
                     .put("s12q2g", s12q2g)
-                    .put("s12q2gdx", s12q2gdx)
+                    .put("s12q2g01x", s12q2g01x)
                     .put("s12q2h", s12q2h)
-                    .put("s12q2hdx", s12q2hdx)
+                    .put("s12q2h01x", s12q2h01x)
                     .put("s12q2i", s12q2i)
-                    .put("s12q2idx", s12q2idx)
+                    .put("s12q2i01x", s12q2i01x)
                     .put("s12q2j", s12q2j)
-                    .put("s12q2jdx", s12q2jdx)
+                    .put("s12q2j01x", s12q2j01x)
                     .put("s12q2k", s12q2k)
-                    .put("s12q2kdx", s12q2kdx)
+                    .put("s12q2k01x", s12q2k01x)
                     .put("s12q2l", s12q2l)
-                    .put("s12q2ldx", s12q2ldx)
+                    .put("s12q2l01x", s12q2l01x)
                     .put("s12q2m", s12q2m)
-                    .put("s12q2mdx", s12q2mdx)
+                    .put("s12q2m01x", s12q2m01x)
                     .put("s12q2n", s12q2n)
-                    .put("s12q2ndx", s12q2ndx)
+                    .put("s12q2n01x", s12q2n01x)
                     .put("s12q2o", s12q2o)
-                    .put("s12q2odx", s12q2odx)
+                    .put("s12q2o01x", s12q2o01x)
                     .put("s12q301", s12q301)
                     .put("s12q302", s12q302)
                     .put("s12q303", s12q303)
@@ -4407,7 +4459,7 @@ public class Form extends LiveData<Form> {
                     .put("s12q306", s12q306)
                     .put("s12q307", s12q307)
                     .put("s12q308", s12q308)
-                    .put("s12q396x", s12q396x)
+                    .put("s12q396", s12q396)
                     .put("s12q4", s12q4)
                     .put("s12q501", s12q501)
                     .put("s12q502", s12q502)
@@ -4445,12 +4497,13 @@ public class Form extends LiveData<Form> {
                     .put("s13q5", s13q5)
                     .put("s13q596x", s13q596x)
                     // error on portal s13q601 missing in portal contract
-                    // .put("s13q601", s13q601)
+                    .put("s13q601", s13q601)
                     .put("s13q602", s13q602)
                     .put("s13q603", s13q603)
                     .put("s13q696", s13q696)
+                    .put("s13q696x", s13q696x)
                     // error on portal s13q698 missing in portal contract
-                    // .put("s13q698", s13q698)
+                    .put("s13q698", s13q698)
                     .put("s13q7", s13q7)
                     .put("s13q796x", s13q796x)
                     .put("s13q8", s13q8)
@@ -4796,11 +4849,14 @@ public class Form extends LiveData<Form> {
             try {
                 JSONObject json = new JSONObject(string);
 
+                this.s6mea1 = json.getString("s6mea1");
+                this.s6mea2 = json.getString("s6mea2");
                 this.s6q1a = json.getString("s6q1a");
                 this.s6q1b = json.getString("s6q1b");
                 this.s6q2a = json.getString("s6q2a");
                 this.s6q2b = json.getString("s6q2b");
-                this.s6q3 = json.getString("s6q3");
+                this.s6q3a = json.getString("s6q3a");
+                this.s6q3b = json.getString("s6q3b");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -4893,10 +4949,10 @@ public class Form extends LiveData<Form> {
                 this.s8q996x = json.getString("s8q996x");
                 this.s8q10 = json.getString("s8q10");
                 this.s8q1001x = json.getString("s8q1001x");
-                this.s8q11 = json.getString("s8q11");
-                this.s8q1101x = json.getString("s8q1101x");
-                this.s8q1102x = json.getString("s8q1102x");
-                this.s8q1103x = json.getString("s8q1103x");
+                this.s8q1198 = json.getString("s8q1198");
+                this.s8q1101 = json.getString("s8q1101");
+                this.s8q1102 = json.getString("s8q1102");
+                this.s8q1103 = json.getString("s8q1103");
                 this.s8q12 = json.getString("s8q12");
                 this.s8q1296x = json.getString("s8q1296x");
                 this.s8q13 = json.getString("s8q13");
@@ -4918,11 +4974,13 @@ public class Form extends LiveData<Form> {
                 this.s9q1 = json.getString("s9q1");
                 this.s9q2 = json.getString("s9q2");
                 this.s9q3 = json.getString("s9q3");
-                this.s9q401 = json.getString("s9q401");
-                this.s9q402 = json.getString("s9q402");
-                this.s9q501 = json.getString("s9q501");
-                this.s9q502 = json.getString("s9q502");
-                this.s9q6 = json.getString("s9q6");
+                this.s9mea1 = json.getString("s9mea1");
+                this.s9mea2 = json.getString("s9mea2");
+                this.s9q4a = json.getString("s9q4a");
+                this.s9q4b = json.getString("s9q4b");
+                this.s9q5a = json.getString("s9q5a");
+                this.s9q5b = json.getString("s9q5b");
+                this.s9q6a = json.getString("s9q6a");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -5042,35 +5100,35 @@ public class Form extends LiveData<Form> {
 
                 this.s12q1 = json.getString("s12q1");
                 this.s12q2a = json.getString("s12q2a");
-                this.s12q2adx = json.getString("s12q2adx");
+                this.s12q2a01x = json.getString("s12q2a01x");
                 this.s12q2b = json.getString("s12q2b");
-                this.s12q2bdx = json.getString("s12q2bdx");
+                this.s12q2b01x = json.getString("s12q2b01x");
                 this.s12q2c = json.getString("s12q2c");
-                this.s12q2cdx = json.getString("s12q2cdx");
+                this.s12q2c01x = json.getString("s12q2c01x");
                 this.s12q2d = json.getString("s12q2d");
-                this.s12q2ddx = json.getString("s12q2ddx");
+                this.s12q2d01x = json.getString("s12q2d01x");
                 this.s12q2e = json.getString("s12q2e");
-                this.s12q2edx = json.getString("s12q2edx");
+                this.s12q2e01x = json.getString("s12q2e01x");
                 this.s12q2f = json.getString("s12q2f");
-                this.s12q2fdx = json.getString("s12q2fdx");
+                this.s12q2f01x = json.getString("s12q2f01x");
                 this.s12q2g = json.getString("s12q2g");
-                this.s12q2gdx = json.getString("s12q2gdx");
+                this.s12q2g01x = json.getString("s12q2g01x");
                 this.s12q2h = json.getString("s12q2h");
-                this.s12q2hdx = json.getString("s12q2hdx");
+                this.s12q2h01x = json.getString("s12q2h01x");
                 this.s12q2i = json.getString("s12q2i");
-                this.s12q2idx = json.getString("s12q2idx");
+                this.s12q2i01x = json.getString("s12q2i01x");
                 this.s12q2j = json.getString("s12q2j");
-                this.s12q2jdx = json.getString("s12q2jdx");
+                this.s12q2j01x = json.getString("s12q2j01x");
                 this.s12q2k = json.getString("s12q2k");
-                this.s12q2kdx = json.getString("s12q2kdx");
+                this.s12q2k01x = json.getString("s12q2k01x");
                 this.s12q2l = json.getString("s12q2l");
-                this.s12q2ldx = json.getString("s12q2ldx");
+                this.s12q2l01x = json.getString("s12q2l01x");
                 this.s12q2m = json.getString("s12q2m");
-                this.s12q2mdx = json.getString("s12q2mdx");
+                this.s12q2m01x = json.getString("s12q2m01x");
                 this.s12q2n = json.getString("s12q2n");
-                this.s12q2ndx = json.getString("s12q2ndx");
+                this.s12q2n01x = json.getString("s12q2n01x");
                 this.s12q2o = json.getString("s12q2o");
-                this.s12q2odx = json.getString("s12q2odx");
+                this.s12q2o01x = json.getString("s12q2o01x");
                 this.s12q301 = json.getString("s12q301");
                 this.s12q302 = json.getString("s12q302");
                 this.s12q303 = json.getString("s12q303");
@@ -5079,7 +5137,7 @@ public class Form extends LiveData<Form> {
                 this.s12q306 = json.getString("s12q306");
                 this.s12q307 = json.getString("s12q307");
                 this.s12q308 = json.getString("s12q308");
-                this.s12q396x = json.getString("s12q396x");
+                this.s12q396 = json.getString("s12q396");
                 this.s12q4 = json.getString("s12q4");
                 // this.s12q5title1 = json.getString("s12q5title1");
                 this.s12q501 = json.getString("s12q501");
@@ -5120,14 +5178,13 @@ public class Form extends LiveData<Form> {
                 this.s13q5 = json.getString("s13q5");
                 this.s13q596x = json.getString("s13q596x");
                 // Error on Portal
-                // this.s13q601 = json.getString("s13q601");
+                this.s13q601 = json.getString("s13q601");
                 this.s13q602 = json.getString("s13q602");
                 this.s13q603 = json.getString("s13q603");
                 this.s13q696 = json.getString("s13q696");
-/*              Error on Portal
+                //  Error on Portal
                 this.s13q696x = json.getString("s13q696x");
                 this.s13q698 = json.getString("s13q698");
-*/
                 this.s13q7 = json.getString("s13q7");
                 this.s13q796x = json.getString("s13q796x");
                 this.s13q8 = json.getString("s13q8");

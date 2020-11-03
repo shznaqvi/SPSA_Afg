@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -10,6 +11,9 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection13Binding;
 import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
@@ -77,16 +81,12 @@ public class Section13Activity extends AppCompatActivity {
                 : "-1");
         form.setS13q596x(bi.s13q596x.getText().toString());
 
-        // Error in portal
-        // form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
-
+        form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
         form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1");
         form.setS13q603(bi.s13q603.isChecked() ? "3" : "-1");
         form.setS13q696(bi.s13q696.isChecked() ? "96" : "-1");
-
-        /* Error in portal
+        form.setS13q696x(bi.s13q696x.getText().toString());
         form.setS13q698(bi.s13q698.isChecked() ? "98" : "-1");
-        form.setS13q696x(bi.s13q696x.getText().toString());*/
 
         form.setS13q7(bi.s13q701.isChecked() ? "1"
                 : bi.s13q702.isChecked() ? "2"
@@ -147,15 +147,15 @@ public class Section13Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S13, form.s13toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+      /*  return true;*/
     }
 
 

@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <!-- s12title  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12title"
@@ -35,15 +34,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/qtxt_s12title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s12title" />
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q1  Radio   -->
             <androidx.cardview.widget.CardView
@@ -103,7 +98,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
             <!-- s12q2  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs12q2"
@@ -115,15 +109,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/qtxt_s12q2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s12q2" />
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2a  Radio   -->
             <androidx.cardview.widget.CardView
@@ -168,6 +158,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2a01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2a01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2a01"
+                            android:inputType="number"
+                            android:tag="s12q2a01"
+
+
+                            android:text='@{s12q2a01.checked ? s12q2a01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2a01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2a02"
                             android:layout_width="match_parent"
@@ -179,26 +181,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2a98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2ad"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2ad" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2adx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2ad"
-                            android:inputType="number"
-                            android:tag="s12q2ad"
-                            android:text='@{s12q2ad.checked ? s12q2adx.getText().toString() : ""}'
-                            android:visibility='@{s12q2ad.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2b  Radio   -->
             <androidx.cardview.widget.CardView
@@ -243,6 +228,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2b01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2b01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2b01"
+                            android:inputType="number"
+                            android:tag="s12q2b01"
+
+
+                            android:text='@{s12q2b01.checked ? s12q2b01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2b01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2b02"
                             android:layout_width="match_parent"
@@ -254,26 +251,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2b98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2bd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2bd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2bdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2bd"
-                            android:inputType="number"
-                            android:tag="s12q2bd"
-                            android:text='@{s12q2bd.checked ? s12q2bdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2bd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2c  Radio   -->
             <androidx.cardview.widget.CardView
@@ -318,6 +298,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2c01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2c01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2c01"
+                            android:inputType="number"
+                            android:tag="s12q2c01"
+
+
+                            android:text='@{s12q2c01.checked ? s12q2c01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2c01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2c02"
                             android:layout_width="match_parent"
@@ -329,26 +321,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2c98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2cd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2cd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2cdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2cd"
-                            android:inputType="number"
-                            android:tag="s12q2cd"
-                            android:text='@{s12q2cd.checked ? s12q2cdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2cd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2d  Radio   -->
             <androidx.cardview.widget.CardView
@@ -393,6 +368,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2d01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2d01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2d01"
+                            android:inputType="number"
+                            android:tag="s12q2d01"
+
+
+                            android:text='@{s12q2d01.checked ? s12q2d01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2d01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2d02"
                             android:layout_width="match_parent"
@@ -404,26 +391,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2d98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2dd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2dd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2ddx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2dd"
-                            android:inputType="number"
-                            android:tag="s12q2dd"
-                            android:text='@{s12q2dd.checked ? s12q2ddx.getText().toString() : ""}'
-                            android:visibility='@{s12q2dd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2e  Radio   -->
             <androidx.cardview.widget.CardView
@@ -468,6 +438,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2e01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2e01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2e01"
+                            android:inputType="number"
+                            android:tag="s12q2e01"
+
+
+                            android:text='@{s12q2e01.checked ? s12q2e01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2e01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2e02"
                             android:layout_width="match_parent"
@@ -479,26 +461,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12qe98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2ed"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2ed" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2edx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2ed"
-                            android:inputType="number"
-                            android:tag="s12q2ed"
-                            android:text='@{s12q2ed.checked ? s12q2edx.getText().toString() : ""}'
-                            android:visibility='@{s12q2ed.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2f  Radio   -->
             <androidx.cardview.widget.CardView
@@ -543,6 +508,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2f01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2f01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2f01"
+                            android:inputType="number"
+                            android:tag="s12q2f01"
+
+
+                            android:text='@{s12q2f01.checked ? s12q2f01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2f01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2f02"
                             android:layout_width="match_parent"
@@ -554,26 +531,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2f98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2fd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2fd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2fdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2fd"
-                            android:inputType="number"
-                            android:tag="s12q2fd"
-                            android:text='@{s12q2fd.checked ? s12q2fdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2fd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2g  Radio   -->
             <androidx.cardview.widget.CardView
@@ -618,6 +578,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2g01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2g01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2g01"
+                            android:inputType="number"
+                            android:tag="s12q2g01"
+
+
+                            android:text='@{s12q2g01.checked ? s12q2g01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2g01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2g02"
                             android:layout_width="match_parent"
@@ -629,26 +601,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2g98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2gd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2gd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2gdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2gd"
-                            android:inputType="number"
-                            android:tag="s12q2gd"
-                            android:text='@{s12q2gd.checked ? s12q2gdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2gd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2h  Radio   -->
             <androidx.cardview.widget.CardView
@@ -693,6 +648,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2h01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2h01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2h01"
+                            android:inputType="number"
+                            android:tag="s12q2h01"
+
+
+                            android:text='@{s12q2h01.checked ? s12q2h01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2h01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2h02"
                             android:layout_width="match_parent"
@@ -704,26 +671,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2h98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2hd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2hd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2hdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2hd"
-                            android:inputType="number"
-                            android:tag="s12q2hd"
-                            android:text='@{s12q2hd.checked ? s12q2hdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2hd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2i  Radio   -->
             <androidx.cardview.widget.CardView
@@ -768,6 +718,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2i01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2i01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2i01"
+                            android:inputType="number"
+                            android:tag="s12q2i01"
+
+
+                            android:text='@{s12q2i01.checked ? s12q2i01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2i01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2i02"
                             android:layout_width="match_parent"
@@ -779,26 +741,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2i98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2id"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2id" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2idx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2id"
-                            android:inputType="number"
-                            android:tag="s12q2id"
-                            android:text='@{s12q2id.checked ? s12q2idx.getText().toString() : ""}'
-                            android:visibility='@{s12q2id.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2j  Radio   -->
             <androidx.cardview.widget.CardView
@@ -843,6 +788,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2j01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2j01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2j01"
+                            android:inputType="number"
+                            android:tag="s12q2j01"
+
+
+                            android:text='@{s12q2j01.checked ? s12q2j01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2j01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2j02"
                             android:layout_width="match_parent"
@@ -854,26 +811,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2j98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2jd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2jd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2jdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2jd"
-                            android:inputType="number"
-                            android:tag="s12q2jd"
-                            android:text='@{s12q2jd.checked ? s12q2jdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2jd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2k  Radio   -->
             <androidx.cardview.widget.CardView
@@ -918,6 +858,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2k01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2k01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2k01"
+                            android:inputType="number"
+                            android:tag="s12q2k01"
+
+
+                            android:text='@{s12q2k01.checked ? s12q2k01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2k01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2k02"
                             android:layout_width="match_parent"
@@ -929,26 +881,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2k98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2kd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2kd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2kdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2kd"
-                            android:inputType="number"
-                            android:tag="s12q2kd"
-                            android:text='@{s12q2kd.checked ? s12q2kdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2kd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2l  Radio   -->
             <androidx.cardview.widget.CardView
@@ -993,6 +928,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2l01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2l01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2l01"
+                            android:inputType="number"
+                            android:tag="s12q2l01"
+
+
+                            android:text='@{s12q2l01.checked ? s12q2l01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2l01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2l02"
                             android:layout_width="match_parent"
@@ -1004,26 +951,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2l98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2ld"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2ld" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2ldx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2ld"
-                            android:inputType="number"
-                            android:tag="s12q2ld"
-                            android:text='@{s12q2ld.checked ? s12q2ldx.getText().toString() : ""}'
-                            android:visibility='@{s12q2ld.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2m  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1068,6 +998,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2m01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2m01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2m01"
+                            android:inputType="number"
+                            android:tag="s12q2m01"
+
+
+                            android:text='@{s12q2m01.checked ? s12q2m01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2m01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2m02"
                             android:layout_width="match_parent"
@@ -1079,26 +1021,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2m98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2md"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2md" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2mdx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2md"
-                            android:inputType="number"
-                            android:tag="s12q2md"
-                            android:text='@{s12q2md.checked ? s12q2mdx.getText().toString() : ""}'
-                            android:visibility='@{s12q2md.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2n  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1143,6 +1068,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2n01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2n01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2n01"
+                            android:inputType="number"
+                            android:tag="s12q2n01"
+
+
+                            android:text='@{s12q2n01.checked ? s12q2n01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2n01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2n02"
                             android:layout_width="match_parent"
@@ -1154,26 +1091,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2n98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2nd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2nd" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2ndx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2nd"
-                            android:inputType="number"
-                            android:tag="s12q2nd"
-                            android:text='@{s12q2nd.checked ? s12q2ndx.getText().toString() : ""}'
-                            android:visibility='@{s12q2nd.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q2o  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1218,6 +1138,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2o01" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s12q2o01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/s12q2o01"
+                            android:inputType="number"
+                            android:tag="s12q2o01"
+
+
+                            android:text='@{s12q2o01.checked ? s12q2o01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2o01.checked? View.VISIBLE : View.GONE}' />
+
                         <RadioButton
                             android:id="@+id/s12q2o02"
                             android:layout_width="match_parent"
@@ -1229,26 +1161,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2o98" />
-
-                        <RadioButton
-                            android:id="@+id/s12q2od"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/s12q2od" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/s12q2odx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/s12q2od"
-                            android:inputType="number"
-                            android:tag="s12q2od"
-                            android:text='@{s12q2od.checked ? s12q2odx.getText().toString() : ""}'
-                            android:visibility='@{s12q2od.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q3  Title   -->
             <androidx.cardview.widget.CardView
@@ -1261,13 +1176,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/qtxt_s12q3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/s12q3" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q301  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1304,29 +1217,22 @@
                     <RadioGroup
                         android:id="@+id/s12q301"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q301a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q301a" />
 
                         <RadioButton
                             android:id="@+id/s12q301b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q301b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q302  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1363,29 +1269,22 @@
                     <RadioGroup
                         android:id="@+id/s12q302"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q302a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q302a" />
 
                         <RadioButton
                             android:id="@+id/s12q302b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q302b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q303  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1422,29 +1321,22 @@
                     <RadioGroup
                         android:id="@+id/s12q303"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q303a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q303a" />
 
                         <RadioButton
                             android:id="@+id/s12q303b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q303b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q304  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1481,29 +1373,22 @@
                     <RadioGroup
                         android:id="@+id/s12q304"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q304a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q304a" />
 
                         <RadioButton
                             android:id="@+id/s12q304b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q304b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q305  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1540,29 +1425,22 @@
                     <RadioGroup
                         android:id="@+id/s12q305"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q305a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q305a" />
 
                         <RadioButton
                             android:id="@+id/s12q305b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q305b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q306  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1599,29 +1477,22 @@
                     <RadioGroup
                         android:id="@+id/s12q306"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q306a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q306a" />
 
                         <RadioButton
                             android:id="@+id/s12q306b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q306b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q307  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1658,27 +1529,21 @@
                     <RadioGroup
                         android:id="@+id/s12q307"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q307a"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q307a" />
 
                         <RadioButton
                             android:id="@+id/s12q307b"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q307b" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
             <!-- s12q308  Radio   -->
@@ -1729,28 +1594,72 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/s12q308b" />
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <RadioButton
-                            android:id="@+id/s12q396"
+            <!-- s12q396  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVs12q396"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_s12q396"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_s12q396"
                             android:text="@string/s12q396" />
 
+                        <TextView
+                            android:id="@+id/q_s12q396"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_s12q396"
+                            android:layout_alignBottom="@id/qtxt_s12q396"
+                            android:text="@string/Q_s12q396" />
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/s12q396"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/s12q396a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s12q396a" />
+
                         <EditText
-                            android:id="@+id/s12q396x"
+                            android:id="@+id/s12q396ax"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/s12q396"
-                            android:tag="s12q396"
-                            android:text='@{s12q396.checked ? s12q396x.getText().toString() : ""}'
-                            android:visibility='@{s12q396.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/s12q396a"
+                            android:tag="s12q396a"
+                            android:text='@{s12q396a.checked ? s12q396ax.getText().toString() : ""}'
+                            android:visibility='@{s12q396a.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/s12q396b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s12q396b" />
+
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
 
             <!-- s12q4  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1787,34 +1696,27 @@
                     <RadioGroup
                         android:id="@+id/s12q4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/s12q401"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q401" />
 
                         <RadioButton
                             android:id="@+id/s12q402"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q402" />
 
                         <RadioButton
                             android:id="@+id/s12q498"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:text="@string/s12q498" />
-
                     </RadioGroup>
-
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
 
@@ -1823,7 +1725,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility='@{s12q401.checked ? View.VISIBLE : View.GONE }'>
+                android:visibility='@{s12q401.checked? View.VISIBLE : View.GONE}'>
 
                 <!-- s12q5  CheckBox   -->
                 <androidx.cardview.widget.CardView
@@ -1993,12 +1895,21 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/s12q696" />
+
+                            <EditText
+                                android:id="@+id/s12q696x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/s12q696"
+                                android:tag="s12q696"
+                                android:text='@{s12q696.checked ? s12q696x.getText().toString() : ""}'
+                                android:visibility='@{s12q696.checked? View.VISIBLE : View.GONE}' />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-
 
             <!--EndButton LinearLayout-->
             <LinearLayout
@@ -2028,7 +1939,6 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
-
 
         </LinearLayout>
 

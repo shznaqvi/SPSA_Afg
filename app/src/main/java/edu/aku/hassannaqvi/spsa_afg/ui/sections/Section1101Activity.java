@@ -12,14 +12,11 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection1101Binding;
-import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -42,7 +39,7 @@ public class Section1101Activity extends AppCompatActivity {
 
         bi.s11q7.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s11q701.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVs11q8);
+                Clear.clearAllFields(bi.fldGrpCVs11q7a);
             }
         }));
 
@@ -50,27 +47,27 @@ public class Section1101Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S11, form.s11toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+        /*return true;*/
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        form = new Form();
+       /* form = new Form();
         form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
         form.setUsername(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
-        form.setFormdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        form.setFormdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));*/
 
         form.setS11q7(bi.s11q701.isChecked() ? "1"
                 : bi.s11q702.isChecked() ? "2"

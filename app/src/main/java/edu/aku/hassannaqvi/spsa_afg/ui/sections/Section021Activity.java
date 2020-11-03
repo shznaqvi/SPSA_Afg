@@ -17,6 +17,8 @@ import java.util.Date;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection021Binding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
@@ -62,26 +64,26 @@ public class Section021Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S02, form.s02toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+       /* return true;*/
     }
 
 
     private void SaveDraft() throws JSONException {
 
-        form = new Form();
+        /*form = new Form();
         form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
         form.setS1q2(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
-        form.setAppversion(MainApp.appInfo.getAppVersion());
+        form.setAppversion(MainApp.appInfo.getAppVersion());*/
 
         form.setS2q1(bi.s2q101.isChecked() ? "1"
                 : bi.s2q102.isChecked() ? "2"
@@ -92,14 +94,14 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q107.isChecked() ? "7"
                 : bi.s2q196.isChecked() ? "96"
                 : "-1");
-
         form.setS2q196x(bi.s2q196x.getText().toString());
+
         form.setS2q2(bi.s2q201.isChecked() ? "1"
                 : bi.s2q202.isChecked() ? "2"
                 : bi.s2q296.isChecked() ? "96"
                 : "-1");
-
         form.setS2q296x(bi.s2q296x.getText().toString());
+
         form.setS2q3(bi.s2q301.isChecked() ? "1"
                 : bi.s2q302.isChecked() ? "2"
                 : bi.s2q303.isChecked() ? "3"
@@ -118,8 +120,8 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q316.isChecked() ? "16"
                 : bi.s2q396.isChecked() ? "96"
                 : "-1");
-
         form.setS2q396x(bi.s2q396x.getText().toString());
+
         form.setS2q4(bi.s2q401.isChecked() ? "1"
                 : bi.s2q402.isChecked() ? "2"
                 : "-1");
@@ -132,8 +134,8 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q506.isChecked() ? "6"
                 : bi.s2q596.isChecked() ? "96"
                 : "-1");
-
         form.setS2q596x(bi.s2q596x.getText().toString());
+
         form.setS2q6(bi.s2q601.isChecked() ? "1"
                 : bi.s2q602.isChecked() ? "2"
                 : bi.s2q603.isChecked() ? "3"
@@ -145,8 +147,8 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q609.isChecked() ? "9"
                 : bi.s2q696.isChecked() ? "96"
                 : "-1");
-
         form.setS2q696x(bi.s2q696x.getText().toString());
+
         form.setS2q7(bi.s2q701.isChecked() ? "1"
                 : bi.s2q702.isChecked() ? "2"
                 : "-1");
@@ -155,8 +157,8 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q811.isChecked() ? "11"
                 : bi.s2q898.isChecked() ? "98"
                 : "-1");
-
         form.setS2q801x(bi.s2q801x.getText().toString());
+
         form.setS2q9a(bi.s2q9a01.isChecked() ? "1"
                 : bi.s2q9a02.isChecked() ? "2"
                 : "-1");

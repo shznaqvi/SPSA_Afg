@@ -13,8 +13,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.location.LocationManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -59,7 +57,7 @@ import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.core.AppInfo;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
-import edu.aku.hassannaqvi.spsa_afg.sync.GetAllData;
+import edu.aku.hassannaqvi.spsa_afg.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.spsa_afg.utils.CreateTable;
 
 /**
@@ -288,16 +286,23 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
     @OnClick(R.id.syncData)
     void onSyncClustersClick() {
-        //TODO implement
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
+/*        ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
-            new syncData(this).execute();
+        //    new syncData(this).execute();
+            startActivity(new Intent(this, SyncActivity.class).putExtra(CONSTANTS.SYNC_LOGIN, true));
+        } else {
+            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        }*/
 
+        if (AndroidUtilityKt.isNetworkConnected(this)) {
+            /*if (sync_flag) new SyncData(SyncActivity.this, MainApp.DIST_ID).execute(true);
+            else new SyncDevice(SyncActivity.this, true).execute();*/
+            startActivity(new Intent(this, SyncActivity.class));
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
@@ -543,15 +548,28 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
-                if ((mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu")) || db.Login(mEmail1, mPassword1) ||
-                        (mEmail1.equals("test1234") && mPassword1.equals("test1234"))) {
+                if (db.Login(mEmail1, mPassword1)
+                        || (mEmail1.equals("dmu@aku") && mPassword1.equals("aku?dmu"))
+                        || (mEmail1.equals("test1234") && mPassword1.equals("test1234"))
+                        || (mEmail1.equals("test1235") && mPassword1.equals("test1235"))
+
+                ) {
                     MainApp.userName = mEmail1;
                     MainApp.admin = mEmail1.contains("@");
 
-                    if ((mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu")) || db.Login(mEmail2, mPassword2) ||
-                            (mEmail2.equals("test1234") && mPassword2.equals("test1234"))) {
+                    if (db.Login(mEmail2, mPassword1)
+                            || (mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu"))
+                            || (mEmail2.equals("test1234") && mPassword2.equals("test1234"))
+                            || (mEmail2.equals("test1235") && mPassword2.equals("test1235"))
+                    ) {
                         MainApp.userName = mEmail2;
                         MainApp.admin = mEmail2.contains("@");
+
+                        MainApp.measurers = new ArrayList<>();
+
+                        MainApp.measurers.add(mEmail1);
+                        MainApp.measurers.add(mEmail2);
+
 
                         finish();
 
@@ -627,14 +645,25 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
                 @Override
                 public void run() {
-                    Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "PW").execute();
 
-                    Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
+
+                    /*Toast.makeText(getApplicationContext(), "Getting PW's", Toast.LENGTH_SHORT).show();
+                    new GetAllData(mContext, "PW").execute();*/
+
+                   /* Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "User").execute();
 
-                    Toast.makeText(LoginActivity.this, "Sync FollowUps", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FollowUps").execute();
+                    Toast.makeText(LoginActivity.this, "Sync App Version", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "VersionApp").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Provinces", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Provinces").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Districts", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Districts").execute();
+
+                    Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Villages").execute();*/
                 }
             });
 

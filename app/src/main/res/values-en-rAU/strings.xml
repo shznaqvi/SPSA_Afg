@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SPSA Afghanistan</string>
+    <string name="app_name">SPSA Afghanistan (Dari)</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="btnSync">Download Data</string>
-    <string name="btnUpload">Upload Data</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Login</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="btnSync">دونلود آمار</string>
+    <string name="btnUpload">اپلود آمار</string>
+    <string name="prompt_email">ایمیل</string>
+    <string name="prompt_password">پاسورد</string>
+    <string name="action_sign_in">داخل شدن</string>
+    <string name="action_sign_in_short">داخل شدن</string>
     <string name="splashText"> </string>
     <string name="splashText2">  </string>
-    <string name="check_pending_forms">CHECK PENDING FORMS</string>
-    <string name="open_new_form"> OPEN NEW FORM </string>
+    <string name="check_pending_forms">فورم های در انتظار را چک نمایید</string>
+    <string name="open_new_form"> فورم نو را باز کنید</string>
+    <string name="records_summary">خلاصه ریکارد ها</string>
+    <string name="main_menu">صفحه اصلی</string>
+    <string name="only_for_testing">ONLY FOR TESTING</string>
     <string name="openScreening"> Screening </string>
     <string name="openPretest"> Pre Test Knowlegde </string>
     <string name="openFollowup"> Follow Up </string>
-    <string name="records_summary">Records Summary</string>
-    <string name="main_menu">Main Menu</string>
-    <string name="only_for_testing">ONLY FOR TESTING</string>
-    <string name="database">Database</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="numfth"> Number of times </string>
+    <string name="database">دیتا بیس</string>
+    <string name="error_invalid_password">این پاسورد بسیار کوتاه است</string>
+    <string name="error_field_required">این بخش ضروری است</string>
+    <string name="error_incorrect_password">پاسورد غلط است</string>
     <string name="no"> نہیں </string>
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
@@ -56,7 +57,6 @@
     <string name="istatus"> انٽرويو جو نتيجو </string>
     <string name="istatusa"> مڪمل ٿيو </string>
     <string name="istatusb"> نامڪمل </string>
-    <string name="istatusc"> انڪار ڪري ڇڏيو </string>
     <string name="istatus96"> ٻيو ڪجھ </string>
     <string name="istatus96x"> وضاحت ڪريو </string>
 
@@ -375,6 +375,8 @@
     <string name="s4q4b">تعداد مستفیدین</string>
     <string name="s4q4c">منبع / این جی او</string>
     <string name="s4q5">دیگر (مشخص نمایید): </string>
+    <string name="s4q5b">تعداد مستفیدین</string>
+    <string name="s4q5c">منبع / این جی او</string>
     <string name="s5title">بخش پنجم: ابزار اندازه گیری میزان تشویش دسترسی غذائی خانواده </string>
     <string name="s5q1">آیا شما در چهار هفته گذشته تشویش اینکه خانواده شما غذای کافی نخواهند داشت، بودید؟</string>
     <string name="s5q101">بلی</string>
@@ -441,14 +443,13 @@
     <string name="s5q9a03">( اکثراً (بیشتر از ده مرتبه در چهار هفته گذشته</string>
     <string name="s6title"></string>
     <string name="s6mea1">Measurer-1</string>
+    <string name="s6q1a">وزن به کیلو</string>
+    <string name="s6q2a">قد به سانتی</string>
+    <string name="s6q3a">نتیجه Hbرا بنوسید</string>
     <string name="s6mea2">Measurer-2</string>
-    <string name="s6q1">وزن به کیلو</string>
-    <string name="s6q1a">Measurer-1 Code: </string>
-    <string name="s6q1b">Measurer-2 Code: </string>
-    <string name="s6q2">قد به سانتی </string>
-    <string name="s6q2a">Measurer-1 Code: </string>
-    <string name="s6q2b">Measurer-2 Code: </string>
-    <string name="s6q3">نتیجه  Hbرا بنوسید</string>
+    <string name="s6q1b">وزن به کیلو</string>
+    <string name="s6q2b">قد به سانتی</string>
+    <string name="s6q3b">نتیجه Hbرا بنوسید</string>
     <string name="s7title1">بخش هفتم: حداقل تنوع غذایی برای خانم های حامله و شیرده</string>
     <string name="s7title2">لطفاً غذاها را توضیح دهید (وعده های غذایی و میان وعده ها) که خوردید یا نوشیدید دیروز در طول روز و شب چه در خانه و چه در خارج از خانه۔ با اولین غذای یا نوشیدنی خورده شده در صبح شروع کنید  تمام غذاها و نوشیدنی های ذکر شده را بنویسید۔ هنگامی که غذاهای کامپوزیت ذکر شده است لیست مواد تشکیل دهنده را بخواهید۔ وقتی مخاطب تمام شد، کاوش برای وعده های غذایی و میان وعده هایی که ذکر نشده است</string>
     <string name="s7qa">غذاهای تهیه شده از غلات فرنی، نان، برنج، ماکارونی/ آش یا غذاهای دیگر تهیه شده از غلات مثلا دانه جواری/ ذرت، گندم، ذرت خوشهای، ارزن یا هر نوع غلات یا مواد غذایی دیگر یا غذاهای ساخته شده از اینها (مثلا نان، آش، فرنی یا ورمیشل، ناشته و پراته)</string>
@@ -622,13 +623,13 @@
     <string name="s9q3">جنس کودک </string>
     <string name="s9q301">مرد</string>
     <string name="s9q302">زن</string>
-    <string name="s9q4">قد </string>
-    <string name="s9q401">Measurer-1 Code: قد </string>
-    <string name="s9q402">Measurer-2 Code: قد </string>
-    <string name="s9q5">وزن</string>
-    <string name="s9q501">Measurer-1 Code: وزن</string>
-    <string name="s9q502">Measurer-2 Code: وزن</string>
-    <string name="s9q6">نتیجه  HBرا بنوسید  Measurer-1 Code</string>
+    <string name="s9mea1">Measurer-1 Code</string>
+    <string name="s9q4a">قد </string>
+    <string name="s9q5a">وزن</string>
+    <string name="s9q6a">نتیجه  HBرا بنوسید  </string>
+    <string name="s9mea2">Measurer-2 Code</string>
+    <string name="s9q4b">قد</string>
+    <string name="s9q5b">وزن</string>
     <string name="s10title">بخش دهم: شروع تغذیه با شیر مادر</string>
     <string name="s10q1">ایا تاکنون (نام طفل) شیر مادر گرفته شده است؟</string>
     <string name="s10q101">بلی </string>
@@ -948,6 +949,8 @@
     <string name="s12q308a">بلی</string>
     <string name="s12q308b">نخیر</string>
     <string name="s12q396">دیگر (مشخص نماید) </string>
+    <string name="s12q396a">بلی</string>
+    <string name="s12q396b">نخیر</string>
     <string name="s12q4">آیا در طول دو هفته گذشته به دنبال مراقبت از این بیماری ها بودید؟</string>
     <string name="s12q401">بلی</string>
     <string name="s12q402">نخیر</string>
@@ -1130,6 +1133,7 @@
     <string name='Q_s12q306'>s12q306</string>
     <string name='Q_s12q307'>s12q307</string>
     <string name='Q_s12q308'>s12q308</string>
+    <string name='Q_s12q396'>s12q396</string>
     <string name='Q_s12q4'>s12q4</string>
     <string name='Q_s12q5'>s12q5</string>
     <string name='Q_s12q6'>s12q6</string>
@@ -1246,6 +1250,8 @@
     <string name='Q_s4title1'>s4title1</string>
     <string name='Q_s4title2'>s4title2</string>
     <string name='Q_s4title3'>s4title3</string>
+    <string name='Q_s4q5b'>s4q5b</string>
+    <string name='Q_s4q5c'>s4q5c</string>
     <string name='Q_s5q1'>s5q1</string>
     <string name='Q_s5q1a'>s5q1a</string>
     <string name='Q_s5q2'>s5q2</string>
@@ -1267,9 +1273,12 @@
     <string name='Q_s5title'>s5title</string>
     <string name='Q_s6mea1'>s6mea1</string>
     <string name='Q_s6mea2'>s6mea2</string>
-    <string name='Q_s6q1'>s6q1</string>
-    <string name='Q_s6q2'>s6q2</string>
-    <string name='Q_s6q3'>s6q3</string>
+    <string name='Q_s6q1a'>s6q1a</string>
+    <string name='Q_s6q1b'>s6q1b</string>
+    <string name='Q_s6q2a'>s6q2a</string>
+    <string name='Q_s6q2b'>s6q2b</string>
+    <string name='Q_s6q3a'>s6q3a</string>
+    <string name='Q_s6q3b'>s6q3b</string>
     <string name='Q_s6title'>s6title</string>
     <string name='Q_s7qa'>s7qa</string>
     <string name='Q_s7qb'>s7qb</string>
@@ -1312,12 +1321,16 @@
     <string name='Q_s8q8'>s8q8</string>
     <string name='Q_s8q9'>s8q9</string>
     <string name='Q_s8title'>s8title</string>
+    <string name='Q_s9mea1'>s9mea1</string>
+    <string name='Q_s9mea2'>s9mea2</string>
     <string name='Q_s9q1'>s9q1</string>
     <string name='Q_s9q2'>s9q2</string>
     <string name='Q_s9q3'>s9q3</string>
-    <string name='Q_s9q4'>s9q4</string>
-    <string name='Q_s9q5'>s9q5</string>
-    <string name='Q_s9q6'>s9q6</string>
+    <string name='Q_s9q4a'>s9q4a</string>
+    <string name='Q_s9q4b'>s9q4b</string>
+    <string name='Q_s9q5a'>s9q5a</string>
+    <string name='Q_s9q5b'>s9q5b</string>
+    <string name='Q_s9q6a'>s9q6a</string>
     <string name='Q_s9title'>s9title</string>
 
 

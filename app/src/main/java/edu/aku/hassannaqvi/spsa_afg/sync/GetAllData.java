@@ -18,10 +18,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.Objects;
 
 import edu.aku.hassannaqvi.spsa_afg.adapter.SyncListAdapter;
+import edu.aku.hassannaqvi.spsa_afg.contracts.DistrictContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.ProvinceContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.UsersContract;
 import edu.aku.hassannaqvi.spsa_afg.contracts.VersionAppContract;
+import edu.aku.hassannaqvi.spsa_afg.contracts.VillageContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.models.SyncModel;
@@ -59,8 +63,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "FUP":
+            case "Provinces":
                 position = 2;
+                break;
+            case "Districts":
+                position = 3;
+                break;
+            case "Villages":
+                position = 4;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -90,8 +100,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "FUP":
+            case "Provinces":
                 position = 2;
+                break;
+            case "Districts":
+                position = 3;
+                break;
+            case "Villages":
+                position = 4;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -118,16 +134,33 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable.SERVER_URI);
                     position = 1;
                     break;
+                case "Provinces":
+                    url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+                    tableName = ProvinceContract.table.TABLE_NAME;
+                    position = 2;
+                    break;
+                case "Districts":
+                    url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+                    tableName = DistrictContract.table.TABLE_NAME;
+                    position = 3;
+                    break;
+                case "Villages":
+                    url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+                    tableName = VillageContract.table.TABLE_NAME;
+                    position = 4;
+                    break;
 
             }
 
-            urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection = (HttpURLConnection) Objects.requireNonNull(url).openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
                 case "User":
-                case "FUP":
+                case "Provinces":
+                case "Districts":
+                case "Villages":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
                     urlConnection.setDoInput(true);
@@ -200,6 +233,21 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             insertCount = db.syncVersionApp(new JSONObject(result));
                             if (insertCount == 1) jsonArray.put("1");
                             position = 1;
+                            break;
+                        case "Provinces":
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncProvince(jsonArray);
+                            position = 2;
+                            break;
+                        case "Districts":
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncDistricts(jsonArray);
+                            position = 3;
+                            break;
+                        case "Villages":
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncVillages(jsonArray);
+                            position = 4;
                             break;
 
                     }

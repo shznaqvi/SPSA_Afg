@@ -2,19 +2,21 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection03Binding;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -36,14 +38,36 @@ public class Section03Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.s3q1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.s3q102.getId() || i == bi.s3q103.getId() || i == bi.s3q1096.getId()) {
+            if (i != bi.s3q101.getId()) {
                 Clear.clearAllFields(bi.llgrpsecs3q1);
+
             }
         }));
 
         bi.s3q301.setOnCheckedChangeListener(((compoundButton, b) -> {
             if (b) {
                 Clear.clearAllFields(bi.llgrpsec206i);
+                bi.llgrpsec206i.setVisibility(View.GONE);
+            } else {
+                bi.llgrpsec206i.setVisibility(View.VISIBLE);
+            }
+        }));
+
+        bi.s3q302.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.llgrpsec206i);
+                bi.llgrpsec206i.setVisibility(View.GONE);
+            } else {
+                bi.llgrpsec206i.setVisibility(View.VISIBLE);
+            }
+        }));
+
+        bi.s3q303.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.llgrpsec206i);
+                bi.llgrpsec206i.setVisibility(View.GONE);
+            } else {
+                bi.llgrpsec206i.setVisibility(View.VISIBLE);
             }
         }));
 
@@ -73,31 +97,31 @@ public class Section03Activity extends AppCompatActivity {
 
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S03, form.s03toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+       /* return true;*/
     }
 
 
     private void SaveDraft() throws JSONException {
 
 
-        form.setS3q1( bi.s3q101.isChecked() ? "1"
+        form.setS3q1(bi.s3q101.isChecked() ? "1"
                 : bi.s3q102.isChecked() ? "2"
                 : bi.s3q103.isChecked() ? "3"
                 : bi.s3q1096.isChecked() ? "4"
-                :  "-1");
+                : "-1");
 
         form.setS3q1096x(bi.s3q1096x.getText().toString());
-        form.setS3q2( bi.s3q201.isChecked() ? "1"
+        form.setS3q2(bi.s3q201.isChecked() ? "1"
                 : bi.s3q202.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setS3q301(bi.s3q301.isChecked() ? "1" : "-1");
 
@@ -109,9 +133,9 @@ public class Section03Activity extends AppCompatActivity {
 
         form.setS3q305(bi.s3q305.isChecked() ? "5" : "-1");
 
-        form.setS3q4( bi.s3q401.isChecked() ? "1"
+        form.setS3q4(bi.s3q401.isChecked() ? "1"
                 : bi.s3q402.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
         form.setS3q501(bi.s3q501.isChecked() ? "1" : "-1");
 
@@ -138,7 +162,6 @@ public class Section03Activity extends AppCompatActivity {
         form.setS3q696x(bi.s3q696x.getText().toString());
 
 
-
         //    MainApp.fc.setsL(String.valueOf(json));
 
     }
@@ -158,7 +181,7 @@ public class Section03Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, Section04Activity.class));
         }
     }
 

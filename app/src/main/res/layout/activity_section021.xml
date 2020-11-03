@@ -114,7 +114,7 @@
                             android:id="@+id/s2q196x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
                             android:hint="@string/s2q196"
                             android:tag="s2q196"
                             android:text='@{s2q196.checked ? s2q196x.getText().toString() : ""}'
@@ -540,6 +540,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s2q6title1" />
 
                         <RadioButton
@@ -570,6 +571,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="@string/s2q6title2" />
 
                         <RadioButton
@@ -738,11 +740,11 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/s2q801"
                                 android:inputType="number"
-                                android:maxLength="2"
+                                android:maxLength="1"
                                 android:tag="s2q801"
                                 android:text='@{s2q801.checked ? s2q801x.getText().toString() : ""}'
                                 android:visibility='@{s2q801.checked? View.VISIBLE : View.GONE}'
-                                app:maxValue="10"
+                                app:maxValue="9"
                                 app:minValue="1"
                                 app:type="range" />
 

@@ -200,6 +200,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s13q3  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q3"
@@ -405,6 +406,7 @@
 
 
             <!-- s13q6  CheckBox   -->
+            <!-- s13q6  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs13q6"
                 style="@style/cardView">
@@ -444,6 +446,12 @@
                         android:tag="0">
 
                         <CheckBox
+                            android:id="@+id/s13q601"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/s13q601" />
+
+                        <CheckBox
                             android:id="@+id/s13q602"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -465,9 +473,9 @@
                             android:id="@+id/s13q696x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                             android:hint="@string/s13q696"
-                            android:tag="s13q196"
+                            android:tag="s13q696"
                             android:text='@{s13q696.checked ? s13q696x.getText().toString() : ""}'
                             android:visibility='@{s13q696.checked? View.VISIBLE : View.GONE}' />
 
@@ -481,7 +489,6 @@
                         android:text="@string/s13q698" />
 
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
 
 

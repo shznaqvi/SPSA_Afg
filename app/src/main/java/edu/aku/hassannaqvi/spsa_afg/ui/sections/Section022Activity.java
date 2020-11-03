@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +14,10 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
+import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection022Binding;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -47,19 +50,24 @@ public class Section022Activity extends AppCompatActivity {
             }
         }));
 
+      /*  bi.s2q1798.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b){
+                Clear.clearAllFields(bi.lls2q17check, false);
+            }
+        }));*/
     }
 
 
     private boolean UpdateDB() {
-       /* DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_S02, form.s02toString());
         if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
+        /*return true;*/
     }
 
 
@@ -114,8 +122,8 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1111.isChecked() ? "11"
                 : bi.s2q1196.isChecked() ? "96"
                 : "-1");
-
         form.setS2q1196x(bi.s2q1196x.getText().toString());
+
         form.setS2q12(bi.s2q1211.isChecked() ? "11"
                 : bi.s2q1212.isChecked() ? "12"
                 : bi.s2q1221.isChecked() ? "21"
@@ -129,8 +137,8 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1237.isChecked() ? "37"
                 : bi.s2q1296.isChecked() ? "96"
                 : "-1");
-
         form.setS2q1296x(bi.s2q1296x.getText().toString());
+
         form.setS2q13(bi.s2q1311.isChecked() ? "11"
                 : bi.s2q1312.isChecked() ? "12"
                 : bi.s2q1313.isChecked() ? "13"
@@ -147,8 +155,8 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1337.isChecked() ? "37"
                 : bi.s2q1396.isChecked() ? "96"
                 : "-1");
-
         form.setS2q1396x(bi.s2q1396x.getText().toString());
+
         form.setS2q14(bi.s2q1411.isChecked() ? "11"
                 : bi.s2q1412.isChecked() ? "12"
                 : bi.s2q1413.isChecked() ? "13"
@@ -167,39 +175,40 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1436.isChecked() ? "36"
                 : bi.s2q1496.isChecked() ? "96"
                 : "-1");
-
         form.setS2q1496x(bi.s2q1496x.getText().toString());
+
         form.setS2q15(bi.s2q15.getText().toString());
 
         form.setS2q16(bi.s2q1601.isChecked() ? "1"
                 : bi.s2q1602.isChecked() ? "2"
                 : "-1");
 
-        form.setS2q17(bi.s2q1701.isChecked() ? ""
-                : bi.s2q1702.isChecked() ? ""
-                : bi.s2q1703.isChecked() ? ""
-                : bi.s2q1798.isChecked() ? "98"
-                : "-1");
+//        form.setS2q17(bi.s2q1701.isChecked() ? ""
+//                : bi.s2q1702.isChecked() ? ""
+//                : bi.s2q1703.isChecked() ? ""
+//                : bi.s2q1798.isChecked() ? "98"
+//                : "-1");
+//
+//        form.setS2q1701x(bi.s2q1701x.getText().toString());
+//        form.setS2q1702x(bi.s2q1702x.getText().toString());
+//        form.setS2q1703x(bi.s2q1703x.getText().toString());
 
-        form.setS2q1701x(bi.s2q1701x.getText().toString());
-        form.setS2q1702x(bi.s2q1702x.getText().toString());
-        form.setS2q1703x(bi.s2q1703x.getText().toString());
+//        form.setS2Q17(bi.s2q17.getText().toString());
+//
+//        form.setS2Q1701x(bi.s2q1701x.getText().toString());
+//        form.setS2Q1702x(bi.s2q1702x.getText().toString());
+//        form.setS2Q1703x(bi.s2q1703x.getText().toString());
+
         form.setS2q18(bi.s2q1801.isChecked() ? "1"
                 : bi.s2q1802.isChecked() ? "2"
                 : "-1");
 
         form.setS2q1901(bi.s2q1901.getText().toString());
-
         form.setS2q1902(bi.s2q1902.getText().toString());
-
         form.setS2q1903(bi.s2q1903.getText().toString());
-
         form.setS2q1904(bi.s2q1904.getText().toString());
-
         form.setS2q1905(bi.s2q1905.getText().toString());
-
         form.setS2q1906(bi.s2q1906.getText().toString());
-
         form.setS2q1907(bi.s2q1907.getText().toString());
 
         form.setS2q20(bi.s2q2001.isChecked() ? "1"
@@ -211,7 +220,29 @@ public class Section022Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+
+        int totals217 = (TextUtils.isEmpty(bi.s2q1701.getText()) ? 0 : Integer.parseInt(bi.s2q1701.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1703.getText()) ? 0 : Integer.parseInt(bi.s2q1703.getText().toString().trim()));
+
+        if ((totals217 == 0 && !bi.s2q1798.isChecked())){
+            return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
+        }
+
+        int totals219 = (TextUtils.isEmpty(bi.s2q1901.getText()) ? 0 : Integer.parseInt(bi.s2q1901.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1902.getText()) ? 0 : Integer.parseInt(bi.s2q1902.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1903.getText()) ? 0 : Integer.parseInt(bi.s2q1903.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1904.getText()) ? 0 : Integer.parseInt(bi.s2q1904.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1905.getText()) ? 0 : Integer.parseInt(bi.s2q1905.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1906.getText()) ? 0 : Integer.parseInt(bi.s2q1906.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s2q1907.getText()) ? 0 : Integer.parseInt(bi.s2q1907.getText().toString().trim()));
+
+        if (totals219 == 0 && bi.s2q1801.isChecked()){
+            return Validator.emptyCustomTextBox(this, bi.s2q1901, "Total cont cannot be 0");
+        }
+        return true;
     }
 
 
@@ -224,7 +255,7 @@ public class Section022Activity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, Section03Activity.class));
         }
     }
 
