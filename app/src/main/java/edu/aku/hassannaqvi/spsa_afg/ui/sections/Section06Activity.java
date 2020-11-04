@@ -28,6 +28,7 @@ public class Section06Activity extends AppCompatActivity {
     ActivitySection06Binding bi;
     Spinner[] userSpinners;
     DatabaseHelper db;
+    boolean spinners = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +109,13 @@ public class Section06Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
+       /* if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+
+        if (bi.s6mea1.getSelectedItem().toString().equals(bi.s6mea2.getSelectedItem().toString())) {
+            Toast.makeText(this, "users can not be same", Toast.LENGTH_SHORT).show();
+        }
+
+        return true;*/
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
