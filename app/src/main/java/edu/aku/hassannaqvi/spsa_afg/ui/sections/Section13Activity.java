@@ -155,7 +155,6 @@ public class Section13Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-      /*  return true;*/
     }
 
 

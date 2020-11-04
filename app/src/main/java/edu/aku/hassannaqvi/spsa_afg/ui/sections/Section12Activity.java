@@ -10,8 +10,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -55,11 +53,10 @@ public class Section12Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-      /*  return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         form.setS12q1(bi.s12q101.isChecked() ? "1"
                 : bi.s12q102.isChecked() ? "2"

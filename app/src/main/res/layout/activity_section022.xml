@@ -1770,6 +1770,7 @@
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
                 <!-- s2q20  Radio   -->

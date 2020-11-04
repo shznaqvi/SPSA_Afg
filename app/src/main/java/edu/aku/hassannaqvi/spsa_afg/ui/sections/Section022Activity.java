@@ -11,8 +11,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -67,11 +65,10 @@ public class Section022Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         form.setS2q10a(bi.s2q10a01.isChecked() ? "1"
                 : bi.s2q10a02.isChecked() ? "2"
@@ -227,7 +224,7 @@ public class Section022Activity extends AppCompatActivity {
                 + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s2q1703.getText()) ? 0 : Integer.parseInt(bi.s2q1703.getText().toString().trim()));
 
-        if ((totals217 == 0 && !bi.s2q1798.isChecked())){
+        if ((totals217 == 0 && bi.s2q1601.isChecked())) {
             return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
         }
 
@@ -239,7 +236,7 @@ public class Section022Activity extends AppCompatActivity {
                 + (TextUtils.isEmpty(bi.s2q1906.getText()) ? 0 : Integer.parseInt(bi.s2q1906.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s2q1907.getText()) ? 0 : Integer.parseInt(bi.s2q1907.getText().toString().trim()));
 
-        if (totals219 == 0 && bi.s2q1801.isChecked()){
+        if (totals219 == 0 && bi.s2q1801.isChecked()) {
             return Validator.emptyCustomTextBox(this, bi.s2q1901, "Total cont cannot be 0");
         }
         return true;

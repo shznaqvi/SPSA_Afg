@@ -5,13 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -105,12 +104,10 @@ public class Section03Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-       /* return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
-
+    private void SaveDraft() {
 
         form.setS3q1(bi.s3q101.isChecked() ? "1"
                 : bi.s3q102.isChecked() ? "2"
@@ -124,13 +121,9 @@ public class Section03Activity extends AppCompatActivity {
                 : "-1");
 
         form.setS3q301(bi.s3q301.isChecked() ? "1" : "-1");
-
         form.setS3q302(bi.s3q302.isChecked() ? "2" : "-1");
-
         form.setS3q303(bi.s3q303.isChecked() ? "3" : "-1");
-
         form.setS3q304(bi.s3q304.isChecked() ? "4" : "-1");
-
         form.setS3q305(bi.s3q305.isChecked() ? "5" : "-1");
 
         form.setS3q4(bi.s3q401.isChecked() ? "1"
@@ -138,31 +131,18 @@ public class Section03Activity extends AppCompatActivity {
                 : "-1");
 
         form.setS3q501(bi.s3q501.isChecked() ? "1" : "-1");
-
         form.setS3q502(bi.s3q502.isChecked() ? "2" : "-1");
-
         form.setS3q503(bi.s3q503.isChecked() ? "3" : "-1");
-
         form.setS3q504(bi.s3q504.isChecked() ? "4" : "-1");
-
         form.setS3q505(bi.s3q505.isChecked() ? "5" : "-1");
 
         form.setS3q6a(bi.s3q6a.isChecked() ? "1" : "-1");
-
         form.setS3q6b(bi.s3q6b.isChecked() ? "2" : "-1");
-
         form.setS3q6c(bi.s3q6c.isChecked() ? "3" : "-1");
-
         form.setS3q6d(bi.s3q6d.isChecked() ? "4" : "-1");
-
         form.setS3q6e(bi.s3q6e.isChecked() ? "5" : "-1");
-
         form.setS3q696(bi.s3q696.isChecked() ? "96" : "-1");
-
         form.setS3q696x(bi.s3q696x.getText().toString());
-
-
-        //    MainApp.fc.setsL(String.valueOf(json));
 
     }
 
