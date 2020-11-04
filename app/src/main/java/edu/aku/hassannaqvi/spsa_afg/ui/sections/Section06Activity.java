@@ -28,7 +28,6 @@ public class Section06Activity extends AppCompatActivity {
     ActivitySection06Binding bi;
     Spinner[] userSpinners;
     DatabaseHelper db;
-    boolean spinners = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +38,7 @@ public class Section06Activity extends AppCompatActivity {
         setupContent();
         setupSkips();
     }
+
 
     private void setupContent() {
         db = new DatabaseHelper(this);
@@ -104,20 +104,18 @@ public class Section06Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
     private boolean formValidation() {
-       /* if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
 
         if (bi.s6mea1.getSelectedItem().toString().equals(bi.s6mea2.getSelectedItem().toString())) {
-            Toast.makeText(this, "users can not be same", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Users Can Not Be Same", Toast.LENGTH_SHORT).show();
+            return false;
         }
-
-        return true;*/
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
-
+        return true;
     }
 
 }
