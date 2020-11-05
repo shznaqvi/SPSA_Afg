@@ -22,6 +22,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 import java.lang.reflect.Field;
 
 import edu.aku.hassannaqvi.spsa_afg.R;
+import edu.aku.hassannaqvi.spsa_afg.ui.sections.Section06Activity;
 
 
 /**
@@ -181,6 +182,21 @@ public abstract class ValidatorClass {
             return false;
         } else {
             ((TextView) spin.getSelectedView()).setError(null);
+            return true;
+        }
+    }
+
+    public static boolean EmptySpinnerEqual(Context context, Spinner spin, Spinner spin2, String msg) {
+        if (spin.getSelectedItem().toString().equals(spin2.getSelectedItem().toString())) {
+            FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+            ((TextView) spin2.getSelectedView()).setText("This Data is Required");
+            ((TextView) spin2.getSelectedView()).setTextColor(Color.RED);
+            spin2.setFocusableInTouchMode(true);
+            spin2.requestFocus();
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(spin2.getId()) + ": This data is Required!");
+            return false;
+        } else {
+            ((TextView) spin2.getSelectedView()).setError(null);
             return true;
         }
     }
@@ -430,5 +446,9 @@ public abstract class ValidatorClass {
             }
         }
         return "";
+    }
+
+    public static boolean EmptySpinnerEqual(Section06Activity section06Activity, Spinner s6mea1, Spinner s6mea2) {
+        return false;
     }
 }

@@ -77,6 +77,7 @@
                         android:id="@+id/s9q1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
                         android:hint="@string/s9q1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -274,8 +275,8 @@
                         android:hint="##.#"
                         android:inputType="number"
                         app:mask="##.#"
-                        app:maxValue="60.0"
-                        app:minValue="14.0"
+                        app:maxValue="95.0"
+                        app:minValue="40.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
                 </LinearLayout>
@@ -370,8 +371,8 @@
                         android:hint="##.#"
                         android:inputType="number"
                         app:mask="##.#"
-                        app:maxValue="20.0"
-                        app:minValue="7.0"
+                        app:maxValue="18.0"
+                        app:minValue="5.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
 
@@ -469,8 +470,8 @@
                         android:hint="##.#"
                         android:inputType="number"
                         app:mask="##.#"
-                        app:maxValue="60.0"
-                        app:minValue="14.0"
+                        app:maxValue="95.0"
+                        app:minValue="40.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
 

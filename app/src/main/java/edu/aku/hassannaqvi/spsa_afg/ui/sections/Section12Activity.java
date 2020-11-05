@@ -207,6 +207,7 @@ public class Section12Activity extends AppCompatActivity {
         form.setS12q603(bi.s12q603.isChecked() ? "3" : "-1");
         form.setS12q604(bi.s12q604.isChecked() ? "4" : "-1");
         form.setS12q696(bi.s12q696.isChecked() ? "96" : "-1");
+        form.setS12q696x(bi.s12q696x.getText().toString());
 
     }
 

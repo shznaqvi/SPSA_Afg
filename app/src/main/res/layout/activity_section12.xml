@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -158,7 +159,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2a01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2a01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -168,7 +169,19 @@
 
 
                             android:text='@{s12q2a01.checked ? s12q2a01x.getText().toString() : ""}'
-                            android:visibility='@{s12q2a01.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{s12q2a01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2a01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            android:visibility='@{s12q2a01.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            android:text='@{s12q2a01.checked ? s12q2a01x.getText().toString() : ""}'
+                            app:minDate="01/11/2015" />
 
                         <RadioButton
                             android:id="@+id/s12q2a02"
@@ -228,7 +241,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2b01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2b01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -238,7 +251,19 @@
 
 
                             android:text='@{s12q2b01.checked ? s12q2b01x.getText().toString() : ""}'
-                            android:visibility='@{s12q2b01.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{s12q2b01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2b01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            android:visibility='@{s12q2b01.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            android:text='@{s12q2b01.checked ? s12q2b01x.getText().toString() : ""}'
+                            app:minDate="01/11/2015" />
 
                         <RadioButton
                             android:id="@+id/s12q2b02"
@@ -298,7 +323,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2c01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2c01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -308,7 +333,19 @@
 
 
                             android:text='@{s12q2c01.checked ? s12q2c01x.getText().toString() : ""}'
-                            android:visibility='@{s12q2c01.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{s12q2c01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2c01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            android:visibility='@{s12q2c01.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            android:text='@{s12q2c01.checked ? s12q2c01x.getText().toString() : ""}'
+                            app:minDate="01/11/2015" />
 
                         <RadioButton
                             android:id="@+id/s12q2c02"
@@ -368,7 +405,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2d01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2d01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -378,7 +415,19 @@
 
 
                             android:text='@{s12q2d01.checked ? s12q2d01x.getText().toString() : ""}'
-                            android:visibility='@{s12q2d01.checked? View.VISIBLE : View.GONE}' />
+                            android:visibility='@{s12q2d01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2d01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            android:visibility='@{s12q2d01.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            android:text='@{s12q2d01.checked ? s12q2d01x.getText().toString() : ""}'
+                            app:minDate="01/11/2015" />
 
                         <RadioButton
                             android:id="@+id/s12q2d02"
@@ -438,15 +487,27 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2e01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!-- <com.edittextpicker.aliazaz.EditTextPicker
+                             android:id="@+id/s12q2e01x"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/s12q2e01"
+                             android:inputType="number"
+                             android:tag="s12q2e01"
+
+
+                             android:text='@{s12q2e01.checked ? s12q2e01x.getText().toString() : ""}'
+                             android:visibility='@{s12q2e01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                             android:id="@+id/s12q2e01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s12q2e01"
-                            android:inputType="number"
-                            android:tag="s12q2e01"
-
-
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2e01.checked ? s12q2e01x.getText().toString() : ""}'
                             android:visibility='@{s12q2e01.checked? View.VISIBLE : View.GONE}' />
 
@@ -508,15 +569,27 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2f01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!-- <com.edittextpicker.aliazaz.EditTextPicker
+                             android:id="@+id/s12q2f01x"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/s12q2f01"
+                             android:inputType="number"
+                             android:tag="s12q2f01"
+
+
+                             android:text='@{s12q2f01.checked ? s12q2f01x.getText().toString() : ""}'
+                             android:visibility='@{s12q2f01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                             android:id="@+id/s12q2f01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s12q2f01"
-                            android:inputType="number"
-                            android:tag="s12q2f01"
-
-
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2f01.checked ? s12q2f01x.getText().toString() : ""}'
                             android:visibility='@{s12q2f01.checked? View.VISIBLE : View.GONE}' />
 
@@ -578,7 +651,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2g01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2g01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -587,6 +660,18 @@
                             android:tag="s12q2g01"
 
 
+                            android:text='@{s12q2g01.checked ? s12q2g01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2g01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2g01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2g01.checked ? s12q2g01x.getText().toString() : ""}'
                             android:visibility='@{s12q2g01.checked? View.VISIBLE : View.GONE}' />
 
@@ -648,15 +733,27 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2h01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!-- <com.edittextpicker.aliazaz.EditTextPicker
+                             android:id="@+id/s12q2h01x"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/s12q2h01"
+                             android:inputType="number"
+                             android:tag="s12q2h01"
+
+
+                             android:text='@{s12q2h01.checked ? s12q2h01x.getText().toString() : ""}'
+                             android:visibility='@{s12q2h01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                             android:id="@+id/s12q2h01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s12q2h01"
-                            android:inputType="number"
-                            android:tag="s12q2h01"
-
-
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2h01.checked ? s12q2h01x.getText().toString() : ""}'
                             android:visibility='@{s12q2h01.checked? View.VISIBLE : View.GONE}' />
 
@@ -718,7 +815,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2i01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2i01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -727,6 +824,18 @@
                             android:tag="s12q2i01"
 
 
+                            android:text='@{s12q2i01.checked ? s12q2i01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2i01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2i01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2i01.checked ? s12q2i01x.getText().toString() : ""}'
                             android:visibility='@{s12q2i01.checked? View.VISIBLE : View.GONE}' />
 
@@ -788,7 +897,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2j01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2j01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -797,6 +906,18 @@
                             android:tag="s12q2j01"
 
 
+                            android:text='@{s12q2j01.checked ? s12q2j01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2j01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2j01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2j01.checked ? s12q2j01x.getText().toString() : ""}'
                             android:visibility='@{s12q2j01.checked? View.VISIBLE : View.GONE}' />
 
@@ -858,7 +979,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2k01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2k01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -867,6 +988,18 @@
                             android:tag="s12q2k01"
 
 
+                            android:text='@{s12q2k01.checked ? s12q2k01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2k01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2k01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2k01.checked ? s12q2k01x.getText().toString() : ""}'
                             android:visibility='@{s12q2k01.checked? View.VISIBLE : View.GONE}' />
 
@@ -928,7 +1061,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2l01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2l01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -937,6 +1070,18 @@
                             android:tag="s12q2l01"
 
 
+                            android:text='@{s12q2l01.checked ? s12q2l01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2l01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2l01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2l01.checked ? s12q2l01x.getText().toString() : ""}'
                             android:visibility='@{s12q2l01.checked? View.VISIBLE : View.GONE}' />
 
@@ -998,7 +1143,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2m01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2m01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1007,6 +1152,18 @@
                             android:tag="s12q2m01"
 
 
+                            android:text='@{s12q2m01.checked ? s12q2m01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2m01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2m01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2m01.checked ? s12q2m01x.getText().toString() : ""}'
                             android:visibility='@{s12q2m01.checked? View.VISIBLE : View.GONE}' />
 
@@ -1068,17 +1225,29 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2n01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!-- <com.edittextpicker.aliazaz.EditTextPicker
+                             android:id="@+id/s12q2n01x"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="@string/s12q2n01"
+                             android:inputType="number"
+                             android:tag="s12q2n01"
+
+
+                             android:text='@{s12q2n01.checked ? s12q2n01x.getText().toString() : ""}'
+                             android:visibility='@{s12q2n01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                             android:id="@+id/s12q2n01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/s12q2n01"
-                            android:inputType="number"
-                            android:tag="s12q2n01"
-
-
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            android:visibility='@{s12q2n01.checked? View.VISIBLE : View.GONE}'
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
                             android:text='@{s12q2n01.checked ? s12q2n01x.getText().toString() : ""}'
-                            android:visibility='@{s12q2n01.checked? View.VISIBLE : View.GONE}' />
+                            app:minDate="01/11/2015" />
 
                         <RadioButton
                             android:id="@+id/s12q2n02"
@@ -1138,7 +1307,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/s12q2o01" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/s12q2o01x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1147,6 +1316,18 @@
                             android:tag="s12q2o01"
 
 
+                            android:text='@{s12q2o01.checked ? s12q2o01x.getText().toString() : ""}'
+                            android:visibility='@{s12q2o01.checked? View.VISIBLE : View.GONE}' />-->
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                            android:id="@+id/s12q2o01x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/date"
+                            app:dateFormat="dd-MM-yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/11/2015"
                             android:text='@{s12q2o01.checked ? s12q2o01x.getText().toString() : ""}'
                             android:visibility='@{s12q2o01.checked? View.VISIBLE : View.GONE}' />
 
@@ -1217,18 +1398,21 @@
                     <RadioGroup
                         android:id="@+id/s12q301"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q301a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q301a" />
 
                         <RadioButton
                             android:id="@+id/s12q301b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q301b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1269,18 +1453,21 @@
                     <RadioGroup
                         android:id="@+id/s12q302"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q302a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q302a" />
 
                         <RadioButton
                             android:id="@+id/s12q302b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q302b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1321,18 +1508,21 @@
                     <RadioGroup
                         android:id="@+id/s12q303"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q303a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q303a" />
 
                         <RadioButton
                             android:id="@+id/s12q303b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q303b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1373,18 +1563,21 @@
                     <RadioGroup
                         android:id="@+id/s12q304"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q304a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q304a" />
 
                         <RadioButton
                             android:id="@+id/s12q304b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q304b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1425,18 +1618,21 @@
                     <RadioGroup
                         android:id="@+id/s12q305"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q305a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q305a" />
 
                         <RadioButton
                             android:id="@+id/s12q305b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q305b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1477,18 +1673,21 @@
                     <RadioGroup
                         android:id="@+id/s12q306"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q306a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q306a" />
 
                         <RadioButton
                             android:id="@+id/s12q306b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q306b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1529,18 +1728,21 @@
                     <RadioGroup
                         android:id="@+id/s12q307"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q307a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q307a" />
 
                         <RadioButton
                             android:id="@+id/s12q307b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q307b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1581,18 +1783,21 @@
                     <RadioGroup
                         android:id="@+id/s12q308"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q308a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q308a" />
 
                         <RadioButton
                             android:id="@+id/s12q308b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q308b" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1633,31 +1838,35 @@
                     <RadioGroup
                         android:id="@+id/s12q396"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q396a"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q396a" />
-
-                        <EditText
-                            android:id="@+id/s12q396ax"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/s12q396a"
-                            android:tag="s12q396a"
-                            android:text='@{s12q396a.checked ? s12q396ax.getText().toString() : ""}'
-                            android:visibility='@{s12q396a.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
                             android:id="@+id/s12q396b"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q396b" />
 
                     </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/s12q396ax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                        android:hint="@string/s12q396a"
+                        android:tag="s12q396a"
+                        android:text='@{s12q396a.checked ? s12q396ax.getText().toString() : ""}'
+                        android:visibility='@{s12q396a.checked? View.VISIBLE : View.GONE}' />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1696,24 +1905,28 @@
                     <RadioGroup
                         android:id="@+id/s12q4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/s12q401"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q401" />
 
                         <RadioButton
                             android:id="@+id/s12q402"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q402" />
 
                         <RadioButton
                             android:id="@+id/s12q498"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/s12q498" />
                     </RadioGroup>
                 </LinearLayout>

@@ -115,6 +115,10 @@ public class Section06Activity extends AppCompatActivity {
             Toast.makeText(this, "Users Can Not Be Same", Toast.LENGTH_SHORT).show();
             return false;
         }
+
+        /*if (ValidatorClass.EmptySpinnerEqual(this, bi.s6mea1, bi.s6mea2))
+            return false;*/
+
         return true;
     }
 
