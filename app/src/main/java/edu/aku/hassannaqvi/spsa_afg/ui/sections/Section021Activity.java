@@ -10,18 +10,11 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivitySection021Binding;
-import edu.aku.hassannaqvi.spsa_afg.models.Form;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -72,18 +65,10 @@ public class Section021Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-       /* return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
-
-        /*form = new Form();
-        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
-        form.setS1q2(MainApp.userName);
-        form.setDeviceID(MainApp.appInfo.getDeviceID());
-        form.setDevicetagID(MainApp.appInfo.getTagName());
-        form.setAppversion(MainApp.appInfo.getAppVersion());*/
+    private void SaveDraft() {
 
         form.setS2q1(bi.s2q101.isChecked() ? "1"
                 : bi.s2q102.isChecked() ? "2"

@@ -9,8 +9,6 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -36,11 +34,6 @@ public class Section07Activity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0203);
-        }));*/
-
     }
 
 
@@ -53,11 +46,10 @@ public class Section07Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         form.setS7qa(bi.s7qa01.isChecked() ? "1"
                 : bi.s7qa02.isChecked() ? "2"

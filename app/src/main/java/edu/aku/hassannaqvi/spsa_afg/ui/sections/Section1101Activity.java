@@ -10,8 +10,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -55,19 +53,10 @@ public class Section1101Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
-
-       /* form = new Form();
-        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
-        form.setUsername(MainApp.userName);
-        form.setDeviceID(MainApp.appInfo.getDeviceID());
-        form.setDevicetagID(MainApp.appInfo.getTagName());
-        form.setAppversion(MainApp.appInfo.getAppVersion());
-        form.setFormdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));*/
+    private void SaveDraft() {
 
         form.setS11q7(bi.s11q701.isChecked() ? "1"
                 : bi.s11q702.isChecked() ? "2"
@@ -93,20 +82,19 @@ public class Section1101Activity extends AppCompatActivity {
                 : bi.s11q10a02.isChecked() ? "2"
                 : bi.s11q10a98.isChecked() ? "98"
                 : "-1");
+
         form.setS11q10b(bi.s11q10b01.isChecked() ? "1"
                 : bi.s11q10b02.isChecked() ? "2"
                 : bi.s11q10b98.isChecked() ? "98"
                 : "-1");
-
-
         form.setS11q10b01x(bi.s11q10b01x.getText().toString());
 
         form.setS11q10c(bi.s11q10c01.isChecked() ? "1"
                 : bi.s11q10c02.isChecked() ? "2"
                 : bi.s11q10c98.isChecked() ? "98"
                 : "-1");
-
         form.setS11q10c01x(bi.s11q10c01x.getText().toString());
+
         form.setS11q10d(bi.s11q10d01.isChecked() ? "1"
                 : bi.s11q10d02.isChecked() ? "2"
                 : bi.s11q10d98.isChecked() ? "98"
@@ -121,8 +109,8 @@ public class Section1101Activity extends AppCompatActivity {
                 : bi.s11q10f02.isChecked() ? "2"
                 : bi.s11q10f98.isChecked() ? "98"
                 : "-1");
-
         form.setS11q10f01x(bi.s11q10f01x.getText().toString());
+
         form.setS11q10g(bi.s11q10g01.isChecked() ? "1"
                 : bi.s11q10g02.isChecked() ? "2"
                 : bi.s11q10g98.isChecked() ? "98"

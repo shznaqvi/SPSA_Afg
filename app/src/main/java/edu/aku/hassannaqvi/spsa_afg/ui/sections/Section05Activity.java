@@ -10,8 +10,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -42,21 +40,25 @@ public class Section05Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVs5q1a);
             }
         }));
+
         bi.s5q2.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q202.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q2a);
             }
         }));
+
         bi.s5q3.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q302.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q3a);
             }
         }));
+
         bi.s5q4.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q402.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q4a);
             }
         }));
+
         bi.s5q5.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q502.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q5a);
@@ -68,25 +70,24 @@ public class Section05Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVs5q6a);
             }
         }));
+
         bi.s5q7.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q702.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q7a);
             }
         }));
+
         bi.s5q8.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q802.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q8a);
             }
         }));
+
         bi.s5q9.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.s5q902.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVs5q9a);
             }
         }));
-        /*bi.d0201.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.cvd0202);
-            Clear.clearAllFields(bi.cvd0203);
-        }));*/
 
     }
 
@@ -100,11 +101,10 @@ public class Section05Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         form.setS5q1(bi.s5q101.isChecked() ? "1"
                 : bi.s5q102.isChecked() ? "2"

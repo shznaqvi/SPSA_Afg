@@ -10,8 +10,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
-
 import edu.aku.hassannaqvi.spsa_afg.R;
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract;
 import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
@@ -95,49 +93,39 @@ public class Section08Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-      /*  return true;*/
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
-        form.setS8q1( bi.s8q101.isChecked() ? "1"
+        form.setS8q1(bi.s8q101.isChecked() ? "1"
                 : bi.s8q102.isChecked() ? "2"
                 : bi.s8q103.isChecked() ? "3"
-                :  "-1");
+                : "-1");
 
         form.setS8q1a(bi.s8q1a.getText().toString());
 
-        form.setS8q2( bi.s8q201.isChecked() ? "1"
+        form.setS8q2(bi.s8q201.isChecked() ? "1"
                 : bi.s8q202.isChecked() ? "2"
                 :  "-1");
 
         form.setS8q2a(bi.s8q2a.getText().toString());
 
         form.setS8q2b01(bi.s8q2b01.isChecked() ? "1" : "-1");
-
         form.setS8q2b02(bi.s8q2b02.isChecked() ? "2" : "-1");
-
         form.setS8q2b03(bi.s8q2b03.isChecked() ? "3" : "-1");
-
         form.setS8q2b04(bi.s8q2b04.isChecked() ? "4" : "-1");
-
         form.setS8q2b05(bi.s8q2b05.isChecked() ? "5" : "-1");
-
         form.setS8q2b96(bi.s8q2b96.isChecked() ? "96" : "-1");
-
         form.setS8q2b96x(bi.s8q2b96x.getText().toString());
+
         form.setS8q2c01(bi.s8q2c01.isChecked() ? "1" : "-1");
-
         form.setS8q2c02(bi.s8q2c02.isChecked() ? "2" : "-1");
-
         form.setS8q2c03(bi.s8q2c03.isChecked() ? "3" : "-1");
-
         form.setS8q2c04(bi.s8q2c04.isChecked() ? "4" : "-1");
-
         form.setS8q2c96(bi.s8q2c96.isChecked() ? "96" : "-1");
-
         form.setS8q2c96x(bi.s8q2c96x.getText().toString());
+
         form.setS8q3( bi.s8q301.isChecked() ? "1"
                 : bi.s8q302.isChecked() ? "2"
                 :  "-1");
@@ -145,8 +133,8 @@ public class Section08Activity extends AppCompatActivity {
         form.setS8q3a( bi.s8q3a01.isChecked() ? ""
                 : bi.s8q3a98.isChecked() ? "98"
                 :  "-1");
-
         form.setS8q3a01x(bi.s8q3a01x.getText().toString());
+
         form.setS8q4( bi.s8q401.isChecked() ? "1"
                 : bi.s8q402.isChecked() ? "2"
                 :  "-1");
@@ -154,8 +142,8 @@ public class Section08Activity extends AppCompatActivity {
         form.setS8q4a( bi.s8q4a01.isChecked() ? ""
                 : bi.s8q4a98.isChecked() ? "98"
                 :  "-1");
-
         form.setS8q4a01x(bi.s8q4a01x.getText().toString());
+
         form.setS8q5( bi.s8q501.isChecked() ? "1"
                 : bi.s8q502.isChecked() ? "2"
                 :  "-1");
@@ -188,8 +176,8 @@ public class Section08Activity extends AppCompatActivity {
         form.setS8q805(bi.s8q805.isChecked() ? "5" : "-1");
         form.setS8q806(bi.s8q806.isChecked() ? "6" : "-1");
         form.setS8q896(bi.s8q896.isChecked() ? "96" : "-1");
-
         form.setS8q896x(bi.s8q896x.getText().toString());
+
         form.setS8q899(bi.s8q899.isChecked() ? "99" : "-1");
 
         form.setS8q9( bi.s8q901.isChecked() ? "1"
@@ -198,12 +186,11 @@ public class Section08Activity extends AppCompatActivity {
                 : bi.s8q904.isChecked() ? "4"
                 : bi.s8q996.isChecked() ? "96"
                 : "-1");
-
         form.setS8q996x(bi.s8q996x.getText().toString());
+
         form.setS8q10(bi.s8q1001.isChecked() ? ""
                 : bi.s8q1098.isChecked() ? "98"
                 : "-1");
-
         form.setS8q1001x(bi.s8q1001x.getText().toString());
 
         form.setS8q1198(bi.s8q1198.isChecked() ? "98" : "-1");
@@ -218,15 +205,14 @@ public class Section08Activity extends AppCompatActivity {
                 : bi.s8q1205.isChecked() ? "5"
                 : bi.s8q1296.isChecked() ? "96"
                 : "-1");
-
         form.setS8q1296x(bi.s8q1296x.getText().toString());
+
         form.setS8q13( bi.s8q1301.isChecked() ? "1"
                 : bi.s8q1302.isChecked() ? "2"
                 : bi.s8q1303.isChecked() ? "3"
                 : bi.s8q1304.isChecked() ? "4"
                 : bi.s8q1396.isChecked() ? "96"
                 :  "-1");
-
         form.setS8q1396x(bi.s8q1396x.getText().toString());
 
     }

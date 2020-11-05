@@ -39,6 +39,7 @@ public class Section09Activity extends AppCompatActivity {
         setupContent();
     }
 
+
     private void setupContent() {
         db = new DatabaseHelper(this);
         userSpinners = new Spinner[]{bi.s9mea1, bi.s9mea2};
@@ -49,7 +50,6 @@ public class Section09Activity extends AppCompatActivity {
 
 
     private void setupSkips() {
-
 
     }
 
@@ -111,13 +111,18 @@ public class Section09Activity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
-        /*return true;*/
     }
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
 
+        if (bi.s9mea1.getSelectedItem().toString().equals(bi.s9mea2.getSelectedItem().toString())) {
+            Toast.makeText(this, "Users Can Not Be Same", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
 }
