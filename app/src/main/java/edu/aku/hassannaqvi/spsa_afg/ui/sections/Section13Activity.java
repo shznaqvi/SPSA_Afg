@@ -55,14 +55,18 @@ public class Section13Activity extends AppCompatActivity {
                 : bi.s13q196.isChecked() ? "96"
                 : bi.s13q198.isChecked() ? "98"
                 : "-1");
-        form.setS13q196x(bi.s13q196x.getText().toString());
+
+
+        form.setS13q196x(bi.s13q196x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q196x.getText().toString());
 
         form.setS13q2(bi.s13q201.isChecked() ? "1"
                 : bi.s13q202.isChecked() ? "2"
                 : bi.s13q2666.isChecked() ? "666"
                 : "-1");
-        form.setS13q202x(bi.s13q202x.getText().toString());
-        form.setS13q201x(bi.s13q201x.getText().toString());
+
+        form.setS13q202x(bi.s13q202x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q202x.getText().toString());
+
+        form.setS13q201x(bi.s13q201x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q201x.getText().toString());
 
         form.setS13q3(bi.s13q301.isChecked() ? "1"
                 : bi.s13q302.isChecked() ? "2"
@@ -73,13 +77,18 @@ public class Section13Activity extends AppCompatActivity {
                 : bi.s13q496.isChecked() ? "96"
                 : bi.s13q498.isChecked() ? "98"
                 : "-1");
-        form.setS13q496x(bi.s13q496x.getText().toString());
+
+
+        form.setS13q496x(bi.s13q496x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q496x.getText().toString());
+
 
         form.setS13q5(bi.s13q501.isChecked() ? "1"
                 : bi.s13q596.isChecked() ? "96"
                 : bi.s13q598.isChecked() ? "98"
                 : "-1");
-        form.setS13q596x(bi.s13q596x.getText().toString());
+
+
+        form.setS13q596x(bi.s13q596x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q596x.getText().toString());
 
         form.setS13q601(bi.s13q601.isChecked() ? "1" : "-1");
         form.setS13q602(bi.s13q602.isChecked() ? "2" : "-1");
@@ -96,6 +105,7 @@ public class Section13Activity extends AppCompatActivity {
                 : bi.s13q798.isChecked() ? "98"
                 : "-1");
         form.setS13q796x(bi.s13q796x.getText().toString());
+
 
         form.setS13q8( bi.s13q801.isChecked() ? "1"
                 : bi.s13q896.isChecked() ? "96"
