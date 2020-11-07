@@ -24,6 +24,7 @@
     <string name="openPretest"> Pre Test Knowlegde </string>
     <string name="openFollowup"> Follow Up </string>
     <string name="numfth"> Number of times </string>
+    <string name="date">Date </string>
     <string name="database">دیتا بیس</string>
     <string name="error_invalid_password">این پاسورد بسیار کوتاه است</string>
     <string name="error_field_required">این بخش ضروری است</string>

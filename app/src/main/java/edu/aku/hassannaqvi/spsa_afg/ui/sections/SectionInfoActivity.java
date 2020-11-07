@@ -36,6 +36,7 @@ import edu.aku.hassannaqvi.spsa_afg.core.DatabaseHelper;
 import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityInfoSectionBinding;
 import edu.aku.hassannaqvi.spsa_afg.models.Form;
+import edu.aku.hassannaqvi.spsa_afg.ui.other.MainActivity;
 import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
@@ -112,7 +113,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, Section021Activity.class));
+            startActivity(new Intent(this, bi.s1consent02.isChecked() ? MainActivity.class : Section021Activity.class));
         }
     }
 
@@ -200,7 +201,22 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        //    return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+
+        int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
+
+        if (totalmember == 0) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Invalid Total Count Please check again");
+        } else if (totalmember != Integer.parseInt(bi.s1q20e.getText().toString())) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members Cannot be match");
+        }
+
+        return true;
 
        /* if (!dtFlag) {
            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();

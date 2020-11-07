@@ -370,6 +370,7 @@ public class Form extends LiveData<Form> {
     public String s12q603;
     public String s12q604;
     public String s12q696;
+    public String s12q696x;
     public String s13q1;
     public String s13q196x;
     public String s13q2;
@@ -3437,6 +3438,14 @@ public class Form extends LiveData<Form> {
         this.s12q696 = s12q696;
     }
 
+    public String getS12q696x() {
+        return s12q696x;
+    }
+
+    public void setS12q696x(String s12q696x) {
+        this.s12q696x = s12q696x;
+    }
+
     public String getS13q1() {
         return s13q1;
     }
@@ -4472,7 +4481,8 @@ public class Form extends LiveData<Form> {
                     .put("s12q602", s12q602)
                     .put("s12q603", s12q603)
                     .put("s12q604", s12q604)
-                    .put("s12q696", s12q696);
+                    .put("s12q696", s12q696)
+                    .put("s12q696x", s12q696x);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -5153,6 +5163,7 @@ public class Form extends LiveData<Form> {
                 this.s12q603 = json.getString("s12q603");
                 this.s12q604 = json.getString("s12q604");
                 this.s12q696 = json.getString("s12q696");
+                this.s12q696x = json.getString("s12q696x");
 
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -18,7 +18,8 @@
     <string name="openScreening"> Screening </string>
     <string name="openPretest"> Pre Test Knowlegde </string>
     <string name="openFollowup"> Follow Up </string>
-    <string name="numfth"> Number of times </string>
+    <string name="numfth">If Yes Number of times </string>
+    <string name="date">Date </string>
     <string name="records_summary">Records Summary</string>
     <string name="main_menu">Main Menu</string>
     <string name="only_for_testing">ONLY FOR TESTING</string>

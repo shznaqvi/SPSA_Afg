@@ -129,12 +129,12 @@
                         android:id="@+id/s6q1a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
+                        android:hint="###.#"
                         android:inputType="number"
-                        app:mask="##.#"
-                        app:maxValue="40.0"
-                        app:minValue="11.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                        app:mask="###.#"
+                        app:maxValue="120.0"
+                        app:minValue="40.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
 
                 </LinearLayout>
@@ -178,12 +178,12 @@
                         android:id="@+id/s6q2a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
+                        android:hint="###.#"
                         android:inputType="number"
-                        app:mask="##.#"
-                        app:maxValue="18.0"
-                        app:minValue="10.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                        app:mask="###.#"
+                        app:maxValue="200.0"
+                        app:minValue="90.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
 
                 </LinearLayout>
@@ -324,12 +324,12 @@
                         android:id="@+id/s6q1b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.#"
+                        android:hint="###.#"
                         android:inputType="number"
-                        app:mask="##.#"
-                        app:maxValue="40.0"
-                        app:minValue="11.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                        app:mask="###.#"
+                        app:maxValue="120.0"
+                        app:minValue="40.0"
+                        app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                         app:type="range" />
 
                 </LinearLayout>
@@ -389,7 +389,8 @@
             <!-- s6q3b  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs6q3b"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
