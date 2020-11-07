@@ -3,9 +3,7 @@ package edu.aku.hassannaqvi.spsa_afg.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,7 +12,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -77,7 +74,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void setupSkip() {
 
-        bi.s1q11.addTextChangedListener(new TextWatcher() {
+     /*   bi.s1q11.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -99,7 +96,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
             }
-        });
+        });*/
 
     }
 
@@ -142,6 +139,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
         form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        MainApp.setGPS(this);
 
 
         form.setS1qno(bi.s1qno.getText().toString());

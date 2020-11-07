@@ -77,7 +77,7 @@
                         android:id="@+id/s9q1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="AaBaCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz,. "
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
                         android:hint="@string/s9q1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
