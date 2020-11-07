@@ -81,7 +81,7 @@
                          android:layout_height="wrap_content"
                          android:hint="@string/s6mea1" />-->
 
-                    <Spinner
+                      <Spinner
                         android:id="@+id/s6mea1"
                         style="@style/spinner"
                         android:layout_width="match_parent"
