@@ -87,8 +87,12 @@ public class Section10Activity extends AppCompatActivity {
                 : bi.s10q202.isChecked() ? "2"
                 : bi.s10q2666.isChecked() ? "666"
                 : "-1");
-        form.setS10q201x(bi.s10q201x.getText().toString());
-        form.setS10q202x(bi.s10q202x.getText().toString());
+
+
+        form.setS10q201x(bi.s10q201x.getText().toString().trim().isEmpty() ? "-1" : bi.s10q201x.getText().toString());
+
+
+        form.setS10q202x(bi.s10q202x.getText().toString().trim().isEmpty() ? "-1" : bi.s10q202x.getText().toString());
 
         form.setS10q3(bi.s10q301.isChecked() ? "1"
                 : bi.s10q302.isChecked() ? "2"
@@ -101,7 +105,9 @@ public class Section10Activity extends AppCompatActivity {
                 : bi.s10q496.isChecked() ? "96"
                 : "-1");
 
-        form.setS10q496x(bi.s10q496x.getText().toString());
+
+        form.setS10q496x(bi.s10q496x.getText().toString().trim().isEmpty() ? "-1" : bi.s10q496x.getText().toString());
+
         form.setS10q5(bi.s10q501.isChecked() ? "1"
                 : bi.s10q502.isChecked() ? "2"
                 : "-1");
@@ -117,7 +123,11 @@ public class Section10Activity extends AppCompatActivity {
         form.setS10q609(bi.s10q609.isChecked() ? "9" : "-1");
         form.setS10q610(bi.s10q610.isChecked() ? "10" : "-1");
         form.setS10q696(bi.s10q696.isChecked() ? "96" : "-1");
-        form.setS10q696x(bi.s10q696x.getText().toString());
+
+
+        form.setS10q696x(bi.s10q696x.getText().toString().trim().isEmpty() ? "-1" : bi.s10q696x.getText().toString());
+
+
         form.setS10q699(bi.s10q699.isChecked() ? "99" : "-1");
 
     }

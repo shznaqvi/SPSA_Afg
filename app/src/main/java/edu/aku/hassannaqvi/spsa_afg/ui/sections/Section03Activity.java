@@ -114,8 +114,8 @@ public class Section03Activity extends AppCompatActivity {
                 : bi.s3q103.isChecked() ? "3"
                 : bi.s3q1096.isChecked() ? "4"
                 : "-1");
+        form.setS3q1096x(bi.s3q1096x.getText().toString().trim().isEmpty() ? "-1" : bi.s3q1096x.getText().toString());
 
-        form.setS3q1096x(bi.s3q1096x.getText().toString());
         form.setS3q2(bi.s3q201.isChecked() ? "1"
                 : bi.s3q202.isChecked() ? "2"
                 : "-1");
@@ -142,7 +142,7 @@ public class Section03Activity extends AppCompatActivity {
         form.setS3q6d(bi.s3q6d.isChecked() ? "4" : "-1");
         form.setS3q6e(bi.s3q6e.isChecked() ? "5" : "-1");
         form.setS3q696(bi.s3q696.isChecked() ? "96" : "-1");
-        form.setS3q696x(bi.s3q696x.getText().toString());
+        form.setS3q696x(bi.s3q696x.getText().toString().trim().isEmpty() ? "-1" : bi.s3q696x.getText().toString());
 
     }
 

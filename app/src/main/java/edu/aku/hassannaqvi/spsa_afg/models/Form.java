@@ -4528,7 +4528,7 @@ public class Form extends LiveData<Form> {
                     .put("s13q1006", s13q1006)
                     .put("s13q1007", s13q1007);
 
-        } catch (JSONException e) {
+        } catch (JSONException e)   {
             e.printStackTrace();
             return "\"error\":, \"" + e.getMessage() + "\"";
         }
@@ -4852,7 +4852,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s06Hydrate(String string) {
+    private void s06Hydrate(String string){
 
         if (string != null) {
 
