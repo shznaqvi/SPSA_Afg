@@ -121,7 +121,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             form.set_UID(form.getDeviceID() + form.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SINFO, form.sInfotoString());
             return true;
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();

@@ -768,7 +768,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 /* FormsContract.FormsTable.COLUMN_S1Q5,*/
                 FormsContract.FormsTable.COLUMN_S1Q6,
                 /* FormsContract.FormsTable.COLUMN_S01,*/
-                FormsTable.COLUMN_SINFO,
+                FormsContract.FormsTable.COLUMN_SINFO,
                 FormsContract.FormsTable.COLUMN_S02,
                 FormsContract.FormsTable.COLUMN_S03,
                 FormsContract.FormsTable.COLUMN_S04,

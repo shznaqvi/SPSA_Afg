@@ -4570,6 +4570,9 @@ public class Form extends LiveData<Form> {
             json.put(FormsTable.COLUMN_S12, new JSONObject(s12toString()));
             json.put(FormsTable.COLUMN_S13, new JSONObject(s13toString()));
 
+            if (this.sInfo != null && !this.sInfo.equals("")) {
+                json.put(FormsTable.COLUMN_SINFO, new JSONObject(this.sInfo));
+            }
 
             if (this.s02 != null && !this.s02.equals("")) {
                 json.put(FormsTable.COLUMN_S02, new JSONObject(this.s02));
