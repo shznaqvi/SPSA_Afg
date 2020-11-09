@@ -87,13 +87,18 @@ public class Section1101Activity extends AppCompatActivity {
                 : bi.s11q10b02.isChecked() ? "2"
                 : bi.s11q10b98.isChecked() ? "98"
                 : "-1");
-        form.setS11q10b01x(bi.s11q10b01x.getText().toString());
+
+        form.setS11q10b01x(bi.s11q10b01x.getText().toString().trim().isEmpty() ? "-1" : bi.s11q10b01x.getText().toString());
+
 
         form.setS11q10c(bi.s11q10c01.isChecked() ? "1"
                 : bi.s11q10c02.isChecked() ? "2"
                 : bi.s11q10c98.isChecked() ? "98"
                 : "-1");
-        form.setS11q10c01x(bi.s11q10c01x.getText().toString());
+
+
+        form.setS11q10c01x(bi.s11q10c01x.getText().toString().trim().isEmpty() ? "-1" : bi.s11q10c01x.getText().toString());
+
 
         form.setS11q10d(bi.s11q10d01.isChecked() ? "1"
                 : bi.s11q10d02.isChecked() ? "2"
@@ -109,7 +114,9 @@ public class Section1101Activity extends AppCompatActivity {
                 : bi.s11q10f02.isChecked() ? "2"
                 : bi.s11q10f98.isChecked() ? "98"
                 : "-1");
-        form.setS11q10f01x(bi.s11q10f01x.getText().toString());
+
+        form.setS11q10f01x(bi.s11q10f01x.getText().toString().trim().isEmpty() ? "-1" : bi.s11q10f01x.getText().toString());
+
 
         form.setS11q10g(bi.s11q10g01.isChecked() ? "1"
                 : bi.s11q10g02.isChecked() ? "2"

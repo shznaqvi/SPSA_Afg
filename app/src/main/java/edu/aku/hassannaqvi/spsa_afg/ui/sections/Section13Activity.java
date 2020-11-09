@@ -104,22 +104,26 @@ public class Section13Activity extends AppCompatActivity {
                 : bi.s13q796.isChecked() ? "96"
                 : bi.s13q798.isChecked() ? "98"
                 : "-1");
-        form.setS13q796x(bi.s13q796x.getText().toString());
+        form.setS13q796x(bi.s13q796x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q796x.getText().toString());
 
-
-        form.setS13q8( bi.s13q801.isChecked() ? "1"
+        form.setS13q8(bi.s13q801.isChecked() ? "1"
                 : bi.s13q896.isChecked() ? "96"
                 : bi.s13q898.isChecked() ? "98"
-                :  "-1");
-        form.setS13q896x(bi.s13q896x.getText().toString());
+                : "-1");
 
-        form.setS13q9( bi.s13q901.isChecked() ? "1"
+        form.setS13q896x(bi.s13q896x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q896x.getText().toString());
+
+
+        form.setS13q9(bi.s13q901.isChecked() ? "1"
                 : bi.s13q902.isChecked() ? "2"
                 : bi.s13q903.isChecked() ? "3"
                 : bi.s13q996.isChecked() ? "96"
                 : bi.s13q998.isChecked() ? "98"
-                :  "-1");
-        form.setS13q996x(bi.s13q996x.getText().toString());
+                : "-1");
+
+
+        form.setS13q996x(bi.s13q996x.getText().toString().trim().isEmpty() ? "-1" : bi.s13q996x.getText().toString());
+
 
         form.setS13q1001(bi.s13q1001.isChecked() ? "1" : "-1");
         form.setS13q1002(bi.s13q1002.isChecked() ? "2" : "-1");

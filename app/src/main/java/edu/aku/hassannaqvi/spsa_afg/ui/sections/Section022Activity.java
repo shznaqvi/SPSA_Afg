@@ -119,7 +119,8 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1111.isChecked() ? "11"
                 : bi.s2q1196.isChecked() ? "96"
                 : "-1");
-        form.setS2q1196x(bi.s2q1196x.getText().toString());
+
+        form.setS2q1196x(bi.s2q1196x.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1196x.getText().toString());
 
         form.setS2q12(bi.s2q1211.isChecked() ? "11"
                 : bi.s2q1212.isChecked() ? "12"
@@ -134,7 +135,9 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1237.isChecked() ? "37"
                 : bi.s2q1296.isChecked() ? "96"
                 : "-1");
-        form.setS2q1296x(bi.s2q1296x.getText().toString());
+
+        form.setS2q1296x(bi.s2q1296x.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1296x.getText().toString());
+
 
         form.setS2q13(bi.s2q1311.isChecked() ? "11"
                 : bi.s2q1312.isChecked() ? "12"
@@ -152,7 +155,9 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1337.isChecked() ? "37"
                 : bi.s2q1396.isChecked() ? "96"
                 : "-1");
-        form.setS2q1396x(bi.s2q1396x.getText().toString());
+
+        form.setS2q1396x(bi.s2q1396x.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1396x.getText().toString());
+
 
         form.setS2q14(bi.s2q1411.isChecked() ? "11"
                 : bi.s2q1412.isChecked() ? "12"
@@ -172,9 +177,11 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1436.isChecked() ? "36"
                 : bi.s2q1496.isChecked() ? "96"
                 : "-1");
-        form.setS2q1496x(bi.s2q1496x.getText().toString());
 
-        form.setS2q15(bi.s2q15.getText().toString());
+        form.setS2q1496x(bi.s2q1496x.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1496x.getText().toString());
+
+
+        form.setS2q15(bi.s2q15.getText().toString().trim().isEmpty() ? "-1" : bi.s2q15.getText().toString());
 
         form.setS2q16(bi.s2q1601.isChecked() ? "1"
                 : bi.s2q1602.isChecked() ? "2"
@@ -200,14 +207,14 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1802.isChecked() ? "2"
                 : "-1");
 
-        form.setS2q1901(bi.s2q1901.getText().toString());
-        form.setS2q1902(bi.s2q1902.getText().toString());
-        form.setS2q1903(bi.s2q1903.getText().toString());
-        form.setS2q1904(bi.s2q1904.getText().toString());
-        form.setS2q1905(bi.s2q1905.getText().toString());
-        form.setS2q1906(bi.s2q1906.getText().toString());
-        form.setS2q1907(bi.s2q1907.getText().toString());
 
+        form.setS2q1901(bi.s2q1901.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1901.getText().toString());
+        form.setS2q1902(bi.s2q1902.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1902.getText().toString());
+        form.setS2q1903(bi.s2q1903.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1903.getText().toString());
+        form.setS2q1904(bi.s2q1904.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1904.getText().toString());
+        form.setS2q1905(bi.s2q1905.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1905.getText().toString());
+        form.setS2q1906(bi.s2q1906.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1906.getText().toString());
+        form.setS2q1907(bi.s2q1907.getText().toString().trim().isEmpty() ? "-1" : bi.s2q1907.getText().toString());
         form.setS2q20(bi.s2q2001.isChecked() ? "1"
                 : bi.s2q2002.isChecked() ? "2"
                 : bi.s2q20098.isChecked() ? "98"
