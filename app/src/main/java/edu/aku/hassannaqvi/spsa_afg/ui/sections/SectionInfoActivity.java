@@ -14,7 +14,6 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.json.JSONException;
 import org.threeten.bp.LocalDate;
 
 import java.text.SimpleDateFormat;
@@ -130,7 +129,7 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         form = new Form();
         form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
