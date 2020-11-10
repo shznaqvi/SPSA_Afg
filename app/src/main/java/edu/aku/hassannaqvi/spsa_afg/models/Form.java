@@ -143,6 +143,9 @@ public class Form extends LiveData<Form> {
     public String s4q4b;
     public String s4q4c;
     public String s4q5;
+    public String s4q5b;
+    public String s4q5c;
+    public String s4q5a01x;
     public String s5q1;
     public String s5q1a;
     public String s5q2;
@@ -1549,6 +1552,30 @@ public class Form extends LiveData<Form> {
     public Form setS4q5(String s4q5) {
         this.s4q5 = s4q5;
         return this;
+    }
+
+    public String getS4q5b() {
+        return s4q5b;
+    }
+
+    public void setS4q5b(String s4q5b) {
+        this.s4q5b = s4q5b;
+    }
+
+    public String getS4q5c() {
+        return s4q5c;
+    }
+
+    public void setS4q5c(String s4q5c) {
+        this.s4q5c = s4q5c;
+    }
+
+    public String getS4q5a01x() {
+        return s4q5a01x;
+    }
+
+    public void setS4q5a01x(String s4q5a01x) {
+        this.s4q5a01x = s4q5a01x;
     }
 
     public String getS5q1() {
@@ -4146,7 +4173,10 @@ public class Form extends LiveData<Form> {
                     .put("s4q4", s4q4)
                     .put("s4q4b", s4q4b)
                     .put("s4q4c", s4q4c)
-                    .put("s4q5", s4q5);
+                    .put("s4q5", s4q5)
+                    .put("s4q5a01x", s4q5a01x)
+                    .put("s4q5b", s4q5b)
+                    .put("s4q5c", s4q5c);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4816,6 +4846,9 @@ public class Form extends LiveData<Form> {
                 this.s4q4b = json.getString("s4q4b");
                 this.s4q4c = json.getString("s4q4c");
                 this.s4q5 = json.getString("s4q5");
+                this.s4q5a01x = json.getString("s4q5a01x");
+                this.s4q5b = json.getString("s4q5b");
+                this.s4q5c = json.getString("s4q5c");
 
             } catch (JSONException e) {
                 e.printStackTrace();

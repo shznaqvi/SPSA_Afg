@@ -59,6 +59,12 @@ public class Section04Activity extends AppCompatActivity {
             }
         }));
 
+        bi.s4q5.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s4q5a02.getId()) {
+                Clear.clearAllFields(bi.llgrpsec405);
+            }
+        }));
+
     }
 
 
@@ -115,7 +121,13 @@ public class Section04Activity extends AppCompatActivity {
         form.setS4q4c(bi.s4q4c.getText().toString().trim().isEmpty() ? "-1" : bi.s4q4c.getText().toString());
 
 
-        form.setS4q5(bi.s4q5.getText().toString().trim().isEmpty() ? "-1" : bi.s4q5.getText().toString());
+        form.setS4q5(bi.s4q5a01.isChecked() ? "1"
+                : bi.s4q5a02.isChecked() ? "2"
+                : "-1");
+        form.setS4q5a01x(bi.s4q5a01x.getText().toString().trim().isEmpty() ? "-1" : bi.s4q5a01x.getText().toString());
+
+        form.setS4q5b(bi.s4q5b.getText().toString().trim().isEmpty() ? "-1" : bi.s4q5b.getText().toString());
+        form.setS4q5c(bi.s4q5c.getText().toString().trim().isEmpty() ? "-1" : bi.s4q5c.getText().toString());
     }
 
 
