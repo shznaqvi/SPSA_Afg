@@ -58,26 +58,20 @@ public class Section06Activity extends AppCompatActivity {
 
         form.setS6mea1(bi.s6mea1.getSelectedItem().toString());
 
-
         form.setS6q1a(bi.s6q1a.getText().toString().trim().isEmpty() ? "-1" : bi.s6q1a.getText().toString());
-
 
         form.setS6q2a(bi.s6q2a.getText().toString().trim().isEmpty() ? "-1" : bi.s6q2a.getText().toString());
 
-
         form.setS6q3a(bi.s6q3a.getText().toString().trim().isEmpty() ? "-1" : bi.s6q3a.getText().toString());
-
 
         form.setS6mea2(bi.s6mea2.getSelectedItem().toString());
 
-
         form.setS6q1b(bi.s6q1b.getText().toString().trim().isEmpty() ? "-1" : bi.s6q1b.getText().toString());
-
 
         form.setS6q2b(bi.s6q2b.getText().toString().trim().isEmpty() ? "-1" : bi.s6q2b.getText().toString());
 
-
         form.setS6q3b(bi.s6q3b.getText().toString().trim().isEmpty() ? "-1" : bi.s6q3b.getText().toString());
+
     }
 
 
@@ -125,9 +119,6 @@ public class Section06Activity extends AppCompatActivity {
             Toast.makeText(this, "Users Can Not Be Same", Toast.LENGTH_SHORT).show();
             return false;
         }
-
-        /*if (ValidatorClass.EmptySpinnerEqual(this, bi.s6mea1, bi.s6mea2))
-            return false;*/
 
         return true;
     }

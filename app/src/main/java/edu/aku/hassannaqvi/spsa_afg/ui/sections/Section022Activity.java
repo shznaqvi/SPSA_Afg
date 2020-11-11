@@ -187,21 +187,10 @@ public class Section022Activity extends AppCompatActivity {
                 : bi.s2q1602.isChecked() ? "2"
                 : "-1");
 
-//        form.setS2q17(bi.s2q1701.isChecked() ? ""
-//                : bi.s2q1702.isChecked() ? ""
-//                : bi.s2q1703.isChecked() ? ""
-//                : bi.s2q1798.isChecked() ? "98"
-//                : "-1");
-//
-//        form.setS2q1701x(bi.s2q1701x.getText().toString());
-//        form.setS2q1702x(bi.s2q1702x.getText().toString());
-//        form.setS2q1703x(bi.s2q1703x.getText().toString());
-
-//        form.setS2Q17(bi.s2q17.getText().toString());
-//
-//        form.setS2Q1701x(bi.s2q1701x.getText().toString());
-//        form.setS2Q1702x(bi.s2q1702x.getText().toString());
-//        form.setS2Q1703x(bi.s2q1703x.getText().toString());
+        form.setS2q1798(bi.s2q1798.isChecked() ? "98" : "-1");
+        form.setS2q1701(bi.s2q1701.getText().toString());
+        form.setS2q1702(bi.s2q1702.getText().toString());
+        form.setS2q1703(bi.s2q1703.getText().toString());
 
         form.setS2q18(bi.s2q1801.isChecked() ? "1"
                 : bi.s2q1802.isChecked() ? "2"

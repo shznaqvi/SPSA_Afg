@@ -56,11 +56,9 @@ public class Section09Activity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-
         form.setS9q1(bi.s9q1.getText().toString().trim().isEmpty() ? "-1" : bi.s9q1.getText().toString());
 
         form.setS9q2(bi.s9q2.getText().toString().trim().isEmpty() ? "-1" : bi.s9q2.getText().toString());
-
 
         form.setS9q3(bi.s9q301.isChecked() ? "1"
                 : bi.s9q302.isChecked() ? "2"
@@ -68,21 +66,15 @@ public class Section09Activity extends AppCompatActivity {
 
         form.setS9mea1(bi.s9mea1.getSelectedItem().toString());
 
-
         form.setS9q4a(bi.s9q4a.getText().toString().trim().isEmpty() ? "-1" : bi.s9q4a.getText().toString());
-
 
         form.setS9q5a(bi.s9q5a.getText().toString().trim().isEmpty() ? "-1" : bi.s9q5a.getText().toString());
 
-
         form.setS9q6a(bi.s9q6a.getText().toString().trim().isEmpty() ? "-1" : bi.s9q6a.getText().toString());
-
 
         form.setS9mea2(bi.s9mea2.getSelectedItem().toString());
 
-
         form.setS9q4b(bi.s9q4b.getText().toString().trim().isEmpty() ? "-1" : bi.s9q4b.getText().toString());
-
 
         form.setS9q5b(bi.s9q5b.getText().toString().trim().isEmpty() ? "-1" : bi.s9q5b.getText().toString());
 
