@@ -183,41 +183,20 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
 
-        /*int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
-
-        if (totalmember == 0) {
-            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Invalid Total Count Please check again");
-        } else if (totalmember != Integer.parseInt(bi.s1q20e.getText().toString())) {
-            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members Cannot be match");
-        }*/
-
-        int totals120a = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+        int totalchild = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()));
 
-        if ((totals120a == 0 && bi.s1consent01.isChecked())) {
+        if ((totalchild == 0 && bi.s1consent01.isChecked())) {
             return Validator.emptyCustomTextBox(this, bi.s1q20a, "Total cont cannot be 0");
         }
 
 
-        int totals120b = (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
+        int totalwomen = (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
 
-        if ((totals120b == 0 && bi.s1consent01.isChecked())) {
+        if ((totalwomen == 0 && bi.s1consent01.isChecked())) {
             return Validator.emptyCustomTextBox(this, bi.s1q20c, "Total cont cannot be 0");
         }
-
-
-        /*int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
-
-        if (Integer.parseInt(bi.s1q20e.getText().toString()) < totalmember && bi.s1consent01.isChecked()) {
-            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members is Incorrect");
-        }*/
 
         int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
@@ -226,8 +205,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         if (totalmember == 0 && bi.s1consent01.isChecked()) {
             return Validator.emptyCustomTextBox(this, bi.s1q20e, "Invalid Total Count Please check again");
-        } else if (totalmember >= Integer.parseInt(bi.s1q20e.getText().toString())) {
-            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members in Incorrect");
+        } else if (bi.s1consent01.isChecked() && totalmember > Integer.parseInt(bi.s1q20e.getText().toString())) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members is Incorrect");
         }
 
         return true;

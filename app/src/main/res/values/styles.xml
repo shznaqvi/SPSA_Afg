@@ -49,7 +49,6 @@
         <item name="hintEnabled">false</item>
         <item name="android:buttonStyle">@style/button</item>
         <item name="android:textColorHint">@color/gray_overlay</item>
-        <item name="android:typeface">sans</item>
         <item name="android:fillAfter">true</item>
         <item name="android:enterFadeDuration">600</item>
         <item name="android:exitFadeDuration">200</item>
