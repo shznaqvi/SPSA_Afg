@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.threeten.bp.LocalDate;
@@ -73,29 +74,11 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void setupSkip() {
 
-     /*   bi.s1q11.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+        bi.s1consent.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.s1consent02.getId()) {
+                Clear.clearAllFields(bi.llGrpsec02);
             }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (TextUtils.isEmpty(bi.s1q11.getText())) {
-                }
-                if (bi.s1q11.getText().toString().length() == 3) {
-                    bi.llGrpsec01.setVisibility(View.VISIBLE);
-                    bi.btnContinue.setVisibility(View.VISIBLE);
-                } else {
-                    bi.llGrpsec01.setVisibility(View.GONE);
-                    Clear.clearAllFields(bi.llGrpsec01);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-        });*/
+        }));
 
     }
 
@@ -162,7 +145,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setS1q13(bi.s1q1301.isChecked() ? "1"
                 : bi.s1q1302.isChecked() ? "2"
                 : "-1");
-
 
         form.setS1q14(bi.s1q14.getText().toString().trim().isEmpty() ? "-1" : bi.s1q14.getText().toString());
 
