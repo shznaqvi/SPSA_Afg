@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <!-- s1_title1  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs1_title1"
@@ -41,6 +42,7 @@
                         android:text="@string/s1_title1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s1qno  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -86,6 +88,7 @@
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s1q1  Radio   -->
             <androidx.cardview.widget.CardView
@@ -139,6 +142,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- s1q2  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs1q2"
@@ -179,6 +183,7 @@
                         android:hint="@string/s1q2" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- s1q4  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -225,6 +230,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- s1q6  Input   -->
             <androidx.cardview.widget.CardView
@@ -902,6 +908,7 @@
                     android:orientation="vertical"
                     android:visibility='@{s1consent02.checked ? View.GONE : View.VISIBLE}'>
 
+
                     <!-- s1q20  Title   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVs1q20"
@@ -918,6 +925,7 @@
                                 android:text="@string/s1q20" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
 
                     <!-- s1q20a  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
@@ -964,6 +972,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- s1q20b  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVs1q20b"
@@ -1008,6 +1017,7 @@
                                 app:type="range" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
 
                     <!-- s1q20c  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
@@ -1054,6 +1064,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- s1q20d  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVs1q20d"
@@ -1098,6 +1109,7 @@
                                 app:type="range" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
 
                     <!-- s1q20e  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
@@ -1144,9 +1156,12 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+
                 </LinearLayout>
 
+
             </LinearLayout>
+
 
             <!--EndButton LinearLayout-->
             <LinearLayout
@@ -1178,6 +1193,7 @@
                     android:visibility="visible" />
 
             </LinearLayout>
+
 
         </LinearLayout>
 

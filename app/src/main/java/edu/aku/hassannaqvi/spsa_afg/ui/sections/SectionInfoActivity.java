@@ -135,7 +135,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form.setS1q6(bi.s1q6.getSelectedItem().toString());
         form.setS1q8(bi.s1q8.getSelectedItem().toString());
-    //    form.setS1q9(bi.s1q9.getSelectedItem().toString());
+        //    form.setS1q9(bi.s1q9.getSelectedItem().toString());
         form.setS1q10(bi.s1q10.getSelectedItem().toString());
 
         form.setS1q11(bi.s1q11.getText().toString().trim().isEmpty() ? "-1" : bi.s1q11.getText().toString());
@@ -180,11 +180,10 @@ public class SectionInfoActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        //    return Validator.emptyCheckingContainer(this, bi.GrpName);
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
 
-        int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+        /*int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
@@ -193,16 +192,45 @@ public class SectionInfoActivity extends AppCompatActivity {
             return Validator.emptyCustomTextBox(this, bi.s1q20e, "Invalid Total Count Please check again");
         } else if (totalmember != Integer.parseInt(bi.s1q20e.getText().toString())) {
             return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members Cannot be match");
+        }*/
+
+        int totals120a = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()));
+
+        if ((totals120a == 0 && bi.s1consent01.isChecked())) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20a, "Total cont cannot be 0");
+        }
+
+
+        int totals120b = (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
+
+        if ((totals120b == 0 && bi.s1consent01.isChecked())) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20c, "Total cont cannot be 0");
+        }
+
+
+        /*int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
+
+        if (Integer.parseInt(bi.s1q20e.getText().toString()) < totalmember && bi.s1consent01.isChecked()) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members is Incorrect");
+        }*/
+
+        int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
+                + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
+
+        if (totalmember == 0 && bi.s1consent01.isChecked()) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Invalid Total Count Please check again");
+        } else if (totalmember >= Integer.parseInt(bi.s1q20e.getText().toString())) {
+            return Validator.emptyCustomTextBox(this, bi.s1q20e, "Total Members in Incorrect");
         }
 
         return true;
-
-       /* if (!dtFlag) {
-           Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
-            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
-        }
-        if (bi.a0702.isChecked()) return true;
-        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;*/
 
     }
 
