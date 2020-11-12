@@ -35,27 +35,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
                         <TextView
                             android:id="@+id/qtxt_s10title"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_s10title"
+                            android:gravity="center"
                             android:text="@string/s10title" />
 
-                        <TextView
-                            android:id="@+id/q_s10title"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_s10title"
-                            android:layout_alignBottom="@id/qtxt_s10title"
-                            android:text="@string/Q_s10title" />
-                    </RelativeLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

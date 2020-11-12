@@ -3,12 +3,15 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="form"
             type="edu.aku.hassannaqvi.spsa_afg.models.Form" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.spsa_afg.ui.sections.Section05Activity" />
+
     </data>
 
     <ScrollView
@@ -36,6 +39,7 @@
                         android:id="@+id/qtxt_s5title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s5title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

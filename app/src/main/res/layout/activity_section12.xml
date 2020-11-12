@@ -37,6 +37,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s12title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -112,6 +113,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s12q2" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1374,6 +1376,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s12q3" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1997,7 +2000,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
+                                android:gravity="center"
                                 android:text="@string/s12q5title1" />
 
                             <CheckBox
@@ -2021,7 +2024,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
+                                android:gravity="center"
                                 android:text="@string/s12q5title2" />
 
                             <CheckBox

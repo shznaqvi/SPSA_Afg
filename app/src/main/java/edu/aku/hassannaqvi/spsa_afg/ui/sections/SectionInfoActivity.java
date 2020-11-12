@@ -40,11 +40,6 @@ import static edu.aku.hassannaqvi.spsa_afg.core.MainApp.form;
 
 public class SectionInfoActivity extends AppCompatActivity {
 
-    /*private static final String TAG = "";
-    public static FormsContract fc;
-    public List<String> usersName, teamLeadName, healthFacilityCode;
-    public List<String> usersCode, teamLeadCode, healthFacilityName;*/
-
     ActivityInfoSectionBinding bi;
     public List<String> provinceName, districtName, villageName;
     public List<String> provinceCode, districtCode, villageCode;
@@ -69,6 +64,85 @@ public class SectionInfoActivity extends AppCompatActivity {
         // Databinding Edit Mode (only in first activity for every contract)
         db = MainApp.appInfo.getDbHelper();
         populateSpinner(this);
+    }
+
+
+    public void populateSpinner(final Context context) {
+        // Spinner Drop down elements
+        provinceName = new ArrayList<>();
+        provinceCode = new ArrayList<>();
+
+        provinceName.add("....");
+        provinceCode.add("....");
+
+        Collection<ProvinceContract> dc = db.getAllProvince();
+        for (ProvinceContract d : dc) {
+            provinceName.add(d.getProv_name());
+            provinceCode.add(d.getProv_code());
+        }
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, provinceName);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        bi.s1q6.setAdapter(dataAdapter);
+
+        bi.s1q6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                districtCode = new ArrayList<>();
+                districtName = new ArrayList<>();
+
+                districtCode.add("....");
+                districtName.add("....");
+
+                Collection<DistrictContract> dc = db.getAllDistricts(provinceCode.get(position));
+                for (DistrictContract d : dc) {
+                    districtCode.add(d.getDistrictCode());
+                    districtName.add(d.getDistrictName());
+                }
+                ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtName);
+
+                psuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                bi.s1q8.setAdapter(psuAdapter);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        bi.s1q8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                villageCode = new ArrayList<>();
+                villageName = new ArrayList<>();
+
+                villageCode.add("....");
+                villageName.add("....");
+
+                Collection<VillageContract> pc = db.getAllVillages(districtCode.get(position));
+                for (VillageContract p : pc) {
+                    villageCode.add(p.getVillageCode());
+                    villageName.add(p.getVillageName());
+                }
+                ArrayAdapter<String> vilAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageName);
+
+                vilAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                bi.s1q10.setAdapter(vilAdapter);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
 
@@ -115,12 +189,12 @@ public class SectionInfoActivity extends AppCompatActivity {
     private void SaveDraft() {
 
         form = new Form();
-        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         form.setS1q2(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
-        form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         MainApp.setGPS(this);
 
         form.setS1qno(bi.s1qno.getText().toString().trim().isEmpty() ? "-1" : bi.s1qno.getText().toString());
@@ -217,86 +291,5 @@ public class SectionInfoActivity extends AppCompatActivity {
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
     }
-
-
-    public void populateSpinner(final Context context) {
-        // Spinner Drop down elements
-        provinceName = new ArrayList<>();
-        provinceCode = new ArrayList<>();
-
-        provinceName.add("....");
-        provinceCode.add("....");
-
-        Collection<ProvinceContract> dc = db.getAllProvince();
-        for (ProvinceContract d : dc) {
-            provinceName.add(d.getProv_name());
-            provinceCode.add(d.getProv_code());
-        }
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, provinceName);
-
-        // Drop down layout style - list view with radio button
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // attaching data adapter to spinner
-        bi.s1q6.setAdapter(dataAdapter);
-
-        bi.s1q6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                districtCode = new ArrayList<>();
-                districtName = new ArrayList<>();
-
-                districtCode.add("....");
-                districtName.add("....");
-
-                Collection<DistrictContract> dc = db.getAllDistricts(provinceCode.get(position));
-                for (DistrictContract d : dc) {
-                    districtCode.add(d.getDistrictCode());
-                    districtName.add(d.getDistrictName());
-                }
-                ArrayAdapter<String> psuAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, districtName);
-
-                psuAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                bi.s1q8.setAdapter(psuAdapter);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-        bi.s1q8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                villageCode = new ArrayList<>();
-                villageName = new ArrayList<>();
-
-                villageCode.add("....");
-                villageName.add("....");
-
-                Collection<VillageContract> pc = db.getAllVillages(districtCode.get(position));
-                for (VillageContract p : pc) {
-                    villageCode.add(p.getVillageCode());
-                    villageName.add(p.getVillageName());
-                }
-                ArrayAdapter<String> vilAdapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, villageName);
-
-                vilAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                bi.s1q10.setAdapter(vilAdapter);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-    }
-
 
 }

@@ -25,6 +25,26 @@
             android:orientation="vertical">
 
 
+            <!-- s2title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVs2title"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qtxt_s2title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/s2title" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
             <!-- s2q1  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVs2q1"

@@ -72,6 +72,7 @@
     <string name="section13knowledgeaboutiycf_mainheading">Section 13: Knowledge about IYCF   : Knowledge about IYCF   </string>
     <string name="section1generalinformation_mainheading">Section 1: General Information : Section 1: General Information </string>
     <string name="newHHheadname"> Name of new head of the household </string>
+    <string name="s2title">Socio-Economic Status</string>
     <string name="s2q1">What is your mother tongue?</string>
     <string name="s2q101">Dari</string>
     <string name="s2q102">Persian</string>
@@ -369,12 +370,12 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s4q4a02">No</string>
     <string name="s4q4b">Number of Beneficiaries</string>
     <string name="s4q4c">Source/ NGO</string>
-    <string name="s4q5">Other (Specify): </string>
+    <string name="s4q5">Other (Specify) </string>
     <string name="s4q5b">Number of Beneficiaries</string>
     <string name="s4q5a01">Yes</string>
     <string name="s4q5a02">No</string>
     <string name="s4q5c">Source/ NGO</string>
-    <string name="s5title">5: Household Food Insecurity Access Scale (HFIAS) </string>
+    <string name="s5title"> Household Food Insecurity Access Scale (HFIAS) </string>
     <string name="s5q1">In the past four weeks, did you worry that your household would not have enough food?</string>
     <string name="s5q101">Yes</string>
     <string name="s5q102">No</string>
@@ -408,7 +409,7 @@ Ask for each listed animals, one by one and observation by enumerator  Insert  0
     <string name="s5q502">No</string>
     <string name="s5q5a">How often did this happen? </string>
     <string name="s5q5a01">Rarely (once or twice in the past four weeks)</string>
-    <string name="s5q5a02">Sometimes (3-10 times in the past four weeks)</string>
+    <string name="s5q5a02">Sometimes (3–10 times in the past four weeks)</string>
     <string name="s5q5a03">Often (more than ten times in the past four weeks)</string>
     <string name="s5q6">In the past four weeks, did you or any other household member have to eat fewer meals in a day because there was not enough food?</string>
     <string name="s5q601">Yes</string>
@@ -523,7 +524,7 @@ Write down all food and drinks mentioned. When composite dishes are mentioned, a
     <string name="s8q2btitle2">OTHER PERSON </string>
     <string name="s8q2b04">Traditional Birth Attendant</string>
     <string name="s8q2b05">Community Health Worker</string>
-    <string name="s8q2b96">Other (Specify):</string>
+    <string name="s8q2b96">Other (Specify)</string>
     <string name="s8q2c">Where did you receive antenatal care during your current/last pregnancy? Anywhere else?</string>
     <string name="s8q2c01">Home</string>
     <string name="s8q2c02">Govt. Health Facility</string>
@@ -573,7 +574,7 @@ average, or very small?
     <string name="s8q804">Traditional Birth Attendant</string>
     <string name="s8q805">Community Health Worker</string>
     <string name="s8q806">Relative/Friend</string>
-    <string name="s8q896">Other (Specify):</string>
+    <string name="s8q896">Other (Specify)</string>
     <string name="s8q899">No one assisted</string>
     <string name="s8q9">Where did you give birth to (NAME)? Probe to identify the type of source.
 If unable to determine if public or private sector, write the name of place.
@@ -603,7 +604,7 @@ If less than one week, record days.</string>
     <string name="s8q12title2">OTHER PERSON </string>
     <string name="s8q1204">Traditional Birth Attendant</string>
     <string name="s8q1205">Community Health Worker</string>
-    <string name="s8q1296">Other (Specify):</string>
+    <string name="s8q1296">Other (Specify)</string>
     <string name="s8q13">Where did this first check of (NAME) take place?
 Probe to identify the type of source.
 If unable to determine if public or private sector, write the name of place</string>
@@ -612,7 +613,7 @@ If unable to determine if public or private sector, write the name of place</str
     <string name="s8q1303">Private Health Facility </string>
     <string name="s8q1304">NGO Sector</string>
     <string name="s8q1396">Other (Specify</string>
-    <string name="s9title">Child Anthropometry &amp; Hemoglobin: </string>
+    <string name="s9title">Child Anthropometry &amp; Hemoglobin </string>
     <string name="s9q1">Name of child?</string>
     <string name="s9q2">Age of child?  months </string>
     <string name="s9q3">Gender of child?</string>
@@ -954,7 +955,7 @@ Any other illnesses?
     <string name="s12q5title2">OTHER PERSON </string>
     <string name="s12q504">Traditional Birth Attendant</string>
     <string name="s12q505">Community Health Worker</string>
-    <string name="s12q596">Other (Specify): </string>
+    <string name="s12q596">Other (Specify) </string>
     <string name="s12q6">Where did you receive care for your child during the last two weeks?Anywhere else?</string>
     <string name="s12q601">Home</string>
     <string name="s12q602">Govt. Health Facility</string>

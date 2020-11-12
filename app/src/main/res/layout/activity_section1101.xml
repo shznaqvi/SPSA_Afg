@@ -39,6 +39,7 @@
                         android:id="@+id/qtxt_s11title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s11title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -313,6 +314,7 @@
                         android:id="@+id/qtxt_s11title1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s11title1" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -332,6 +334,7 @@
                         android:id="@+id/qtxt_s11q10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s11q10" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

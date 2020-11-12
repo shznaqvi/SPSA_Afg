@@ -720,7 +720,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q12title1" />
 
@@ -739,7 +738,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q12title2" />
 
@@ -758,7 +756,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q12title3" />
 
@@ -863,7 +860,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q13title1" />
 
@@ -888,7 +884,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q13title2" />
 
@@ -919,7 +914,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q13title3" />
 
@@ -1024,7 +1018,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q14title1" />
 
@@ -1049,7 +1042,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q14title2" />
 
@@ -1098,7 +1090,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
                             android:gravity="center"
                             android:text="@string/s2q14title3" />
 
@@ -1445,6 +1436,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:gravity="center"
                             android:text="@string/s2q19" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
