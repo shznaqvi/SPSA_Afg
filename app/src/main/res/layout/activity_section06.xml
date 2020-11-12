@@ -38,6 +38,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:text="@string/s6title" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -81,12 +82,10 @@
                          android:layout_height="wrap_content"
                          android:hint="@string/s6mea1" />-->
 
-                      <Spinner
+                    <Spinner
                         android:id="@+id/s6mea1"
-                        style="@style/spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp" />
+                        style="@style/spinner1"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
 
@@ -281,10 +280,8 @@
 
                     <Spinner
                         android:id="@+id/s6mea2"
-                        style="@style/spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp" />
+                        style="@style/spinner1"
+                        android:layout_gravity="center" />
 
                 </LinearLayout>
 
