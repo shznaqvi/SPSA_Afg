@@ -10,6 +10,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
+import edu.aku.hassannaqvi.spsa_afg.ui.other.SyncActivity;
+import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -358,6 +360,7 @@ public class Form extends LiveData<Form> {
     public String s12q307;
     public String s12q308;
     public String s12q396;
+    public String s12q396ax;
     public String s12q4;
     public String s12q5;
     public String s12q501;
@@ -3345,6 +3348,14 @@ public class Form extends LiveData<Form> {
         this.s12q396 = s12q396;
     }
 
+    public String getS12q396ax() {
+        return s12q396ax;
+    }
+
+    public void setS12q396ax(String s12q396ax) {
+        this.s12q396ax = s12q396ax;
+    }
+
     public String getS12q4() {
         return s12q4;
     }
@@ -3998,29 +4009,47 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s1qno", s1qno)
-                    .put("s1q1", s1q1)
-                    .put("s1q2", s1q2)
-                    .put("s1q4", s1q4)
-                    .put("s1q6", s1q6)
-                    .put("s1q8", s1q8)
-                    .put("s1q9", s1q9)
-                    .put("s1q10", s1q10)
-                    .put("s1q11", s1q11)
-                    .put("s1q12", s1q12)
-                    .put("s1q13", s1q13)
-                    .put("s1q14", s1q14)
-                    .put("s1q15", s1q15)
-                    .put("s1q16", s1q16)
-                    .put("s1q17", s1q17)
-                    .put("s1q18", s1q18)
-                    .put("s1_consent", s1_consent)
-                    .put("s1q19et", s1q19et)
-                    .put("s1q20a", s1q20a)
-                    .put("s1q20b", s1q20b)
-                    .put("s1q20c", s1q20c)
-                    .put("s1q20d", s1q20d)
-                    .put("s1q20e", s1q20e);
+                    .put("s1qno", s1qno == null ? "" :s1qno)
+
+                    .put("s1q1", s1q1 == null ? "" :s1q1)
+                    .put("s1q2", s1q2 == null ? "" :s1q2)
+
+                    .put("s1q4", s1q4 == null ? "" :s1q4)
+
+                    .put("s1q6", s1q6 == null ? "" :s1q6)
+
+                    .put("s1q8", s1q8 == null ? "" :s1q8)
+
+                    .put("s1q9", s1q9 == null ? "" :s1q9)
+
+                    .put("s1q10", s1q10 == null ? "" :s1q10)
+
+                    .put("s1q11", s1q11 == null ? "" :s1q11)
+
+                    .put("s1q12", s1q12 == null ? "" :s1q12)
+
+                    .put("s1q13", s1q13 == null ? "" :s1q13)
+                    .put("s1q14", s1q14 == null ? "" :s1q14)
+
+                    .put("s1q15", s1q15 == null ? "" :s1q15)
+
+                    .put("s1q16", s1q16 == null ? "" :s1q16)
+
+                    .put("s1q17", s1q17 == null ? "" :s1q17)
+                    .put("s1q18", s1q18 == null ? "" :s1q18)
+                    .put("s1_consent", s1_consent == null ? "" :s1_consent)
+                    .put("s1q19et", s1q19et == null ? "" :s1q19et)
+
+                    .put("s1q20a", s1q20a == null ? "" :s1q20a)
+
+                    .put("s1q20b", s1q20b == null ? "" :s1q20b)
+
+                    .put("s1q20c", s1q20c == null ? "" :s1q20c)
+
+                    .put("s1q20d", s1q20d == null ? "" :s1q20d)
+
+                    .put("s1q20e", s1q20e == null ? "" :s1q20e);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4035,71 +4064,82 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s2q1", s2q1)
-                    .put("s2q196x", s2q196x)
-                    .put("s2q2", s2q2)
-                    .put("s2q296x", s2q296x)
-                    .put("s2q3", s2q3)
-                    .put("s2q396x", s2q396x)
-                    .put("s2q4", s2q4)
-                    .put("s2q5", s2q5)
-                    .put("s2q596x", s2q596x)
-                    .put("s2q6", s2q6)
-                    .put("s2q696x", s2q696x)
-                    .put("s2q7", s2q7)
-                    .put("s2q8", s2q8)
-                    .put("s2q801x", s2q801x)
-                    .put("s2q9a", s2q9a)
-                    .put("s2q9b", s2q9b)
-                    .put("s2q9c", s2q9c)
-                    .put("s2q9d", s2q9d)
-                    .put("s2q9e", s2q9e)
-                    .put("s2q9f", s2q9f)
-                    .put("s2q9g", s2q9g)
-                    .put("s2q9h", s2q9h)
-                    .put("s2q9i", s2q9i)
-                    .put("s2q9j", s2q9j)
-                    .put("s2q9k", s2q9k)
-                    .put("s2q9l", s2q9l)
-                    .put("s2q9m", s2q9m)
-                    .put("s2q9n", s2q9n)
-                    .put("s2q9o", s2q9o)
-                    .put("s2q9p", s2q9p)
-                    .put("s2q9q", s2q9q)
-                    .put("s2q9r", s2q9r)
-                    .put("s2q9s", s2q9s)
-                    .put("s2q10a", s2q10a)
-                    .put("s2q10b", s2q10b)
-                    .put("s2q10c", s2q10c)
-                    .put("s2q10d", s2q10d)
-                    .put("s2q10e", s2q10e)
-                    .put("s2q10f", s2q10f)
-                    .put("s2q10g", s2q10g)
-                    .put("s2q10h", s2q10h)
-                    .put("s2q10i", s2q10i)
-                    .put("s2q11", s2q11)
-                    .put("s2q1196x", s2q1196x)
-                    .put("s2q12", s2q12)
-                    .put("s2q1296x", s2q1296x)
-                    .put("s2q13", s2q13)
-                    .put("s2q1396x", s2q1396x)
-                    .put("s2q14", s2q14)
-                    .put("s2q1496x", s2q1496x)
-                    .put("s2q15", s2q15)
-                    .put("s2q16", s2q16)
-                    .put("s2q1798", s2q1798)
-                    .put("s2q1701", s2q1701)
-                    .put("s2q1702", s2q1702)
-                    .put("s2q1703", s2q1703)
-                    .put("s2q18", s2q18)
-                    .put("s2q1901", s2q1901)
-                    .put("s2q1902", s2q1902)
-                    .put("s2q1903", s2q1903)
-                    .put("s2q1904", s2q1904)
-                    .put("s2q1905", s2q1905)
-                    .put("s2q1906", s2q1906)
-                    .put("s2q1907", s2q1907)
-                    .put("s2q20", s2q20);
+
+                    .put("s2q1", s2q1 == null ? "" :s2q1)
+                    .put("s2q196x", s2q196x == null ? "" :s2q196x)
+                    .put("s2q2", s2q2 == null ? "" :s2q2)
+                    .put("s2q296x", s2q296x == null ? "" :s2q296x)
+                    .put("s2q3", s2q3 == null ? "" :s2q3)
+                    .put("s2q396x", s2q396x == null ? "" :s2q396x)
+                    .put("s2q4", s2q4 == null ? "" :s2q4)
+                    .put("s2q5", s2q5 == null ? "" :s2q5)
+                    .put("s2q596x", s2q596x == null ? "" :s2q596x)
+                    .put("s2q6", s2q6 == null ? "" :s2q6)
+                    .put("s2q696x", s2q696x == null ? "" :s2q696x)
+                    .put("s2q7", s2q7 == null ? "" :s2q7)
+                    .put("s2q8", s2q8 == null ? "" :s2q8)
+                    .put("s2q801x", s2q801x == null ? "" :s2q801x)
+                    .put("s2q9a", s2q9a == null ? "" :s2q9a)
+                    .put("s2q9b", s2q9b == null ? "" :s2q9b)
+                    .put("s2q9c", s2q9c == null ? "" :s2q9c)
+                    .put("s2q9d", s2q9d == null ? "" :s2q9d)
+                    .put("s2q9e", s2q9e == null ? "" :s2q9e)
+                    .put("s2q9f", s2q9f == null ? "" :s2q9f)
+                    .put("s2q9g", s2q9g == null ? "" :s2q9g)
+                    .put("s2q9h", s2q9h == null ? "" :s2q9h)
+                    .put("s2q9i", s2q9i == null ? "" :s2q9i)
+                    .put("s2q9j", s2q9j == null ? "" :s2q9j)
+                    .put("s2q9k", s2q9k == null ? "" :s2q9k)
+                    .put("s2q9l", s2q9l == null ? "" :s2q9l)
+                    .put("s2q9m", s2q9m == null ? "" :s2q9m)
+                    .put("s2q9n", s2q9n == null ? "" :s2q9n)
+                    .put("s2q9o", s2q9o == null ? "" :s2q9o)
+                    .put("s2q9p", s2q9p == null ? "" :s2q9p)
+                    .put("s2q9q", s2q9q == null ? "" :s2q9q)
+                    .put("s2q9r", s2q9r == null ? "" :s2q9r)
+                    .put("s2q9s", s2q9s == null ? "" :s2q9s)
+                    .put("s2q10a", s2q10a == null ? "" :s2q10a)
+                    .put("s2q10b", s2q10b == null ? "" :s2q10b)
+                    .put("s2q10c", s2q10c == null ? "" :s2q10c)
+                    .put("s2q10d", s2q10d == null ? "" :s2q10d)
+                    .put("s2q10e", s2q10e == null ? "" :s2q10e)
+                    .put("s2q10f", s2q10f == null ? "" :s2q10f)
+                    .put("s2q10g", s2q10g == null ? "" :s2q10g)
+                    .put("s2q10h", s2q10h == null ? "" :s2q10h)
+                    .put("s2q10i", s2q10i == null ? "" :s2q10i)
+                    .put("s2q11", s2q11 == null ? "" :s2q11)
+                    .put("s2q1196x", s2q1196x == null ? "" :s2q1196x)
+                    .put("s2q12", s2q12 == null ? "" :s2q12)
+                    .put("s2q1296x", s2q1296x == null ? "" :s2q1296x)
+                    .put("s2q13", s2q13 == null ? "" :s2q13)
+                    .put("s2q1396x", s2q1396x == null ? "" :s2q1396x)
+                    .put("s2q14", s2q14 == null ? "" :s2q14)
+                    .put("s2q1496x", s2q1496x == null ? "" :s2q1496x)
+                    .put("s2q15", s2q15 == null ? "" :s2q15)
+
+                    .put("s2q16", s2q16 == null ? "" :s2q16)
+                    .put("s2q17", s2q1798 == null ? "" :s2q1798)
+
+                    .put("s2q1701", s2q1701 == null ? "" :s2q1701)
+                    .put("s2q1702", s2q1702 == null ? "" :s2q1702)
+                    .put("s2q1703", s2q1703 == null ? "" :s2q1703)
+                    .put("s2q18", s2q18 == null ? "" :s2q18)
+                    .put("s2q1901", s2q1901 == null ? "" :s2q1901)
+
+                    .put("s2q1902", s2q1902 == null ? "" :s2q1902)
+
+                    .put("s2q1903", s2q1903 == null ? "" :s2q1903)
+
+                    .put("s2q1904", s2q1904 == null ? "" :s2q1904)
+
+                    .put("s2q1905", s2q1905 == null ? "" :s2q1905)
+
+                    .put("s2q1906", s2q1906 == null ? "" :s2q1906)
+
+                    .put("s2q1907", s2q1907 == null ? "" :s2q1907)
+
+                    .put("s2q20", s2q20 == null ? "" :s2q20)
+            ;
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4113,27 +4153,45 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s3q1", s3q1)
-                    .put("s3q1096x", s3q1096x)
-                    .put("s3q2", s3q2)
-                    .put("s3q301", s3q301)
-                    .put("s3q302", s3q302)
-                    .put("s3q303", s3q303)
-                    .put("s3q304", s3q304)
-                    .put("s3q305", s3q305)
-                    .put("s3q4", s3q4)
-                    .put("s3q501", s3q501)
-                    .put("s3q502", s3q502)
-                    .put("s3q503", s3q503)
-                    .put("s3q504", s3q504)
-                    .put("s3q505", s3q505)
-                    .put("s3q6a", s3q6a)
-                    .put("s3q6b", s3q6b)
-                    .put("s3q6c", s3q6c)
-                    .put("s3q6d", s3q6d)
-                    .put("s3q6e", s3q6e)
-                    .put("s3q696", s3q696)
-                    .put("s3q696x", s3q696x);
+
+                    .put("s3q1", s3q1 == null ? "" :s3q1)
+                    .put("s3q1096x", s3q1096x == null ? "" :s3q1096x)
+                    .put("s3q2", s3q2 == null ? "" :s3q2)
+                    .put("s3q301", s3q301 == null ? "" :s3q301)
+
+                    .put("s3q302", s3q302 == null ? "" :s3q302)
+
+                    .put("s3q303", s3q303 == null ? "" :s3q303)
+
+                    .put("s3q304", s3q304 == null ? "" :s3q304)
+
+                    .put("s3q305", s3q305 == null ? "" :s3q305)
+
+                    .put("s3q4", s3q4 == null ? "" :s3q4)
+                    .put("s3q501", s3q501 == null ? "" :s3q501)
+
+                    .put("s3q502", s3q502 == null ? "" :s3q502)
+
+                    .put("s3q503", s3q503 == null ? "" :s3q503)
+
+                    .put("s3q504", s3q504 == null ? "" :s3q504)
+
+                    .put("s3q505", s3q505 == null ? "" :s3q505)
+
+                    .put("s3q6a", s3q6a == null ? "" :s3q6a)
+
+                    .put("s3q6b", s3q6b == null ? "" :s3q6b)
+
+                    .put("s3q6c", s3q6c == null ? "" :s3q6c)
+
+                    .put("s3q6d", s3q6d == null ? "" :s3q6d)
+
+                    .put("s3q6e", s3q6e == null ? "" :s3q6e)
+
+                    .put("s3q696", s3q696 == null ? "" :s3q696)
+
+                    .put("s3q696x", s3q696x == null ? "" :s3q696x);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4161,22 +4219,32 @@ public class Form extends LiveData<Form> {
                     .put("s4q4cx", s4q4cx)
                     .put("s4q5", s4q5);*/
 
-                    .put("s4q1", s4q1)
-                    .put("s4q1b", s4q1b)
-                    .put("s4q1c", s4q1c)
-                    .put("s4q2", s4q2)
-                    .put("s4q2b", s4q2b)
-                    .put("s4q2c", s4q2c)
-                    .put("s4q3", s4q3)
-                    .put("s4q3b", s4q3b)
-                    .put("s4q3c", s4q3c)
-                    .put("s4q4", s4q4)
-                    .put("s4q4b", s4q4b)
-                    .put("s4q4c", s4q4c)
-                    .put("s4q5", s4q5)
-                    .put("s4q5a01x", s4q5a01x)
-                    .put("s4q5b", s4q5b)
-                    .put("s4q5c", s4q5c);
+
+                    .put("s4q1", s4q1 == null ? "" :s4q1)
+                    .put("s4q1b", s4q1b == null ? "" :s4q1b)
+
+                    .put("s4q1c", s4q1c == null ? "" :s4q1c)
+
+                    .put("s4q2", s4q2 == null ? "" :s4q2)
+                    .put("s4q2b", s4q2b == null ? "" :s4q2b)
+
+                    .put("s4q2c", s4q2c == null ? "" :s4q2c)
+
+                    .put("s4q3", s4q3 == null ? "" :s4q3)
+                    .put("s4q3b", s4q3b == null ? "" :s4q3b)
+
+                    .put("s4q3c", s4q3c == null ? "" :s4q3c)
+
+                    .put("s4q4", s4q4 == null ? "" :s4q4)
+                    .put("s4q4b", s4q4b == null ? "" :s4q4b)
+
+                    .put("s4q4c", s4q4c == null ? "" :s4q4c)
+
+                    .put("s4q5", s4q5 == null ? "" :s4q5)
+                    .put("s4q5a01x", s4q5a01x == null ? "" :s4q5a01x)
+                    .put("s4q5b", s4q5b == null ? "" :s4q5b)
+
+                    .put("s4q5c", s4q5c == null ? "" :s4q5c);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4190,24 +4258,25 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s5q1", s5q1)
-                    .put("s5q1a", s5q1a)
-                    .put("s5q2", s5q2)
-                    .put("s5q2a", s5q2a)
-                    .put("s5q3", s5q3)
-                    .put("s5q3a", s5q3a)
-                    .put("s5q4", s5q4)
-                    .put("s5q4a", s5q4a)
-                    .put("s5q5", s5q5)
-                    .put("s5q5a", s5q5a)
-                    .put("s5q6", s5q6)
-                    .put("s5q6a", s5q6a)
-                    .put("s5q7", s5q7)
-                    .put("s5q7a", s5q7a)
-                    .put("s5q8", s5q8)
-                    .put("s5q8a", s5q8a)
-                    .put("s5q9", s5q9)
-                    .put("s5q9a", s5q9a);
+
+                    .put("s5q1", s5q1 == null ? "" :s5q1)
+                    .put("s5q1a", s5q1a == null ? "" :s5q1a)
+                    .put("s5q2", s5q2 == null ? "" :s5q2)
+                    .put("s5q2a", s5q2a == null ? "" :s5q2a)
+                    .put("s5q3", s5q3 == null ? "" :s5q3)
+                    .put("s5q3a", s5q3a == null ? "" :s5q3a)
+                    .put("s5q4", s5q4 == null ? "" :s5q4)
+                    .put("s5q4a", s5q4a == null ? "" :s5q4a)
+                    .put("s5q5", s5q5 == null ? "" :s5q5)
+                    .put("s5q5a", s5q5a == null ? "" :s5q5a)
+                    .put("s5q6", s5q6 == null ? "" :s5q6)
+                    .put("s5q6a", s5q6a == null ? "" :s5q6a)
+                    .put("s5q7", s5q7 == null ? "" :s5q7)
+                    .put("s5q7a", s5q7a == null ? "" :s5q7a)
+                    .put("s5q8", s5q8 == null ? "" :s5q8)
+                    .put("s5q8a", s5q8a == null ? "" :s5q8a)
+                    .put("s5q9", s5q9 == null ? "" :s5q9)
+                    .put("s5q9a", s5q9a == null ? "" :s5q9a);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4221,14 +4290,20 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s6mea1", s6mea1)
-                    .put("s6mea2", s6mea2)
-                    .put("s6q1a", s6q1a)
-                    .put("s6q1b", s6q1b)
-                    .put("s6q2a", s6q2a)
-                    .put("s6q2b", s6q2b)
-                    .put("s6q3a", s6q3a)
-                    .put("s6q3b", s6q3b);
+
+                    .put("s6mea1", s6mea1 == null ? "" :s6mea1)
+
+                    .put("s6q1a", s6q1a == null ? "" :s6q1a)
+
+                    .put("s6q2a", s6q2a == null ? "" :s6q2a)
+
+                    .put("s6q3a", s6q3a == null ? "" :s6q3a)
+
+                    .put("s6mea2", s6mea2 == null ? "" :s6mea2)
+
+                    .put("s6q1b", s6q1b == null ? "" :s6q1b)
+
+                    .put("s6q2b", s6q2b == null ? "" :s6q2b);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4242,24 +4317,25 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s7qa", s7qa)
-                    .put("s7qb", s7qb)
-                    .put("s7qc", s7qc)
-                    .put("s7qd", s7qd)
-                    .put("s7qe", s7qe)
-                    .put("s7qf", s7qf)
-                    .put("s7qg", s7qg)
-                    .put("s7qh", s7qh)
-                    .put("s7qi", s7qi)
-                    .put("s7qj", s7qj)
-                    .put("s7qk", s7qk)
-                    .put("s7ql", s7ql)
-                    .put("s7qm", s7qm)
-                    .put("s7qn", s7qn)
-                    .put("s7qo", s7qo)
-                    .put("s7qp", s7qp)
-                    .put("s7qq", s7qq)
-                    .put("s7qr", s7qr);
+
+                    .put("s7qa", s7qa == null ? "" :s7qa)
+                    .put("s7qb", s7qb == null ? "" :s7qb)
+                    .put("s7qc", s7qc == null ? "" :s7qc)
+                    .put("s7qd", s7qd == null ? "" :s7qd)
+                    .put("s7qe", s7qe == null ? "" :s7qe)
+                    .put("s7qf", s7qf == null ? "" :s7qf)
+                    .put("s7qg", s7qg == null ? "" :s7qg)
+                    .put("s7qh", s7qh == null ? "" :s7qh)
+                    .put("s7qi", s7qi == null ? "" :s7qi)
+                    .put("s7qj", s7qj == null ? "" :s7qj)
+                    .put("s7qk", s7qk == null ? "" :s7qk)
+                    .put("s7ql", s7ql == null ? "" :s7ql)
+                    .put("s7qm", s7qm == null ? "" :s7qm)
+                    .put("s7qn", s7qn == null ? "" :s7qn)
+                    .put("s7qo", s7qo == null ? "" :s7qo)
+                    .put("s7qp", s7qp == null ? "" :s7qp)
+                    .put("s7qq", s7qq == null ? "" :s7qq)
+                    .put("s7qr", s7qr == null ? "" :s7qr);
 
 
         } catch (JSONException e) {
@@ -4274,56 +4350,80 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s8q1", s8q1)
-                    .put("s8q1a", s8q1a)
-                    .put("s8q2", s8q2)
-                    .put("s8q2a", s8q2a)
-                    .put("s8q2b01", s8q2b01)
-                    .put("s8q2b02", s8q2b02)
-                    .put("s8q2b03", s8q2b03)
-                    .put("s8q2b04", s8q2b04)
-                    .put("s8q2b05", s8q2b05)
-                    .put("s8q2b96", s8q2b96)
-                    .put("s8q2b96x", s8q2b96x)
-                    .put("s8q2c01", s8q2c01)
-                    .put("s8q2c02", s8q2c02)
-                    .put("s8q2c03", s8q2c03)
-                    .put("s8q2c04", s8q2c04)
-                    .put("s8q2c96", s8q2c96)
-                    .put("s8q2c96x", s8q2c96x)
-                    .put("s8q3", s8q3)
-                    .put("s8q3a", s8q3a)
-                    .put("s8q3a01x", s8q3a01x)
-                    .put("s8q4", s8q4)
-                    .put("s8q4a", s8q4a)
-                    .put("s8q4a01x", s8q4a01x)
-                    .put("s8q5", s8q5)
-                    .put("s8q6", s8q6)
-                    .put("s8q7", s8q7)
-                    .put("s8q7a", s8q7a)
-                    .put("s8q7a01x", s8q7a01x)
-                    .put("s8q7a02x", s8q7a02x)
-                    .put("s8q801", s8q801)
-                    .put("s8q802", s8q802)
-                    .put("s8q803", s8q803)
-                    .put("s8q804", s8q804)
-                    .put("s8q805", s8q805)
-                    .put("s8q806", s8q806)
-                    .put("s8q896", s8q896)
-                    .put("s8q896x", s8q896x)
-                    .put("s8q899", s8q899)
-                    .put("s8q9", s8q9)
-                    .put("s8q996x", s8q996x)
-                    .put("s8q10", s8q10)
-                    .put("s8q1001x", s8q1001x)
-                    .put("s8q1198", s8q1198)
-                    .put("s8q1101", s8q1101)
-                    .put("s8q1102", s8q1102)
-                    .put("s8q1103", s8q1103)
-                    .put("s8q12", s8q12)
-                    .put("s8q1296x", s8q1296x)
-                    .put("s8q13", s8q13)
-                    .put("s8q1396x", s8q1396x);
+
+                    .put("s8q1", s8q1 == null ? "" :s8q1)
+                    .put("s8q1a", s8q1a == null ? "" :s8q1a)
+
+                    .put("s8q2", s8q2 == null ? "" :s8q2)
+                    .put("s8q2a", s8q2a == null ? "" :s8q2a)
+
+                    .put("s8q2b01", s8q2b01 == null ? "" :s8q2b01)
+
+                    .put("s8q2b02", s8q2b02 == null ? "" :s8q2b02)
+
+                    .put("s8q2b03", s8q2b03 == null ? "" :s8q2b03)
+
+                    .put("s8q2b04", s8q2b04 == null ? "" :s8q2b04)
+
+                    .put("s8q2b05", s8q2b05 == null ? "" :s8q2b05)
+
+                    .put("s8q2b96", s8q2b96 == null ? "" :s8q2b96)
+
+                    .put("s8q2b96x", s8q2b96x == null ? "" :s8q2b96x)
+                    .put("s8q2c01", s8q2c01 == null ? "" :s8q2c01)
+
+                    .put("s8q2c02", s8q2c02 == null ? "" :s8q2c02)
+
+                    .put("s8q2c03", s8q2c03 == null ? "" :s8q2c03)
+
+                    .put("s8q2c04", s8q2c04 == null ? "" :s8q2c04)
+
+                    .put("s8q2c96", s8q2c96 == null ? "" :s8q2c96)
+
+                    .put("s8q2c96x", s8q2c96x == null ? "" :s8q2c96x)
+                    .put("s8q3", s8q3 == null ? "" :s8q3)
+                    .put("s8q3a", s8q3a == null ? "" :s8q3a)
+                    .put("s8q3a01x", s8q3a01x == null ? "" :s8q3a01x)
+                    .put("s8q4", s8q4 == null ? "" :s8q4)
+                    .put("s8q4a", s8q4a == null ? "" :s8q4a)
+                    .put("s8q4a01x", s8q4a01x == null ? "" :s8q4a01x)
+                    .put("s8q5", s8q5 == null ? "" :s8q5)
+                    .put("s8q6", s8q6 == null ? "" :s8q6)
+                    .put("s8q7", s8q7 == null ? "" :s8q7)
+                    .put("s8q7a", s8q7a == null ? "" :s8q7a)
+                    .put("s8q7a01x", s8q7a01x == null ? "" :s8q7a01x)
+                    .put("s8q7a02x", s8q7a02x == null ? "" :s8q7a02x)
+                    .put("s8q801", s8q801 == null ? "" :s8q801)
+
+                    .put("s8q802", s8q802 == null ? "" :s8q802)
+
+                    .put("s8q803", s8q803 == null ? "" :s8q803)
+
+                    .put("s8q804", s8q804 == null ? "" :s8q804)
+
+                    .put("s8q805", s8q805 == null ? "" :s8q805)
+
+                    .put("s8q806", s8q806 == null ? "" :s8q806)
+
+                    .put("s8q896", s8q896 == null ? "" :s8q896)
+
+                    .put("s8q896x", s8q896x == null ? "" :s8q896x)
+                    .put("s8q899", s8q899 == null ? "" :s8q899)
+
+                    .put("s8q9", s8q9 == null ? "" :s8q9)
+                    .put("s8q996x", s8q996x == null ? "" :s8q996x)
+                    .put("s8q10", s8q10 == null ? "" :s8q10)
+                    .put("s8q1001x", s8q1001x == null ? "" :s8q1001x)
+                    .put("s8q11", s8q1198 == null ? "" :s8q1198)
+
+                    .put("s8q1101", s8q1101 == null ? "" :s8q1101)
+                    .put("s8q1102", s8q1102 == null ? "" :s8q1102)
+                    .put("s8q1103", s8q1103 == null ? "" :s8q1103)
+                    .put("s8q12", s8q12 == null ? "" :s8q12)
+                    .put("s8q1296x", s8q1296x == null ? "" :s8q1296x)
+                    .put("s8q13", s8q13 == null ? "" :s8q13)
+                    .put("s8q1396x", s8q1396x == null ? "" :s8q1396x)
+            ;
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4337,16 +4437,25 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s9q1", s9q1)
-                    .put("s9q2", s9q2)
-                    .put("s9q3", s9q3)
-                    .put("s9mea1", s9mea1)
-                    .put("s9mea2", s9mea2)
-                    .put("s9q4a", s9q4a)
-                    .put("s9q4b", s9q4b)
-                    .put("s9q5a", s9q5a)
-                    .put("s9q5b", s9q5b)
-                    .put("s9q6a", s9q6a);
+
+                    .put("s9q1", s9q1 == null ? "" :s9q1)
+
+                    .put("s9q2", s9q2 == null ? "" :s9q2)
+
+                    .put("s9q3", s9q3 == null ? "" :s9q3)
+                    .put("s9mea1", s9mea1 == null ? "" :s9mea1)
+
+                    .put("s9q4a", s9q4a == null ? "" :s9q4a)
+
+                    .put("s9q5a", s9q5a == null ? "" :s9q5a)
+
+                    .put("s9q6a", s9q6a == null ? "" :s9q6a)
+
+                    .put("s9mea2", s9mea2 == null ? "" :s9mea2)
+
+                    .put("s9q4b", s9q4b == null ? "" :s9q4b)
+
+                    .put("s9q5b", s9q5b == null ? "" :s9q5b);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4360,27 +4469,39 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s10q1", s10q1)
-                    .put("s10q2", s10q2)
-                    .put("s10q202x", s10q202x)
-                    .put("s10q203x", s10q201x)
-                    .put("s10q3", s10q3)
-                    .put("s10q4", s10q4)
-                    .put("s10q496x", s10q496x)
-                    .put("s10q5", s10q5)
-                    .put("s10q601", s10q601)
-                    .put("s10q602", s10q602)
-                    .put("s10q603", s10q603)
-                    .put("s10q604", s10q604)
-                    .put("s10q605", s10q605)
-                    .put("s10q606", s10q606)
-                    .put("s10q607", s10q607)
-                    .put("s10q608", s10q608)
-                    .put("s10q609", s10q609)
-                    .put("s10q610", s10q610)
-                    .put("s10q696", s10q696)
-                    .put("s10q696x", s10q696x)
-                    .put("s10q699", s10q699);
+
+                    .put("s10q1", s10q1 == null ? "" :s10q1)
+                    .put("s10q2", s10q2 == null ? "" :s10q2)
+                    .put("s10q201x", s10q201x == null ? "" :s10q201x)
+                    .put("s10q202x", s10q202x == null ? "" :s10q202x)
+                    .put("s10q3", s10q3 == null ? "" :s10q3)
+                    .put("s10q4", s10q4 == null ? "" :s10q4)
+                    .put("s10q496x", s10q496x == null ? "" :s10q496x)
+                    .put("s10q5", s10q5 == null ? "" :s10q5)
+                    .put("s10q601", s10q601 == null ? "" :s10q601)
+
+                    .put("s10q602", s10q602 == null ? "" :s10q602)
+
+                    .put("s10q603", s10q603 == null ? "" :s10q603)
+
+                    .put("s10q604", s10q604 == null ? "" :s10q604)
+
+                    .put("s10q605", s10q605 == null ? "" :s10q605)
+
+                    .put("s10q606", s10q606 == null ? "" :s10q606)
+
+                    .put("s10q607", s10q607 == null ? "" :s10q607)
+
+                    .put("s10q608", s10q608 == null ? "" :s10q608)
+
+                    .put("s10q609", s10q609 == null ? "" :s10q609)
+
+                    .put("s10q610", s10q610 == null ? "" :s10q610)
+
+                    .put("s10q696", s10q696 == null ? "" :s10q696)
+
+                    .put("s10q696x", s10q696x == null ? "" :s10q696x)
+                    .put("s10q699", s10q699 == null ? "" :s10q699);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4394,50 +4515,62 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s11q7", s11q7)
-                    .put("s11q7a", s11q7a)
-                    .put("s11q8", s11q8)
-                    .put("s11q9", s11q9)
-                    .put("s11q10a", s11q10a)
-                    .put("s11q10b", s11q10b)
-                    .put("s11q10b01x", s11q10b01x)
-                    .put("s11q10c", s11q10c)
-                    .put("s11q10c01x", s11q10c01x)
-                    .put("s11q10d", s11q10d)
-                    .put("s11q10e", s11q10e)
-                    .put("s11q10f", s11q10f)
-                    .put("s11q10f01x", s11q10f01x)
-                    .put("s11q10g", s11q10g)
-                    .put("s11q10h", s11q10h)
-                    .put("s11q10i", s11q10i)
-                    .put("s11q12a", s11q12a)
-                    .put("s11q12b", s11q12b)
-                    .put("s11q12c", s11q12c)
-                    .put("s11q12d", s11q12d)
-                    .put("s11q12e", s11q12e)
-                    .put("s11q12f", s11q12f)
-                    .put("s11q12g", s11q12g)
-                    .put("s11q12h", s11q12h)
-                    .put("s11q12i", s11q12i)
-                    .put("s11q12j", s11q12j)
-                    .put("s11q12k", s11q12k)
-                    .put("s11q12l", s11q12l)
-                    .put("s11q12m", s11q12m)
-                    .put("s11q12n", s11q12n)
-                    .put("s11q12o", s11q12o)
-                    .put("s11q12p", s11q12p)
+
+                    .put("s11q7", s11q7 == null ? "" :s11q7)
+                    .put("s11q7a", s11q7a == null ? "" :s11q7a)
+                    .put("s11q8", s11q8 == null ? "" :s11q8)
+                    .put("s11q9", s11q9 == null ? "" :s11q9)
+                    .put("s11q10a", s11q10a == null ? "" :s11q10a)
+                    .put("s11q10b", s11q10b == null ? "" :s11q10b)
+                    .put("s11q10b01x", s11q10b01x == null ? "" :s11q10b01x)
+                    .put("s11q10c", s11q10c == null ? "" :s11q10c)
+                    .put("s11q10c01x", s11q10c01x == null ? "" :s11q10c01x)
+                    .put("s11q10d", s11q10d == null ? "" :s11q10d)
+                    .put("s11q10e", s11q10e == null ? "" :s11q10e)
+                    .put("s11q10f", s11q10f == null ? "" :s11q10f)
+                    .put("s11q10f01x", s11q10f01x == null ? "" :s11q10f01x)
+                    .put("s11q10g", s11q10g == null ? "" :s11q10g)
+                    .put("s11q10h", s11q10h == null ? "" :s11q10h)
+                    .put("s11q10i", s11q10i == null ? "" :s11q10i)
+                    .put("s11q12a", s11q12a == null ? "" :s11q12a)
+                    .put("s11q12b", s11q12b == null ? "" :s11q12b)
+                    .put("s11q12c", s11q12c == null ? "" :s11q12c)
+                    .put("s11q12d", s11q12d == null ? "" :s11q12d)
+                    .put("s11q12e", s11q12e == null ? "" :s11q12e)
+                    .put("s11q12f", s11q12f == null ? "" :s11q12f)
+                    .put("s11q12g", s11q12g == null ? "" :s11q12g)
+                    .put("s11q12h", s11q12h == null ? "" :s11q12h)
+                    .put("s11q12i", s11q12i == null ? "" :s11q12i)
+                    .put("s11q12j", s11q12j == null ? "" :s11q12j)
+                    .put("s11q12k", s11q12k == null ? "" :s11q12k)
+                    .put("s11q12l", s11q12l == null ? "" :s11q12l)
+                    .put("s11q12m", s11q12m == null ? "" :s11q12m)
+                    .put("s11q12n", s11q12n == null ? "" :s11q12n)
+                    .put("s11q12o", s11q12o == null ? "" :s11q12o)
+                    .put("s11q12p", s11q12p == null ? "" :s11q12p)
+                    .put("s11q12q", s11q12q == null ? "" :s11q12q)
+                    .put("s11q13", s11q13 == null ? "" :s11q13)
+                    .put("s11q14", s11q14 == null ? "" :s11q14)
+                    .put("s11q1401x", s11q1401x == null ? "" :s11q1401x)
+                    .put("s11q15", s11q15 == null ? "" :s11q15)
+                    .put("s11q16", s11q16 == null ? "" :s11q16)
+                    .put("s11q1696x", s11q1696x == null ? "" :s11q1696x)
+                    .put("s11q17", s11q17 == null ? "" :s11q17)
+                    .put("s11q1796x", s11q1796x == null ? "" :s11q1796x)
+                    .put("s11q18", s11q18 == null ? "" :s11q18);
+
 /* Modified on portal
                     .put("s11q12p01", s11q12p01)
                     .put("s11q12p02", s11q12p02)
                     .put("s11q12p98", s11q12p98)
 */
-                    .put("s11q12q", s11q12q)
+                  /*  .put("s11q12q", s11q12q)*/
 /* Modified on portal
                     .put("s11q12q01", s11q12q01)
                     .put("s11q12q02", s11q12q02)
                     .put("s11q12q98", s11q12q98)
 */
-                    .put("s11q13", s11q13)
+                    /*.put("s11q13", s11q13)
                     .put("s11q14", s11q14)
                     .put("s11q1401x", s11q1401x)
                     .put("s11q15", s11q15)
@@ -4445,7 +4578,7 @@ public class Form extends LiveData<Form> {
                     .put("s11q1696x", s11q1696x)
                     .put("s11q17", s11q17)
                     .put("s11q1796x", s11q1796x)
-                    .put("s11q18", s11q18);
+                    .put("s11q18", s11q18);*/
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4459,60 +4592,73 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s12q1", s12q1)
-                    .put("s12q2a", s12q2a)
-                    .put("s12q2a01x", s12q2a01x)
-                    .put("s12q2b", s12q2b)
-                    .put("s12q2b01x", s12q2b01x)
-                    .put("s12q2c", s12q2c)
-                    .put("s12q2c01x", s12q2c01x)
-                    .put("s12q2d", s12q2d)
-                    .put("s12q2d01x", s12q2d01x)
-                    .put("s12q2e", s12q2e)
-                    .put("s12q2e01x", s12q2e01x)
-                    .put("s12q2f", s12q2f)
-                    .put("s12q2f01x", s12q2f01x)
-                    .put("s12q2g", s12q2g)
-                    .put("s12q2g01x", s12q2g01x)
-                    .put("s12q2h", s12q2h)
-                    .put("s12q2h01x", s12q2h01x)
-                    .put("s12q2i", s12q2i)
-                    .put("s12q2i01x", s12q2i01x)
-                    .put("s12q2j", s12q2j)
-                    .put("s12q2j01x", s12q2j01x)
-                    .put("s12q2k", s12q2k)
-                    .put("s12q2k01x", s12q2k01x)
-                    .put("s12q2l", s12q2l)
-                    .put("s12q2l01x", s12q2l01x)
-                    .put("s12q2m", s12q2m)
-                    .put("s12q2m01x", s12q2m01x)
-                    .put("s12q2n", s12q2n)
-                    .put("s12q2n01x", s12q2n01x)
-                    .put("s12q2o", s12q2o)
-                    .put("s12q2o01x", s12q2o01x)
-                    .put("s12q301", s12q301)
-                    .put("s12q302", s12q302)
-                    .put("s12q303", s12q303)
-                    .put("s12q304", s12q304)
-                    .put("s12q305", s12q305)
-                    .put("s12q306", s12q306)
-                    .put("s12q307", s12q307)
-                    .put("s12q308", s12q308)
-                    .put("s12q396", s12q396)
-                    .put("s12q4", s12q4)
-                    .put("s12q501", s12q501)
-                    .put("s12q502", s12q502)
-                    .put("s12q503", s12q503)
-                    .put("s12q504", s12q504)
-                    .put("s12q505", s12q505)
-                    .put("s12q596", s12q596)
-                    .put("s12q596x", s12q596x)
-                    .put("s12q601", s12q601)
-                    .put("s12q602", s12q602)
-                    .put("s12q603", s12q603)
-                    .put("s12q604", s12q604)
-                    .put("s12q696", s12q696)
-                    .put("s12q696x", s12q696x);
+
+                    .put("s12q1", s12q1 == null ? "" :s12q1)
+                    .put("s12q2a", s12q2a == null ? "" :s12q2a)
+                    .put("s12q2a01x", s12q2a01x == null ? "" :s12q2a01x)
+                    .put("s12q2b", s12q2b == null ? "" :s12q2b)
+                    .put("s12q2b01x", s12q2b01x == null ? "" :s12q2b01x)
+                    .put("s12q2c", s12q2c == null ? "" :s12q2c)
+                    .put("s12q2c01x", s12q2c01x == null ? "" :s12q2c01x)
+                    .put("s12q2d", s12q2d == null ? "" :s12q2d)
+                    .put("s12q2d01x", s12q2d01x == null ? "" :s12q2d01x)
+                    .put("s12q2e", s12q2e == null ? "" :s12q2e)
+                    .put("s12q2e01x", s12q2e01x == null ? "" :s12q2e01x)
+                    .put("s12q2f", s12q2f == null ? "" :s12q2f)
+                    .put("s12q2f01x", s12q2f01x == null ? "" :s12q2f01x)
+                    .put("s12q2g", s12q2g == null ? "" :s12q2g)
+                    .put("s12q2g01x", s12q2g01x == null ? "" :s12q2g01x)
+                    .put("s12q2h", s12q2h == null ? "" :s12q2h)
+                    .put("s12q2h01x", s12q2h01x == null ? "" :s12q2h01x)
+                    .put("s12q2i", s12q2i == null ? "" :s12q2i)
+                    .put("s12q2i01x", s12q2i01x == null ? "" :s12q2i01x)
+                    .put("s12q2j", s12q2j == null ? "" :s12q2j)
+                    .put("s12q2j01x", s12q2j01x == null ? "" :s12q2j01x)
+                    .put("s12q2k", s12q2k == null ? "" :s12q2k)
+                    .put("s12q2k01x", s12q2k01x == null ? "" :s12q2k01x)
+                    .put("s12q2l", s12q2l == null ? "" :s12q2l)
+                    .put("s12q2l01x", s12q2l01x == null ? "" :s12q2l01x)
+                    .put("s12q2m", s12q2m == null ? "" :s12q2m)
+                    .put("s12q2m01x", s12q2m01x == null ? "" :s12q2m01x)
+                    .put("s12q2n", s12q2n == null ? "" :s12q2n)
+                    .put("s12q2n01x", s12q2n01x == null ? "" :s12q2n01x)
+                    .put("s12q2o", s12q2o == null ? "" :s12q2o)
+                    .put("s12q2o01x", s12q2o01x == null ? "" :s12q2o01x)
+                    .put("s12q301", s12q301 == null ? "" :s12q301)
+                    .put("s12q302", s12q302 == null ? "" :s12q302)
+                    .put("s12q303", s12q303 == null ? "" :s12q303)
+                    .put("s12q304", s12q304 == null ? "" :s12q304)
+                    .put("s12q305", s12q305 == null ? "" :s12q305)
+                    .put("s12q306", s12q306 == null ? "" :s12q306)
+                    .put("s12q307", s12q307 == null ? "" :s12q307)
+                    .put("s12q308", s12q308 == null ? "" :s12q308)
+                    .put("s12q396", s12q396 == null ? "" :s12q396)
+                    .put("s12q396ax", s12q396ax == null ? "" :s12q396ax)
+                    .put("s12q4", s12q4 == null ? "" :s12q4)
+                    .put("s12q501", s12q501 == null ? "" :s12q501)
+
+                    .put("s12q502", s12q502 == null ? "" :s12q502)
+
+                    .put("s12q503", s12q503 == null ? "" :s12q503)
+
+                    .put("s12q504", s12q504 == null ? "" :s12q504)
+
+                    .put("s12q505", s12q505 == null ? "" :s12q505)
+
+                    .put("s12q596", s12q596 == null ? "" :s12q596)
+
+                    .put("s12q596x", s12q596x == null ? "" :s12q596x)
+                    .put("s12q601", s12q601 == null ? "" :s12q601)
+
+                    .put("s12q602", s12q602 == null ? "" :s12q602)
+
+                    .put("s12q603", s12q603 == null ? "" :s12q603)
+
+                    .put("s12q604", s12q604 == null ? "" :s12q604)
+
+                    .put("s12q696", s12q696 == null ? "" :s12q696)
+
+                    .put("s12q696x", s12q696x == null ? "" :s12q696x);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4526,39 +4672,49 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("s13q1", s13q1)
-                    .put("s13q196x", s13q196x)
-                    .put("s13q2", s13q2)
-                    .put("s13q201x", s13q201x)
-                    .put("s13q202x", s13q202x)
-                    .put("s13q3", s13q3)
-                    .put("s13q4", s13q4)
-                    .put("s13q496x", s13q496x)
-                    .put("s13q5", s13q5)
-                    .put("s13q596x", s13q596x)
-                    // error on portal s13q601 missing in portal contract
-                    .put("s13q601", s13q601)
-                    .put("s13q602", s13q602)
-                    .put("s13q603", s13q603)
-                    .put("s13q696", s13q696)
-                    .put("s13q696x", s13q696x)
-                    // error on portal s13q698 missing in portal contract
-                    .put("s13q698", s13q698)
-                    .put("s13q7", s13q7)
-                    .put("s13q796x", s13q796x)
-                    .put("s13q8", s13q8)
-                    .put("s13q896x", s13q896x)
-                    .put("s13q9", s13q9)
-                    .put("s13q996x", s13q996x)
-                    .put("s13q1001", s13q1001)
-                    .put("s13q1002", s13q1002)
-                    .put("s13q1003", s13q1003)
-                    .put("s13q1004", s13q1004)
-                    .put("s13q1005", s13q1005)
-                    .put("s13q1006", s13q1006)
-                    .put("s13q1007", s13q1007);
 
-        } catch (JSONException e)   {
+                    .put("s13q1", s13q1 == null ? "" :s13q1)
+                    .put("s13q196x", s13q196x == null ? "" :s13q196x)
+                    .put("s13q2", s13q2 == null ? "" :s13q2)
+                    .put("s13q201x", s13q201x == null ? "" :s13q201x)
+                    .put("s13q202x", s13q202x == null ? "" :s13q202x)
+                    .put("s13q3", s13q3 == null ? "" :s13q3)
+                    .put("s13q4", s13q4 == null ? "" :s13q4)
+                    .put("s13q496x", s13q496x == null ? "" :s13q496x)
+                    .put("s13q5", s13q5 == null ? "" :s13q5)
+                    .put("s13q596x", s13q596x == null ? "" :s13q596x)
+                    .put("s13q601", s13q601 == null ? "" :s13q601)
+
+                    .put("s13q602", s13q602 == null ? "" :s13q602)
+
+                    .put("s13q603", s13q603 == null ? "" :s13q603)
+
+                    .put("s13q698", s13q698 == null ? "" :s13q698)
+
+                    .put("s13q696", s13q696 == null ? "" :s13q696)
+
+                    .put("s13q696x", s13q696x == null ? "" :s13q696x)
+                    .put("s13q7", s13q7 == null ? "" :s13q7)
+                    .put("s13q796x", s13q796x == null ? "" :s13q796x)
+                    .put("s13q8", s13q8 == null ? "" :s13q8)
+                    .put("s13q896x", s13q896x == null ? "" :s13q896x)
+                    .put("s13q9", s13q9 == null ? "" :s13q9)
+                    .put("s13q996x", s13q996x == null ? "" :s13q996x)
+                    .put("s13q1001", s13q1001 == null ? "" :s13q1001)
+
+                    .put("s13q1002", s13q1002 == null ? "" :s13q1002)
+
+                    .put("s13q1003", s13q1003 == null ? "" :s13q1003)
+
+                    .put("s13q1004", s13q1004 == null ? "" :s13q1004)
+
+                    .put("s13q1005", s13q1005 == null ? "" :s13q1005)
+
+                    .put("s13q1006", s13q1006 == null ? "" :s13q1006)
+
+                    .put("s13q1007", s13q1007 == null ? "" :s13q1007);
+
+        } catch (JSONException e) {
             e.printStackTrace();
             return "\"error\":, \"" + e.getMessage() + "\"";
         }
@@ -4886,7 +5042,7 @@ public class Form extends LiveData<Form> {
         }
     }
 
-    private void s06Hydrate(String string){
+    private void s06Hydrate(String string) {
 
         if (string != null) {
 
@@ -5182,6 +5338,7 @@ public class Form extends LiveData<Form> {
                 this.s12q307 = json.getString("s12q307");
                 this.s12q308 = json.getString("s12q308");
                 this.s12q396 = json.getString("s12q396");
+                this.s12q396ax = json.getString("s12q396ax");
                 this.s12q4 = json.getString("s12q4");
                 // this.s12q5title1 = json.getString("s12q5title1");
                 this.s12q501 = json.getString("s12q501");

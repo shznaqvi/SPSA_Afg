@@ -211,6 +211,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setS1q8(bi.s1q8.getSelectedItem().toString());
         //    form.setS1q9(bi.s1q9.getSelectedItem().toString());
         form.setS1q10(bi.s1q10.getSelectedItem().toString());
+       // form.setS1q10(bi.s1q10.getSelectedItem().toString().trim().isEmpty() ? "-1" : bi.s1q10.getSelectedItem().toString());
 
         form.setS1q11(bi.s1q11.getText().toString().trim().isEmpty() ? "-1" : bi.s1q11.getText().toString());
 
