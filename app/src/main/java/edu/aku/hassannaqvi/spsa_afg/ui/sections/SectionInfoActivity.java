@@ -177,6 +177,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             form.set_UID(form.getDeviceID() + form.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SINFO, form.sInfotoString());
             return true;
         } else {
@@ -258,6 +259,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
 
+        // For Child <6 and 6-23 Months
         int totalchild = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()));
 
@@ -265,7 +267,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             return Validator.emptyCustomTextBox(this, bi.s1q20a, "Total cont cannot be 0");
         }
 
-
+        // For Pregnant and Lactating Women
         int totalwomen = (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20d.getText()) ? 0 : Integer.parseInt(bi.s1q20d.getText().toString().trim()));
 
@@ -273,6 +275,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             return Validator.emptyCustomTextBox(this, bi.s1q20c, "Total cont cannot be 0");
         }
 
+        // For Total Member Sum
         int totalmember = (TextUtils.isEmpty(bi.s1q20a.getText()) ? 0 : Integer.parseInt(bi.s1q20a.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20b.getText()) ? 0 : Integer.parseInt(bi.s1q20b.getText().toString().trim()))
                 + (TextUtils.isEmpty(bi.s1q20c.getText()) ? 0 : Integer.parseInt(bi.s1q20c.getText().toString().trim()))

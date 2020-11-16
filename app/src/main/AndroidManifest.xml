@@ -57,58 +57,72 @@
         <activity
             android:name=".ui.sections.Section021Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section2socioeconomicstatus_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section022Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section2socioeconomicstatus_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section03Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section3handwashing_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section04Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section4exposuretointerventions_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section05Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section5householdfoodinsecurityaccessscalehfias_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section06Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section6anthropometryandhbofpregnantandlactatingwomenplw_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section07Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section7minimumdietarydiversityforpregnantandlactatingwomanplw_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section08Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section8antenatalandpostnatalcareforplw_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section09Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section9childanthropometryhemoglobin_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section10Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section10initiationofbreastfeeding_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section1101Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section11infantyoungchildfeedingiycfpractices_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section1102Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section11infantyoungchildfeedingiycfpractices_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section12Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section12childimmunizationmorbidityandcareseeking_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.sections.Section13Activity"
             android:screenOrientation="portrait"
+            android:label="@string/section13knowledgeaboutiycf_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.other.MainActivity"
@@ -116,6 +130,7 @@
         <activity
             android:name=".ui.sections.SectionInfoActivity"
             android:screenOrientation="portrait"
+            android:label="@string/section1generalinformation_mainheading"
             android:theme="@style/AppThemeDari" />
         <activity
             android:name=".ui.other.EndingActivity"
