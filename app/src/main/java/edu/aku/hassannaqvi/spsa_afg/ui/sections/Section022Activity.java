@@ -48,11 +48,11 @@ public class Section022Activity extends AppCompatActivity {
             }
         }));
 
-      /*  bi.s2q1798.setOnCheckedChangeListener(((compoundButton, b) -> {
-            if (b){
+        bi.s2q1798.setOnCheckedChangeListener(((compoundButton, b) -> {
+            if (b) {
                 Clear.clearAllFields(bi.lls2q17check, false);
             }
-        }));*/
+        }));
     }
 
 
@@ -216,12 +216,14 @@ public class Section022Activity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
 
-        int totals217 = (TextUtils.isEmpty(bi.s2q1701.getText()) ? 0 : Integer.parseInt(bi.s2q1701.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
-                + (TextUtils.isEmpty(bi.s2q1703.getText()) ? 0 : Integer.parseInt(bi.s2q1703.getText().toString().trim()));
+        if (!bi.s2q1798.isChecked()) {
+            int totals217 = (TextUtils.isEmpty(bi.s2q1701.getText()) ? 0 : Integer.parseInt(bi.s2q1701.getText().toString().trim()))
+                    + (TextUtils.isEmpty(bi.s2q1702.getText()) ? 0 : Integer.parseInt(bi.s2q1702.getText().toString().trim()))
+                    + (TextUtils.isEmpty(bi.s2q1703.getText()) ? 0 : Integer.parseInt(bi.s2q1703.getText().toString().trim()));
 
-        if ((totals217 == 0 && bi.s2q1601.isChecked())) {
-            return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
+            if ((totals217 == 0 && bi.s2q1601.isChecked())) {
+                return Validator.emptyCustomTextBox(this, bi.s2q1701, "Total cont cannot be 0");
+            }
         }
 
         int totals219 = (TextUtils.isEmpty(bi.s2q1901.getText()) ? 0 : Integer.parseInt(bi.s2q1901.getText().toString().trim()))

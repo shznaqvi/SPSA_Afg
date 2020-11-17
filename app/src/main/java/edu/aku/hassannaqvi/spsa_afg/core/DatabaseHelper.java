@@ -687,7 +687,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsContract.FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
         values.put(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
-        values.put(FormsContract.FormsTable.COLUMN_USERNAME, form.getUsername());
+        values.put(FormsContract.FormsTable.COLUMN_USERNAME1, form.getUsername1());
+        values.put(FormsContract.FormsTable.COLUMN_USERNAME2, form.getUsername2());
         values.put(FormsContract.FormsTable.COLUMN_SYSDATE, form.getSysdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMDATE, form.getFormdate());
         values.put(FormsContract.FormsTable.COLUMN_FORMTYPE, form.getFormtype());
@@ -757,7 +758,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsContract.FormsTable._ID,
                 FormsContract.FormsTable.COLUMN_UID,
-                FormsContract.FormsTable.COLUMN_USERNAME,
+                FormsContract.FormsTable.COLUMN_USERNAME1,
+                FormsContract.FormsTable.COLUMN_USERNAME2,
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
@@ -830,7 +832,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsContract.FormsTable._ID,
                 FormsContract.FormsTable.COLUMN_UID,
-                FormsContract.FormsTable.COLUMN_USERNAME,
+                FormsContract.FormsTable.COLUMN_USERNAME1,
+                FormsContract.FormsTable.COLUMN_USERNAME2,
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
@@ -892,12 +895,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsTable._ID,
                 FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_USERNAME,
+                FormsTable.COLUMN_USERNAME1,
+                FormsTable.COLUMN_USERNAME2,
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_FORMDATE,
                 FormsTable.COLUMN_FORMTYPE,
-               /* FormsTable.COLUMN_S1Q1,
-                FormsTable.COLUMN_S1Q2,*/
+                /* FormsTable.COLUMN_S1Q1,
+                 FormsTable.COLUMN_S1Q2,*/
                 /* FormsTable.COLUMN_S1Q3,*/
                 FormsTable.COLUMN_S1Q4,
                 /*FormsTable.COLUMN_S1Q5,*/
@@ -969,7 +973,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsContract.FormsTable._ID,
                 FormsContract.FormsTable.COLUMN_UID,
-                FormsContract.FormsTable.COLUMN_USERNAME,
+                FormsContract.FormsTable.COLUMN_USERNAME1,
+                FormsContract.FormsTable.COLUMN_USERNAME2,
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_FORMTYPE,
@@ -1007,7 +1012,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 Form form = new Form();
                 form.set_ID(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ID)));
                 form.set_UID(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_UID)));
-                form.setUsername(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_USERNAME)));
+                form.setUsername1(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_USERNAME1)));
+                form.setUsername2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_USERNAME2)));
                 form.setSysdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYSDATE)));
                 form.setFormdate(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMDATE)));
                 String formValue = c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_FORMTYPE));
@@ -1021,6 +1027,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 /*form.setsB(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SB)));*/
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
+                form.setSynced_date(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED_DATE)));
                 allForms.add(form);
             }
         } catch (SQLiteException e) {
@@ -1082,6 +1089,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
+                form.setSynced_date(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED_DATE)));
                 allForms.add(form);
             }
         } finally {
@@ -1133,6 +1141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setS1q2(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_S1Q2)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED)));
+                form.setSynced_date(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED_DATE)));
                 allForms.add(form);
             }
         } finally {
@@ -1226,7 +1235,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 FormsContract.FormsTable._ID,
                 FormsContract.FormsTable.COLUMN_UID,
-                FormsContract.FormsTable.COLUMN_USERNAME,
+                FormsContract.FormsTable.COLUMN_USERNAME1,
+                FormsContract.FormsTable.COLUMN_USERNAME2,
                 FormsContract.FormsTable.COLUMN_SYSDATE,
                 FormsContract.FormsTable.COLUMN_FORMDATE,
                 FormsContract.FormsTable.COLUMN_S1Q1,

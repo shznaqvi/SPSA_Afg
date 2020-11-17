@@ -191,8 +191,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form = new Form();
         form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
-        form.setS1q2(MainApp.loginMem[2]);
-        form.setUsername(MainApp.loginMem[1]);
+        form.setUsername2(MainApp.loginMem[2]);
+        form.setUsername1(MainApp.loginMem[1]);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
@@ -205,7 +205,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 : bi.s1q102.isChecked() ? "2"
                 : "-1");
 
-        //    form.setS1q2(bi.s1q2.getText().toString().trim().isEmpty() ? "-1" : bi.s1q2.getText().toString());
+        form.setS1q2(bi.s1q2.getText().toString().trim().isEmpty() ? "-1" : bi.s1q2.getText().toString());
 
         form.setS1q4(bi.s1q4.getText().toString().trim().isEmpty() ? "-1" : bi.s1q4.getText().toString());
 

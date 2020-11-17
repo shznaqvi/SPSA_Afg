@@ -192,7 +192,7 @@ public class Section1102Activity extends AppCompatActivity {
                 : bi.s11q1398.isChecked() ? "98"
                 : "-1");
 
-        form.setS11q14(bi.s11q1401.isChecked() ? ""
+        form.setS11q14(bi.s11q1401.isChecked() ? "1"
                 : bi.s11q1402.isChecked() ? "98"
                 : "-1");
         form.setS11q1401x(bi.s11q1401x.getText().toString().trim().isEmpty() ? "-1" : bi.s11q1401x.getText().toString());

@@ -19,7 +19,8 @@ public class FormsContract {
         public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_USERNAME = "username";
+        public static final String COLUMN_USERNAME1 = "username1";
+        public static final String COLUMN_USERNAME2 = "username2";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_FORMTYPE = "formtype";
@@ -49,7 +50,7 @@ public class FormsContract {
         public static final String COLUMN_GPSDATE = "gpsdate";
         public static final String COLUMN_GPSACC = "gpsacc";
         public static final String COLUMN_DEVICEID = "deviceid";
-        public static final String COLUMN_DEVICETAGID = "devicetagID";
+        public static final String COLUMN_DEVICETAGID = "devicetagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
