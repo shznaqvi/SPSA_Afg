@@ -8,7 +8,11 @@ import androidx.databinding.DataBindingUtil
 import com.validatorcrawler.aliazaz.Validator
 import edu.aku.hassannaqvi.spsa_afg.CONSTANTS.Companion.FSTATUS_END_FLAG
 import edu.aku.hassannaqvi.spsa_afg.R
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp.appInfo
+import edu.aku.hassannaqvi.spsa_afg.core.MainApp.form
 import edu.aku.hassannaqvi.spsa_afg.databinding.ActivityEndingBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class EndingActivity : AppCompatActivity() {
     lateinit var bi: ActivityEndingBinding
@@ -45,28 +49,28 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun saveDraft() {
-       /* val statusValue = if (bi.istatusa.isChecked) "1"
+        val statusValue = if (bi.istatusa.isChecked) "1"
         else if (bi.istatusb.isChecked) "2"
-     //   else if (bi.istatusc.isChecked) "3"
+        //   else if (bi.istatusc.isChecked) "3"
         else if (bi.istatus96.isChecked) "96"
         else "-1"
-        Form.istatus = statusValue
+        form.istatus = statusValue
         form.istatus96x = if (bi.istatus96x.text.toString().trim().isEmpty()) "-1" else bi.istatus96x.text.toString()
-        form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)*/
+        form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(Date().time)
 
     }
 
 
     private fun updateDB(): Boolean {
-       /* val db = appInfo.dbHelper
+        val db = appInfo.dbHelper
         val updcount = db.updateEnding()
         return if (updcount == 1) {
             true
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show()
             false
-        }*/ /*Commit for App Testing by Fazal*/
-        return true
+        } /*Commit for App Testing by Fazal*/
+
     }
 
     private fun formValidation(): Boolean {

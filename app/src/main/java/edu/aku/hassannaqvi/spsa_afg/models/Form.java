@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.spsa_afg.models;
 
 import android.database.Cursor;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
@@ -10,8 +11,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.spsa_afg.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.spsa_afg.ui.other.SyncActivity;
-import edu.aku.hassannaqvi.spsa_afg.utils.AppUtilsKt;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -26,7 +25,6 @@ public class Form extends LiveData<Form> {
     public String s1q4;
     public String s1q6;
     public String s1q8;
-    public String s1q9;
     public String s1q10;
     public String s1q11;
     public String s1q12;
@@ -439,6 +437,7 @@ public class Form extends LiveData<Form> {
     private String istatus96x = ""; // Interview Status
     private String endingdatetime = "";
     private String refno = ""; // Reference Number
+    private String TAG = this.getClass().getSimpleName();
 
 
     public Form() {
@@ -3772,14 +3771,6 @@ public class Form extends LiveData<Form> {
         this.s1q8 = s1q8;
     }
 
-    public String getS1q9() {
-        return s1q9;
-    }
-
-    public void setS1q9(String s1q9) {
-        this.s1q9 = s1q9;
-    }
-
     public String getS1q10() {
         return s1q10;
     }
@@ -4012,15 +4003,13 @@ public class Form extends LiveData<Form> {
                     .put("s1qno", s1qno )
 
                     .put("s1q1", s1q1 )
-                    .put("s1q2", s1q2 )
+                    //        .put("s1q2", s1q2 )
 
                     .put("s1q4", s1q4 )
 
                     .put("s1q6", s1q6 )
 
                     .put("s1q8", s1q8 )
-
-                    .put("s1q9", s1q9 )
 
                     .put("s1q10", s1q10 )
 
@@ -4108,17 +4097,17 @@ public class Form extends LiveData<Form> {
                     .put("s2q10h", s2q10h )
                     .put("s2q10i", s2q10i )
                     .put("s2q11", s2q11 )
-                    .put("s2q1196x", s2q1196x )
-                    .put("s2q12", s2q12 )
-                    .put("s2q1296x", s2q1296x )
-                    .put("s2q13", s2q13 )
-                    .put("s2q1396x", s2q1396x )
-                    .put("s2q14", s2q14 )
-                    .put("s2q1496x", s2q1496x )
-                    .put("s2q15", s2q15 )
+                    .put("s2q1196x", s2q1196x)
+                    .put("s2q12", s2q12)
+                    .put("s2q1296x", s2q1296x)
+                    .put("s2q13", s2q13)
+                    .put("s2q1396x", s2q1396x)
+                    .put("s2q14", s2q14)
+                    .put("s2q1496x", s2q1496x)
+                    .put("s2q15", s2q15)
 
-                    .put("s2q16", s2q16 )
-                    .put("s2q17", s2q1798 )
+                    .put("s2q16", s2q16)
+                    .put("s2q1798", s2q1798)
 
                     .put("s2q1701", s2q1701 )
                     .put("s2q1702", s2q1702 )
@@ -4823,16 +4812,16 @@ public class Form extends LiveData<Form> {
     private void sInfoHydrate(String string) {
 
         if (string != null) {
+            Log.d(TAG, "sInfoHydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
                 this.s1qno = json.getString("s1qno");
                 this.s1q1 = json.getString("s1q1");
-                this.s1q2 = json.getString("s1q2");
+                //    this.s1q2 = json.getString("s1q2");
                 this.s1q4 = json.getString("s1q4");
                 this.s1q6 = json.getString("s1q6");
                 this.s1q8 = json.getString("s1q8");
-                this.s1q9 = json.getString("s1q9");
                 this.s1q10 = json.getString("s1q10");
                 this.s1q11 = json.getString("s1q11");
                 this.s1q12 = json.getString("s1q12");
@@ -4859,6 +4848,7 @@ public class Form extends LiveData<Form> {
     private void s02Hydrate(String string) {
 
         if (string != null) {
+            Log.d(TAG, "s02Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -4937,7 +4927,7 @@ public class Form extends LiveData<Form> {
     private void s03Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s03Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -4972,7 +4962,7 @@ public class Form extends LiveData<Form> {
     private void s04Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s04Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5017,7 +5007,7 @@ public class Form extends LiveData<Form> {
     private void s05Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s05Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5049,7 +5039,7 @@ public class Form extends LiveData<Form> {
     private void s06Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s06Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5060,7 +5050,7 @@ public class Form extends LiveData<Form> {
                 this.s6q2a = json.getString("s6q2a");
                 this.s6q2b = json.getString("s6q2b");
                 this.s6q3a = json.getString("s6q3a");
-                this.s6q3b = json.getString("s6q3b");
+                //    this.s6q3b = json.getString("s6q3b");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -5071,7 +5061,7 @@ public class Form extends LiveData<Form> {
     private void s07Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s07Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5103,7 +5093,7 @@ public class Form extends LiveData<Form> {
     private void s08Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s08Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5171,7 +5161,7 @@ public class Form extends LiveData<Form> {
     private void s09Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s09Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5195,7 +5185,7 @@ public class Form extends LiveData<Form> {
     private void s10Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s10Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5230,7 +5220,7 @@ public class Form extends LiveData<Form> {
     private void s11Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s11Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5298,7 +5288,7 @@ public class Form extends LiveData<Form> {
     private void s12Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s12Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 
@@ -5369,7 +5359,7 @@ public class Form extends LiveData<Form> {
     private void s13Hydrate(String string) {
 
         if (string != null) {
-
+            Log.d(TAG, "s13Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
 

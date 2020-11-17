@@ -191,11 +191,12 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         form = new Form();
         form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
-        form.setS1q2(MainApp.userName);
+        form.setS1q2(MainApp.loginMem[2]);
+        form.setUsername(MainApp.loginMem[1]);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
-        form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
+        form.setFormdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         MainApp.setGPS(this);
 
         form.setS1qno(bi.s1qno.getText().toString().trim().isEmpty() ? "-1" : bi.s1qno.getText().toString());
@@ -204,15 +205,14 @@ public class SectionInfoActivity extends AppCompatActivity {
                 : bi.s1q102.isChecked() ? "2"
                 : "-1");
 
-        form.setS1q2(bi.s1q2.getText().toString().trim().isEmpty() ? "-1" : bi.s1q2.getText().toString());
+        //    form.setS1q2(bi.s1q2.getText().toString().trim().isEmpty() ? "-1" : bi.s1q2.getText().toString());
 
         form.setS1q4(bi.s1q4.getText().toString().trim().isEmpty() ? "-1" : bi.s1q4.getText().toString());
 
         form.setS1q6(bi.s1q6.getSelectedItem().toString());
         form.setS1q8(bi.s1q8.getSelectedItem().toString());
-        //    form.setS1q9(bi.s1q9.getSelectedItem().toString());
+
         form.setS1q10(bi.s1q10.getSelectedItem().toString());
-       // form.setS1q10(bi.s1q10.getSelectedItem().toString().trim().isEmpty() ? "-1" : bi.s1q10.getSelectedItem().toString());
 
         form.setS1q11(bi.s1q11.getText().toString().trim().isEmpty() ? "-1" : bi.s1q11.getText().toString());
 
