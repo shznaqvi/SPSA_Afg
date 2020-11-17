@@ -4017,7 +4017,6 @@ public class Form extends LiveData<Form> {
                     .put("s1q1", s1q1)
                     .put("username1", username1)
                     .put("username2", username2)
-                    .put("formdate", formdate)
                     .put("s1q2", s1q2)
 
                     .put("s1q4", s1q4 )
@@ -4835,7 +4834,6 @@ public class Form extends LiveData<Form> {
                 this.s1q1 = json.getString("s1q1");
                 this.username1 = json.getString("username1");
                 this.username2 = json.getString("username2");
-                this.formdate = json.getString("formdate");
                 this.s1q2 = json.getString("s1q2");
                 this.s1q4 = json.getString("s1q4");
                 this.s1q6 = json.getString("s1q6");

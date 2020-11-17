@@ -196,7 +196,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
-        form.setFormdate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
+        form.setS1q19et(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         MainApp.setGPS(this);
 
         form.setS1qno(bi.s1qno.getText().toString().trim().isEmpty() ? "-1" : bi.s1qno.getText().toString());
