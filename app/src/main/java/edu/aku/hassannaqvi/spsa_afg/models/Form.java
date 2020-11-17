@@ -4811,7 +4811,7 @@ public class Form extends LiveData<Form> {
 
     private void sInfoHydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "sInfoHydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -4847,7 +4847,7 @@ public class Form extends LiveData<Form> {
 
     private void s02Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s02Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -4926,7 +4926,7 @@ public class Form extends LiveData<Form> {
 
     private void s03Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s03Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -4961,7 +4961,7 @@ public class Form extends LiveData<Form> {
 
     private void s04Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s04Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5006,7 +5006,7 @@ public class Form extends LiveData<Form> {
 
     private void s05Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s05Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5038,7 +5038,7 @@ public class Form extends LiveData<Form> {
 
     private void s06Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s06Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5060,7 +5060,7 @@ public class Form extends LiveData<Form> {
 
     private void s07Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s07Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5092,7 +5092,7 @@ public class Form extends LiveData<Form> {
 
     private void s08Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s08Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5160,7 +5160,7 @@ public class Form extends LiveData<Form> {
 
     private void s09Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s09Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5184,7 +5184,7 @@ public class Form extends LiveData<Form> {
 
     private void s10Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s10Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5219,7 +5219,7 @@ public class Form extends LiveData<Form> {
 
     private void s11Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s11Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5287,7 +5287,7 @@ public class Form extends LiveData<Form> {
 
     private void s12Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s12Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
@@ -5358,7 +5358,7 @@ public class Form extends LiveData<Form> {
 
     private void s13Hydrate(String string) {
 
-        if (string != null) {
+        if (string != null || !string.equals("")) {
             Log.d(TAG, "s13Hydrate: " + string);
             try {
                 JSONObject json = new JSONObject(string);
