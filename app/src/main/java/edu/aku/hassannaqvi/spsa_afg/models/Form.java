@@ -4931,27 +4931,27 @@ public class Form extends LiveData<Form> {
             try {
                 JSONObject json = new JSONObject(string);
 
-                this.s3q1 = json.getString(s3q1);
-                this.s3q1096x = json.getString(s3q1096x);
-                this.s3q2 = json.getString(s3q2);
-                this.s3q301 = json.getString(s3q301);
-                this.s3q302 = json.getString(s3q302);
-                this.s3q303 = json.getString(s3q303);
-                this.s3q304 = json.getString(s3q304);
-                this.s3q305 = json.getString(s3q305);
-                this.s3q4 = json.getString(s3q4);
-                this.s3q501 = json.getString(s3q501);
-                this.s3q502 = json.getString(s3q502);
-                this.s3q503 = json.getString(s3q503);
-                this.s3q504 = json.getString(s3q504);
-                this.s3q505 = json.getString(s3q505);
-                this.s3q6a = json.getString(s3q6a);
-                this.s3q6b = json.getString(s3q6b);
-                this.s3q6c = json.getString(s3q6c);
-                this.s3q6d = json.getString(s3q6d);
-                this.s3q6e = json.getString(s3q6e);
-                this.s3q696 = json.getString(s3q696);
-                this.s3q696x = json.getString(s3q696x);
+                this.s3q1 = json.getString("s3q1");
+                this.s3q1096x = json.getString("s3q1096x");
+                this.s3q2 = json.getString("s3q2");
+                this.s3q301 = json.getString("s3q301");
+                this.s3q302 = json.getString("s3q302");
+                this.s3q303 = json.getString("s3q303");
+                this.s3q304 = json.getString("s3q304");
+                this.s3q305 = json.getString("s3q305");
+                this.s3q4 = json.getString("s3q4");
+                this.s3q501 = json.getString("s3q501");
+                this.s3q502 = json.getString("s3q502");
+                this.s3q503 = json.getString("s3q503");
+                this.s3q504 = json.getString("s3q504");
+                this.s3q505 = json.getString("s3q505");
+                this.s3q6a = json.getString("s3q6a");
+                this.s3q6b = json.getString("s3q6b");
+                this.s3q6c = json.getString("s3q6c");
+                this.s3q6d = json.getString("s3q6d");
+                this.s3q6e = json.getString("s3q6e");
+                this.s3q696 = json.getString("s3q696");
+                this.s3q696x = json.getString("s3q696x");
 
             } catch (JSONException e) {
                 e.printStackTrace();
