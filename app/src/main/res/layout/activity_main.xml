@@ -170,17 +170,14 @@
                 </LinearLayout>
 
 
-
-
-
                 <LinearLayout
                     android:id="@+id/admin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_gravity="center_vertical"
                     android:gravity="center"
 
                     android:orientation="vertical">
@@ -199,32 +196,32 @@
                         <Button
                             android:id="@+id/uploadData"
                             android:layout_width="0dp"
-                            android:layout_marginStart="10dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
                             android:layout_weight="1"
                             android:background="@color/white"
                             android:drawableStart="@drawable/ic_upload"
                             android:drawablePadding="12dp"
                             android:gravity="center_vertical"
-                        android:onClick='@{callback::openSpecificActivity}'
-                        android:padding="8dp"
-                        android:text="@string/btnUpload"
-                        android:textColor="@color/colorPrimaryDark" />
+                            android:onClick='@{callback::openSpecificActivity}'
+                            android:padding="8dp"
+                            android:text="@string/btnUpload"
+                            android:textColor="@color/colorPrimaryDark" />
 
-                    <Button
-                        android:id="@+id/databaseBtn"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:drawableStart="@drawable/database"
-                        android:drawablePadding="12dp"
-                        android:gravity="center_vertical"
-                        android:onClick="@{callback::openSpecificActivity}"
-                        android:padding="8dp"
-                        android:text="@string/database"
-                        android:textColor="@color/colorPrimaryDark" />
+                        <Button
+                            android:id="@+id/databaseBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/database"
+                            android:drawablePadding="12dp"
+                            android:gravity="center_vertical"
+                            android:onClick="@{callback::openSpecificActivity}"
+                            android:padding="8dp"
+                            android:text="@string/database"
+                            android:textColor="@color/colorPrimaryDark" />
 
                     </LinearLayout>
 
