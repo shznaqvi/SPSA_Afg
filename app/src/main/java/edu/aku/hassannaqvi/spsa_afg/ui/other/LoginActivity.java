@@ -48,6 +48,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import butterknife.BindView;
@@ -136,17 +137,17 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
         try {
             MainApp.installedOn = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.spsa_afg", 0)
                     .lastUpdateTime;
             MainApp.versionCode = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.spsa_afg", 0)
                     .versionCode;
             MainApp.versionName = this
                     .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.wfp_followups", 0)
+                    .getPackageInfo("edu.aku.hassannaqvi.spsa_afg", 0)
                     .versionName;
-            txtinstalldate.setText("Ver. " + MainApp.versionName + "." + MainApp.versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(MainApp.installedOn)) + " )");
+            txtinstalldate.setText("Ver. " + MainApp.versionName + "." + MainApp.versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy", Locale.ENGLISH).format(new Date(MainApp.installedOn)) + " )");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -224,20 +225,20 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
     public void dbBackup() {
 
-        sharedPref = getSharedPreferences("wfp_followups", MODE_PRIVATE);
+        sharedPref = getSharedPreferences("spsa_afg", MODE_PRIVATE);
         editor = sharedPref.edit();
 
         if (sharedPref.getBoolean("flag", false)) {
 
-            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
+            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
+            if (dt != new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date())) {
+                editor.putString("dt", new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date()));
 
                 editor.commit();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-WFP-FollowUPs");
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-SPSA-AFG");
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
