@@ -70,8 +70,6 @@ public class Section06Activity extends AppCompatActivity {
 
         form.setS6q2b(bi.s6q2b.getText().toString().trim().isEmpty() ? "-1" : bi.s6q2b.getText().toString());
 
-    //    form.setS6q3b(bi.s6q3b.getText().toString().trim().isEmpty() ? "-1" : bi.s6q3b.getText().toString());
-
     }
 
 

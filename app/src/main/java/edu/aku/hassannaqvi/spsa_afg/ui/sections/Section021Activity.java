@@ -138,7 +138,7 @@ public class Section021Activity extends AppCompatActivity {
                 : bi.s2q702.isChecked() ? "2"
                 : "-1");
 
-        form.setS2q8(bi.s2q801.isChecked() ? ""
+        form.setS2q8(bi.s2q801.isChecked() ? "1"
                 : bi.s2q811.isChecked() ? "11"
                 : bi.s2q898.isChecked() ? "98"
                 : "-1");
