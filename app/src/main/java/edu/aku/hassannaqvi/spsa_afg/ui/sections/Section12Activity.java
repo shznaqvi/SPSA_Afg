@@ -41,6 +41,12 @@ public class Section12Activity extends AppCompatActivity {
             }
         }));
 
+        bi.s12q1.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.s12q101.getId()) {
+                Clear.clearAllFields(bi.llGrpsecs21qa);
+            }
+        }));
+
     }
 
 
