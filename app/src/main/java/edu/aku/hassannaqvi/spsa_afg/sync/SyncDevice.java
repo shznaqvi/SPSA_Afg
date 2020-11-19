@@ -26,10 +26,13 @@ import edu.aku.hassannaqvi.spsa_afg.core.MainApp;
 import static android.content.Context.MODE_PRIVATE;
 
 public class SyncDevice extends AsyncTask<Void, Integer, String> {
-    private SyncDevicInterface delegate;
-    private Context context;
-    private boolean flag;
-    private String TAG = SyncDevice.class.getName();
+    private final SyncDevicInterface delegate;
+    private final Context context;
+    private final boolean flag;
+    private final String TAG = SyncDevice.class.getName();
+    SharedPreferences sharedPref;
+    SharedPreferences.Editor editor;
+    String tag = null;
 
     public SyncDevice(Context context, boolean flag) {
         this.context = context;
@@ -37,6 +40,8 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
 
         delegate = (SyncDevicInterface) context;
         delegate.processFinish(false);
+
+        sharedPref = context.getSharedPreferences("tagName", MODE_PRIVATE);
     }
 
     @Override
@@ -120,27 +125,23 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        int sSynced = 0;
         StringBuilder sSyncedError = new StringBuilder();
-        JSONArray json = null;
+        JSONArray json;
         try {
             json = new JSONArray(result);
             if (json.length() > 0) {
                 for (int i = 0; i < json.length(); i++) {
                     JSONObject jsonObject = new JSONObject(json.getString(i));
-                    if (!jsonObject.equals("")) {
-                        String tag = jsonObject.getString("tag");
-                        SharedPreferences sharedPref = context.getSharedPreferences("tagName", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPref.edit();
-                        editor.putString("tagName", tag);
-                        editor.apply();
-
+                    if (jsonObject.getString("status").equals("0") && jsonObject.getString("error").equals("1")) {
+                        tag = null;
+                        sSyncedError.append("\nError:This device is not found on server.");
+                    } else if (jsonObject.getString("status").equals("1")) {
+                        tag = jsonObject.getString("tag");
                         if (flag) {
                             delegate.processFinish(true);
                         }
-
-                    } else if (jsonObject.getString("status").equals("0") && jsonObject.getString("error").equals("1")) {
                     } else {
+                        tag = null;
                         sSyncedError.append("\nError:This device is not found on server.");
                     }
                 }
@@ -148,14 +149,20 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                 if (flag) {
                     delegate.processFinish(true);
                 }
+                tag = null;
             }
 
         } catch (JSONException e) {
             e.printStackTrace();
+            tag = null;
             Toast.makeText(context, "Failed to get TAG ID " + result, Toast.LENGTH_SHORT).show();
             if (flag) {
                 delegate.processFinish(true);
             }
+        } finally {
+            editor = sharedPref.edit();
+            editor.putString("tagName", tag);
+            editor.apply();
         }
     }
 

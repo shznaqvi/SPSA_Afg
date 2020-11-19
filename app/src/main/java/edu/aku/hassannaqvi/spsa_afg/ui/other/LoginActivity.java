@@ -20,6 +20,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.ContactsContract;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
@@ -124,6 +126,28 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
      */
     private UserLoginTask mAuthTask = null;
 
+    public static String getDeviceId(Context context) {
+
+        String deviceId;
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            deviceId = Settings.Secure.getString(
+                    context.getContentResolver(),
+                    Settings.Secure.ANDROID_ID);
+        } else {
+            final TelephonyManager mTelephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+            if (mTelephony.getDeviceId() != null) {
+                deviceId = mTelephony.getDeviceId();
+            } else {
+                deviceId = Settings.Secure.getString(
+                        context.getContentResolver(),
+                        Settings.Secure.ANDROID_ID);
+            }
+        }
+
+        return deviceId;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -194,6 +218,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
 //        DB backup
         dbBackup();
+        MainApp.IMEI = getDeviceId(this);
 
         MainApp.appInfo = new AppInfo(this);
 
@@ -634,7 +659,7 @@ public class LoginActivity extends Activity implements LoaderManager.LoaderCallb
 
     public class syncData extends AsyncTask<String, String, String> {
 
-        private Context mContext;
+        private final Context mContext;
 
         public syncData(Context mContext) {
             this.mContext = mContext;

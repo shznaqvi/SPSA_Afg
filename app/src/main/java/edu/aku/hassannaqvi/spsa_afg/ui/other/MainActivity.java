@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.spsa_afg.ui.other;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                         editorDownload.putBoolean("flag", true);
                         editorDownload.commit();
 
-                        Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "New App downloaded", Toast.LENGTH_SHORT).show();
                         bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " App New Version ").append(newVer).append("  Downloaded"));
 
                         ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
@@ -296,10 +297,15 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         );
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void openSpecificActivity(View v) {
         Intent oF = null;
         switch (v.getId()) {
             case R.id.openForm:
+                if (MainApp.getTagName(this) == null) {
+                    Toast.makeText(this, "Tag ID not found. Please contact IT support team.", Toast.LENGTH_SHORT).show();
+                    break;
+                }
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
             case R.id.sec01:
@@ -362,7 +368,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             Toast.makeText(this, "Please re-login app.", Toast.LENGTH_SHORT).show();
             return;
         }
-        startActivity(oF);
+        if (oF != null)
+            startActivity(oF);
     }
 
     public void toggleSummary(View view) {

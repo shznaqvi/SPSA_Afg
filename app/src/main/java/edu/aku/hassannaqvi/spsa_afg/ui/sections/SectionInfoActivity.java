@@ -15,8 +15,6 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.threeten.bp.LocalDate;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -44,9 +42,6 @@ public class SectionInfoActivity extends AppCompatActivity {
     public List<String> provinceName, districtName, villageName;
     public List<String> provinceCode, districtCode, villageCode;
     private DatabaseHelper db;
-    boolean dtFlag = false;
-    LocalDate localDate = null;
-    LocalDate calculatedDOB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
