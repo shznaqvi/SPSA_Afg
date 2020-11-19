@@ -4013,44 +4013,28 @@ public class Form extends LiveData<Form> {
         try {
             json
                     .put("s1qno", s1qno)
-
                     .put("s1q1", s1q1)
                     .put("username1", username1)
                     .put("username2", username2)
                     .put("s1q2", s1q2)
-
                     .put("s1q4", s1q4 )
-
                     .put("s1q6", s1q6 )
-
                     .put("s1q8", s1q8 )
-
                     .put("s1q10", s1q10 )
-
                     .put("s1q11", s1q11 )
-
                     .put("s1q12", s1q12 )
-
                     .put("s1q13", s1q13 )
                     .put("s1q14", s1q14 )
-
                     .put("s1q15", s1q15 )
-
                     .put("s1q16", s1q16 )
-
                     .put("s1q17", s1q17 )
                     .put("s1q18", s1q18 )
                     .put("s1_consent", s1_consent )
                     .put("s1q19et", s1q19et )
-
                     .put("s1q20a", s1q20a )
-
                     .put("s1q20b", s1q20b )
-
                     .put("s1q20c", s1q20c )
-
                     .put("s1q20d", s1q20d )
-
                     .put("s1q20e", s1q20e );
 
 
