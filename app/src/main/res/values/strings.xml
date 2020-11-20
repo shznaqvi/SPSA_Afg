@@ -838,6 +838,7 @@ Dates are not applicable if the source of vaccination is from maternal recall, a
 </string>
     <string name="s12q2a">BCG against tuberculosis in the arm or shoulder</string>
     <string name="s12q2a01">Yes</string>
+    <string name="s12q2a44">Yes (Without Date)</string>
     <string name="s12q2a02">No</string>
     <string name="s12q2a98">Don’t know </string>
     <string name="s12q2ad">BCG DATE</string>

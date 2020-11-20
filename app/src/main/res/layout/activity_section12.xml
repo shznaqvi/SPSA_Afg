@@ -193,7 +193,7 @@
                                 android:id="@+id/s12q2a44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -255,7 +255,7 @@
                                 android:id="@+id/s12q2b01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (with date" />
+                                android:text="@string/s12q2b01" />
 
                             <LinearLayout
                                 android:id="@+id/llGrps12q2b"
@@ -270,10 +270,10 @@
                                     android:gravity="center"
                                     android:hint="@string/date"
                                     android:tag="s12q2b01"
+                                    android:text='@{s12q2b01.checked ? s12q2b01x.getText().toString() : ""}'
                                     android:visibility='@{s12q2b01.checked? View.VISIBLE : View.GONE}'
                                     app:dateFormat="dd-MM-yyyy"
                                     app:maxDate="CR_DATE"
-                                    android:text='@{s12q2b01.checked ? s12q2b01x.getText().toString() : ""}'
                                     app:minDate="01/11/2015" />
 
                             </LinearLayout>
@@ -282,7 +282,7 @@
                                 android:id="@+id/s12q2b44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -298,7 +298,9 @@
                                 android:text="@string/s12q2b98" />
 
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- s12q2c  Radio   -->
@@ -369,7 +371,7 @@
                                 android:id="@+id/s12q2c44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -458,7 +460,7 @@
                                 android:id="@+id/s12q2d44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -547,7 +549,7 @@
                                 android:id="@+id/s12q2e44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -636,7 +638,7 @@
                                 android:id="@+id/s12q2f44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -725,7 +727,7 @@
                                 android:id="@+id/s12q2g44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -814,7 +816,7 @@
                                 android:id="@+id/s12q2h44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -903,7 +905,7 @@
                                 android:id="@+id/s12q2i44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -992,7 +994,7 @@
                                 android:id="@+id/s12q2j44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -1081,7 +1083,7 @@
                                 android:id="@+id/s12q2k44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -1170,7 +1172,7 @@
                                 android:id="@+id/s12q2l44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -1259,7 +1261,7 @@
                                 android:id="@+id/s12q2m44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -1348,7 +1350,7 @@
                                 android:id="@+id/s12q2n44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
@@ -1437,7 +1439,7 @@
                                 android:id="@+id/s12q2o44"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Yes (without date)"
+                                android:text="@string/s12q2a44"
                                 android:visibility='@{s12q101.checked? View.VISIBLE : View.GONE}' />
 
                             <RadioButton
