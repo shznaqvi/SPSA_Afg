@@ -356,12 +356,12 @@
     <string name="s4title3">در 30 روز گذشته ، آیا کسی در خانواده شما کمک های زیر را دریافت کرده است؟
 یکی یکی بپرسید
 </string>
-    <string name="s4q1">برای اطفال LNS </string>
+    <string name="s4q1">  برای اطفال  LNS </string>
     <string name="s4q1a01">بلی </string>
     <string name="s4q1a02">نخیر</string>
     <string name="s4q1b">تعداد مستفیدین</string>
     <string name="s4q1c">منبع / این جی او</string>
-    <string name="s4q2">RUTF برای اطفال </string>
+    <string name="s4q2">۔RUTF برای اطفال </string>
     <string name="s4q2a01">بلی</string>
     <string name="s4q2a02">نخیر</string>
     <string name="s4q2b">تعداد مستفیدین</string>
@@ -376,7 +376,7 @@
     <string name="s4q4a02">بلی</string>
     <string name="s4q4b">تعداد مستفیدین</string>
     <string name="s4q4c">منبع / این جی او</string>
-    <string name="s4q5">دیگر (مشخص نمایید): </string>
+    <string name="s4q5">دیگر (مشخص نمایید):</string>
     <string name="s4q5b">تعداد مستفیدین</string>
     <string name="s4q5a01">بلی</string>
     <string name="s4q5a02">نخیر</string>
