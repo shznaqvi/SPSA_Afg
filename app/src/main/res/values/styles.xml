@@ -1,32 +1,32 @@
 <resources>
 
-    <!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+      <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
 
-        </style>-->
+      </style>
 
     <!-- Base application theme. -->
     <style name="AppThemeEnglish" parent="Theme.AppCompat.Light.DarkActionBar">
 
-        <item name="android:textSize">20sp</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
-        <item name="android:spinnerStyle">@style/spinner</item>
-        <item name="android:actionBarStyle">@style/topBarStyle</item>
-        <item name="android:textViewStyle">@style/labels</item>
-        <item name="android:editTextStyle">@style/textInput</item>
-        <item name="radioButtonStyle">@style/radiobutton</item>
-        <item name="checkboxStyle">@style/checkbox</item>
-        <item name="hintEnabled">false</item>
-        <item name="android:buttonStyle">@style/button</item>
-        <item name="android:textColorHint">@color/gray_overlay</item>
-        <item name="android:fillAfter">true</item>
-        <item name="android:enterFadeDuration">600</item>
-        <item name="android:exitFadeDuration">200</item>
-        <item name="android:layoutDirection">ltr</item>
-        <item name="android:animateLayoutChanges">false</item>
+        <!--        <item name="android:textSize">20sp</item>
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
+                <item name="android:spinnerStyle">@style/spinner</item>
+                <item name="android:actionBarStyle">@style/topBarStyle</item>
+                <item name="android:textViewStyle">@style/labels</item>
+                <item name="android:editTextStyle">@style/textInput</item>
+                <item name="radioButtonStyle">@style/radiobutton</item>
+                <item name="checkboxStyle">@style/checkbox</item>
+                <item name="hintEnabled">false</item>
+                <item name="android:buttonStyle">@style/button</item>
+                <item name="android:textColorHint">@color/gray_overlay</item>
+                <item name="android:fillAfter">true</item>
+                <item name="android:enterFadeDuration">600</item>
+                <item name="android:exitFadeDuration">200</item>
+                <item name="android:layoutDirection">ltr</item>
+                <item name="android:animateLayoutChanges">false</item>-->
 
     </style>
     <!--
@@ -73,7 +73,7 @@
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
         <item name="android:background">@drawable/app_bg_gray</item>
-        <item name="android:padding">24dp</item>
+        <item name="android:padding">18dp</item>
     </style>
 
     <style name="topBarStyle" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -160,7 +160,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">sans</item>
         <item name="android:textColor">@color/gray</item>
-        <!--        <item name="android:background">@drawable/background_grad</item>-->
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <style name="spinner" parent="Widget.AppCompat.Spinner">
@@ -320,4 +320,20 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="expandCollapse">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="date_picker_theme" parent="@android:style/Widget.DatePicker">
+
+
+    </style>
+
+
+    <style name="info_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fillViewport">true</item>
+    </style>
 </resources>

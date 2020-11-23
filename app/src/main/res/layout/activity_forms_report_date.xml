@@ -57,6 +57,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="0dp"
                     android:layout_weight="1"
+                    app:theme="@style/AppTheme"
+
                     app:dateFormat="dd-MM-yy" />
 
                 <Button
