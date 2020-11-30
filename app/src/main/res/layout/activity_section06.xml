@@ -224,20 +224,28 @@
                             android:text="@string/Q_s6q3a" />
                     </RelativeLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/s6q3a"
+                    <LinearLayout
+                        android:id="@+id/lls6q3a98check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:hint="#.##"
-                        android:inputType="number"
-                        app:mask="##.#"
-                        app:maxValue="19.0"
-                        app:minValue="6.0"
-                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
-                        android:enabled='@{s6q3a98.checked? false : true}'
-                        android:text='@{s6q3a98.checked? "" : s6q3a.getText().toString()}'
-                        app:type="range" />
+                        android:orientation="vertical">
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/s6q3a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="#.##"
+                            android:inputType="number"
+                            app:mask="##.#"
+                            app:maxValue="19.0"
+                            app:minValue="6.0"
+                            app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                            android:enabled='@{s6q3a98.checked? false : true}'
+                            android:text='@{s6q3a98.checked? "99.9" : s6q3a.getText().toString() }'
+                            app:type="range" />
+
+                    </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/s6q3a98"

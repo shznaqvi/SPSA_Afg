@@ -377,7 +377,7 @@
                         app:minValue="5.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         android:enabled='@{s9q6a98.checked? false : true}'
-                        android:text='@{s9q6a98.checked? "" : s9q6a.getText().toString()}'
+                        android:text='@{s9q6a98.checked? "99.9" : s9q6a.getText().toString()}'
                         app:type="range" />
 
                     <CheckBox

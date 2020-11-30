@@ -171,7 +171,6 @@ public class Form extends LiveData<Form> {
     public String s6q2a;
     public String s6q2b;
     public String s6q3a;
-    public String s6q3a98;
     public String s6q3b;
     public String s7qa;
     public String s7qb;
@@ -254,7 +253,6 @@ public class Form extends LiveData<Form> {
     public String s9q5a;
     public String s9q5b;
     public String s9q6a;
-    public String s9q6a98;
     public String s10title;
     public String s10q1;
     public String s10q2;
@@ -1784,15 +1782,6 @@ public class Form extends LiveData<Form> {
     }
 
 
-    public String getS6q3a98() {
-        return s6q3a98;
-    }
-
-    public void setS6q3a98(String s6q3a98) {
-        this.s6q3a98 = s6q3a98;
-    }
-
-
     public String getS6q1b() {
         return s6q1b;
     }
@@ -2476,15 +2465,6 @@ public class Form extends LiveData<Form> {
 
     public void setS9q6a(String s9q6a) {
         this.s9q6a = s9q6a;
-    }
-
-
-    public String getS9q6a98() {
-        return s9q6a98;
-    }
-
-    public void setS9q6a98(String s9q6a98) {
-        this.s9q6a98 = s9q6a98;
     }
 
 
@@ -4306,8 +4286,6 @@ public class Form extends LiveData<Form> {
 
                     .put("s6q3a", s6q3a)
 
-                    .put("s6q3a98", s6q3a98)
-
                     .put("s6mea2", s6mea2)
 
                     .put("s6q1b", s6q1b)
@@ -4458,7 +4436,6 @@ public class Form extends LiveData<Form> {
                     .put("s9q5a", s9q5a)
 
                     .put("s9q6a", s9q6a)
-                    .put("s9q6a98", s9q6a98)
 
                     .put("s9mea2", s9mea2)
 
@@ -5073,7 +5050,6 @@ public class Form extends LiveData<Form> {
                 this.s6q2a = json.getString("s6q2a");
                 this.s6q2b = json.getString("s6q2b");
                 this.s6q3a = json.getString("s6q3a");
-                this.s6q3a98 = json.getString("s6q3a98");
                 //    this.s6q3b = json.getString("s6q3b");
 
             } catch (JSONException e) {
@@ -5199,7 +5175,6 @@ public class Form extends LiveData<Form> {
                 this.s9q5a = json.getString("s9q5a");
                 this.s9q5b = json.getString("s9q5b");
                 this.s9q6a = json.getString("s9q6a");
-                this.s9q6a98 = json.getString("s9q6a98");
 
             } catch (JSONException e) {
                 e.printStackTrace();

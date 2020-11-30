@@ -71,7 +71,6 @@ public class Section09Activity extends AppCompatActivity {
         form.setS9q5a(bi.s9q5a.getText().toString().trim().isEmpty() ? "-1" : bi.s9q5a.getText().toString());
 
         form.setS9q6a(bi.s9q6a.getText().toString().trim().isEmpty() ? "-1" : bi.s9q6a.getText().toString());
-        form.setS9q6a98(bi.s9q6a98.isChecked() ? "99.9" : "-1");
 
         form.setS9mea2(bi.s9mea2.getSelectedItem().toString());
 
