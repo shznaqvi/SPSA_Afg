@@ -376,7 +376,16 @@
                         app:maxValue="18.0"
                         app:minValue="5.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                        android:enabled='@{s9q6a98.checked? false : true}'
+                        android:text='@{s9q6a98.checked? "" : s9q6a.getText().toString()}'
                         app:type="range" />
+
+                    <CheckBox
+                        android:id="@+id/s9q6a98"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/s2q1798" />
 
                 </LinearLayout>
 

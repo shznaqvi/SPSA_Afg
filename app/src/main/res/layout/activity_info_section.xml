@@ -226,7 +226,7 @@
                         app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"
                         app:theme="@style/AppTheme"
-                        app:minDate="27/10/2020" />
+                        app:minDate="01/10/2020" />
 
                 </LinearLayout>
 

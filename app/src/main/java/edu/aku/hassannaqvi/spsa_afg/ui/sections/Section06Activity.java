@@ -63,6 +63,7 @@ public class Section06Activity extends AppCompatActivity {
         form.setS6q2a(bi.s6q2a.getText().toString().trim().isEmpty() ? "-1" : bi.s6q2a.getText().toString());
 
         form.setS6q3a(bi.s6q3a.getText().toString().trim().isEmpty() ? "-1" : bi.s6q3a.getText().toString());
+        form.setS6q3a98(bi.s6q3a98.isChecked() ? "99.9" : "-1");
 
         form.setS6mea2(bi.s6mea2.getSelectedItem().toString());
 

@@ -235,8 +235,19 @@
                         app:maxValue="19.0"
                         app:minValue="6.0"
                         app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
+                        android:enabled='@{s6q3a98.checked? false : true}'
+                        android:text='@{s6q3a98.checked? "" : s6q3a.getText().toString()}'
                         app:type="range" />
+
+                    <CheckBox
+                        android:id="@+id/s6q3a98"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/s2q1798" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
